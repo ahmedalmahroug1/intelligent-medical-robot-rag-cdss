@@ -1,0 +1,781 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-006",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-006",
+    "name": "Streptococcal pharyngitis (strep throat, group A Streptococcus)",
+    "name_ar": "التهاب الحلق العِقدي (البكتيري بالمكورات العقدية المجموعة A)",
+    "synonyms": [
+      "strep throat",
+      "GAS pharyngitis",
+      "streptococcal sore throat",
+      "streptococcal tonsillitis"
+    ],
+    "abbreviations": [
+      "GAS",
+      "GABHS"
+    ],
+    "icd10": {
+      "code": "J02.0",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA02.0",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "43878008",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D014069",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute bacterial pharyngeal infection",
+    "organ_system": "ENT (pharynx/tonsils)",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine — but recognise suppurative (quinsy) and non-suppurative (rheumatic fever) complications",
+    "severity": "Usually self-limiting; antibiotics shorten illness and reduce complications/transmission",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute pharyngitis/tonsillitis caused by group A beta-haemolytic Streptococcus, typically with fever, tonsillar exudate and tender cervical nodes WITHOUT cough, benefiting from antibiotics in higher-probability cases.",
+    "detailed_description": "GAS is the most important treatable bacterial cause of sore throat. It is distinguished from viral pharyngitis by clinical scoring and, where used, rapid antigen testing or culture. Antibiotics modestly shorten symptoms, reduce transmission, and prevent suppurative and (in at-risk populations) rheumatic complications. Overuse of antibiotics is avoided by treating higher-probability cases.",
+    "pathophysiology": "GAS adheres to and invades pharyngeal epithelium, producing local inflammation with exudate and tender lymphadenitis. Toxin production can cause scarlet fever (sandpaper rash). Immune cross-reactivity can (rarely) lead to rheumatic fever or post-streptococcal glomerulonephritis.",
+    "etiology": "Group A beta-haemolytic Streptococcus (Streptococcus pyogenes); spread by respiratory droplets and close contact.",
+    "incubation_period": "2-5 days.",
+    "natural_history": "Self-limiting over ~1 week even untreated; antibiotics shorten illness by ~1-2 days, reduce transmission, and lower complication risk.",
+    "prognosis": "Excellent with treatment; complications (quinsy, rheumatic fever, glomerulonephritis) are uncommon, with rheumatic fever now rare in high-income settings."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "GAS causes roughly 5-15% of adult and up to ~20-30% of childhood sore throats.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Common, peaking in winter/spring; highest in children 5-15 years.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible directly; serious outcomes via rare invasive disease or rheumatic complications.",
+      "basis": "estimate"
+    },
+    "age_groups": "Predominantly children/adolescents (5-15 years); less common in young children <3 and adults.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide; rheumatic fever burden higher in low-resource settings.",
+    "seasonal_pattern": "Winter and early spring."
+  },
+  "risk_factors": {
+    "lifestyle": "Crowding, close contact (schools, households, barracks).",
+    "smoking": "Not a major factor.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "May increase infection risk.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not a specific risk factor; affects antibiotic choice.",
+    "occupation": "Contact with children (teachers, childcare, parents).",
+    "travel": "Crowded settings increase transmission.",
+    "family_history": "Household contacts often affected.",
+    "genetic_factors": "Host susceptibility to rheumatic fever varies.",
+    "medications": "Immunosuppression increases risk/severity.",
+    "previous_diseases": "Prior rheumatic fever markedly increases importance of treating GAS."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sore throat with painful swallowing and fever",
+      "frequency": "very common",
+      "importance": "Core presentation",
+      "source": "IDSA; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Absence of cough/cold symptoms",
+      "frequency": "common",
+      "importance": "Points towards bacterial (strep) cause",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Tender neck glands",
+      "frequency": "common",
+      "importance": "Scoring feature",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Sore throat / painful swallowing",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "strongly reduces",
+      "importance": "Core symptom",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "IDSA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever (often >=38°C)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Scoring feature; favours strep",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Tonsillar exudate/swelling",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Scoring feature (also in EBV)",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Tender, enlarged anterior cervical lymph nodes",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Scoring feature",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Absence of cough",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "A defining Centor criterion favouring strep",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Headache, nausea/abdominal pain (esp. children)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Supportive, especially in children",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "IDSA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Scarlatiniform (sandpaper) rash + strawberry tongue (scarlet fever)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "When present, strongly indicates GAS (scarlet fever)",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "clinical/UKHSA",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Cough, coryza, hoarseness, conjunctivitis present",
+      "why_important": "These viral features make streptococcal infection much less likely (lower score)",
+      "absence_significance": "moderately reduces",
+      "source": "Centor/McIsaac; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No trismus, uvular deviation, muffled voice, or drooling",
+      "why_important": "Absence argues against peritonsillar abscess/airway emergency",
+      "absence_significance": "strongly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have a cough or cold symptoms?",
+      "why_ask": "Their absence increases strep probability (Centor)",
+      "expected_answer": "Often absent in strep",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "How high is your fever and how quickly did symptoms begin?",
+      "why_ask": "Fever is a scoring feature; rapid onset common",
+      "expected_answer": "Fever, rapid onset",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any rash, and has your tongue changed appearance?",
+      "why_ask": "Scarlet fever (notifiable) supports GAS",
+      "expected_answer": "Usually no; if yes, supports GAS",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any one-sided severe pain, trismus, drooling, or breathing difficulty?",
+      "why_ask": "Screens for quinsy/airway emergency (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "History of rheumatic fever or significant heart valve disease?",
+      "why_ask": "Raises the threshold to treat and follow up",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate-high"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Throat/tonsils",
+      "expected_finding": "Erythema, exudate, tonsillar enlargement; check for asymmetry (quinsy)",
+      "importance": "High"
+    },
+    {
+      "examination": "Anterior cervical lymph nodes",
+      "expected_finding": "Tender/enlarged",
+      "importance": "Moderate-high (scoring)"
+    },
+    {
+      "examination": "Temperature",
+      "expected_finding": "Often raised",
+      "importance": "Moderate (scoring)"
+    },
+    {
+      "examination": "Skin and tongue",
+      "expected_finding": "Sandpaper rash / strawberry tongue if scarlet fever",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Airway signs (voice, drooling, trismus)",
+      "expected_finding": "Normal; abnormal = emergency",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Often >=38°C",
+    "heart_rate": "May rise with fever",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal (stridor/distress is an emergency)",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Rapid antigen detection test (RADT) for GAS",
+      "indication": "To confirm strep in higher-probability cases where testing is available/used",
+      "expected_result": "Positive in GAS",
+      "normal_range": "Negative",
+      "diagnostic_value": "Confirms GAS (high specificity)",
+      "rule_in": "Positive supports/targets antibiotics",
+      "rule_out": "Negative lowers probability; in children may warrant backup culture",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Throat culture",
+      "indication": "Confirmation/backup where RADT negative but suspicion remains (esp. children), or for surveillance",
+      "expected_result": "GAS growth",
+      "normal_range": "No GAS",
+      "diagnostic_value": "Reference standard",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC / EBV serology (selective)",
+      "indication": "If glandular fever is a competing diagnosis",
+      "expected_result": "Atypical lymphocytes / positive EBV serology in EBV",
+      "normal_range": "",
+      "diagnostic_value": "Distinguishes EBV",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "Suspected deep-space/peritonsillar infection (CT with contrast)",
+      "expected_findings": "Abscess if complicated"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable (unless assessing rheumatic carditis)",
+    "findings": "May show conduction changes in acute rheumatic fever (rare complication)."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "Throat swab culture for GAS (reference standard)",
+    "pcr": "Molecular GAS tests available in some settings"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical probability by Centor/McIsaac or FeverPAIN, optionally confirmed by RADT or throat culture. GAS cannot be reliably diagnosed by examination alone; scoring +/- testing is used to guide antibiotics.",
+    "diagnostic_scores": {
+      "value": "Centor (1 point each): fever, tonsillar exudate, tender anterior cervical nodes, ABSENCE of cough (McIsaac adds age adjustment). FeverPAIN (Fever, Purulence, Attend rapidly, Inflamed tonsils, No cough/coryza).",
+      "basis": "sourced"
+    },
+    "cutoff_values": {
+      "value": "Centor >=3 or FeverPAIN >=4 indicate higher GAS likelihood and support antibiotics/testing (NICE NG84).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Viral pharyngitis",
+      "why_similar": "Sore throat, fever",
+      "differences": "Cough/coryza present, lower score, no exudate",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Cough, runny nose, hoarseness",
+      "distinguishing_exam": "Less exudate/nodes",
+      "distinguishing_labs": "RADT negative",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have a cough and runny nose?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Infectious mononucleosis (EBV)",
+      "why_similar": "Exudative tonsillitis, nodes, fever",
+      "differences": "Young adult, marked fatigue, posterior cervical nodes, splenomegaly, prolonged",
+      "red_flags": "Splenic rupture; airway obstruction; amoxicillin rash",
+      "distinguishing_symptoms": "Marked prolonged fatigue",
+      "distinguishing_exam": "Splenomegaly, posterior nodes",
+      "distinguishing_labs": "Monospot/EBV serology, atypical lymphocytes",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are you a young adult with weeks of fatigue and swollen glands?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Peritonsillar abscess (quinsy)",
+      "why_similar": "Severe throat pain, exudate",
+      "differences": "Unilateral, trismus, muffled voice, uvular deviation",
+      "red_flags": "Airway compromise",
+      "distinguishing_symptoms": "Unilateral severe pain, trismus",
+      "distinguishing_exam": "Peritonsillar bulge, deviated uvula",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CT if uncertain",
+      "differential_questions": "Is the pain one-sided with trismus?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Epiglottitis",
+      "why_similar": "Severe sore throat, fever",
+      "differences": "Toxic, drooling, stridor, minimal oropharyngeal findings",
+      "red_flags": "Airway emergency",
+      "distinguishing_symptoms": "Drooling, stridor, distress",
+      "distinguishing_exam": "Do not examine throat aggressively",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "Lateral neck X-ray (thumbprint) if stable",
+      "differential_questions": "Any drooling or difficulty breathing?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have a cough or cold symptoms?",
+      "target_disease": "Viral pharyngitis",
+      "competing_disease": "Streptococcal pharyngitis",
+      "purpose": "Cough absence raises strep probability (Centor)",
+      "interpretation": "No cough + fever + exudate + tender nodes -> higher GAS likelihood",
+      "information_gain": "high",
+      "source": "Centor/McIsaac; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is there a sandpaper rash or strawberry tongue?",
+      "target_disease": "Scarlet fever (GAS)",
+      "competing_disease": "Viral pharyngitis",
+      "purpose": "Detect toxin-mediated GAS (notifiable)",
+      "interpretation": "Present -> strongly supports GAS; notify per local rules",
+      "information_gain": "moderate",
+      "source": "UKHSA/clinical",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Sore throat with fever/exudate, no airway red flags",
+      "question": "Do you have a cough/cold symptoms, and any rash or one-sided severe pain?",
+      "expected_answers": "Viral features vs strep/scarlet features vs abscess features",
+      "branching_logic": "Viral features -> avoid antibiotics; high score/scarlet -> antibiotics +/- testing; unilateral/airway signs -> urgent ENT",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Clinical scoring (Centor/McIsaac or FeverPAIN)",
+      "why": "Estimates GAS probability to guide management",
+      "expected_outcome": "Low vs high strep likelihood"
+    },
+    {
+      "test": "RADT / throat culture (where used)",
+      "why": "Confirm GAS in higher-score cases",
+      "expected_outcome": "Confirms/excludes GAS"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Stridor, drooling, or difficulty breathing/swallowing saliva",
+      "immediate_action": "Airway emergency — urgent ENT/anaesthetics (suspect epiglottitis); do not examine throat aggressively"
+    },
+    {
+      "finding": "Unilateral severe pain with trismus, muffled voice, uvular deviation",
+      "immediate_action": "Urgent ENT — suspected peritonsillar abscess"
+    },
+    {
+      "finding": "Signs of invasive GAS / streptococcal toxic shock (hypotension, rash, very unwell)",
+      "immediate_action": "Emergency — resuscitate and urgent antibiotics"
+    },
+    {
+      "finding": "New joint pains, carditis features, or chorea weeks after infection",
+      "immediate_action": "Assess for acute rheumatic fever (especially at-risk populations)"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected peritonsillar abscess/deep-space infection; suspected invasive GAS disease.",
+    "routine_referral": "Recurrent documented tonsillitis meeting tonsillectomy criteria; suspected rheumatic fever for specialist assessment.",
+    "emergency_referral": "Airway compromise, streptococcal toxic shock, or acute rheumatic carditis."
+  },
+  "complications": {
+    "early": [
+      "Peritonsillar abscess (quinsy)",
+      "Otitis media / sinusitis",
+      "Scarlet fever",
+      "Invasive GAS / toxic shock (rare)"
+    ],
+    "late": [
+      "Acute rheumatic fever (rare in high-income settings)",
+      "Post-streptococcal glomerulonephritis",
+      "Recurrent tonsillitis"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Analgesia/antipyretics, fluids, rest; explanation and safety-net advice.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Phenoxymethylpenicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG84.",
+    "lifestyle_advice": "Stay home while febrile / for ~24 hours after starting antibiotics to reduce spread; fluids and rest.",
+    "follow_up": "Safety-net for airway/deep-space signs, poor response, or complication features; notify scarlet fever per local public-health rules.",
+    "legacy_medications_pre_v13": "Antibiotics for higher-probability cases (Centor >=3/FeverPAIN >=4), systemically unwell, scarlet fever, or high complication risk: first-line phenoxymethylpenicillin for 5-10 days (per guideline); use a macrolide (e.g., clarithromycin) if penicillin-allergic. AVOID amoxicillin if EBV is possible (rash). Complete the course to reduce complications/transmission. Consider delayed prescribing in intermediate-probability cases."
+  },
+  "patient_education": {
+    "home_advice": "Strep throat is a bacterial throat infection. Antibiotics can help when it's likely strep — take the full course. Painkillers and fluids ease symptoms, and you're much less contagious about a day after starting antibiotics. Seek urgent help for difficulty breathing or swallowing saliva, drooling, one-sided severe pain, or a widespread rash with feeling very unwell.",
+    "home_advice_ar": "التهاب الحلق العِقدي عدوى بكتيرية. قد تفيد المضادات الحيوية عندما يكون السبب بكتيرياً على الأرجح — أكمل الجرعة كاملة. مسكّنات الألم والسوائل تخفّف الأعراض، وتقلّ العدوى كثيراً بعد نحو يوم من بدء المضاد. اطلب المساعدة العاجلة عند صعوبة التنفّس أو بلع الريق، أو سيلان اللعاب، أو ألم شديد في جانب واحد، أو طفح منتشر مع توعّك شديد.",
+    "prevention": "Hand hygiene, avoiding close contact and sharing utensils while infectious.",
+    "warning_signs": "Difficulty breathing or swallowing saliva, drooling, one-sided severe throat pain with trismus, spreading rash with feeling very unwell, or new joint pains/breathlessness weeks later."
+  },
+  "prevention": {
+    "vaccination": "No licensed GAS vaccine currently.",
+    "lifestyle": "Hand/respiratory hygiene; stay home while infectious.",
+    "screening": "Not routine; secondary prophylaxis (long-term penicillin) for those with prior rheumatic fever."
+  },
+  "evidence": {
+    "evidence_level": "High for scoring-guided antibiotic use; modest symptomatic benefit and complication reduction from antibiotics.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG84; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — IDSA, NICE NG84, AAFP.",
+    "verified_source_ids": [
+      "NICE_NG84"
+    ]
+  },
+  "references": {
+    "nice": "Sore throat (acute): antimicrobial prescribing (NG84) — https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+    "aafp": "AAFP — Streptococcal pharyngitis",
+    "bmj_best_practice": "BMJ Best Practice — Streptococcal pharyngitis / tonsillitis",
+    "msd_manual": "MSD Manual — Streptococcal Infections; Pharyngitis",
+    "merck_manual": "Merck Manual — Streptococcal Pharyngitis",
+    "uptodate": "UpToDate — Group A streptococcal tonsillopharyngitis in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine — Streptococcal Infections",
+    "oxford_handbook": "Oxford Handbook of General Practice — Sore throat / tonsillitis",
+    "who": "WHO — Rheumatic fever and rheumatic heart disease resources",
+    "cdc": "CDC — Group A Streptococcal (GAS) Disease; Strep Throat",
+    "idsa": "IDSA — Clinical Practice Guideline for Group A Streptococcal Pharyngitis",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG84",
+        "organization": "NICE",
+        "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute pharyngitis/tonsillitis scoring, self-care and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG84"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG84"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG84"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG84",
+        "organization": "NICE",
+        "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute pharyngitis/tonsillitis scoring, self-care and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Treat likely/confirmed streptococcal infection while avoiding unnecessary antibiotics.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Phenoxymethylpenicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG84.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "probability score/test result",
+      "EBV features",
+      "allergy reaction",
+      "complication risk"
+    ],
+    "non_drug_measures": [
+      "Hydration, rest and infection-control advice."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "alternative symptom relief",
+        "when_to_consider": "Pain or fever when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "Phenoxymethylpenicillin",
+        "medication_or_class": "Phenoxymethylpenicillin",
+        "option_type": "medication",
+        "role": "first-choice antibiotic",
+        "when_to_consider": "Guideline-defined likely streptococcal disease or high-risk/systemically unwell patient",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "Macrolide",
+        "medication_or_class": "Macrolide",
+        "option_type": "medication",
+        "role": "allergy alternative",
+        "when_to_consider": "True penicillin allergy",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "Avoid empiric amoxicillin when infectious mononucleosis is plausible because rash is common.",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent referral for airway compromise, deep-neck infection, toxic appearance or sepsis."
+    ],
+    "source_ids": [
+      "NICE_NG84"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

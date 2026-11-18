@@ -1,0 +1,755 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-029",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: each symptom on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh are estimates to verify.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-029",
+    "name": "Gastro-oesophageal reflux disease (GERD/GORD)",
+    "name_ar": "مرض الارتجاع المعدي المريئي",
+    "synonyms": [
+      "acid reflux",
+      "reflux oesophagitis",
+      "gastro-oesophageal reflux disease",
+      "GORD"
+    ],
+    "abbreviations": [
+      "GERD",
+      "GORD"
+    ],
+    "icd10": {
+      "code": "K21.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DA22",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "235595009",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D005764",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic / functional-structural gastrointestinal",
+    "organ_system": "Gastrointestinal (upper GI / oesophagus)",
+    "specialty": "Family medicine / Gastroenterology",
+    "emergency_level": "Routine — but red-flag symptoms (dysphagia, GI bleeding, weight loss) require urgent work-up; consider cardiac cause for chest pain",
+    "severity": "Usually mild-moderate and manageable; can cause oesophagitis, stricture, and Barrett's oesophagus (premalignant) if severe/chronic",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Troublesome symptoms and/or mucosal damage caused by reflux of gastric contents into the oesophagus, classically heartburn and acid regurgitation.",
+    "detailed_description": "GERD is one of the most common upper-GI conditions in primary care. It exists on a spectrum from non-erosive reflux disease (normal endoscopy) to erosive oesophagitis and complications (stricture, Barrett's oesophagus). Diagnosis in typical cases is clinical, and a therapeutic trial of acid suppression is both diagnostic and therapeutic. Investigation (endoscopy, pH studies) is reserved for red flags, atypical/refractory presentations, or Barrett's surveillance.",
+    "pathophysiology": "Reflux occurs when the anti-reflux barrier fails: transient lower-oesophageal-sphincter relaxations, low LOS tone, hiatus hernia, impaired oesophageal acid clearance, delayed gastric emptying, and raised intra-abdominal pressure (obesity, pregnancy). Refluxed acid/pepsin (and sometimes bile) injures oesophageal mucosa and stimulates sensory nerves, producing symptoms and, with chronicity, metaplasia (Barrett's).",
+    "etiology": "Multifactorial: hiatus hernia, obesity, pregnancy, dietary and lifestyle factors, smoking, certain drugs (see risk factors), and conditions delaying gastric emptying. Helicobacter pylori is not a cause of GERD (and may be inversely related in some patients).",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Often chronic/relapsing; many controlled with lifestyle and intermittent or continuous acid suppression. A minority progress to erosive disease, stricture, or Barrett's oesophagus (small annual risk of oesophageal adenocarcinoma).",
+    "prognosis": "Generally good; symptom control is achievable in most. Prognosis worsens with long-standing severe disease and Barrett's/dysplasia."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "~10-20% of adults in Western populations report weekly reflux symptoms; common worldwide and rising with obesity.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Very common presenting complaint in primary care.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Very low directly; relevance is via oesophageal adenocarcinoma risk in Barrett's oesophagus.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; prevalence increases with age; also common in pregnancy.",
+    "sex_predominance": "Roughly equal for symptoms; erosive disease and Barrett's/adenocarcinoma more common in men.",
+    "geographic_distribution": "Worldwide; higher symptom prevalence in Western/high-obesity populations.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Large/late meals, lying down after eating, trigger foods (fatty/spicy, caffeine, chocolate, peppermint, citrus, carbonated/alcoholic drinks).",
+    "smoking": "Lowers LOS tone and worsens reflux; cessation helps.",
+    "alcohol": "Relaxes LOS and irritates mucosa; worsens symptoms.",
+    "obesity": "Strong risk factor (raised intra-abdominal pressure, hiatus hernia); weight loss improves symptoms.",
+    "diabetes": "Autonomic neuropathy/gastroparesis can worsen reflux.",
+    "hypertension": "Not directly related (some antihypertensives e.g. calcium-channel blockers can worsen reflux).",
+    "pregnancy": "Common cause (hormonal LOS relaxation + mechanical pressure); usually resolves postpartum.",
+    "occupation": "Jobs involving bending/heavy lifting may aggravate.",
+    "travel": "Not relevant.",
+    "family_history": "Some familial clustering (and for Barrett's/adenocarcinoma).",
+    "genetic_factors": "Modest heritability.",
+    "medications": "Calcium-channel blockers, nitrates, anticholinergics, theophylline, bisphosphonates, NSAIDs (mucosal injury), some sedatives — can cause or worsen reflux/oesophagitis.",
+    "previous_diseases": "Hiatus hernia, scleroderma (oesophageal dysmotility), prior gastric surgery."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Heartburn (retrosternal burning)",
+      "frequency": "very common",
+      "importance": "Cardinal symptom",
+      "source": "NICE CG184; ACG",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Acid regurgitation / sour taste",
+      "frequency": "very common",
+      "importance": "Cardinal symptom",
+      "source": "NICE CG184; ACG",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Chest discomfort (non-cardiac)",
+      "frequency": "common",
+      "importance": "Must exclude cardiac cause first",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Chronic cough / hoarseness / throat clearing",
+      "frequency": "sometimes",
+      "importance": "Atypical / extra-oesophageal",
+      "source": "ACG",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Heartburn (retrosternal burning, worse after meals/lying down)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Cardinal symptom",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE CG184; ACG",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Acid/food regurgitation",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Cardinal symptom",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE CG184; ACG",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Symptoms worse lying flat/bending or at night, relieved by antacids",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Positional pattern supports reflux",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Waterbrash (excess salivation)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Supportive only",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Chronic cough / hoarseness / laryngitis / dental erosion (extra-oesophageal)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Low specificity - many other causes",
+      "stage": "Any",
+      "early_late": "Variable",
+      "source": "ACG",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Dysphagia (difficulty swallowing)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - suggests stricture or malignancy; needs endoscopy",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No dysphagia, odynophagia, weight loss, anaemia, GI bleeding, or vomiting",
+      "why_important": "Absence of alarm features supports uncomplicated GERD and empirical therapy without urgent endoscopy",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Pain not exertional and not relieved by rest/GTN",
+      "why_important": "Reduces (but does not exclude) cardiac cause of chest pain",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you get burning behind the breastbone or acid coming up, especially after meals or lying down?",
+      "why_ask": "Elicits cardinal reflux symptoms",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any difficulty or pain swallowing, food sticking, weight loss, black stools, vomiting blood, or persistent vomiting?",
+      "why_ask": "Screens for alarm features (stricture/malignancy/bleeding)",
+      "expected_answer": "Should be no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Is the chest discomfort brought on by exertion and relieved by rest?",
+      "why_ask": "Distinguishes cardiac chest pain from reflux",
+      "expected_answer": "No for reflux",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "What triggers it (foods, alcohol, large/late meals), and does it wake you at night?",
+      "why_ask": "Identifies lifestyle triggers and severity",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Do you take NSAIDs, bisphosphonates, calcium-channel blockers, or steroids?",
+      "why_ask": "Drugs that cause/worsen reflux or oesophageal injury",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Have you tried antacids/alginates and did they help?",
+      "why_ask": "Response supports reflux and guides therapy",
+      "expected_answer": "Often partial relief",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "General exam is usually normal",
+      "expected_finding": "No specific signs",
+      "importance": "Low (diagnosis is clinical)"
+    },
+    {
+      "examination": "Abdominal examination",
+      "expected_finding": "Usually normal; epigastric tenderness possible",
+      "importance": "Moderate (exclude other causes)"
+    },
+    {
+      "examination": "Weight/BMI and signs of anaemia",
+      "expected_finding": "Overweight common; pallor suggests bleeding/anaemia (alarm)",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Cardiovascular/respiratory exam if chest pain or atypical symptoms",
+      "expected_finding": "Normal in GERD",
+      "importance": "High if chest pain (exclude cardiac/respiratory cause)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Often raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Full blood count",
+      "indication": "If anaemia/bleeding suspected or alarm features",
+      "expected_result": "Usually normal; microcytic anaemia suggests chronic GI blood loss",
+      "normal_range": "Hb within age/sex reference",
+      "diagnostic_value": "Detects complications, not diagnostic of GERD",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine (urgent if bleeding)"
+    },
+    {
+      "test_name": "Helicobacter pylori testing (stool antigen or urea breath test)",
+      "indication": "Dyspepsia overlap / before long-term PPI in some pathways",
+      "expected_result": "Positive or negative",
+      "normal_range": "Negative",
+      "diagnostic_value": "Guides eradication in dyspepsia (H. pylori does not cause GERD)",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Barium swallow (rarely, e.g. suspected stricture/hiatus hernia if endoscopy unsuitable)",
+      "when_needed": "Selected cases",
+      "expected_findings": "Hiatus hernia, stricture, dysmotility"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If chest pain could be cardiac",
+    "findings": "Normal in GERD; used to help exclude ischaemia (does not fully exclude — clinical judgement/cardiac work-up as needed)."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Upper GI endoscopy (OGD): indicated for alarm features, age/risk-based new dyspepsia, refractory symptoms, or Barrett's surveillance. May show oesophagitis (Los Angeles grade), stricture, or Barrett's; often normal in non-erosive reflux disease.",
+    "biopsy": "Oesophageal biopsy if Barrett's/eosinophilic oesophagitis/malignancy suspected at endoscopy.",
+    "culture": "Not applicable",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Primarily clinical in typical cases: troublesome heartburn and/or acid regurgitation. A positive response to a PPI trial supports the diagnosis. Objective confirmation (when needed) is by endoscopy (erosive oesophagitis/Barrett's) or ambulatory 24-hour oesophageal pH (+/- impedance) monitoring showing abnormal acid exposure (e.g., % time pH <4 above threshold).",
+    "diagnostic_scores": "Symptom questionnaires (e.g., GERD-Q) can aid diagnosis and monitoring; not required.",
+    "cutoff_values": {
+      "value": "Ambulatory pH: abnormal oesophageal acid exposure typically defined as acid exposure time >6% (Lyon consensus); LA-grade C/D oesophagitis is diagnostic of GERD.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Cardiac ischaemia (angina/ACS)",
+      "why_similar": "Retrosternal/chest discomfort",
+      "differences": "Exertional, radiates to arm/jaw, associated dyspnoea/sweating",
+      "red_flags": "Acute cardiac symptoms",
+      "distinguishing_symptoms": "Exertional, not food-related",
+      "distinguishing_exam": "May be normal",
+      "distinguishing_labs": "Troponin",
+      "distinguishing_imaging": "ECG, stress testing",
+      "differential_questions": "Is it triggered by exertion and relieved by rest?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Peptic ulcer disease / dyspepsia",
+      "why_similar": "Epigastric/upper-GI symptoms",
+      "differences": "Epigastric pain, hunger/night pain, H. pylori/NSAID related",
+      "red_flags": "Bleeding, weight loss",
+      "distinguishing_symptoms": "Epigastric pain rather than burning behind sternum",
+      "distinguishing_exam": "Epigastric tenderness",
+      "distinguishing_labs": "H. pylori test",
+      "distinguishing_imaging": "Endoscopy",
+      "differential_questions": "Is the pain more in the stomach and related to hunger?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Eosinophilic oesophagitis",
+      "why_similar": "Reflux-like symptoms, dysphagia, PPI-refractory",
+      "differences": "Younger, atopic, food impaction, dysphagia",
+      "red_flags": "Food bolus obstruction",
+      "distinguishing_symptoms": "Dysphagia/food sticking",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Eosinophils on oesophageal biopsy",
+      "distinguishing_imaging": "Endoscopy (rings/furrows)",
+      "differential_questions": "Do you have allergies and food sticking?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Oesophageal/gastric malignancy",
+      "why_similar": "Reflux-type symptoms",
+      "differences": "Alarm features: progressive dysphagia, weight loss, anaemia, older age",
+      "red_flags": "Dysphagia, weight loss, GI bleeding",
+      "distinguishing_symptoms": "Progressive dysphagia, weight loss",
+      "distinguishing_exam": "Cachexia, mass, lymphadenopathy",
+      "distinguishing_labs": "Iron-deficiency anaemia",
+      "distinguishing_imaging": "Urgent endoscopy",
+      "differential_questions": "Any trouble swallowing or weight loss?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Biliary colic / gallstones",
+      "why_similar": "Upper abdominal/postprandial discomfort",
+      "differences": "RUQ pain after fatty meals, radiating to back/shoulder",
+      "red_flags": "Fever/jaundice (cholangitis)",
+      "distinguishing_symptoms": "RUQ colicky pain",
+      "distinguishing_exam": "RUQ tenderness",
+      "distinguishing_labs": "LFTs",
+      "distinguishing_imaging": "Abdominal ultrasound",
+      "differential_questions": "Is the pain right-sided after fatty food?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is your chest discomfort brought on by exertion and relieved by rest, or is it burning after meals/lying down?",
+      "target_disease": "GERD",
+      "competing_disease": "Cardiac ischaemia",
+      "purpose": "Safety triage of chest pain",
+      "interpretation": "Exertional -> assess cardiac urgently; postprandial burning -> supports reflux",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "question": "Do you have progressive difficulty swallowing or unintentional weight loss?",
+      "target_disease": "Oesophageal stricture/malignancy",
+      "competing_disease": "Uncomplicated GERD",
+      "purpose": "Detect alarm features",
+      "interpretation": "Positive -> urgent endoscopy referral",
+      "information_gain": "very high",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Typical heartburn, no alarm features, age-appropriate",
+      "question": "Would you like to try lifestyle changes plus a course of acid-suppressing medication and review response?",
+      "expected_answers": "Improves vs not",
+      "branching_logic": "Improves -> confirms/treats GERD, step down; No improvement -> reassess, consider endoscopy/pH study/other diagnosis",
+      "information_gain": "high"
+    },
+    {
+      "current_situation": "Chest pain, uncertain origin",
+      "question": "Any exertional component, breathlessness, sweating, or radiation to arm/jaw?",
+      "expected_answers": "Yes/No",
+      "branching_logic": "Yes -> cardiac pathway first; No -> reflux pathway",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Empirical PPI trial (e.g., 4-8 weeks)",
+      "why": "Diagnostic and therapeutic in typical cases without alarm features",
+      "expected_outcome": "Symptom relief supports GERD"
+    },
+    {
+      "test": "Upper GI endoscopy",
+      "why": "Alarm features, refractory symptoms, or Barrett's surveillance",
+      "expected_outcome": "Identifies oesophagitis, stricture, Barrett's, or malignancy"
+    },
+    {
+      "test": "Ambulatory 24-h pH (+/- impedance) monitoring",
+      "why": "Confirm reflux when diagnosis uncertain or before anti-reflux surgery, especially with normal endoscopy",
+      "expected_outcome": "Quantifies acid exposure"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Dysphagia or odynophagia (difficulty/pain swallowing)",
+      "immediate_action": "Urgent upper GI endoscopy referral (suspected stricture/malignancy)"
+    },
+    {
+      "finding": "Unintentional weight loss, iron-deficiency anaemia, or upper GI bleeding (haematemesis/melaena)",
+      "immediate_action": "Urgent (2-week-wait) endoscopy / acute assessment if active bleeding"
+    },
+    {
+      "finding": "Persistent vomiting or epigastric mass",
+      "immediate_action": "Urgent investigation for malignancy/obstruction"
+    },
+    {
+      "finding": "Chest pain with exertional features / cardiac risk",
+      "immediate_action": "Assess for acute coronary syndrome before attributing to reflux"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Alarm features (dysphagia, weight loss, GI bleeding, anaemia, mass, persistent vomiting) — urgent/2-week-wait endoscopy; Barrett's with dysplasia.",
+    "routine_referral": "Refractory symptoms despite optimised therapy, diagnostic uncertainty, consideration of anti-reflux surgery, Barrett's surveillance.",
+    "emergency_referral": "Active haematemesis/melaena with haemodynamic compromise; suspected acute coronary syndrome."
+  },
+  "complications": {
+    "early": [
+      "Reflux oesophagitis",
+      "Oesophageal ulcer / bleeding",
+      "Sleep disturbance, reduced quality of life"
+    ],
+    "late": [
+      "Peptic oesophageal stricture (dysphagia)",
+      "Barrett's oesophagus (metaplasia, premalignant)",
+      "Oesophageal adenocarcinoma (small long-term risk via Barrett's)",
+      "Dental erosion, chronic laryngitis, aspiration/asthma exacerbation"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Reassurance and explanation; identify and address triggers; assess for alarm features first.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Proton-pump inhibitor; H2-receptor antagonist; Antacid/alginate. No autonomous selection or dosing is allowed. Source IDs: NICE_CG184.",
+    "lifestyle_advice": "Weight loss if overweight, smaller and earlier evening meals, avoid trigger foods/alcohol/caffeine, stop smoking, raise the head of the bed, avoid lying down within ~3 hours of eating.",
+    "follow_up": "Review symptom response after the initial PPI course; step-down therapy; re-evaluate or investigate if no response, relapse on stopping, or new alarm features.",
+    "legacy_medications_pre_v13": "Antacids/alginates for immediate/intermittent relief; proton-pump inhibitor (PPI) for 4-8 weeks as first-line for troublesome symptoms/oesophagitis, then step down to lowest effective dose or on-demand; H2-receptor antagonist as alternative/add-on. Review and stop/avoid aggravating drugs where possible. Long-term/maintenance PPI for erosive oesophagitis or relapse; use lowest effective dose."
+  },
+  "patient_education": {
+    "home_advice": "Reflux is common and usually manageable. Eat smaller, earlier meals, avoid your trigger foods, alcohol and smoking, lose extra weight, and raise the head of your bed. Antacids help quickly; acid-reducing tablets help over weeks. See a doctor promptly if you have trouble swallowing, weight loss, black stools, or vomit blood.",
+    "home_advice_ar": "الارتجاع شائع ويمكن التحكم به عادةً. تناول وجبات أصغر وأبكر، وتجنّب الأطعمة المهيّجة والكحول والتدخين، وأنقِص الوزن الزائد، وارفع رأس السرير. مضادات الحموضة تريح بسرعة، وأدوية تقليل الحمض تفيد خلال أسابيع. راجع الطبيب فوراً إذا صعُب البلع أو نقص وزنك أو صار البراز أسود أو تقيّأت دماً.",
+    "prevention": "Weight control, avoiding late/large meals and known triggers, not smoking.",
+    "warning_signs": "Difficulty or pain on swallowing, food sticking, unintentional weight loss, black/tarry stools, vomiting blood, or exertional chest pain — seek prompt medical review."
+  },
+  "prevention": {
+    "vaccination": "Not applicable",
+    "lifestyle": "Weight management, dietary modification, smoking cessation, meal timing.",
+    "screening": "No population screening for GERD; endoscopic surveillance for diagnosed Barrett's oesophagus."
+  },
+  "evidence": {
+    "evidence_level": "High for PPI efficacy and lifestyle measures (RCTs and systematic reviews).",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_CG184; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — NICE CG184, ACG, BMJ Best Practice; Lyon consensus for objective diagnosis.",
+    "verified_source_ids": [
+      "NICE_CG184"
+    ]
+  },
+  "references": {
+    "nice": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184) — https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+    "aafp": "AAFP — GERD diagnosis and management",
+    "bmj_best_practice": "BMJ Best Practice — Gastro-oesophageal reflux disease",
+    "msd_manual": "MSD Manual — Gastroesophageal Reflux Disease (GERD)",
+    "merck_manual": "Merck Manual — Gastroesophageal Reflux Disease",
+    "uptodate": "UpToDate — Clinical manifestations and diagnosis of GERD in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine — Diseases of the Oesophagus",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine — Gastro-oesophageal reflux disease",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_CG184",
+        "organization": "NICE",
+        "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+        "publication_or_update": "2014; updated 2019 and safety links 2024",
+        "url": "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "GORD, dyspepsia, peptic ulcer and H. pylori test-and-treat",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_CG184"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_CG184"
+      ],
+      "red_flags_and_referral": [
+        "NICE_CG184"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_CG184",
+        "organization": "NICE",
+        "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+        "publication_or_update": "2014; updated 2019 and safety links 2024",
+        "url": "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "GORD, dyspepsia, peptic ulcer and H. pylori test-and-treat",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Control reflux, identify alarm features and use the lowest effective long-term therapy.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Proton-pump inhibitor; H2-receptor antagonist; Antacid/alginate. No autonomous selection or dosing is allowed. Source IDs: NICE_CG184.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "alarm features",
+      "pregnancy",
+      "long-term PPI risks",
+      "clopidogrel",
+      "NSAIDs/bisphosphonates",
+      "cardiac mimic"
+    ],
+    "non_drug_measures": [
+      "Weight management when relevant, avoid individual triggers, stop smoking, avoid late meals and elevate bed head for nocturnal symptoms."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Proton-pump inhibitor",
+        "medication_or_class": "Proton-pump inhibitor",
+        "option_type": "medication",
+        "role": "first-line healing/symptom control",
+        "when_to_consider": "Troublesome GORD or oesophagitis, followed by step-down when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ppi",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "long-term use, osteoporosis risk, low magnesium/B12/iron, C. difficile risk, severe liver disease, or clopidogrel interaction for some PPIs"
+            ],
+            "history_checks": [
+              "alarm symptoms",
+              "duration/indication",
+              "fracture risk",
+              "electrolyte/nutrient risk",
+              "clopidogrel"
+            ],
+            "monitoring": [
+              "response and ongoing indication; magnesium/B12/iron or bone risk when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG184"
+        ]
+      },
+      {
+        "option_name": "H2-receptor antagonist",
+        "medication_or_class": "H2-receptor antagonist",
+        "option_type": "medication",
+        "role": "alternative/add-on",
+        "when_to_consider": "Inadequate PPI response, intermittent symptoms or PPI intolerance",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "h2_blocker",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious reaction to the selected agent"
+            ],
+            "use_caution_if": [
+              "renal impairment, older/frail patient, or clinically important interacting medicines"
+            ],
+            "history_checks": [
+              "renal function",
+              "age/frailty",
+              "complete medicine list"
+            ],
+            "monitoring": [
+              "symptom response, renal-adjusted dosing and adverse cognitive effects where relevant"
+            ]
+          }
+        ],
+        "clinical_note": "Review renal function and interactions for the chosen agent.",
+        "source_ids": [
+          "NICE_CG184"
+        ]
+      },
+      {
+        "option_name": "Antacid/alginate",
+        "medication_or_class": "Antacid/alginate",
+        "option_type": "medication",
+        "role": "intermittent rescue",
+        "when_to_consider": "Short-term symptom relief",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "antacid_alginate",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious reaction to the selected product"
+            ],
+            "use_caution_if": [
+              "significant renal or heart disease, sodium restriction, electrolyte disorder, or medicines with absorption interactions"
+            ],
+            "history_checks": [
+              "renal/heart disease",
+              "electrolytes",
+              "sodium restriction",
+              "all medicine timing"
+            ],
+            "monitoring": [
+              "short-term response; separate interacting medicines according to product guidance"
+            ]
+          }
+        ],
+        "clinical_note": "Separate from medicines whose absorption can be affected.",
+        "source_ids": [
+          "NICE_CG184"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent/endoscopic pathway for dysphagia, bleeding, persistent vomiting, anaemia, weight loss or treatment-resistant symptoms."
+    ],
+    "source_ids": [
+      "NICE_CG184"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

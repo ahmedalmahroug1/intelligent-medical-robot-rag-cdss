@@ -1,0 +1,1232 @@
+{
+  "schema_version": "1.1",
+  "verification_policy": {
+    "rule_role": "pre-prescribing screening prompts, not a complete product label",
+    "required_before_prescribing": [
+      "select the exact active ingredient, formulation and route",
+      "check the current locally authorised product information or formulary",
+      "re-check contraindications, warnings, interactions, age, pregnancy, renal/hepatic dosing and monitoring",
+      "record the product/label version and review date"
+    ],
+    "official_label_portals": [
+      {
+        "name": "DailyMed (US National Library of Medicine)",
+        "url": "https://dailymed.nlm.nih.gov/dailymed/about-dailymed.cfm",
+        "limitation": "Contains current in-use labeling submitted to FDA; confirm approval/current FDA label and local applicability."
+      },
+      {
+        "name": "European Medicines Agency product information",
+        "url": "https://www.ema.europa.eu/en/glossary-terms/product-information",
+        "limitation": "Covers officially approved EU product information; confirm that the exact product is included and adapt to Libya."
+      }
+    ],
+    "libya_requirement": "A Libyan formulary or locally authorised product label must take precedence when available."
+  },
+  "rules": {
+    "paracetamol": {
+      "avoid_if": [
+        "severe active liver disease or prior serious reaction"
+      ],
+      "use_caution_if": [
+        "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+      ],
+      "history_checks": [
+        "liver disease",
+        "alcohol intake",
+        "all current OTC products"
+      ],
+      "monitoring": [
+        "total daily exposure and clinical response"
+      ]
+    },
+    "nsaid": {
+      "avoid_if": [
+        "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+      ],
+      "use_caution_if": [
+        "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+      ],
+      "history_checks": [
+        "ulcer/bleeding history",
+        "renal disease",
+        "heart failure",
+        "asthma reaction",
+        "pregnancy",
+        "anticoagulants"
+      ],
+      "monitoring": [
+        "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+      ]
+    },
+    "penicillin": {
+      "avoid_if": [
+        "documented immediate or severe delayed penicillin allergy"
+      ],
+      "use_caution_if": [
+        "renal impairment, prior C. difficile, or recent antibiotic exposure"
+      ],
+      "history_checks": [
+        "exact allergy reaction",
+        "renal function",
+        "recent antibiotics",
+        "local resistance"
+      ],
+      "monitoring": [
+        "clinical response, allergy and antibiotic-associated diarrhoea"
+      ]
+    },
+    "macrolide": {
+      "avoid_if": [
+        "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+      ],
+      "use_caution_if": [
+        "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+      ],
+      "history_checks": [
+        "ECG/QT history",
+        "liver disease",
+        "pregnancy",
+        "interacting medicines"
+      ],
+      "monitoring": [
+        "clinical response; ECG/electrolytes when risk is material"
+      ]
+    },
+    "doxycycline": {
+      "avoid_if": [
+        "pregnancy, breastfeeding where unsuitable, or tetracycline allergy"
+      ],
+      "use_caution_if": [
+        "oesophageal disease, liver disease, photosensitivity, or interacting iron/calcium/antacid products"
+      ],
+      "history_checks": [
+        "pregnancy possibility",
+        "swallowing/oesophageal disease",
+        "supplements and antacids"
+      ],
+      "monitoring": [
+        "clinical response and gastrointestinal/photosensitivity adverse effects"
+      ]
+    },
+    "decongestant": {
+      "avoid_if": [
+        "uncontrolled hypertension, severe coronary disease, or monoamine-oxidase inhibitor use"
+      ],
+      "use_caution_if": [
+        "pregnancy, arrhythmia, glaucoma, urinary retention/BPH, hyperthyroidism, or diabetes"
+      ],
+      "history_checks": [
+        "blood pressure",
+        "cardiac history",
+        "pregnancy",
+        "glaucoma",
+        "urinary symptoms",
+        "medicines"
+      ],
+      "monitoring": [
+        "blood pressure, palpitations and duration; topical products only briefly to avoid rebound congestion"
+      ]
+    },
+    "intranasal_steroid": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "recurrent epistaxis, recent nasal surgery/trauma, glaucoma, or concurrent high-dose corticosteroids"
+      ],
+      "history_checks": [
+        "nosebleeds",
+        "eye disease",
+        "other steroids",
+        "technique"
+      ],
+      "monitoring": [
+        "nasal irritation/bleeding, growth in children when prolonged, and total steroid burden"
+      ]
+    },
+    "topical_ear": {
+      "avoid_if": [
+        "ototoxic preparation when the tympanic membrane is perforated or a ventilation tube is present"
+      ],
+      "use_caution_if": [
+        "diabetes, immunocompromise, prior ear surgery, severe pain or cranial-nerve symptoms"
+      ],
+      "history_checks": [
+        "eardrum status",
+        "ear surgery/tubes",
+        "diabetes",
+        "immunosuppression"
+      ],
+      "monitoring": [
+        "response within 48-72 hours and signs of invasive disease"
+      ]
+    },
+    "oseltamivir": {
+      "avoid_if": [
+        "serious oseltamivir allergy"
+      ],
+      "use_caution_if": [
+        "renal impairment, severe vomiting, or neuropsychiatric history"
+      ],
+      "history_checks": [
+        "renal function",
+        "age/weight",
+        "pregnancy",
+        "illness severity and onset"
+      ],
+      "monitoring": [
+        "dose adjustment by renal function, clinical response, nausea/vomiting"
+      ]
+    },
+    "zanamivir": {
+      "avoid_if": [
+        "asthma, COPD, or prior bronchospasm with inhaled powder"
+      ],
+      "use_caution_if": [
+        "milk-protein allergy or inability to use inhaler correctly"
+      ],
+      "history_checks": [
+        "airways disease",
+        "inhaler ability",
+        "allergy"
+      ],
+      "monitoring": [
+        "bronchospasm and clinical response"
+      ]
+    },
+    "ics_airway": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "recurrent oral candidiasis, dysphonia, high cumulative steroid exposure, or poor inhaler technique"
+      ],
+      "history_checks": [
+        "current inhalers",
+        "exacerbations",
+        "adherence",
+        "technique",
+        "smoking",
+        "oral thrush"
+      ],
+      "monitoring": [
+        "symptom control, exacerbations, inhaler technique, oral effects and growth in children"
+      ]
+    },
+    "systemic_steroid": {
+      "avoid_if": [
+        "untreated serious systemic infection unless specialist-directed"
+      ],
+      "use_caution_if": [
+        "diabetes, severe hypertension, peptic ulcer, osteoporosis, glaucoma, psychiatric history, or recurrent courses"
+      ],
+      "history_checks": [
+        "infection",
+        "diabetes",
+        "blood pressure",
+        "bone/eye/psychiatric history"
+      ],
+      "monitoring": [
+        "glucose, blood pressure, mood, infection and cumulative exposure"
+      ]
+    },
+    "bronchodilator": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "tachyarrhythmia, ischaemic heart disease, hypokalaemia, urinary retention or narrow-angle glaucoma depending on class"
+      ],
+      "history_checks": [
+        "arrhythmia",
+        "heart disease",
+        "potassium",
+        "glaucoma",
+        "urinary retention"
+      ],
+      "monitoring": [
+        "heart rate, tremor, potassium when high-dose, symptoms and inhaler technique"
+      ]
+    },
+    "ace_arb": {
+      "avoid_if": [
+        "pregnancy, prior ACE-inhibitor angioedema for ACE inhibitors, bilateral renal artery stenosis, or severe hyperkalaemia"
+      ],
+      "use_caution_if": [
+        "chronic kidney disease, dehydration, low blood pressure, or potassium-raising medicines"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "angioedema",
+        "renal disease",
+        "potassium",
+        "NSAIDs/diuretics"
+      ],
+      "monitoring": [
+        "creatinine/eGFR, potassium and blood pressure before and after initiation/titration"
+      ]
+    },
+    "ccb": {
+      "avoid_if": [
+        "class-specific contraindication such as severe hypotension; avoid verapamil/diltiazem in HFrEF"
+      ],
+      "use_caution_if": [
+        "heart failure, bradycardia/heart block, constipation, oedema, or interacting medicines"
+      ],
+      "history_checks": [
+        "heart-failure phenotype",
+        "heart rate/ECG",
+        "bowel symptoms",
+        "medicines"
+      ],
+      "monitoring": [
+        "blood pressure, heart rate, oedema and constipation"
+      ]
+    },
+    "diuretic": {
+      "avoid_if": [
+        "anuria or severe electrolyte depletion"
+      ],
+      "use_caution_if": [
+        "gout, diabetes, hyponatraemia, dehydration, kidney disease, or lithium use"
+      ],
+      "history_checks": [
+        "renal function",
+        "electrolytes",
+        "gout",
+        "lithium",
+        "volume status"
+      ],
+      "monitoring": [
+        "electrolytes, renal function, blood pressure, weight and gout symptoms"
+      ]
+    },
+    "mra": {
+      "avoid_if": [
+        "significant hyperkalaemia or renal function below the product/guideline threshold"
+      ],
+      "use_caution_if": [
+        "CKD, ACE inhibitor/ARB/ARNI use, potassium supplements, or dehydration"
+      ],
+      "history_checks": [
+        "renal function",
+        "potassium",
+        "concomitant renin-angiotensin medicines"
+      ],
+      "monitoring": [
+        "potassium and renal function at baseline and after initiation/titration"
+      ]
+    },
+    "statin": {
+      "avoid_if": [
+        "pregnancy/breastfeeding or active serious liver disease"
+      ],
+      "use_caution_if": [
+        "prior muscle toxicity, hypothyroidism, heavy alcohol use, renal impairment, or CYP-interacting medicines"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "liver disease",
+        "muscle symptoms",
+        "thyroid disease",
+        "interactions"
+      ],
+      "monitoring": [
+        "baseline liver tests; repeat as guideline directs; CK only when muscle symptoms/risk warrant"
+      ]
+    },
+    "metformin": {
+      "avoid_if": [
+        "severe renal impairment below the licensed threshold or acute metabolic acidosis"
+      ],
+      "use_caution_if": [
+        "acute illness/dehydration, hypoxia, liver failure, heavy alcohol use, contrast studies, or vitamin B12 deficiency"
+      ],
+      "history_checks": [
+        "eGFR",
+        "acute illness",
+        "hypoxia",
+        "alcohol",
+        "contrast procedures",
+        "B12 risk"
+      ],
+      "monitoring": [
+        "eGFR, gastrointestinal tolerance, HbA1c and periodic B12 in at-risk patients"
+      ]
+    },
+    "sglt2": {
+      "avoid_if": [
+        "active diabetic ketoacidosis or inability to follow sick-day rules"
+      ],
+      "use_caution_if": [
+        "recurrent genital infection, volume depletion, low carbohydrate intake, frailty, CKD, pregnancy, or planned surgery"
+      ],
+      "history_checks": [
+        "DKA history",
+        "renal function",
+        "infection history",
+        "volume status",
+        "pregnancy",
+        "surgery/fasting"
+      ],
+      "monitoring": [
+        "renal function, volume status, genital/urinary symptoms; ketones when unwell; temporary withholding during acute illness/fasting/surgery"
+      ]
+    },
+    "glp1": {
+      "avoid_if": [
+        "pregnancy or serious product allergy"
+      ],
+      "use_caution_if": [
+        "prior pancreatitis, severe gastroparesis, gallbladder disease, dehydration risk, or concurrent insulin/sulfonylurea"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "pancreatitis",
+        "gastroparesis",
+        "gallstones",
+        "hypoglycaemic medicines"
+      ],
+      "monitoring": [
+        "weight, glucose, gastrointestinal tolerance, hydration and symptoms of pancreatitis/gallbladder disease"
+      ]
+    },
+    "orlistat": {
+      "avoid_if": [
+        "chronic malabsorption or cholestasis"
+      ],
+      "use_caution_if": [
+        "warfarin, ciclosporin, antiepileptics, levothyroxine, kidney-stone risk, or fat-soluble vitamin deficiency"
+      ],
+      "history_checks": [
+        "malabsorption",
+        "biliary disease",
+        "medicines",
+        "vitamin status"
+      ],
+      "monitoring": [
+        "weight, gastrointestinal effects, interacting-drug levels and fat-soluble vitamins when prolonged"
+      ]
+    },
+    "levothyroxine": {
+      "avoid_if": [
+        "untreated thyrotoxicosis or uncorrected adrenal insufficiency"
+      ],
+      "use_caution_if": [
+        "coronary disease, arrhythmia, older/frail patient, pregnancy, or malabsorption"
+      ],
+      "history_checks": [
+        "cardiac history",
+        "pregnancy",
+        "adrenal disease",
+        "iron/calcium/antacid use",
+        "adherence"
+      ],
+      "monitoring": [
+        "TSH after initiation/dose changes and periodically; closer monitoring in pregnancy and cardiac disease"
+      ]
+    },
+    "antithyroid": {
+      "avoid_if": [
+        "previous severe reaction to the selected antithyroid medicine"
+      ],
+      "use_caution_if": [
+        "pregnancy trimester, liver disease, baseline neutropenia, or interacting anticoagulation"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "liver disease",
+        "blood-count history",
+        "prior reaction"
+      ],
+      "monitoring": [
+        "thyroid function; urgent full blood count for fever/sore throat; liver assessment for hepatic symptoms"
+      ]
+    },
+    "beta_blocker": {
+      "avoid_if": [
+        "severe bradycardia, high-grade heart block without pacing, or cardiogenic shock"
+      ],
+      "use_caution_if": [
+        "asthma/COPD, peripheral vascular disease, diabetes with hypoglycaemia, or acute decompensated heart failure"
+      ],
+      "history_checks": [
+        "heart rate/ECG",
+        "airways disease",
+        "heart failure",
+        "diabetes"
+      ],
+      "monitoring": [
+        "heart rate, blood pressure, bronchospasm and heart-failure symptoms"
+      ]
+    },
+    "colchicine": {
+      "avoid_if": [
+        "severe renal/hepatic impairment with strong CYP3A4 or P-gp inhibitor use"
+      ],
+      "use_caution_if": [
+        "CKD, liver disease, older/frail patient, statin use, macrolides, or neuromuscular disease"
+      ],
+      "history_checks": [
+        "renal/liver function",
+        "macrolides and other interactions",
+        "statin",
+        "neuromuscular symptoms"
+      ],
+      "monitoring": [
+        "gastrointestinal toxicity, blood count/CK when toxicity suspected"
+      ]
+    },
+    "urate_lowering": {
+      "avoid_if": [
+        "previous severe hypersensitivity to the selected medicine"
+      ],
+      "use_caution_if": [
+        "CKD, cardiovascular disease (especially for febuxostat choice), interacting azathioprine/mercaptopurine, or high hypersensitivity-risk ancestry"
+      ],
+      "history_checks": [
+        "renal/liver function",
+        "CVD",
+        "prior rash",
+        "azathioprine/mercaptopurine",
+        "ancestry where HLA testing is recommended"
+      ],
+      "monitoring": [
+        "serum urate treat-to-target, renal/liver function and urgent review for rash/systemic symptoms"
+      ]
+    },
+    "oral_iron": {
+      "avoid_if": [
+        "iron overload or anaemia not caused by iron deficiency"
+      ],
+      "use_caution_if": [
+        "active GI disease, severe constipation, malabsorption, ongoing bleeding, or interactions with levothyroxine/tetracyclines/quinolones/antacids"
+      ],
+      "history_checks": [
+        "confirmed iron deficiency",
+        "cause of blood loss",
+        "GI history",
+        "medicines"
+      ],
+      "monitoring": [
+        "haemoglobin response, ferritin/iron stores and tolerance; investigate failure to respond"
+      ]
+    },
+    "vitamin_d": {
+      "avoid_if": [
+        "hypercalcaemia or vitamin D toxicity"
+      ],
+      "use_caution_if": [
+        "renal stones, severe CKD, granulomatous disease, hyperparathyroidism, digoxin or thiazide use"
+      ],
+      "history_checks": [
+        "calcium",
+        "renal disease/stones",
+        "sarcoidosis/TB",
+        "parathyroid disease",
+        "medicines"
+      ],
+      "monitoring": [
+        "calcium and 25-hydroxyvitamin D when treating deficiency; renal function in high-risk patients"
+      ]
+    },
+    "vitamin_b12": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "severe hypokalaemia risk during brisk haematologic response, uncertain diagnosis, or folate deficiency"
+      ],
+      "history_checks": [
+        "cause of deficiency",
+        "neurological signs",
+        "diet",
+        "malabsorption/surgery",
+        "metformin/PPI/nitrous oxide"
+      ],
+      "monitoring": [
+        "clinical and haematologic response; investigate cause; do not delay treatment for neurological compromise"
+      ]
+    },
+    "nitrate": {
+      "avoid_if": [
+        "concurrent PDE-5 inhibitor or riociguat use, or severe hypotension"
+      ],
+      "use_caution_if": [
+        "aortic stenosis, hypertrophic obstructive cardiomyopathy, volume depletion or recurrent syncope"
+      ],
+      "history_checks": [
+        "erectile-dysfunction/pulmonary-hypertension medicines",
+        "blood pressure",
+        "valve disease",
+        "syncope"
+      ],
+      "monitoring": [
+        "blood pressure, symptom frequency and headache; emergency action if pain persists"
+      ]
+    },
+    "antiplatelet": {
+      "avoid_if": [
+        "active major bleeding or serious aspirin allergy for aspirin"
+      ],
+      "use_caution_if": [
+        "ulcer history, anticoagulation, thrombocytopenia, asthma sensitive to aspirin, renal disease, or older/frail patient"
+      ],
+      "history_checks": [
+        "bleeding/ulcer history",
+        "allergy/asthma",
+        "anticoagulants",
+        "platelet disorder"
+      ],
+      "monitoring": [
+        "bleeding symptoms and haemoglobin when indicated"
+      ]
+    },
+    "doac": {
+      "avoid_if": [
+        "active major bleeding, mechanical heart valve, or anticoagulant-specific contraindication"
+      ],
+      "use_caution_if": [
+        "renal/liver impairment, prior GI/intracranial bleed, frailty/falls, interacting medicines, pregnancy, or adherence concern"
+      ],
+      "history_checks": [
+        "valve disease",
+        "renal/liver function",
+        "bleeding history",
+        "pregnancy",
+        "interactions",
+        "adherence"
+      ],
+      "monitoring": [
+        "renal/liver function at guideline intervals, haemoglobin, bleeding and adherence; use licensed dose criteria"
+      ]
+    },
+    "ppi": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "long-term use, osteoporosis risk, low magnesium/B12/iron, C. difficile risk, severe liver disease, or clopidogrel interaction for some PPIs"
+      ],
+      "history_checks": [
+        "alarm symptoms",
+        "duration/indication",
+        "fracture risk",
+        "electrolyte/nutrient risk",
+        "clopidogrel"
+      ],
+      "monitoring": [
+        "response and ongoing indication; magnesium/B12/iron or bone risk when clinically indicated"
+      ]
+    },
+    "h_pylori_regimen": {
+      "avoid_if": [
+        "use of clarithromycin- or levofloxacin-containing empiric therapy without susceptibility/local-resistance justification"
+      ],
+      "use_caution_if": [
+        "penicillin allergy, pregnancy, QT risk, liver/renal disease, prior macrolide/fluoroquinolone exposure, or anticoagulation"
+      ],
+      "history_checks": [
+        "allergy details",
+        "prior antibiotics",
+        "pregnancy",
+        "QT/interactions",
+        "local resistance"
+      ],
+      "monitoring": [
+        "adherence/adverse effects and mandatory test of cure using an accepted method after the recommended washout"
+      ]
+    },
+    "loperamide": {
+      "avoid_if": [
+        "bloody diarrhoea, high fever, suspected invasive infection/C. difficile, ileus, toxic megacolon, or young child without specialist direction"
+      ],
+      "use_caution_if": [
+        "liver disease, acute ulcerative colitis flare, dehydration, or uncertain diagnosis"
+      ],
+      "history_checks": [
+        "blood/fever",
+        "recent antibiotics",
+        "travel",
+        "IBD",
+        "age",
+        "dehydration"
+      ],
+      "monitoring": [
+        "stop if worsening pain/distension, fever, blood or lack of improvement"
+      ]
+    },
+    "laxative": {
+      "avoid_if": [
+        "suspected bowel obstruction, perforation, or acute surgical abdomen"
+      ],
+      "use_caution_if": [
+        "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+      ],
+      "history_checks": [
+        "obstruction/red flags",
+        "impaction",
+        "renal function",
+        "hydration",
+        "medicines causing constipation"
+      ],
+      "monitoring": [
+        "stool response, hydration and electrolytes when risk/product warrants"
+      ]
+    },
+    "topical_anorectal": {
+      "avoid_if": [
+        "serious product allergy"
+      ],
+      "use_caution_if": [
+        "undiagnosed rectal bleeding, infection, prolonged corticosteroid exposure, pregnancy, hypotension or headache depending on agent"
+      ],
+      "history_checks": [
+        "bleeding red flags",
+        "pregnancy",
+        "duration",
+        "blood pressure",
+        "PDE-5 inhibitor use for topical nitrate"
+      ],
+      "monitoring": [
+        "short duration for steroid/anaesthetic products; symptom response and local adverse effects"
+      ]
+    },
+    "adrenaline_autoinjector": {
+      "avoid_if": [
+        "no absolute contraindication when anaphylaxis is suspected; do not withhold because of cardiac disease or pregnancy"
+      ],
+      "use_caution_if": [
+        "beta-blocker use or significant cardiac disease does not remove the emergency indication but requires specialist planning"
+      ],
+      "history_checks": [
+        "previous reaction severity",
+        "asthma control",
+        "beta-blocker/ACE inhibitor",
+        "ability to use and access two in-date devices"
+      ],
+      "monitoring": [
+        "training, expiry dates, carriage and emergency action-plan understanding"
+      ]
+    },
+    "antihistamine": {
+      "avoid_if": [
+        "previous serious reaction to the selected antihistamine"
+      ],
+      "use_caution_if": [
+        "renal/hepatic impairment, pregnancy, glaucoma/urinary retention for anticholinergic agents, sedation-sensitive work or driving, or other sedatives"
+      ],
+      "history_checks": [
+        "exact agent",
+        "renal/liver function",
+        "pregnancy",
+        "glaucoma/urinary retention",
+        "driving/work",
+        "sedatives and alcohol"
+      ],
+      "monitoring": [
+        "sedation, anticholinergic effects and symptom response"
+      ]
+    },
+    "warfarin": {
+      "avoid_if": [
+        "active major bleeding, pregnancy except specialist-defined indications, or inability to provide safe INR monitoring"
+      ],
+      "use_caution_if": [
+        "high bleeding risk, liver disease, poor adherence, unstable diet/alcohol intake, falls, or interacting medicines/antibiotics"
+      ],
+      "history_checks": [
+        "bleeding history",
+        "pregnancy",
+        "liver function",
+        "adherence",
+        "diet/alcohol",
+        "complete interaction list"
+      ],
+      "monitoring": [
+        "INR at protocol-defined intervals, bleeding, interactions and time in therapeutic range"
+      ]
+    },
+    "insulin_hypoglycaemia": {
+      "avoid_if": [
+        "no absolute disease-wide exclusion when insulin is urgently required; selection must be clinician-directed"
+      ],
+      "use_caution_if": [
+        "recurrent hypoglycaemia, renal/hepatic impairment, frailty, irregular meals, driving, cognitive impairment, or concomitant glucose-lowering medicines"
+      ],
+      "history_checks": [
+        "hypoglycaemia history",
+        "renal/liver function",
+        "meal pattern",
+        "driving",
+        "self-management ability",
+        "other diabetes medicines"
+      ],
+      "monitoring": [
+        "glucose/HbA1c, hypoglycaemia, weight, injection technique and sick-day management"
+      ]
+    },
+    "h2_blocker": {
+      "avoid_if": [
+        "serious reaction to the selected agent"
+      ],
+      "use_caution_if": [
+        "renal impairment, older/frail patient, or clinically important interacting medicines"
+      ],
+      "history_checks": [
+        "renal function",
+        "age/frailty",
+        "complete medicine list"
+      ],
+      "monitoring": [
+        "symptom response, renal-adjusted dosing and adverse cognitive effects where relevant"
+      ]
+    },
+    "antacid_alginate": {
+      "avoid_if": [
+        "serious reaction to the selected product"
+      ],
+      "use_caution_if": [
+        "significant renal or heart disease, sodium restriction, electrolyte disorder, or medicines with absorption interactions"
+      ],
+      "history_checks": [
+        "renal/heart disease",
+        "electrolytes",
+        "sodium restriction",
+        "all medicine timing"
+      ],
+      "monitoring": [
+        "short-term response; separate interacting medicines according to product guidance"
+      ]
+    },
+    "ezetimibe": {
+      "avoid_if": [
+        "active serious liver disease when combined with a statin, or serious product reaction"
+      ],
+      "use_caution_if": [
+        "pregnancy, hepatic impairment, prior muscle symptoms, ciclosporin, warfarin, or concomitant statin/fibrate"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "liver disease",
+        "muscle history",
+        "complete interaction list"
+      ],
+      "monitoring": [
+        "lipid response, liver tests when combined/indicated, and muscle symptoms"
+      ]
+    },
+    "advanced_lipid": {
+      "avoid_if": [
+        "agent-specific contraindication or serious product reaction"
+      ],
+      "use_caution_if": [
+        "pregnancy, hepatic/renal impairment, gout for bempedoic acid, injection reaction risk, or major interacting therapy"
+      ],
+      "history_checks": [
+        "exact agent and indication",
+        "pregnancy",
+        "renal/liver function",
+        "gout/tendon history",
+        "interactions"
+      ],
+      "monitoring": [
+        "lipid response and agent-specific adverse effects under formulary/specialist protocol"
+      ]
+    },
+    "liothyronine": {
+      "avoid_if": [
+        "untreated thyrotoxicosis or uncorrected adrenal insufficiency"
+      ],
+      "use_caution_if": [
+        "coronary disease, arrhythmia, older/frail patient, pregnancy, osteoporosis, or concomitant thyroid hormone"
+      ],
+      "history_checks": [
+        "specialist indication",
+        "cardiac history",
+        "pregnancy",
+        "bone risk",
+        "current thyroid dose"
+      ],
+      "monitoring": [
+        "TSH and thyroid hormones, pulse/ECG when indicated, symptoms and bone/cardiac adverse effects"
+      ]
+    },
+    "oral_rehydration": {
+      "avoid_if": [
+        "unsafe oral route because of shock, ileus, altered consciousness or persistent uncontrollable vomiting"
+      ],
+      "use_caution_if": [
+        "heart failure, advanced renal disease, severe electrolyte disturbance, diabetes, or need for precisely controlled fluids"
+      ],
+      "history_checks": [
+        "dehydration severity",
+        "ability to drink",
+        "renal/heart disease",
+        "electrolytes/glucose when indicated"
+      ],
+      "monitoring": [
+        "hydration, urine output, weight and electrolytes when clinically indicated"
+      ]
+    },
+    "iv_iron": {
+      "avoid_if": [
+        "active serious hypersensitivity to the selected preparation"
+      ],
+      "use_caution_if": [
+        "active infection, pregnancy trimester, severe liver disease, prior infusion reaction, or phosphate-depletion risk"
+      ],
+      "history_checks": [
+        "prior infusion reaction",
+        "infection",
+        "pregnancy",
+        "liver disease",
+        "phosphate risk",
+        "calculated iron need"
+      ],
+      "monitoring": [
+        "observed infusion reaction, haemoglobin/iron response and phosphate for preparations/risk groups where indicated"
+      ]
+    },
+    "antispasmodic": {
+      "avoid_if": [
+        "agent-specific serious reaction or mechanical bowel obstruction"
+      ],
+      "use_caution_if": [
+        "glaucoma, urinary retention/prostatic obstruction, constipation, tachyarrhythmia, pregnancy, older/frail patient, or anticholinergic burden"
+      ],
+      "history_checks": [
+        "bowel pattern/obstruction",
+        "glaucoma",
+        "urinary symptoms",
+        "cardiac history",
+        "pregnancy",
+        "anticholinergic medicines"
+      ],
+      "monitoring": [
+        "symptom response, constipation, urinary retention, vision/cognitive adverse effects"
+      ]
+    },
+    "tca": {
+      "avoid_if": [
+        "recent myocardial infarction, significant conduction disorder, uncontrolled mania, or concomitant MAOI"
+      ],
+      "use_caution_if": [
+        "suicide/overdose risk, epilepsy, glaucoma, urinary retention, constipation, older/frail patient, pregnancy, QT-prolonging or serotonergic medicines"
+      ],
+      "history_checks": [
+        "mental-health and overdose risk",
+        "ECG/cardiac history",
+        "seizures",
+        "glaucoma/urinary retention",
+        "pregnancy",
+        "interactions"
+      ],
+      "monitoring": [
+        "response, mood/suicidality, anticholinergic effects, blood pressure and ECG when risk warrants; taper rather than abrupt cessation"
+      ]
+    },
+    "hbv_antiviral": {
+      "avoid_if": [
+        "agent-specific serious reaction"
+      ],
+      "use_caution_if": [
+        "renal impairment, osteoporosis/bone risk, pregnancy, HIV coinfection, decompensated cirrhosis, or prior antiviral resistance"
+      ],
+      "history_checks": [
+        "confirmed HBV DNA/serology",
+        "cirrhosis",
+        "renal/bone status",
+        "pregnancy",
+        "HIV/coinfection",
+        "prior antivirals"
+      ],
+      "monitoring": [
+        "HBV DNA, ALT, renal/bone parameters by agent, adherence and hepatocellular-carcinoma surveillance when indicated; avoid unsafe abrupt withdrawal"
+      ]
+    },
+    "hcv_daa": {
+      "avoid_if": [
+        "unresolved major interaction or regimen contraindication"
+      ],
+      "use_caution_if": [
+        "decompensated cirrhosis, HBV coinfection/reactivation risk, pregnancy considerations, severe renal disease, prior DAA failure, or interacting acid suppressants/statins/anticonvulsants/herbals"
+      ],
+      "history_checks": [
+        "active HCV RNA",
+        "cirrhosis stage",
+        "HBV/HIV",
+        "renal function",
+        "pregnancy",
+        "full interaction list",
+        "prior treatment"
+      ],
+      "monitoring": [
+        "adherence, liver safety where indicated and sustained virologic response testing after treatment"
+      ]
+    },
+    "calcium": {
+      "avoid_if": [
+        "hypercalcaemia or serious product reaction"
+      ],
+      "use_caution_if": [
+        "renal stones, CKD, hyperparathyroidism, cardiovascular risk, constipation, or interactions with levothyroxine/iron/bisphosphonates/selected antibiotics"
+      ],
+      "history_checks": [
+        "calcium level",
+        "renal function/stones",
+        "dietary intake",
+        "hyperparathyroidism",
+        "medicine timing"
+      ],
+      "monitoring": [
+        "calcium and renal/stone risk when indicated; avoid unnecessary high total intake"
+      ]
+    },
+    "allergen_immunotherapy": {
+      "avoid_if": [
+        "uncontrolled asthma or inability to manage anaphylaxis risk in an appropriate specialist setting"
+      ],
+      "use_caution_if": [
+        "pregnancy initiation, beta-blocker/ACE-inhibitor use, cardiovascular disease, prior systemic reaction, or adherence/access limitations"
+      ],
+      "history_checks": [
+        "confirmed allergen",
+        "asthma control",
+        "pregnancy",
+        "cardiac disease",
+        "beta-blocker/ACE inhibitor",
+        "prior reactions"
+      ],
+      "monitoring": [
+        "specialist-observed reactions, asthma control, adherence and emergency preparedness"
+      ]
+    },
+    "nitrofurantoin": {
+      "avoid_if": [
+        "suspected pyelonephritis/systemic infection, significant renal impairment below the current product threshold, previous nitrofurantoin lung/liver injury, or serious allergy"
+      ],
+      "use_caution_if": [
+        "pregnancy near term, G6PD deficiency, anaemia, pulmonary or hepatic disease, peripheral neuropathy, older/frail patient, or repeated/prolonged courses"
+      ],
+      "history_checks": [
+        "upper-UTI symptoms",
+        "eGFR",
+        "pregnancy stage",
+        "G6PD/anaemia",
+        "lung/liver/neuropathy history",
+        "previous nitrofurantoin exposure"
+      ],
+      "monitoring": [
+        "clinical response, renal eligibility, and pulmonary/hepatic/neurological symptoms; reassess promptly if systemic symptoms develop"
+      ]
+    },
+    "trimethoprim": {
+      "avoid_if": [
+        "serious trimethoprim allergy, severe folate-deficiency blood disorder, or pregnancy when contraindicated by the selected product/local guideline"
+      ],
+      "use_caution_if": [
+        "renal impairment, hyperkalaemia risk, folate deficiency, older/frail patient, or ACE inhibitor/ARB/MRA/potassium/methotrexate interaction"
+      ],
+      "history_checks": [
+        "pregnancy",
+        "renal function",
+        "potassium",
+        "blood-count/folate history",
+        "methotrexate and potassium-raising medicines",
+        "prior culture/resistance"
+      ],
+      "monitoring": [
+        "clinical response; potassium, renal function and blood count when risk or duration warrants"
+      ]
+    },
+    "cephalosporin": {
+      "avoid_if": [
+        "previous serious cephalosporin reaction; avoid selected beta-lactam if cross-reactive severe allergy risk is unacceptable"
+      ],
+      "use_caution_if": [
+        "renal impairment, prior severe penicillin reaction, previous C. difficile, recent antibiotics, or seizure risk with selected high-dose agents"
+      ],
+      "history_checks": [
+        "exact beta-lactam allergy reaction",
+        "renal function",
+        "C. difficile history",
+        "recent antibiotics",
+        "culture and local resistance"
+      ],
+      "monitoring": [
+        "clinical response, allergy, renal-adjusted dosing and antibiotic-associated diarrhoea"
+      ]
+    },
+    "fluoroquinolone": {
+      "avoid_if": [
+        "previous serious quinolone reaction or previous disabling/long-lasting fluoroquinolone adverse effect"
+      ],
+      "use_caution_if": [
+        "pregnancy, children unless specialist indication, tendon disorder/corticosteroid use, aortic aneurysm risk, QT prolongation, myasthenia gravis, seizure/neuropathy, renal impairment, diabetes, or interacting cations/medicines"
+      ],
+      "history_checks": [
+        "availability of safer effective alternatives",
+        "pregnancy/age",
+        "tendon/aortic/neurological history",
+        "QT and interactions",
+        "renal function",
+        "culture susceptibility"
+      ],
+      "monitoring": [
+        "stop and seek review for tendon, neurological, psychiatric, severe glucose or aortic symptoms; monitor response and renal dosing"
+      ]
+    },
+    "aminoglycoside": {
+      "avoid_if": [
+        "serious aminoglycoside allergy or inability to provide required drug-level/renal monitoring"
+      ],
+      "use_caution_if": [
+        "renal impairment, dehydration, older/frail patient, hearing/vestibular disease, myasthenia gravis, pregnancy, or other nephrotoxic/ototoxic medicines"
+      ],
+      "history_checks": [
+        "renal function and hydration",
+        "hearing/balance",
+        "neuromuscular disease",
+        "pregnancy",
+        "weight",
+        "nephrotoxic/ototoxic medicines"
+      ],
+      "monitoring": [
+        "serum drug concentrations per protocol, creatinine/eGFR, urine output and auditory/vestibular toxicity"
+      ]
+    },
+    "opioid": {
+      "avoid_if": [
+        "severe respiratory depression, acute severe asthma without monitoring, paralytic ileus, or serious product reaction"
+      ],
+      "use_caution_if": [
+        "older/frail patient, sleep apnoea/COPD, renal/hepatic impairment, pregnancy, constipation, falls, substance-use history, or sedative/gabapentinoid/alcohol use"
+      ],
+      "history_checks": [
+        "respiratory disease",
+        "renal/liver function",
+        "pregnancy",
+        "bowel obstruction/constipation",
+        "falls",
+        "substance use",
+        "all sedatives"
+      ],
+      "monitoring": [
+        "sedation, respiratory rate, pain response, constipation, nausea and duration; use the shortest appropriate course"
+      ]
+    },
+    "urology_alpha_blocker": {
+      "avoid_if": [
+        "symptomatic severe hypotension or serious product reaction"
+      ],
+      "use_caution_if": [
+        "postural hypotension/syncope, falls, cataract surgery, PDE-5 inhibitor/other antihypertensive use, hepatic/renal impairment, or pregnancy when used off-label for stones"
+      ],
+      "history_checks": [
+        "lying/standing blood pressure",
+        "falls/syncope",
+        "cataract surgery plans",
+        "PDE-5 inhibitors and antihypertensives",
+        "renal/liver function",
+        "pregnancy"
+      ],
+      "monitoring": [
+        "blood pressure, dizziness/falls, symptom response and ejaculatory adverse effects; alert cataract surgeon"
+      ]
+    },
+    "five_alpha_reductase": {
+      "avoid_if": [
+        "pregnancy exposure to crushed/leaking product or serious product reaction"
+      ],
+      "use_caution_if": [
+        "liver disease, planned PSA interpretation, sexual/fertility concerns, depression history, or suspected prostate cancer"
+      ],
+      "history_checks": [
+        "prostate size/PSA before treatment",
+        "cancer red flags",
+        "liver disease",
+        "sexual/fertility priorities",
+        "mood history",
+        "pregnant household contact"
+      ],
+      "monitoring": [
+        "symptoms and adverse effects; PSA must be interpreted in light of therapy; response is delayed and requires scheduled review"
+      ]
+    },
+    "antimuscarinic_bladder": {
+      "avoid_if": [
+        "urinary retention, gastric retention, uncontrolled narrow-angle glaucoma, or serious product reaction"
+      ],
+      "use_caution_if": [
+        "high post-void residual/obstruction, cognitive impairment, older/frail patient, constipation, autonomic neuropathy, QT risk, or anticholinergic burden"
+      ],
+      "history_checks": [
+        "retention/residual risk",
+        "glaucoma",
+        "cognition",
+        "bowel function",
+        "cardiac/QT history",
+        "all anticholinergic medicines"
+      ],
+      "monitoring": [
+        "voiding/retention, cognition, constipation, dry mouth, vision and symptom response"
+      ]
+    },
+    "potassium_citrate": {
+      "avoid_if": [
+        "hyperkalaemia, severe renal impairment, untreated Addison disease, delayed gastric emptying/obstruction, or serious product reaction"
+      ],
+      "use_caution_if": [
+        "ACE inhibitor/ARB/MRA/potassium use, heart disease, active UTI with selected salts, gastrointestinal ulceration risk, or sodium/potassium restriction"
+      ],
+      "history_checks": [
+        "stone type and urine chemistry",
+        "potassium and renal function",
+        "GI disease",
+        "cardiac disease",
+        "potassium-raising medicines"
+      ],
+      "monitoring": [
+        "serum potassium/renal function and urine pH/stone-risk parameters according to the prevention plan"
+      ]
+    },
+    "fosfomycin": {
+      "avoid_if": [
+        "serious fosfomycin reaction or use for suspected upper/systemic UTI where adequate renal-tissue treatment is required"
+      ],
+      "use_caution_if": [
+        "significant renal impairment, pregnancy, recurrent/complicated infection, or high sodium load for selected IV formulations"
+      ],
+      "history_checks": [
+        "upper-UTI features",
+        "renal function",
+        "pregnancy",
+        "culture/resistance",
+        "infection complexity and formulation"
+      ],
+      "monitoring": [
+        "clinical response, gastrointestinal adverse effects and culture-directed reassessment"
+      ]
+    },
+    "beta3_bladder": {
+      "avoid_if": [
+        "severe uncontrolled hypertension for mirabegron or serious product reaction"
+      ],
+      "use_caution_if": [
+        "hypertension, tachyarrhythmia/QT risk, urinary retention/obstruction, renal/hepatic impairment, pregnancy, or interacting CYP medicines depending on agent"
+      ],
+      "history_checks": [
+        "blood pressure",
+        "pulse/arrhythmia",
+        "retention risk",
+        "renal/liver function",
+        "pregnancy",
+        "interactions"
+      ],
+      "monitoring": [
+        "blood pressure, pulse, urinary retention and symptom response"
+      ]
+    }
+  }
+}

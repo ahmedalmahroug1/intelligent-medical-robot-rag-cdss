@@ -1,0 +1,755 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-022",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-022",
+    "name": "Gout",
+    "name_ar": "النقرس",
+    "synonyms": [
+      "gouty arthritis",
+      "urate crystal arthropathy",
+      "podagra (first MTP)"
+    ],
+    "abbreviations": [
+      "MSU"
+    ],
+    "icd10": {
+      "code": "M10.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "FA25",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "90560007",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "138900",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D006073",
+      "basis": "estimate"
+    },
+    "disease_category": "Crystal arthropathy / metabolic",
+    "organ_system": "Musculoskeletal / metabolic",
+    "specialty": "Family medicine / Rheumatology",
+    "emergency_level": "Routine - but exclude septic arthritis (emergency) in an acute hot joint",
+    "severity": "Painful acute attacks; chronic tophaceous disease and joint damage if untreated",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A crystal arthritis caused by deposition of monosodium urate crystals due to chronic hyperuricaemia, presenting as acute, severe, self-limiting attacks of a hot, swollen joint (classically the big toe).",
+    "detailed_description": "Gout is the commonest inflammatory arthritis. Acute attacks are intensely painful monoarthritis, often of the first metatarsophalangeal joint (podagra). It results from long-standing raised serum urate leading to crystal deposition; attacks are triggered by fluctuations in urate. Management is anti-inflammatory treatment of attacks plus long-term urate-lowering therapy (treat-to-target) to prevent recurrence and tophi. The key safety step is excluding septic arthritis in an acute hot joint.",
+    "pathophysiology": "Sustained hyperuricaemia (overproduction or, more often, renal under-excretion of urate) leads to monosodium urate crystal formation in and around joints; crystals trigger an intense innate inflammatory response (NLRP3 inflammasome, IL-1beta).",
+    "etiology": "Hyperuricaemia from reduced renal excretion (most), increased production (purine-rich diet, alcohol - especially beer, high fructose, cell turnover), or drugs (diuretics, low-dose aspirin, ciclosporin). Genetic and metabolic-syndrome associations.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Recurrent acute attacks over years; without urate lowering, progresses to chronic tophaceous gout with joint damage; associated with cardiovascular and renal disease.",
+    "prognosis": "Excellent with effective urate-lowering therapy to target; poor adherence leads to recurrent attacks and joint damage."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common; affects a few percent of adults, rising with age and metabolic syndrome.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increasing with obesity/diet; strongly male-predominant.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low directly; associated with increased cardiovascular/renal risk.",
+      "basis": "estimate"
+    },
+    "age_groups": "Middle-aged and older adults; postmenopausal women.",
+    "sex_predominance": "Much more common in men (women's risk rises after menopause).",
+    "geographic_distribution": "Worldwide; higher with Western diets.",
+    "seasonal_pattern": "None strong."
+  },
+  "risk_factors": {
+    "lifestyle": "Purine-rich diet (red meat, shellfish), sugary/fructose drinks, dehydration.",
+    "smoking": "Not a major factor.",
+    "alcohol": "Strong risk factor, especially beer and spirits.",
+    "obesity": "Strong risk factor (part of metabolic syndrome).",
+    "diabetes": "Associated (metabolic syndrome).",
+    "hypertension": "Associated; some antihypertensives (diuretics) raise urate.",
+    "pregnancy": "Uncommon in premenopausal women.",
+    "occupation": "Not directly relevant.",
+    "travel": "Not relevant.",
+    "family_history": "Common; genetic influences on urate handling.",
+    "genetic_factors": "Polymorphisms in urate transporters; rare enzyme disorders.",
+    "medications": "Thiazide/loop diuretics, low-dose aspirin, ciclosporin/tacrolimus.",
+    "previous_diseases": "Chronic kidney disease, hypertension, obesity, dyslipidaemia; prior gout."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sudden severe pain, redness and swelling of a joint (often the big toe)",
+      "frequency": "very common",
+      "importance": "Classic acute presentation",
+      "source": "NICE NG219; ACR/EULAR",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Recurrent attacks in the same/other joints",
+      "frequency": "common",
+      "importance": "Suggests established gout",
+      "source": "ACR/EULAR",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Lumps under the skin (tophi)",
+      "frequency": "sometimes",
+      "importance": "Chronic tophaceous gout",
+      "source": "EULAR",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Acute monoarthritis - rapid-onset severe pain, swelling, redness, warmth",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Cardinal acute presentation; peaks within ~24h",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "ACR/EULAR",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "First metatarsophalangeal joint involvement (podagra)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Classic site; strongly suggestive when present",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "ACR/EULAR",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Extreme tenderness (even bedsheet unbearable)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Marked inflammation",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Tophi (firm urate deposits, e.g., ear, fingers, Achilles)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Indicates chronic untreated hyperuricaemia",
+      "stage": "Chronic",
+      "early_late": "Late",
+      "source": "EULAR",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever/systemic upset with a hot joint",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Overlaps with septic arthritis - must exclude infection",
+      "stage": "Acute",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Joint aspirate with NO organisms/negative culture but negatively birefringent urate crystals",
+      "why_important": "Confirms gout and excludes septic arthritis (the key differential)",
+      "absence_significance": "excludes if absent",
+      "source": "EULAR",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No fever, gradual onset, polyarticular pattern without prior gout",
+      "why_important": "Makes acute gout less likely; consider other arthritides",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Did the pain come on rapidly (hours) and is it very severe in one joint, especially the big toe?",
+      "why_ask": "Rapid, severe monoarthritis (podagra) is typical of gout",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Have you had similar attacks before, and any tophi?",
+      "why_ask": "Recurrence/tophi support established gout",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any fever or feeling systemically unwell?",
+      "why_ask": "Screens for septic arthritis (safety)",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Alcohol intake, diet, diuretics/aspirin, kidney disease?",
+      "why_ask": "Identifies causes/triggers to modify",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any cardiovascular/renal disease or metabolic syndrome features?",
+      "why_ask": "Associated comorbidity and drug-safety for urate lowering",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Affected joint",
+      "expected_finding": "Hot, red, swollen, exquisitely tender (often first MTP)",
+      "importance": "High"
+    },
+    {
+      "examination": "Look for tophi (ears, fingers, elbows, Achilles)",
+      "expected_finding": "Firm chalky deposits in chronic gout",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Temperature and systemic assessment",
+      "expected_finding": "Usually afebrile; fever raises concern for infection",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Assess other joints and cardiovascular/renal status",
+      "expected_finding": "Comorbidity",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Usually normal (low-grade fever can occur; high fever suggests sepsis)",
+    "heart_rate": "Normal",
+    "blood_pressure": "Often raised (comorbid)",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Often raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Joint aspiration (synovial fluid) for crystals and culture",
+      "indication": "Definitive diagnosis and to EXCLUDE septic arthritis",
+      "expected_result": "Negatively birefringent needle-shaped MSU crystals; no organisms",
+      "normal_range": "",
+      "diagnostic_value": "Gold standard; excludes infection",
+      "rule_in": "MSU crystals",
+      "rule_out": "Positive culture -> septic arthritis",
+      "urgency": "Urgent if infection possible"
+    },
+    {
+      "test_name": "Serum urate",
+      "indication": "Support diagnosis and guide urate-lowering therapy (check ~2-4 weeks after an attack settles, as it can be normal/low acutely)",
+      "expected_result": "Usually raised (may be normal during an acute attack)",
+      "normal_range": "Target <360 micromol/L (<300 if tophi/severe)",
+      "diagnostic_value": "Supportive; treat-to-target",
+      "rule_in": "",
+      "rule_out": "A normal level during an attack does not exclude gout",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC/CRP, U&E, glucose, lipids",
+      "indication": "Assess inflammation, renal function and comorbidity",
+      "expected_result": "Raised inflammatory markers in attacks",
+      "normal_range": "",
+      "diagnostic_value": "Supportive/comorbidity",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Joint X-ray",
+      "when_needed": "Chronic/erosive disease or uncertainty",
+      "expected_findings": "Punched-out erosions with overhanging edges in chronic gout"
+    },
+    {
+      "imaging_type": "Ultrasound / dual-energy CT (selective)",
+      "when_needed": "Diagnostic uncertainty",
+      "expected_findings": "Double-contour sign / urate deposition"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Tophus aspiration/biopsy shows urate crystals if needed",
+    "culture": "Synovial fluid culture to exclude septic arthritis",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Definitive diagnosis is demonstration of monosodium urate crystals in synovial fluid or a tophus. A confident clinical diagnosis can be made for a typical acute podagra with hyperuricaemia and prior similar attacks; the ACR/EULAR classification criteria can support diagnosis.",
+    "diagnostic_scores": "ACR/EULAR 2015 classification criteria.",
+    "cutoff_values": {
+      "value": "Urate-lowering treat-to-target: serum urate <360 micromol/L (6 mg/dL), or <300 micromol/L for tophaceous/severe disease (EULAR/ACR).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Septic arthritis",
+      "why_similar": "Acute hot, swollen, painful joint",
+      "differences": "Systemically unwell/fever, cannot be excluded clinically - MUST aspirate",
+      "red_flags": "Joint destruction/sepsis",
+      "distinguishing_symptoms": "Fever, systemic illness",
+      "distinguishing_exam": "Very hot joint, unwell",
+      "distinguishing_labs": "Aspirate: organisms/positive culture",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have a fever or feel systemically unwell?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Pseudogout (CPPD)",
+      "why_similar": "Acute crystal arthritis",
+      "differences": "Often knee/wrist, older, positively birefringent rhomboid crystals, chondrocalcinosis",
+      "red_flags": "",
+      "distinguishing_symptoms": "Larger joints",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "CPPD crystals in aspirate",
+      "distinguishing_imaging": "Chondrocalcinosis on X-ray",
+      "differential_questions": "Is it a larger joint like the knee/wrist in an older person?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Cellulitis",
+      "why_similar": "Red, hot, swollen area",
+      "differences": "Skin infection pattern, spreading erythema, portal of entry, less joint-centred",
+      "red_flags": "Sepsis",
+      "distinguishing_symptoms": "Skin (not joint) focus",
+      "distinguishing_exam": "Diffuse skin erythema, less joint-line tenderness",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the redness in the skin rather than centred on the joint?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Reactive/other inflammatory arthritis",
+      "why_similar": "Joint inflammation",
+      "differences": "Preceding infection, other joints/eyes/skin involvement",
+      "red_flags": "",
+      "distinguishing_symptoms": "Recent GI/GU infection, other features",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Negative for MSU",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any recent infection or other joint/eye/skin symptoms?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have a fever or feel systemically unwell with this hot joint?",
+      "target_disease": "Septic arthritis",
+      "competing_disease": "Gout",
+      "purpose": "Do not miss joint infection",
+      "interpretation": "Fever/systemic illness -> aspirate urgently to exclude sepsis",
+      "information_gain": "very high",
+      "source": "EULAR",
+      "basis": "sourced"
+    },
+    {
+      "question": "Did it come on within hours in the big toe, and have you had similar attacks before?",
+      "target_disease": "Gout",
+      "competing_disease": "Other arthritis",
+      "purpose": "Recognise typical gout",
+      "interpretation": "Rapid podagra + prior attacks -> gout likely",
+      "information_gain": "high",
+      "source": "ACR/EULAR",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Acute hot, swollen joint",
+      "question": "Any fever/systemic illness, and is this a typical rapid big-toe attack with prior episodes?",
+      "expected_answers": "Typical gout vs possible infection",
+      "branching_logic": "Systemically unwell/uncertain -> urgent aspiration to exclude septic arthritis; typical gout -> treat the attack + plan urate-lowering",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Joint aspiration (if infection possible or diagnosis uncertain)",
+      "why": "Confirms crystals and excludes septic arthritis",
+      "expected_outcome": "MSU crystals, no organisms"
+    },
+    {
+      "test": "Serum urate (after attack) + renal function",
+      "why": "Guides treat-to-target urate lowering safely",
+      "expected_outcome": "Baseline for therapy"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Hot, swollen joint with fever or systemic illness",
+      "immediate_action": "Treat as possible septic arthritis - urgent aspiration/orthopaedic referral before assuming gout"
+    },
+    {
+      "finding": "Multiple joints, immunosuppression, or prosthetic joint involved",
+      "immediate_action": "Urgent assessment - higher infection risk"
+    },
+    {
+      "finding": "Rapidly progressive joint destruction or systemic sepsis",
+      "immediate_action": "Emergency management"
+    },
+    {
+      "finding": "Severe tophaceous disease with renal impairment",
+      "immediate_action": "Specialist rheumatology input for urate lowering"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected septic arthritis (emergency); diagnostic uncertainty needing aspiration.",
+    "routine_referral": "Refractory/frequent attacks, tophaceous gout, urate-lowering difficulties (CKD, intolerance), or uncertain diagnosis.",
+    "emergency_referral": "Septic arthritis / joint sepsis."
+  },
+  "complications": {
+    "early": [
+      "Recurrent acute attacks",
+      "Misdiagnosed septic arthritis (if not excluded)"
+    ],
+    "late": [
+      "Chronic tophaceous gout with joint damage",
+      "Urate nephropathy / renal stones",
+      "Associated cardiovascular and renal disease"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Rest and elevate the joint; ice; explain the condition and the plan for prevention.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Colchicine; Corticosteroid; Allopurinol or other urate-lowering therapy. No autonomous selection or dosing is allowed. Source IDs: NICE_NG219.",
+    "lifestyle_advice": "Reduce alcohol (especially beer) and sugary/fructose drinks, moderate purine-rich foods, weight loss, hydration; review diuretics; manage cardiovascular/renal risk.",
+    "follow_up": "Titrate urate-lowering therapy to target serum urate; monitor renal function and attack frequency.",
+    "legacy_medications_pre_v13": "Acute attack: NSAID (with gastroprotection) OR colchicine OR corticosteroid (oral/intra-articular), chosen by comorbidity/renal function - start early. Long-term: offer urate-lowering therapy (allopurinol first-line; febuxostat alternative) treat-to-target, especially with recurrent attacks, tophi, renal stones, or CKD; start after an attack settles with prophylaxis (low-dose colchicine or NSAID) during initiation; do NOT stop urate-lowering therapy during an acute attack if already established."
+  },
+  "patient_education": {
+    "home_advice": "Gout is caused by uric acid crystals in the joint, giving sudden very painful, red, swollen attacks (often the big toe). Treat attacks early with the medicine your doctor advises. To prevent attacks long-term, a daily tablet (like allopurinol) lowers uric acid - keep taking it every day, even between attacks. Cut down alcohol and sugary drinks, lose excess weight, and drink water. Seek urgent care if a hot joint comes with fever, as that could be a joint infection.",
+    "home_advice_ar": "النقرس سببه بلورات حمض اليوريك في المفصل، فتحدث نوبات مفاجئة شديدة الألم مع احمرار وتورّم (غالباً إبهام القدم). عالِج النوبات مبكراً بالدواء الذي يصفه طبيبك. وللوقاية طويلة الأمد، حبة يومية (مثل الألوبيورينول) تخفض حمض اليوريك - استمرّ عليها يومياً حتى بين النوبات. قلّل الكحول والمشروبات السكرية، وأنقِص الوزن الزائد، واشرب الماء. اطلب الرعاية العاجلة إذا صاحب المفصل الحار حرارةٌ، فقد يكون عدوى في المفصل.",
+    "prevention": "Weight management, limit alcohol/sugary drinks, hydration, urate-lowering therapy to target.",
+    "warning_signs": "Hot joint with fever/feeling unwell (possible infection), or frequent recurrent attacks."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Diet, alcohol reduction, weight loss, hydration; review urate-raising drugs.",
+    "screening": "Not applicable (manage hyperuricaemia when symptomatic)."
+  },
+  "evidence": {
+    "evidence_level": "High for acute treatments and treat-to-target urate lowering.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG219; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG219, EULAR, ACR, BSR.",
+    "verified_source_ids": [
+      "NICE_NG219"
+    ]
+  },
+  "references": {
+    "nice": "Gout: diagnosis and management (NG219) — https://www.nice.org.uk/guidance/ng219/chapter/Recommendations",
+    "aafp": "AAFP - Gout diagnosis and management",
+    "bmj_best_practice": "BMJ Best Practice - Gout",
+    "msd_manual": "MSD Manual - Gout",
+    "merck_manual": "Merck Manual - Gout",
+    "uptodate": "UpToDate - Clinical manifestations and diagnosis of gout; treatment",
+    "harrisons": "Harrison's Principles of Internal Medicine - Gout and Other Crystal Arthropathies",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Gout",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "ACP - Management of acute and recurrent gout",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG219",
+        "organization": "NICE",
+        "title": "Gout: diagnosis and management (NG219)",
+        "publication_or_update": "2022",
+        "url": "https://www.nice.org.uk/guidance/ng219/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Gout flare treatment and treat-to-target urate-lowering therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG219"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG219"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG219"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG219",
+        "organization": "NICE",
+        "title": "Gout: diagnosis and management (NG219)",
+        "publication_or_update": "2022",
+        "url": "https://www.nice.org.uk/guidance/ng219/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Gout flare treatment and treat-to-target urate-lowering therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Treat flares promptly and reduce recurrent crystal burden using treat-to-target urate lowering.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Colchicine; Corticosteroid; Allopurinol or other urate-lowering therapy. No autonomous selection or dosing is allowed. Source IDs: NICE_NG219.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "renal/liver function",
+      "ulcer/bleeding/CVD",
+      "infection/septic-joint risk",
+      "interacting medicines",
+      "attack frequency/tophi/stones"
+    ],
+    "non_drug_measures": [
+      "Hydration, healthy weight and review of alcohol/diet and urate-raising medicines without blaming the patient."
+    ],
+    "medication_options": [
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "flare treatment",
+        "when_to_consider": "One first-line option after comorbidity review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG219"
+        ]
+      },
+      {
+        "option_name": "Colchicine",
+        "medication_or_class": "Colchicine",
+        "option_type": "medication",
+        "role": "flare treatment/prophylaxis",
+        "when_to_consider": "Alternative based on renal function and interactions",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "colchicine",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe renal/hepatic impairment with strong CYP3A4 or P-gp inhibitor use"
+            ],
+            "use_caution_if": [
+              "CKD, liver disease, older/frail patient, statin use, macrolides, or neuromuscular disease"
+            ],
+            "history_checks": [
+              "renal/liver function",
+              "macrolides and other interactions",
+              "statin",
+              "neuromuscular symptoms"
+            ],
+            "monitoring": [
+              "gastrointestinal toxicity, blood count/CK when toxicity suspected"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG219"
+        ]
+      },
+      {
+        "option_name": "Corticosteroid",
+        "medication_or_class": "Corticosteroid",
+        "option_type": "medication",
+        "role": "flare treatment",
+        "when_to_consider": "When NSAID/colchicine are unsuitable or intra-articular therapy is appropriate",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "systemic_steroid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "untreated serious systemic infection unless specialist-directed"
+            ],
+            "use_caution_if": [
+              "diabetes, severe hypertension, peptic ulcer, osteoporosis, glaucoma, psychiatric history, or recurrent courses"
+            ],
+            "history_checks": [
+              "infection",
+              "diabetes",
+              "blood pressure",
+              "bone/eye/psychiatric history"
+            ],
+            "monitoring": [
+              "glucose, blood pressure, mood, infection and cumulative exposure"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG219"
+        ]
+      },
+      {
+        "option_name": "Allopurinol or other urate-lowering therapy",
+        "medication_or_class": "Allopurinol or other urate-lowering therapy",
+        "option_type": "medication",
+        "role": "long-term prevention",
+        "when_to_consider": "Recurrent/troublesome gout, tophi, CKD or other guideline indication",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "urate_lowering",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "previous severe hypersensitivity to the selected medicine"
+            ],
+            "use_caution_if": [
+              "CKD, cardiovascular disease (especially for febuxostat choice), interacting azathioprine/mercaptopurine, or high hypersensitivity-risk ancestry"
+            ],
+            "history_checks": [
+              "renal/liver function",
+              "CVD",
+              "prior rash",
+              "azathioprine/mercaptopurine",
+              "ancestry where HLA testing is recommended"
+            ],
+            "monitoring": [
+              "serum urate treat-to-target, renal/liver function and urgent review for rash/systemic symptoms"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG219"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent joint aspiration/assessment when septic arthritis cannot be excluded."
+    ],
+    "source_ids": [
+      "NICE_NG219"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

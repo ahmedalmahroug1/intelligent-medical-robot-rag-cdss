@@ -1,0 +1,13 @@
+pyserial>=3.5
+numpy>=1.24
+opencv-python>=4.8
+insightface>=0.7.3
+onnxruntime>=1.16
+edge-tts>=6.1
+pygame>=2.5
+faster-whisper>=1.0
+sounddevice>=0.4
+
+# Optional face-recognition fallback; this installs a much larger TensorFlow stack.
+deepface>=0.0.92
+tf-keras>=2.16

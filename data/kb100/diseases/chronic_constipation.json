@@ -1,0 +1,749 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-034",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-034",
+    "name": "Chronic constipation",
+    "name_ar": "الإمساك المزمن",
+    "synonyms": [
+      "constipation",
+      "functional constipation",
+      "slow-transit constipation"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "K59.00",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "ME05.0",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "14760008",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D003248",
+      "basis": "estimate"
+    },
+    "disease_category": "Functional/lower gastrointestinal",
+    "organ_system": "Gastrointestinal (colon/rectum)",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine - but red flags (bleeding, weight loss, new onset >50) need investigation; faecal impaction/obstruction can be urgent",
+    "severity": "Common and usually benign; can cause significant discomfort and complications",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Persistently infrequent, difficult, or incomplete defecation (hard stools, straining) for at least several months, usually functional and managed with lifestyle measures and laxatives.",
+    "detailed_description": "Chronic constipation is very common, especially in women, the elderly and those on certain drugs. Most is functional/primary. Management is a stepped approach: lifestyle (fibre, fluids, activity, toileting), then laxatives (bulk-forming, then osmotic/stimulant, then newer agents). The main safety task is to identify red flags suggesting colorectal cancer or obstruction and to recognise and treat faecal impaction.",
+    "pathophysiology": "Reduced colonic motility (slow transit), disordered defecation (pelvic floor dyssynergia), and/or a normal-transit functional disorder produce hard, infrequent or difficult-to-pass stool; low fibre/fluid and inactivity contribute.",
+    "etiology": "Primary/functional (most). Secondary: drugs (opioids, iron, anticholinergics, calcium-channel blockers, some antidepressants), metabolic/endocrine (hypothyroidism, hypercalcaemia, diabetes), neurological (Parkinson's, spinal disease), obstruction (stricture, cancer), painful anorectal conditions, and reduced mobility/dehydration.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Often chronic/relapsing; responds to lifestyle and laxatives in most.",
+    "prognosis": "Good; the concern is missing an underlying secondary cause (especially colorectal cancer)."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; affects a substantial proportion of adults, more with age and in women.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High; increases with age, immobility and medication use.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Very low directly; relevant via complications or an underlying cause.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; commoner in the elderly.",
+    "sex_predominance": "More common in women.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Low-fibre diet, low fluid intake, physical inactivity, ignoring the urge to defecate.",
+    "smoking": "Not a major factor.",
+    "alcohol": "Dehydration can contribute.",
+    "obesity": "Not a major direct factor.",
+    "diabetes": "Autonomic neuropathy can slow transit.",
+    "hypertension": "Some antihypertensives (calcium-channel blockers) contribute.",
+    "pregnancy": "Common (hormonal and mechanical, plus iron).",
+    "occupation": "Sedentary work; poor toilet access.",
+    "travel": "Change in routine/diet.",
+    "family_history": "Colorectal cancer history (red flag consideration).",
+    "genetic_factors": "Not typically relevant.",
+    "medications": "Opioids (very common cause), iron, anticholinergics, calcium-channel blockers, some antidepressants/antipsychotics, antacids (aluminium/calcium).",
+    "previous_diseases": "Hypothyroidism, hypercalcaemia, Parkinson's, spinal cord disease, anorectal disease, prior obstruction."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Infrequent bowel movements",
+      "frequency": "very common",
+      "importance": "Core symptom",
+      "source": "NICE CKS; Rome IV",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Straining and hard/lumpy stools",
+      "frequency": "very common",
+      "importance": "Core symptoms",
+      "source": "Rome IV",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Sensation of incomplete emptying / bloating",
+      "frequency": "common",
+      "importance": "Supportive",
+      "source": "Rome IV",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Infrequent defecation (e.g., <3 times/week)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core Rome feature",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "Rome IV",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Straining and hard/lumpy stools",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core features",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "Rome IV",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Sensation of incomplete evacuation / anorectal blockage",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Supports (esp. defecatory disorder)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "Rome IV",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Bloating and abdominal discomfort",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Overflow (spurious) diarrhoea / soiling (with impaction)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Suggests faecal impaction (do not treat as simple diarrhoea)",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Rectal bleeding, weight loss, or new onset >50 (RED FLAGS)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "RED FLAGS - investigate for colorectal cancer/obstruction",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE (suspected cancer)",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No rectal bleeding, weight loss, anaemia, abdominal/rectal mass, or new change >50",
+      "why_important": "Absence of red flags supports benign functional constipation",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No features of obstruction (severe pain, distension, vomiting, no flatus)",
+      "why_important": "Argues against bowel obstruction",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How often do you open your bowels, and are stools hard with straining or incomplete emptying?",
+      "why_ask": "Defines constipation and possible defecatory disorder",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any rectal bleeding, weight loss, or a recent change in bowel habit (especially over 50)?",
+      "why_ask": "Red flags for colorectal cancer (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "What medications do you take (especially opioids, iron)?",
+      "why_ask": "Very common secondary cause",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any symptoms of hypothyroidism, or neurological disease?",
+      "why_ask": "Secondary metabolic/neurological causes",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any severe pain, distension, vomiting, or not passing wind (obstruction)?",
+      "why_ask": "Screens for obstruction/impaction (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Abdominal examination",
+      "expected_finding": "May feel loaded colon; a mass or distension is a red flag",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Rectal examination (if indicated)",
+      "expected_finding": "Hard stool/impaction; assess for mass, and anorectal disease; pelvic floor function",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Signs of a secondary cause (thyroid, neurological)",
+      "expected_finding": "Usually normal",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable (weight loss is a red flag)"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Selective bloods (FBC, calcium, TFTs, glucose)",
+      "indication": "If a secondary cause is suspected or red flags present",
+      "expected_result": "Identify hypothyroidism, hypercalcaemia, anaemia",
+      "normal_range": "",
+      "diagnostic_value": "Excludes secondary/serious causes",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Faecal immunochemical test (FIT) / referral per cancer pathway",
+      "indication": "Red flags or change in bowel habit",
+      "expected_result": "Guides urgent colorectal investigation",
+      "normal_range": "",
+      "diagnostic_value": "Cancer pathway",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "As per pathway"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Abdominal X-ray (selective)",
+      "when_needed": "Suspected impaction/obstruction",
+      "expected_findings": "Faecal loading; obstruction features"
+    },
+    {
+      "imaging_type": "Colonoscopy/CT (as per cancer pathway)",
+      "when_needed": "Red flags",
+      "expected_findings": "Excludes/identifies colorectal pathology"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Colonoscopy for red flags / to exclude organic disease",
+    "biopsy": "As part of colonoscopy if indicated",
+    "culture": "Not applicable",
+    "pcr": "Not applicable",
+    "anorectal_physiology": "Anorectal manometry/defecography for suspected defecatory disorder (specialist)"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical (Rome IV functional constipation): >=2 of straining, hard/lumpy stools, sensation of incomplete evacuation, sensation of anorectal obstruction, manual manoeuvres, and <3 spontaneous bowel movements/week - for the last 3 months (onset >=6 months). Exclude red flags and secondary causes.",
+    "diagnostic_scores": "Bristol stool chart; Rome IV criteria.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Colorectal cancer / obstruction",
+      "why_similar": "Change in bowel habit, constipation",
+      "differences": "Bleeding, weight loss, older, mass, progressive",
+      "red_flags": "Bleeding, weight loss, obstruction",
+      "distinguishing_symptoms": "New persistent change >50",
+      "distinguishing_exam": "Mass",
+      "distinguishing_labs": "Anaemia, FIT",
+      "distinguishing_imaging": "Colonoscopy/CT",
+      "differential_questions": "Any bleeding, weight loss, or new change over 50?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Secondary constipation (drugs, hypothyroidism, hypercalcaemia, neurological)",
+      "why_similar": "Constipation",
+      "differences": "Underlying cause present",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "TFTs, calcium",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you take opioids/iron, or have thyroid/neurological disease?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Defecatory (pelvic floor) disorder",
+      "why_similar": "Difficult evacuation",
+      "differences": "Excessive straining, digitation, incomplete emptying with normal transit",
+      "red_flags": "",
+      "distinguishing_symptoms": "Need to manually assist",
+      "distinguishing_exam": "Abnormal pelvic floor coordination",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "Anorectal physiology",
+      "differential_questions": "Do you strain a lot or need to press to empty despite the urge?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Faecal impaction with overflow",
+      "why_similar": "Soiling/'diarrhoea'",
+      "differences": "Impaction on examination; overflow leakage",
+      "red_flags": "",
+      "distinguishing_symptoms": "Soiling with underlying constipation",
+      "distinguishing_exam": "Loaded rectum",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "AXR faecal loading",
+      "differential_questions": "Do you have leakage/soiling with a blocked feeling?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Any rectal bleeding, weight loss, or a new persistent change in bowel habit (especially over 50)?",
+      "target_disease": "Colorectal cancer",
+      "competing_disease": "Functional constipation",
+      "purpose": "Do not miss colorectal cancer",
+      "interpretation": "Red flags -> urgent investigation/referral",
+      "information_gain": "very high",
+      "source": "NICE (suspected cancer)",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you take opioids or iron, or have thyroid/neurological disease?",
+      "target_disease": "Secondary constipation",
+      "competing_disease": "Primary/functional",
+      "purpose": "Find a treatable cause",
+      "interpretation": "Positive -> address the cause",
+      "information_gain": "high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Chronic constipation",
+      "question": "Any red flags, what medications, and is there overflow soiling or straining/incomplete emptying?",
+      "expected_answers": "Red flags / secondary cause / defecatory disorder",
+      "branching_logic": "Red flags -> investigate; secondary -> treat cause; functional -> lifestyle + stepped laxatives; impaction -> disimpaction regimen; defecatory disorder -> pelvic floor therapy",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Clinical assessment +/- rectal examination",
+      "why": "Detect impaction, mass, and defecatory dysfunction",
+      "expected_outcome": "Guides management"
+    },
+    {
+      "test": "Bloods/FIT/colonoscopy (if red flags or secondary cause suspected)",
+      "why": "Exclude serious/secondary causes",
+      "expected_outcome": "Confirms functional vs organic"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Rectal bleeding, iron-deficiency anaemia, weight loss, abdominal/rectal mass, or new change in bowel habit over 50",
+      "immediate_action": "Urgent colorectal investigation/referral (cancer pathway)"
+    },
+    {
+      "finding": "Features of obstruction (severe pain, distension, vomiting, no flatus)",
+      "immediate_action": "Emergency assessment"
+    },
+    {
+      "finding": "Faecal impaction with overflow",
+      "immediate_action": "Disimpaction regimen; do not treat as simple diarrhoea"
+    },
+    {
+      "finding": "New neurological symptoms (e.g., cauda equina features with constipation/retention)",
+      "immediate_action": "Emergency - exclude cauda equina"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Red flags for colorectal cancer; obstruction; cauda equina.",
+    "routine_referral": "Refractory constipation, suspected defecatory disorder (pelvic floor), or diagnostic uncertainty.",
+    "emergency_referral": "Bowel obstruction or cauda equina syndrome."
+  },
+  "complications": {
+    "early": [
+      "Faecal impaction with overflow",
+      "Painful defecation/anal fissure/haemorrhoids",
+      "Urinary retention (with impaction)"
+    ],
+    "late": [
+      "Rectal prolapse",
+      "Stercoral ulceration/perforation (rare)",
+      "Reduced quality of life"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain and reassure (usually benign); optimise toileting habits (respond to urge, correct posture, unhurried time).",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Soluble fibre/bulk-forming agent; Polyethylene glycol/macrogol; Stimulant laxative; Prescription secretagogue/prucalopride/PAMORA. No autonomous selection or dosing is allowed. Source IDs: AGA_ACG_CIC_2023.",
+    "lifestyle_advice": "Increase dietary fibre gradually, adequate fluids, regular physical activity, and good toileting routine; review causative drugs.",
+    "follow_up": "Review response; titrate/step laxatives; investigate if not improving or red flags develop.",
+    "legacy_medications_pre_v13": "Stepped laxatives: bulk-forming (with adequate fluids) first for most; add/switch to an osmotic (e.g., macrogol) then a stimulant (e.g., senna/bisacodyl); newer agents (e.g., prucalopride, linaclotide) for refractory cases per criteria. Use a specific opioid-induced constipation approach (osmotic/stimulant +/- PAMORA) for opioid users. Disimpaction regimen for faecal impaction."
+  },
+  "patient_education": {
+    "home_advice": "Constipation is very common and usually not serious. Eating more fibre, drinking enough fluids, staying active, and not putting off going to the toilet all help. If needed, laxatives are safe and effective - start with a fibre or osmotic type. See a doctor if you see blood, lose weight, or your bowel habit changes and stays changed (especially over 50), or if you have severe pain, a swollen tummy and vomiting.",
+    "home_advice_ar": "الإمساك شائع جداً وغالباً غير خطير. يفيد تناول مزيد من الألياف، وشرب سوائل كافية، والحفاظ على النشاط، وعدم تأجيل الذهاب للحمّام. وعند الحاجة، المُليّنات آمنة وفعّالة - ابدأ بنوع ليفي أو تناضحي. راجع الطبيب إذا رأيت دماً، أو نقص وزنك، أو تغيّرت عادة الأمعاء واستمرّ التغيّر (خاصةً فوق الخمسين)، أو حدث ألم شديد وانتفاخ بطن وقيء.",
+    "prevention": "Fibre, fluids, activity, good toileting habits; anticipate and prevent opioid-induced constipation.",
+    "warning_signs": "Rectal bleeding, weight loss, persistent change in bowel habit, severe pain with distension/vomiting, or overflow soiling."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Fibre, fluids, activity, toileting habits; laxatives when starting opioids.",
+    "screening": "Age-appropriate bowel cancer screening applies."
+  },
+  "evidence": {
+    "evidence_level": "High for laxatives; moderate for lifestyle measures.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by AGA_ACG_CIC_2023; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, Rome IV, specialist society guidance.",
+    "verified_source_ids": [
+      "AGA_ACG_CIC_2023"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Constipation; NICE guidance on opioid-induced constipation",
+    "aafp": "AAFP - Chronic constipation",
+    "bmj_best_practice": "BMJ Best Practice - Constipation in adults",
+    "msd_manual": "MSD Manual - Constipation",
+    "merck_manual": "Merck Manual - Constipation",
+    "uptodate": "UpToDate - Management of chronic constipation in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine - Constipation",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Constipation",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "AGA_ACG_CIC_2023",
+        "organization": "AGA/ACG",
+        "title": "Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation",
+        "publication_or_update": "2023",
+        "url": "https://gi.org/journals-publications/ebgi/schoenfeld2_june2023/",
+        "accessed": "2026-07-15",
+        "scope": "Evidence-based fibre, osmotic, stimulant and prescription therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "AGA_ACG_CIC_2023"
+      ],
+      "treatment_and_monitoring": [
+        "AGA_ACG_CIC_2023"
+      ],
+      "red_flags_and_referral": [
+        "AGA_ACG_CIC_2023"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "AGA_ACG_CIC_2023",
+        "organization": "AGA/ACG",
+        "title": "Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation",
+        "publication_or_update": "2023",
+        "url": "https://gi.org/journals-publications/ebgi/schoenfeld2_june2023/",
+        "accessed": "2026-07-15",
+        "scope": "Evidence-based fibre, osmotic, stimulant and prescription therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Relieve constipation, remove reversible causes and recognise obstruction/defecatory disorders.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Soluble fibre/bulk-forming agent; Polyethylene glycol/macrogol; Stimulant laxative; Prescription secretagogue/prucalopride/PAMORA. No autonomous selection or dosing is allowed. Source IDs: AGA_ACG_CIC_2023.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "red flags/obstruction",
+      "impaction",
+      "opioids/medicines",
+      "renal/electrolyte status",
+      "pelvic-floor symptoms",
+      "pregnancy"
+    ],
+    "non_drug_measures": [
+      "Toileting routine, activity, fluids and review of opioids, iron, anticholinergics and other causes."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Soluble fibre/bulk-forming agent",
+        "medication_or_class": "Soluble fibre/bulk-forming agent",
+        "option_type": "medication",
+        "role": "first-line option",
+        "when_to_consider": "Adequate fluid intake and no obstruction/swallowing risk",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AGA_ACG_CIC_2023"
+        ]
+      },
+      {
+        "option_name": "Polyethylene glycol/macrogol",
+        "medication_or_class": "Polyethylene glycol/macrogol",
+        "option_type": "medication",
+        "role": "osmotic treatment",
+        "when_to_consider": "Persistent constipation or when fibre is unsuitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AGA_ACG_CIC_2023"
+        ]
+      },
+      {
+        "option_name": "Stimulant laxative",
+        "medication_or_class": "Stimulant laxative",
+        "option_type": "medication",
+        "role": "short-term/rescue or combination",
+        "when_to_consider": "Inadequate response to osmotic therapy or selected regimen",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AGA_ACG_CIC_2023"
+        ]
+      },
+      {
+        "option_name": "Prescription secretagogue/prucalopride/PAMORA",
+        "medication_or_class": "Prescription secretagogue/prucalopride/PAMORA",
+        "option_type": "medication",
+        "role": "refractory or opioid-specific treatment",
+        "when_to_consider": "Only after phenotype, contraindication and eligibility review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AGA_ACG_CIC_2023"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent evaluation for obstruction, peritonism, severe distension/vomiting, bleeding, anaemia, weight loss or new late-onset change."
+    ],
+    "source_ids": [
+      "AGA_ACG_CIC_2023"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

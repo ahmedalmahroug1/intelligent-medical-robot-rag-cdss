@@ -1,0 +1,747 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-008",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-008",
+    "name": "Acute otitis media",
+    "name_ar": "التهاب الأذن الوسطى الحاد",
+    "synonyms": [
+      "middle ear infection",
+      "AOM"
+    ],
+    "abbreviations": [
+      "AOM"
+    ],
+    "icd10": {
+      "code": "H66.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "AA9Z",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "3110003",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D010033",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute ENT infection",
+    "organ_system": "ENT (middle ear)",
+    "specialty": "Family medicine / Paediatrics / ENT",
+    "emergency_level": "Routine - recognise mastoiditis and intracranial complications",
+    "severity": "Usually self-limiting; painful; complications uncommon",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute infection/inflammation of the middle ear, common in young children, presenting with ear pain, fever and a bulging red eardrum; usually self-limiting.",
+    "detailed_description": "AOM is one of the most common childhood infections and a frequent reason for antibiotic prescription. Most cases resolve spontaneously; guidelines favour analgesia and safety-netting with no or delayed antibiotics for most, reserving immediate antibiotics for younger/systemically unwell children, bilateral disease in under-2s, or otorrhoea. The key safety task is to recognise mastoiditis and rarer intracranial complications.",
+    "pathophysiology": "Eustachian tube dysfunction (often after a viral URTI) impairs middle-ear ventilation and drainage; fluid accumulates and becomes infected by bacteria (Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis) or viruses, causing a bulging, inflamed tympanic membrane; perforation relieves pain with otorrhoea.",
+    "etiology": "Bacterial and viral middle-ear infection, usually following a URTI; young children predisposed by short horizontal Eustachian tubes.",
+    "incubation_period": "Follows URTI (days).",
+    "natural_history": "Pain and fever usually settle within 3-7 days; effusion may persist for weeks (otitis media with effusion).",
+    "prognosis": "Excellent; recurrent AOM and persistent effusion can affect hearing; complications rare."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common in children; most children have at least one episode by school age.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Peaks age 6-24 months; declines with age.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible; deaths only via rare intracranial complications.",
+      "basis": "estimate"
+    },
+    "age_groups": "Predominantly infants/young children; less common in adults.",
+    "sex_predominance": "Slightly more common in boys.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "More common in autumn/winter (URTI season)."
+  },
+  "risk_factors": {
+    "lifestyle": "Nursery/daycare attendance, exposure to tobacco smoke, bottle-feeding lying flat, dummy/pacifier use.",
+    "smoking": "Passive smoke exposure increases risk in children.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "Not a major factor (relevant to malignant otitis externa, not AOM).",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not relevant.",
+    "occupation": "Not relevant.",
+    "travel": "Air travel can worsen ear pain with Eustachian dysfunction.",
+    "family_history": "Family history of recurrent AOM.",
+    "genetic_factors": "Craniofacial anomalies (e.g., cleft palate, Down syndrome) increase risk.",
+    "medications": "Immunosuppression increases risk.",
+    "previous_diseases": "Recent URTI; allergic rhinitis; adenoidal hypertrophy."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Ear pain (or ear-tugging/irritability in infants)",
+      "frequency": "very common",
+      "importance": "Cardinal symptom",
+      "source": "NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Fever and being unsettled",
+      "frequency": "common",
+      "importance": "Systemic feature",
+      "source": "NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Ear discharge (if perforated)",
+      "frequency": "sometimes",
+      "importance": "Often relieves pain",
+      "source": "NICE NG91",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Otalgia (ear pain) / ear-tugging in infants",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Cardinal symptom",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE NG91; AAP",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "slightly reduces",
+      "importance": "Systemic feature",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Bulging, red, or cloudy tympanic membrane with reduced mobility",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Key examination finding for diagnosis",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "AAP; NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Ear discharge (otorrhoea) after perforation",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Perforation typically eases pain",
+      "stage": "Mid",
+      "early_late": "Mid",
+      "source": "NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Reduced hearing / irritability / poor feeding (infants)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Common in young children",
+      "stage": "Early-mid",
+      "early_late": "Early",
+      "source": "AAP",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Postauricular swelling/redness with protruding ear (mastoiditis)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - mastoiditis",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal, mobile tympanic membrane on otoscopy/pneumatic otoscopy",
+      "why_important": "A normal, mobile drum largely excludes AOM",
+      "absence_significance": "excludes if absent",
+      "source": "AAP",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No postauricular swelling/tenderness, well child",
+      "why_important": "Absence argues strongly against mastoiditis and serious complication",
+      "absence_significance": "strongly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How old is the child, and is it one or both ears?",
+      "why_ask": "Under-2s with bilateral AOM benefit more from antibiotics",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (management)"
+    },
+    {
+      "question": "Any ear discharge, and how unwell is the child?",
+      "why_ask": "Otorrhoea/systemic illness favours antibiotics",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (management)"
+    },
+    {
+      "question": "Any swelling/redness behind the ear or the ear pushed forwards?",
+      "why_ask": "Screens for mastoiditis (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any severe headache, neck stiffness, facial weakness, or drowsiness?",
+      "why_ask": "Screens for intracranial complication (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Recurrent episodes or persistent hearing problems?",
+      "why_ask": "Consider otitis media with effusion / referral",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Otoscopy (ideally pneumatic)",
+      "expected_finding": "Bulging, red/cloudy, immobile tympanic membrane; +/- perforation with discharge",
+      "importance": "High (diagnostic)"
+    },
+    {
+      "examination": "Temperature and general state",
+      "expected_finding": "Assess systemic illness",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Postauricular area (mastoid)",
+      "expected_finding": "Should be normal; swelling/tenderness = mastoiditis",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Neurological/neck screen if severe",
+      "expected_finding": "Normal; deficits suggest intracranial spread",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or raised",
+    "heart_rate": "May rise with fever",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "None routinely",
+      "indication": "Clinical/otoscopic diagnosis",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "None",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    },
+    {
+      "test_name": "Ear swab (if persistent/complicated otorrhoea)",
+      "indication": "Failed treatment or complications",
+      "expected_result": "Identifies organism",
+      "normal_range": "",
+      "diagnostic_value": "Guides targeted therapy",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "CT/MRI temporal bones and brain",
+      "when_needed": "Suspected mastoiditis or intracranial complication",
+      "expected_findings": "Mastoid opacification/coalescence; intracranial collection"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "Discharge culture in complicated/persistent cases",
+    "pcr": "Not routine",
+    "tympanometry": "Useful for effusion (otitis media with effusion) in follow-up"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "AOM: acute onset of symptoms (ear pain / infant irritability) WITH otoscopic signs of middle-ear inflammation and effusion - a bulging tympanic membrane, or new otorrhoea not due to otitis externa, or a red/cloudy immobile drum.",
+    "diagnostic_scores": "No formal score; diagnosis is otoscopic + clinical.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Otitis media with effusion (glue ear)",
+      "why_similar": "Middle-ear fluid, hearing loss",
+      "differences": "No acute infection signs/pain, dull retracted drum, chronic",
+      "red_flags": "Persistent hearing loss affecting development",
+      "distinguishing_symptoms": "Hearing loss without acute pain/fever",
+      "distinguishing_exam": "Dull, retracted, immobile drum without bulging/erythema",
+      "distinguishing_labs": "Tympanometry flat",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is there pain/fever, or just reduced hearing?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Otitis externa",
+      "why_similar": "Ear pain, discharge",
+      "differences": "Pain on moving pinna/tragus, canal swelling/debris, normal drum",
+      "red_flags": "Malignant otitis externa (diabetic/elderly)",
+      "distinguishing_symptoms": "Pain on ear manipulation, itch",
+      "distinguishing_exam": "Inflamed canal, normal TM",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is it painful to pull on the ear/tragus?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Mastoiditis",
+      "why_similar": "Complication of AOM",
+      "differences": "Postauricular swelling/redness/tenderness, protruding ear, systemically unwell",
+      "red_flags": "Intracranial spread",
+      "distinguishing_symptoms": "Swelling behind the ear",
+      "distinguishing_exam": "Mastoid tenderness/swelling, ear pushed forward",
+      "distinguishing_labs": "Raised inflammatory markers",
+      "distinguishing_imaging": "CT temporal bone",
+      "differential_questions": "Any swelling/redness behind the ear?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Referred pain (dental, TMJ, pharyngeal)",
+      "why_similar": "Ear pain",
+      "differences": "Normal ear exam, source elsewhere",
+      "red_flags": "Persistent unexplained otalgia in adults (exclude head/neck cancer)",
+      "distinguishing_symptoms": "Jaw/throat/dental symptoms",
+      "distinguishing_exam": "Normal TM",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any tooth, jaw, or throat problems?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "On looking in the ear, is the eardrum bulging/red/immobile, or normal and mobile?",
+      "target_disease": "Acute otitis media",
+      "competing_disease": "Other causes of ear pain",
+      "purpose": "Otoscopy is the key discriminator",
+      "interpretation": "Bulging/immobile TM confirms AOM; normal mobile TM largely excludes it",
+      "information_gain": "very high",
+      "source": "AAP; NICE NG91",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is there swelling/redness behind the ear or is the ear pushed forwards?",
+      "target_disease": "Mastoiditis",
+      "competing_disease": "Uncomplicated AOM",
+      "purpose": "Detect mastoiditis",
+      "interpretation": "Positive -> urgent referral",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Child with ear pain and AOM on otoscopy",
+      "question": "How old is the child, is it bilateral, is there discharge, and how unwell are they?",
+      "expected_answers": "Low-risk vs immediate-antibiotic criteria",
+      "branching_logic": "Well, >2y, unilateral, no otorrhoea -> analgesia + no/delayed antibiotics + safety-net; <2y bilateral, otorrhoea, or systemically unwell -> immediate antibiotics; mastoid/neuro red flags -> urgent referral",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Pneumatic otoscopy (+/- tympanometry)",
+      "why": "Confirms middle-ear effusion/immobility",
+      "expected_outcome": "Supports AOM vs normal ear"
+    },
+    {
+      "test": "CT temporal bone/brain (only if complication suspected)",
+      "why": "Suspected mastoiditis/intracranial spread",
+      "expected_outcome": "Identifies complication requiring urgent treatment"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Postauricular swelling/redness/tenderness or protruding ear",
+      "immediate_action": "Urgent - suspected mastoiditis; refer for imaging/IV antibiotics"
+    },
+    {
+      "finding": "Severe headache, neck stiffness, facial palsy, drowsiness, or seizures",
+      "immediate_action": "Emergency - suspected intracranial complication"
+    },
+    {
+      "finding": "Systemically very unwell / signs of sepsis, especially in infants",
+      "immediate_action": "Urgent assessment/admission"
+    },
+    {
+      "finding": "Immunocompromised child or failure to improve on antibiotics",
+      "immediate_action": "Reassess and consider referral"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected mastoiditis/intracranial complication; systemically unwell infant.",
+    "routine_referral": "Recurrent AOM or persistent otitis media with effusion causing hearing/developmental concern (ENT for grommets consideration).",
+    "emergency_referral": "Intracranial complications or sepsis."
+  },
+  "complications": {
+    "early": [
+      "Tympanic membrane perforation (usually heals)",
+      "Mastoiditis",
+      "Facial nerve palsy (rare)"
+    ],
+    "late": [
+      "Otitis media with effusion / hearing loss",
+      "Recurrent AOM",
+      "Chronic suppurative otitis media",
+      "Rare intracranial complications (meningitis, abscess)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Reassurance (most resolve spontaneously); adequate analgesia is the priority.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; Ibuprofen/NSAID; Amoxicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG91.",
+    "lifestyle_advice": "Avoid smoke exposure; keep the ear dry if perforated/discharging.",
+    "follow_up": "Safety-net for mastoid/neurological red flags or failure to improve in 3 days; review persistent effusion/hearing.",
+    "legacy_medications_pre_v13": "Regular paracetamol or ibuprofen for pain/fever. Antibiotics NOT routinely needed for most; use no-antibiotic or delayed (back-up) prescribing with safety-net advice. Offer IMMEDIATE antibiotics (amoxicillin first-line; macrolide if penicillin-allergic) for children who are systemically very unwell, at higher risk, under 2 with bilateral AOM, or with otorrhoea (NICE NG91)."
+  },
+  "patient_education": {
+    "home_advice": "Ear infections are common in children and usually clear up on their own within a few days. The most important thing is regular pain relief (paracetamol or ibuprofen). Antibiotics are often not needed. See a doctor urgently if there is swelling or redness behind the ear, the ear is pushed forward, severe headache, a stiff neck, drowsiness, or your child is very unwell.",
+    "home_advice_ar": "التهابات الأذن شائعة عند الأطفال وتتحسّن غالباً وحدها خلال أيام. الأهم هو تسكين الألم بانتظام (باراسيتامول أو إيبوبروفين)، والمضادات الحيوية كثيراً ما لا تلزم. راجع الطبيب فوراً إذا حدث تورّم أو احمرار خلف الأذن، أو دُفعت الأذن للأمام، أو صداع شديد، أو تيبّس الرقبة، أو خمول، أو إذا كان الطفل متوعّكاً جداً.",
+    "prevention": "Avoid tobacco smoke, keep vaccinations up to date (pneumococcal), breastfeeding where possible.",
+    "warning_signs": "Swelling/redness behind the ear, ear pushed forward, severe headache, neck stiffness, facial weakness, drowsiness, or a very unwell child."
+  },
+  "prevention": {
+    "vaccination": "Pneumococcal (and influenza) vaccination reduce some episodes.",
+    "lifestyle": "Reduce smoke exposure; breastfeeding; avoid flat bottle-feeding.",
+    "screening": "Hearing surveillance if recurrent effusion."
+  },
+  "evidence": {
+    "evidence_level": "High - most AOM resolves without antibiotics; analgesia is key.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG91; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG91, AAP.",
+    "verified_source_ids": [
+      "NICE_NG91"
+    ]
+  },
+  "references": {
+    "nice": "Otitis media (acute): antimicrobial prescribing (NG91) — https://www.nice.org.uk/guidance/ng91/chapter/Recommendations",
+    "aafp": "AAFP - Acute otitis media in children",
+    "bmj_best_practice": "BMJ Best Practice - Acute otitis media",
+    "msd_manual": "MSD Manual - Acute Otitis Media",
+    "merck_manual": "Merck Manual - Acute Otitis Media",
+    "uptodate": "UpToDate - Acute otitis media in children: diagnosis and treatment",
+    "harrisons": "Harrison's Principles of Internal Medicine - Otitis media",
+    "oxford_handbook": "Oxford Handbook of General Practice - Ear problems",
+    "who": "",
+    "cdc": "CDC - Ear Infection",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG91",
+        "organization": "NICE",
+        "title": "Otitis media (acute): antimicrobial prescribing (NG91)",
+        "publication_or_update": "2018; updated 2022",
+        "url": "https://www.nice.org.uk/guidance/ng91/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute otitis media analgesia, observation and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG91"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG91"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG91"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG91",
+        "organization": "NICE",
+        "title": "Otitis media (acute): antimicrobial prescribing (NG91)",
+        "publication_or_update": "2018; updated 2022",
+        "url": "https://www.nice.org.uk/guidance/ng91/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute otitis media analgesia, observation and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Control pain and reserve antibiotics for people likely to benefit.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; Ibuprofen/NSAID; Amoxicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG91.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "age",
+      "bilateral disease",
+      "otorrhoea or perforation",
+      "systemic illness",
+      "immunocompromise"
+    ],
+    "non_drug_measures": [
+      "Observation or delayed prescribing is appropriate for many patients; provide explicit return precautions."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "first-line analgesia",
+        "when_to_consider": "Pain or fever",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG91"
+        ]
+      },
+      {
+        "option_name": "Ibuprofen/NSAID",
+        "medication_or_class": "Ibuprofen/NSAID",
+        "option_type": "medication",
+        "role": "alternative analgesia",
+        "when_to_consider": "Pain or fever when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG91"
+        ]
+      },
+      {
+        "option_name": "Amoxicillin",
+        "medication_or_class": "Amoxicillin",
+        "option_type": "medication",
+        "role": "first-choice antibiotic when indicated",
+        "when_to_consider": "Immediate or backup prescription only under guideline criteria",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG91"
+        ]
+      },
+      {
+        "option_name": "Macrolide",
+        "medication_or_class": "Macrolide",
+        "option_type": "medication",
+        "role": "penicillin-allergy alternative",
+        "when_to_consider": "True penicillin allergy when antibiotic treatment is indicated",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG91"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Hospital assessment for mastoiditis, meningism, facial weakness, severe systemic infection or intracranial complication."
+    ],
+    "source_ids": [
+      "NICE_NG91"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

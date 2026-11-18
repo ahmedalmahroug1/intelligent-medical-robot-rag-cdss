@@ -1,0 +1,709 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-011",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-011",
+    "name": "Allergic rhinitis (hay fever / seasonal allergies)",
+    "name_ar": "التهاب الأنف التحسّسي (حُمّى القش / الحساسية الموسمية)",
+    "synonyms": [
+      "hay fever",
+      "seasonal allergic rhinitis",
+      "pollen allergy",
+      "perennial allergic rhinitis"
+    ],
+    "abbreviations": [
+      "AR"
+    ],
+    "icd10": {
+      "code": "J30.1",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA08.0",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "61582004",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D065631",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic/recurrent allergic (atopic) condition",
+    "organ_system": "ENT / respiratory (nose) / immune-allergic",
+    "specialty": "Family medicine / Allergy / ENT",
+    "emergency_level": "Routine",
+    "severity": "Mild to moderate but can significantly impair sleep, school/work and quality of life; linked with asthma",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "IgE-mediated inflammation of the nasal mucosa on exposure to allergens, causing sneezing, itching, nasal congestion and clear rhinorrhoea, often with itchy watery eyes.",
+    "detailed_description": "Allergic rhinitis is a very common atopic condition, seasonal (pollens) or perennial (dust mite, animals, moulds). It frequently coexists with allergic conjunctivitis and asthma ('one airway' concept). Diagnosis is clinical; treatment is allergen avoidance, intranasal corticosteroids and antihistamines, with immunotherapy for selected refractory cases.",
+    "pathophysiology": "Sensitisation leads to allergen-specific IgE on mast cells; re-exposure triggers mast-cell degranulation (histamine, leukotrienes) causing an early-phase reaction (sneeze, itch, rhinorrhoea) and a late-phase inflammatory response (congestion).",
+    "etiology": "Aeroallergens: grass/tree/weed pollens (seasonal), house dust mite, animal dander, mould spores (perennial).",
+    "incubation_period": "Not applicable (immediate hypersensitivity on exposure).",
+    "natural_history": "Often begins in childhood/adolescence; seasonal cases follow pollen calendars; may improve or persist over years; associated with asthma and sinusitis.",
+    "prognosis": "Good symptom control achievable; not dangerous but affects quality of life; immunotherapy can modify disease."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; affects roughly 10-30% of adults and more children in many populations.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High and rising in industrialised settings.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "None directly.",
+      "basis": "estimate"
+    },
+    "age_groups": "Onset often in childhood/adolescence; any age.",
+    "sex_predominance": "Roughly equal (some variation by age).",
+    "geographic_distribution": "Worldwide; seasonal pattern varies with local pollen.",
+    "seasonal_pattern": "Seasonal forms peak with relevant pollen seasons; perennial forms year-round."
+  },
+  "risk_factors": {
+    "lifestyle": "Allergen exposure (pollen, pets, dust); urban pollution.",
+    "smoking": "Tobacco smoke worsens symptoms and airway inflammation.",
+    "alcohol": "Can worsen nasal symptoms in some.",
+    "obesity": "Weak association.",
+    "diabetes": "Not relevant.",
+    "hypertension": "Not relevant (some antihypertensives cause rhinitis).",
+    "pregnancy": "May worsen/change; affects safe medication choice.",
+    "occupation": "Occupational allergen exposure (e.g., animals, flour, latex).",
+    "travel": "Different pollen exposure at destinations.",
+    "family_history": "Strong - atopy (asthma, eczema, allergic rhinitis) runs in families.",
+    "genetic_factors": "Atopic predisposition (polygenic).",
+    "medications": "Some drugs cause non-allergic rhinitis (e.g., ACE inhibitors, overuse of decongestant sprays - rhinitis medicamentosa).",
+    "previous_diseases": "Asthma, eczema, allergic conjunctivitis, chronic rhinosinusitis, nasal polyps."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sneezing, itchy nose, and runny nose",
+      "frequency": "very common",
+      "importance": "Classic allergic triad",
+      "source": "ARIA; NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Blocked nose",
+      "frequency": "common",
+      "importance": "Late-phase congestion",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Itchy, watery, red eyes",
+      "frequency": "common",
+      "importance": "Allergic conjunctivitis overlap",
+      "source": "ARIA",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Sneezing (paroxysmal)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Early-phase allergic symptom",
+      "stage": "On exposure",
+      "early_late": "Early",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Nasal/ocular itch",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Itch strongly favours allergic (vs infective) cause",
+      "stage": "On exposure",
+      "early_late": "Early",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Clear watery rhinorrhoea",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Clear discharge (vs purulent in infection)",
+      "stage": "On exposure",
+      "early_late": "Early",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Nasal congestion",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Late-phase; can dominate in perennial disease",
+      "stage": "Later",
+      "early_late": "Late",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Itchy, watery, red eyes (allergic conjunctivitis)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Common overlap",
+      "stage": "On exposure",
+      "early_late": "Early",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Reduced smell, postnasal drip, fatigue/poor sleep",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Quality-of-life impact",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "ARIA",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No itch, no ocular symptoms, purulent discharge, fever, or facial pain",
+      "why_important": "Points away from allergy towards infection (viral URTI / sinusitis)",
+      "absence_significance": "moderately reduces",
+      "source": "ARIA; NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Unilateral symptoms or unilateral bloody discharge",
+      "why_important": "Not typical of allergic rhinitis - consider tumour, foreign body, or CSF leak",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Are the nose and eyes itchy, and is the discharge clear and watery?",
+      "why_ask": "Itch + clear rhinorrhoea strongly suggest allergy",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Is there a seasonal pattern or specific triggers (pollen, animals, dust)?",
+      "why_ask": "Identifies allergen and guides avoidance/treatment",
+      "expected_answer": "Often yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any personal/family history of asthma, eczema, or allergies?",
+      "why_ask": "Atopic background supports diagnosis",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any wheeze, cough, or breathlessness?",
+      "why_ask": "Screens for coexisting asthma ('one airway')",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Are symptoms one-sided, bloody, or associated with facial pain/purulent discharge?",
+      "why_ask": "Red flags for alternative diagnosis (tumour, sinusitis)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Anterior rhinoscopy",
+      "expected_finding": "Pale, boggy, swollen turbinates with clear secretions",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Eyes",
+      "expected_finding": "Conjunctival injection/watering if allergic conjunctivitis",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "General atopy signs (allergic shiners, nasal crease, eczema); chest if asthma suspected",
+      "expected_finding": "Supportive atopic features; check for wheeze",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal (fever suggests infection)",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal (raised if asthma exacerbation)",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Specific IgE (blood) or skin-prick testing",
+      "indication": "When allergen confirmation is needed (uncertain diagnosis, considering immunotherapy/avoidance)",
+      "expected_result": "Positive to relevant allergen(s)",
+      "normal_range": "Negative",
+      "diagnostic_value": "Confirms sensitisation (must match clinical history)",
+      "rule_in": "Positive + matching history",
+      "rule_out": "Negative reduces likelihood",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "None routinely for typical cases",
+      "indication": "Clinical diagnosis usually sufficient",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "CT sinuses if chronic rhinosinusitis/polyps or complications suspected",
+      "expected_findings": "Mucosal disease/polyps if present"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Consider if coexisting asthma suspected",
+    "endoscopy": "Nasal endoscopy (ENT) for polyps/structural assessment",
+    "biopsy": "Not applicable",
+    "culture": "Not applicable",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical: two or more nasal symptoms (sneezing, itch, rhinorrhoea, congestion) related to allergen exposure, often with ocular symptoms and an atopic history; supported by allergen testing where needed. Classified (ARIA) by duration (intermittent vs persistent) and severity (mild vs moderate-severe).",
+    "diagnostic_scores": "ARIA classification (intermittent/persistent; mild/moderate-severe) guides treatment.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Viral upper respiratory infection (common cold)",
+      "why_similar": "Congestion, rhinorrhoea, sneezing",
+      "differences": "Short-lived, sore throat, no marked itch, sometimes fever, no seasonal pattern",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Self-limiting, less itch",
+      "distinguishing_exam": "Erythematous mucosa",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is it short-lived with a sore throat, or itchy and recurrent?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Non-allergic rhinitis (vasomotor / medicamentosa)",
+      "why_similar": "Congestion, rhinorrhoea",
+      "differences": "Triggered by temperature/odours; no itch/ocular symptoms; decongestant overuse",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Non-allergic triggers, no itch",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Negative allergy tests",
+      "distinguishing_imaging": "",
+      "differential_questions": "Triggered by weather/smells rather than allergens, and no itch?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Chronic rhinosinusitis +/- nasal polyps",
+      "why_similar": "Congestion, reduced smell",
+      "differences": "Facial pain/pressure, persistent, polyps on exam",
+      "red_flags": "Unilateral symptoms",
+      "distinguishing_symptoms": "Facial pressure, prolonged",
+      "distinguishing_exam": "Polyps on rhinoscopy",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CT sinuses",
+      "differential_questions": "Persistent blockage with facial pressure and reduced smell?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Unilateral nasal pathology (foreign body, tumour, CSF rhinorrhoea)",
+      "why_similar": "Nasal discharge/blockage",
+      "differences": "Unilateral, bloody, or clear watery unilateral discharge after trauma",
+      "red_flags": "Unilateral bloody discharge/mass",
+      "distinguishing_symptoms": "One-sided symptoms",
+      "distinguishing_exam": "Unilateral mass/foreign body",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CT/ENT",
+      "differential_questions": "Is it only one side, or bloody?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are your nose and eyes itchy, and is there a seasonal or specific trigger?",
+      "target_disease": "Allergic rhinitis",
+      "competing_disease": "Non-allergic/infective rhinitis",
+      "purpose": "Itch + triggers strongly favour allergy",
+      "interpretation": "Itch + seasonal/allergen trigger -> allergic rhinitis",
+      "information_gain": "high",
+      "source": "ARIA",
+      "basis": "sourced"
+    },
+    {
+      "question": "Are the symptoms only on one side, or is there bloody discharge?",
+      "target_disease": "Unilateral nasal pathology",
+      "competing_disease": "Allergic rhinitis",
+      "purpose": "Red-flag screen",
+      "interpretation": "Unilateral/bloody -> ENT referral",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Recurrent sneezing/itchy runny nose",
+      "question": "Are there specific triggers/seasonality, any wheeze, and are symptoms one-sided or bloody?",
+      "expected_answers": "Typical allergic pattern vs asthma overlap vs red flags",
+      "branching_logic": "Typical allergic -> treat (avoidance + intranasal steroid/antihistamine); wheeze -> assess asthma; unilateral/bloody -> ENT referral",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Trial of intranasal corticosteroid + antihistamine",
+      "why": "Response supports allergic rhinitis and treats it",
+      "expected_outcome": "Symptom improvement"
+    },
+    {
+      "test": "Allergy testing (skin-prick or specific IgE)",
+      "why": "Confirm allergen for avoidance/immunotherapy in unclear or refractory cases",
+      "expected_outcome": "Identifies causative allergen"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Unilateral nasal symptoms, blockage, or bloody discharge",
+      "immediate_action": "Refer ENT to exclude tumour/foreign body"
+    },
+    {
+      "finding": "Clear watery unilateral discharge after head trauma",
+      "immediate_action": "Consider CSF rhinorrhoea - urgent assessment"
+    },
+    {
+      "finding": "Coexisting poorly-controlled asthma/wheeze",
+      "immediate_action": "Assess and optimise asthma management"
+    },
+    {
+      "finding": "Nasal septal perforation or destructive lesions",
+      "immediate_action": "Refer for further investigation"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Unilateral/bloody nasal symptoms or suspected tumour; suspected CSF leak.",
+    "routine_referral": "Refractory symptoms despite optimal treatment; consideration of immunotherapy; nasal polyps needing ENT; diagnostic uncertainty.",
+    "emergency_referral": "Rarely needed (e.g., anaphylaxis with a broader allergic reaction)."
+  },
+  "complications": {
+    "early": [
+      "Sleep disturbance and impaired concentration/performance",
+      "Allergic conjunctivitis"
+    ],
+    "late": [
+      "Chronic rhinosinusitis / nasal polyps",
+      "Poor asthma control",
+      "Otitis media with effusion (children)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the allergic basis; identify and reduce allergen exposure (pollen avoidance measures, dust-mite reduction, pet management).",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Intranasal corticosteroid; Second-generation antihistamine; Topical nasal decongestant. No autonomous selection or dosing is allowed. Source IDs: ARIA_2024_25.",
+    "lifestyle_advice": "Allergen avoidance (monitor pollen counts, keep windows closed at peak times, shower/change after outdoor exposure, dust-mite measures), avoid tobacco smoke.",
+    "follow_up": "Review response and technique (nasal spray); step up/down treatment; consider referral if uncontrolled.",
+    "legacy_medications_pre_v13": "Intranasal corticosteroids are first-line for moderate-severe/persistent symptoms; oral or intranasal antihistamines for mild/intermittent or as add-on; antihistamine/mast-cell-stabiliser eye drops for ocular symptoms; short-term intranasal decongestant only (avoid prolonged use); leukotriene receptor antagonist as an option (especially with asthma). Allergen immunotherapy for selected refractory cases."
+  },
+  "patient_education": {
+    "home_advice": "Hay fever is an allergic reaction in the nose and eyes to things like pollen, dust or animals. Steroid nose sprays (used correctly and regularly) and antihistamines control it well; eye drops help itchy eyes. Reduce your exposure to the trigger where you can. See a doctor if symptoms are only on one side, there is bloody discharge, or you also have wheezing/breathlessness.",
+    "home_advice_ar": "حُمّى القش تفاعل تحسّسي في الأنف والعينين تجاه مواد مثل حبوب اللقاح أو الغبار أو الحيوانات. تتحكّم بها بخاخات الأنف الستيرويدية (باستخدام صحيح ومنتظم) ومضادات الهيستامين، وتفيد قطرات العين للحكة. قلّل تعرّضك للمُحفّز قدر الإمكان. راجع الطبيب إذا كانت الأعراض في جانب واحد فقط، أو ظهر إفراز دموي، أو صاحبها أزيز أو ضيق نفس.",
+    "prevention": "Allergen avoidance measures; starting nasal steroids before the pollen season if seasonal.",
+    "warning_signs": "One-sided symptoms, bloody discharge, wheeze/breathlessness, or symptoms not responding to treatment."
+  },
+  "prevention": {
+    "vaccination": "Not applicable (immunotherapy can desensitise selected patients).",
+    "lifestyle": "Allergen avoidance; pre-season prophylaxis with intranasal steroids.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for intranasal corticosteroids and antihistamines; high for immunotherapy in selected patients.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by ARIA_2024_25; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - ARIA, NICE CKS, BSACI.",
+    "verified_source_ids": [
+      "ARIA_2024_25"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Allergic rhinitis",
+    "aafp": "AAFP - Allergic rhinitis",
+    "bmj_best_practice": "BMJ Best Practice - Allergic rhinitis",
+    "msd_manual": "MSD Manual - Allergic Rhinitis",
+    "merck_manual": "Merck Manual - Allergic Rhinitis",
+    "uptodate": "UpToDate - Allergic rhinitis: clinical manifestations, epidemiology, and diagnosis",
+    "harrisons": "Harrison's Principles of Internal Medicine - Allergies, Anaphylaxis (Allergic Rhinitis)",
+    "oxford_handbook": "Oxford Handbook of General Practice - Allergic rhinitis",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "GINA - notes on rhinitis-asthma link",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "ARIA_2024_25",
+        "organization": "ARIA-EAACI",
+        "title": "Allergic Rhinitis and Its Impact on Asthma Guidelines: 2024-2025 Revision",
+        "publication_or_update": "2024-2025",
+        "url": "https://aria.med.up.pt/aria-eaaci-2024-2025-guidelines",
+        "accessed": "2026-07-15",
+        "scope": "Allergic-rhinitis intranasal treatment strategy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "ARIA_2024_25"
+      ],
+      "treatment_and_monitoring": [
+        "ARIA_2024_25"
+      ],
+      "red_flags_and_referral": [
+        "ARIA_2024_25"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "ARIA_2024_25",
+        "organization": "ARIA-EAACI",
+        "title": "Allergic Rhinitis and Its Impact on Asthma Guidelines: 2024-2025 Revision",
+        "publication_or_update": "2024-2025",
+        "url": "https://aria.med.up.pt/aria-eaaci-2024-2025-guidelines",
+        "accessed": "2026-07-15",
+        "scope": "Allergic-rhinitis intranasal treatment strategy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Control nasal/ocular symptoms with the least burdensome effective regimen.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Intranasal corticosteroid; Second-generation antihistamine; Topical nasal decongestant. No autonomous selection or dosing is allowed. Source IDs: ARIA_2024_25.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "pregnancy",
+      "driving/sedation risk",
+      "glaucoma",
+      "epistaxis",
+      "asthma control"
+    ],
+    "non_drug_measures": [
+      "Allergen avoidance where practical, saline irrigation and correct spray technique."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Intranasal corticosteroid",
+        "medication_or_class": "Intranasal corticosteroid",
+        "option_type": "medication",
+        "role": "preferred controller for persistent/moderate-severe disease",
+        "when_to_consider": "After diagnosis and technique review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "intranasal_steroid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "recurrent epistaxis, recent nasal surgery/trauma, glaucoma, or concurrent high-dose corticosteroids"
+            ],
+            "history_checks": [
+              "nosebleeds",
+              "eye disease",
+              "other steroids",
+              "technique"
+            ],
+            "monitoring": [
+              "nasal irritation/bleeding, growth in children when prolonged, and total steroid burden"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ARIA_2024_25"
+        ]
+      },
+      {
+        "option_name": "Second-generation antihistamine",
+        "medication_or_class": "Second-generation antihistamine",
+        "option_type": "medication",
+        "role": "mild/intermittent treatment or add-on",
+        "when_to_consider": "When itching/sneezing/rhinorrhoea predominate",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "antihistamine",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "previous serious reaction to the selected antihistamine"
+            ],
+            "use_caution_if": [
+              "renal/hepatic impairment, pregnancy, glaucoma/urinary retention for anticholinergic agents, sedation-sensitive work or driving, or other sedatives"
+            ],
+            "history_checks": [
+              "exact agent",
+              "renal/liver function",
+              "pregnancy",
+              "glaucoma/urinary retention",
+              "driving/work",
+              "sedatives and alcohol"
+            ],
+            "monitoring": [
+              "sedation, anticholinergic effects and symptom response"
+            ]
+          }
+        ],
+        "clinical_note": "Prefer less-sedating agents; still assess driving/work risk and renal/hepatic dosing.",
+        "source_ids": [
+          "ARIA_2024_25"
+        ]
+      },
+      {
+        "option_name": "Topical nasal decongestant",
+        "medication_or_class": "Topical nasal decongestant",
+        "option_type": "medication",
+        "role": "brief rescue only",
+        "when_to_consider": "Severe blockage for a very short course",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "decongestant",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "uncontrolled hypertension, severe coronary disease, or monoamine-oxidase inhibitor use"
+            ],
+            "use_caution_if": [
+              "pregnancy, arrhythmia, glaucoma, urinary retention/BPH, hyperthyroidism, or diabetes"
+            ],
+            "history_checks": [
+              "blood pressure",
+              "cardiac history",
+              "pregnancy",
+              "glaucoma",
+              "urinary symptoms",
+              "medicines"
+            ],
+            "monitoring": [
+              "blood pressure, palpitations and duration; topical products only briefly to avoid rebound congestion"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ARIA_2024_25"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Allergy referral for uncertain diagnosis, severe refractory disease or consideration of immunotherapy."
+    ],
+    "source_ids": [
+      "ARIA_2024_25"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

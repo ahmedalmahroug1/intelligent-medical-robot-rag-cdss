@@ -1,0 +1,852 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-044",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Ordinal symptom tiers are qualitative ranking aids, not probabilities or likelihood ratios. Uncited quantitative values are not authored.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-044",
+    "name": "Renal or ureteric stone",
+    "name_ar": "حصاة الكلى أو الحالب",
+    "synonyms": [
+      "kidney stone",
+      "ureteric calculus",
+      "renal colic",
+      "urolithiasis"
+    ],
+    "abbreviations": [
+      "KUB"
+    ],
+    "icd10": {
+      "code": "N20.0",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "disease_category": "Urinary stone disease",
+    "organ_system": "Kidney and ureter",
+    "specialty": "Family medicine / Emergency medicine / Urology",
+    "emergency_level": "Urgent; emergency if infection plus obstruction, anuria, AKI or uncontrolled symptoms",
+    "severity": "Ranges from self-limited colic to organ-threatening infected obstruction",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A mineral stone in the kidney or ureter that may cause sudden severe loin-to-groin colic, haematuria, obstruction or infection.",
+    "detailed_description": "Suspected renal colic requires timely imaging appropriate to age and pregnancy, effective analgesia, and immediate exclusion of infected obstruction. Stone size/site and patient factors determine observation, expulsive therapy or intervention; recurrence prevention follows stone/metabolic assessment.",
+    "pathophysiology": "Urinary supersaturation, crystal nucleation and growth produce stones that may obstruct the ureter, causing pressure, spasm and pain; obstruction with infection threatens renal function and life.",
+    "etiology": "Calcium, uric acid, infection-related, cystine and other stones; contributors include low urine volume, metabolic disease, infection, anatomy, diet and medicines.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Small stones may pass; others persist, recur, obstruct or become infected.",
+    "prognosis": "Good with appropriate analgesia and passage/removal; recurrence is common enough to justify prevention assessment."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common urological condition",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Varies with climate, hydration, diet, metabolic and genetic factors",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Very low without infection; infected obstruction can be fatal",
+      "basis": "estimate"
+    },
+    "age_groups": "Mostly adults but occurs in children",
+    "sex_predominance": "Occurs in all sexes",
+    "geographic_distribution": "Worldwide; hot climates may increase dehydration-related risk",
+    "seasonal_pattern": "Heat/dehydration may increase presentations but is not diagnostic"
+  },
+  "risk_factors": {
+    "lifestyle": "Low urine volume, high salt intake and selected dietary patterns",
+    "smoking": "",
+    "alcohol": "",
+    "obesity": "Associated with metabolic stone risk",
+    "diabetes": "",
+    "hypertension": "",
+    "pregnancy": "",
+    "occupation": "Heat exposure or limited fluid/toilet access",
+    "travel": "",
+    "family_history": "Raises suspicion for recurrent/metabolic stone disease",
+    "genetic_factors": "Cystinuria and other rare disorders",
+    "medications": "Selected drugs can crystallise or alter stone chemistry",
+    "previous_diseases": "Prior stone, gout, hyperparathyroidism, bowel/malabsorption disease, recurrent UTI or urinary anomaly"
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sudden severe one-sided flank pain radiating toward groin",
+      "frequency": "very common",
+      "importance": "Classic ureteric-colic pattern",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Nausea/vomiting and inability to keep still",
+      "frequency": "common",
+      "importance": "Common colic accompaniment",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Visible or microscopic blood in urine",
+      "frequency": "common",
+      "importance": "Supportive but absence does not exclude",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Severe colicky loin-to-groin pain",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core presentation",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Nausea/vomiting",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Pain/autonomic response",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Haematuria",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Supportive, not obligatory",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Urinary frequency/urgency with distal stone",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Lower ureter irritation",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever/rigors with obstruction",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Infected obstruction emergency",
+      "stage": "Complication",
+      "early_late": "Complication",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No colicky flank pain and a comfortable still patient",
+      "why_important": "Makes classic renal colic less likely",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No haematuria",
+      "why_important": "Does not exclude a stone",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No fever/rigors and stable renal function/urine output",
+      "why_important": "Reduces immediate infected-obstruction concern",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Did severe pain start suddenly in the side and move toward the groin?",
+      "why_ask": "Identify renal-colic pattern",
+      "expected_answer": "Often yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any fever, shaking, burning urine or feeling very unwell?",
+      "why_ask": "Detect infected obstruction",
+      "expected_answer": "Usually absent",
+      "diagnostic_value": "Very high (safety)"
+    },
+    {
+      "question": "Can you pass urine; do you have one kidney, a transplant or known kidney disease?",
+      "why_ask": "Detect organ-threatening obstruction",
+      "expected_answer": "Normal urine output/two kidneys",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Could you be pregnant, and what is the age?",
+      "why_ask": "Choose safe imaging",
+      "expected_answer": "Context-specific",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Prior stones, stone analysis, gout, bowel disease, recurrent UTI, family history or stone-forming medicines?",
+      "why_ask": "Recurrence/metabolic assessment",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Vital signs and sepsis assessment",
+      "expected_finding": "Usually afebrile/stable; fever or instability is a red flag",
+      "importance": "High"
+    },
+    {
+      "examination": "Abdominal, flank and costovertebral-angle examination",
+      "expected_finding": "Flank tenderness; exclude peritonitis/aneurysm",
+      "importance": "High"
+    },
+    {
+      "examination": "Hydration, urine output and genital examination if torsion is plausible",
+      "expected_finding": "Detect dehydration/anuria or alternate emergency",
+      "importance": "High"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Usually normal; fever suggests infection",
+    "heart_rate": "May rise with pain; persistent tachycardia requires reassessment",
+    "blood_pressure": "Usually normal; hypotension is a red flag",
+    "respiratory_rate": "Usually normal; elevation may indicate sepsis/pain",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Record when relevant to risk or treatment"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Urinalysis and urine culture when infection suspected",
+      "indication": "Haematuria and infection assessment",
+      "expected_result": "Blood; pyuria/nitrite interpreted clinically",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Supportive/safety",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    },
+    {
+      "test_name": "Renal function/electrolytes",
+      "indication": "Assess obstruction, AKI and medicine safety",
+      "expected_result": "May be normal or impaired",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Management",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent in significant colic"
+    },
+    {
+      "test_name": "FBC/CRP",
+      "indication": "If infection or alternate inflammatory diagnosis suspected",
+      "expected_result": "Inflammation",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Severity/supportive",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    },
+    {
+      "test_name": "Serum calcium and stone analysis",
+      "indication": "Recurrence/metabolic prevention assessment",
+      "expected_result": "Identifies selected causes and stone type",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Prevention",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Low-dose non-contrast CT within the urgent pathway for adults",
+      "when_needed": "Suspected adult renal colic; ultrasound instead in pregnancy",
+      "expected_findings": "Stone site/size, obstruction and alternate diagnosis"
+    },
+    {
+      "imaging_type": "Ultrasound first-line",
+      "when_needed": "Pregnancy and children/young people",
+      "expected_findings": "Hydronephrosis and some stones; CT considered if uncertainty remains"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not routine; use when cardiac disease, electrolyte disturbance or medicine risk indicates",
+    "findings": "No disease-specific ECG pattern"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "",
+    "endoscopy": "",
+    "biopsy": "",
+    "culture": "Urine culture if infection suspected",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Compatible renal-colic history plus guideline-appropriate imaging demonstrating renal/ureteric stone and obstruction status; assess infection and renal function concurrently.",
+    "diagnostic_scores": {
+      "value": "No single clinical score replaces imaging and emergency-risk assessment.",
+      "basis": "sourced",
+      "source": "NICE_NG118_2026"
+    },
+    "cutoff_values": "Stone-size thresholds guide management in NG118; use current imaging report and guideline rather than copied standalone numbers."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Infected obstructed kidney",
+      "why_similar": "Stone symptoms plus infection",
+      "differences": "Fever/rigors, pyuria, sepsis, hydronephrosis",
+      "red_flags": "Immediate urological drainage pathway",
+      "distinguishing_symptoms": "Fever/rigors, pyuria, sepsis, hydronephrosis",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any fever or reduced urine?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Abdominal aortic aneurysm",
+      "why_similar": "Sudden back/abdominal pain",
+      "differences": "Vascular risk, pulsatile mass, instability",
+      "red_flags": "",
+      "distinguishing_symptoms": "Vascular risk, pulsatile mass, instability",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any collapse or vascular history?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Ectopic pregnancy/ovarian torsion",
+      "why_similar": "Acute lower abdominal/flank pain",
+      "differences": "Pregnancy/gynaecological features",
+      "red_flags": "",
+      "distinguishing_symptoms": "Pregnancy/gynaecological features",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Could you be pregnant?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Testicular torsion",
+      "why_similar": "Groin/lower abdominal pain",
+      "differences": "Acute testicular pain/abnormal lie",
+      "red_flags": "",
+      "distinguishing_symptoms": "Acute testicular pain/abnormal lie",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any testicular pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Pyelonephritis",
+      "why_similar": "Flank pain",
+      "differences": "Fever/systemic infectious syndrome rather than colic",
+      "red_flags": "",
+      "distinguishing_symptoms": "Fever/systemic infectious syndrome rather than colic",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any fever or shaking chills?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is there fever/rigors or reduced urine with suspected stone?",
+      "target_disease": "Infected obstruction",
+      "competing_disease": "Uncomplicated renal colic",
+      "purpose": "Detect urological emergency",
+      "interpretation": "Any infection plus obstruction -> emergency",
+      "information_gain": "very high",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the patient pregnant or under 16?",
+      "target_disease": "Ultrasound-first pathway",
+      "competing_disease": "Adult CT pathway",
+      "purpose": "Choose safe imaging",
+      "interpretation": "Pregnancy/child -> ultrasound first",
+      "information_gain": "very high",
+      "source": "NICE_NG118_2026",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Suspected renal colic",
+      "question": "Any fever/rigors, anuria/reduced urine, one kidney/transplant, pregnancy, uncontrolled pain/vomiting or anticoagulation?",
+      "expected_answers": "Uncomplicated colic versus emergency/high-risk pathway",
+      "branching_logic": "High-risk -> urgent hospital/urology; otherwise analgesia and imaging pathway",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Urgent appropriate imaging",
+      "why": "Confirms site/size and obstruction and detects alternatives",
+      "expected_outcome": "Observation, expulsive therapy or intervention decision"
+    },
+    {
+      "test": "Urinalysis, culture if infected, and renal function",
+      "why": "Detect infected obstruction and AKI",
+      "expected_outcome": "Safe urgency and treatment selection"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Suspected infected obstruction: fever/rigors or sepsis with an obstructing stone",
+      "immediate_action": "Emergency urology/source control"
+    },
+    {
+      "finding": "Anuria, AKI, bilateral obstruction, solitary/transplanted kidney",
+      "immediate_action": "Emergency assessment"
+    },
+    {
+      "finding": "Uncontrolled pain/vomiting or unlikely passage",
+      "immediate_action": "Urgent urological treatment pathway"
+    },
+    {
+      "finding": "Pregnancy with severe pain/obstruction or diagnostic uncertainty",
+      "immediate_action": "Urgent obstetric/urological imaging pathway"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Persistent uncontrolled symptoms, obstruction, renal impairment, pregnancy complexity or stone unlikely to pass.",
+    "routine_referral": "Recurrent stones, metabolic abnormality or asymptomatic stone requiring surveillance decision.",
+    "emergency_referral": "Infected obstruction/sepsis, anuria, AKI, bilateral/solitary-kidney obstruction."
+  },
+  "complications": {
+    "early": [
+      "Obstruction/hydronephrosis",
+      "Infected obstruction and sepsis",
+      "AKI",
+      "Uncontrolled vomiting/dehydration"
+    ],
+    "late": [
+      "Recurrence",
+      "Chronic renal damage in repeated/untreated obstruction"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Rapid analgesia, urine/renal assessment, appropriate imaging and emergency exclusion.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Intravenous paracetamol; Short-course opioid; Alpha blocker; Potassium citrate or thiazide prevention strategy. No autonomous selection or dosing is allowed. Source IDs: NICE_NG118_2026.",
+    "lifestyle_advice": "After acute care, normal hydration and tailored dietary prevention; avoid extreme unsupervised restriction.",
+    "follow_up": "Confirm passage/removal where indicated and arrange stone/metabolic assessment for recurrence risk.",
+    "legacy_medications_pre_v13": "NSAID first-line when suitable; IV paracetamol then opioid rescue if required; selected alpha blocker; prevention only after stone assessment."
+  },
+  "patient_education": {
+    "home_advice": "Kidney stones can cause severe wave-like side pain. Fever or shaking with a stone, inability to urinate, one kidney, faintness or uncontrolled pain/vomiting are emergencies.",
+    "home_advice_ar": "قد تسبب حصاة الكلى ألماً شديداً متقطعاً في الخاصرة. وجود الحمى أو الرجفة مع الحصاة، أو انقطاع البول، أو وجود كلية واحدة، أو الإغماء، أو ألم/قيء غير مسيطر عليه هو حالة طارئة.",
+    "prevention": "Stone analysis, adequate fluids and cause-specific dietary/medical prevention.",
+    "warning_signs": "Fever, very low/no urine, worsening illness, one kidney, persistent vomiting or uncontrolled pain."
+  },
+  "prevention": {
+    "vaccination": "No vaccine",
+    "lifestyle": "Adequate fluid intake and guideline-directed salt/diet advice",
+    "screening": "Stone analysis and selected metabolic testing; serum calcium in adults"
+  },
+  "evidence": {
+    "evidence_level": "Guideline-grounded direction; no claim that every narrative sentence has clinician verification.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG118_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "",
+    "verified_source_ids": [
+      "NICE_NG118_2026"
+    ]
+  },
+  "references": {
+    "nice": "Renal and ureteric stones: assessment and management (NG118) — https://www.nice.org.uk/guidance/ng118/chapter/Recommendations",
+    "aafp": "",
+    "bmj_best_practice": "",
+    "msd_manual": "",
+    "merck_manual": "",
+    "uptodate": "",
+    "harrisons": "",
+    "oxford_handbook": "",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG118_2026",
+        "organization": "NICE",
+        "title": "Renal and ureteric stones: assessment and management (NG118)",
+        "publication_or_update": "2019; updated 2026-05",
+        "url": "https://www.nice.org.uk/guidance/ng118/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Renal colic imaging, analgesia, expulsive therapy, intervention and recurrence prevention",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "epidemiology without cited numbers",
+      "ICD-11/SNOMED/MeSH identifiers left blank rather than guessed"
+    ],
+    "sourced_sections": [
+      "diagnostic direction",
+      "tests",
+      "red flags/referral",
+      "treatment direction"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG118_2026"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG118_2026"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG118_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG118_2026",
+        "organization": "NICE",
+        "title": "Renal and ureteric stones: assessment and management (NG118)",
+        "publication_or_update": "2019; updated 2026-05",
+        "url": "https://www.nice.org.uk/guidance/ng118/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Renal colic imaging, analgesia, expulsive therapy, intervention and recurrence prevention",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Relieve renal colic, identify an infected obstructed kidney, image appropriately and prevent recurrence based on stone and metabolic assessment.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Intravenous paracetamol; Short-course opioid; Alpha blocker; Potassium citrate or thiazide prevention strategy. No autonomous selection or dosing is allowed. Source IDs: NICE_NG118_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "fever/rigors/UTI",
+      "pregnancy",
+      "single/transplanted kidney",
+      "renal function and urine output",
+      "anticoagulation/bleeding",
+      "GI/CV NSAID risk",
+      "stone site/size",
+      "prior stones and metabolic history"
+    ],
+    "non_drug_measures": [
+      "Strain urine when advised, maintain normal hydration after the acute episode, analyse retrieved stone, and tailor diet/fluids to recurrence assessment rather than extreme restriction."
+    ],
+    "medication_options": [
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "first-line renal-colic analgesia",
+        "when_to_consider": "Suspected renal colic when renal/GI/cardiovascular/pregnancy risks permit",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      },
+      {
+        "option_name": "Intravenous paracetamol",
+        "medication_or_class": "Intravenous paracetamol",
+        "option_type": "medication",
+        "role": "analgesic alternative or adjunct",
+        "when_to_consider": "When NSAIDs are contraindicated or insufficient in an assessed care setting",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      },
+      {
+        "option_name": "Short-course opioid",
+        "medication_or_class": "Short-course opioid",
+        "option_type": "medication",
+        "role": "rescue analgesia",
+        "when_to_consider": "Only when NSAID and IV paracetamol are contraindicated or insufficient",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "opioid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe respiratory depression, acute severe asthma without monitoring, paralytic ileus, or serious product reaction"
+            ],
+            "use_caution_if": [
+              "older/frail patient, sleep apnoea/COPD, renal/hepatic impairment, pregnancy, constipation, falls, substance-use history, or sedative/gabapentinoid/alcohol use"
+            ],
+            "history_checks": [
+              "respiratory disease",
+              "renal/liver function",
+              "pregnancy",
+              "bowel obstruction/constipation",
+              "falls",
+              "substance use",
+              "all sedatives"
+            ],
+            "monitoring": [
+              "sedation, respiratory rate, pain response, constipation, nausea and duration; use the shortest appropriate course"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      },
+      {
+        "option_name": "Alpha blocker",
+        "medication_or_class": "Alpha blocker",
+        "option_type": "medication",
+        "role": "medical expulsive therapy",
+        "when_to_consider": "Selected distal ureteric stone below the guideline size threshold after blood-pressure and interaction review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "urology_alpha_blocker",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "symptomatic severe hypotension or serious product reaction"
+            ],
+            "use_caution_if": [
+              "postural hypotension/syncope, falls, cataract surgery, PDE-5 inhibitor/other antihypertensive use, hepatic/renal impairment, or pregnancy when used off-label for stones"
+            ],
+            "history_checks": [
+              "lying/standing blood pressure",
+              "falls/syncope",
+              "cataract surgery plans",
+              "PDE-5 inhibitors and antihypertensives",
+              "renal/liver function",
+              "pregnancy"
+            ],
+            "monitoring": [
+              "blood pressure, dizziness/falls, symptom response and ejaculatory adverse effects; alert cataract surgeon"
+            ]
+          }
+        ],
+        "clinical_note": "Confirm current licensing and shared decision-making for the exact agent.",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      },
+      {
+        "option_name": "Potassium citrate or thiazide prevention strategy",
+        "medication_or_class": "Potassium citrate or thiazide prevention strategy",
+        "option_type": "medication",
+        "role": "selected recurrence prevention",
+        "when_to_consider": "Only after stone analysis/metabolic evaluation identifies an appropriate indication",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "potassium_citrate",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "hyperkalaemia, severe renal impairment, untreated Addison disease, delayed gastric emptying/obstruction, or serious product reaction"
+            ],
+            "use_caution_if": [
+              "ACE inhibitor/ARB/MRA/potassium use, heart disease, active UTI with selected salts, gastrointestinal ulceration risk, or sodium/potassium restriction"
+            ],
+            "history_checks": [
+              "stone type and urine chemistry",
+              "potassium and renal function",
+              "GI disease",
+              "cardiac disease",
+              "potassium-raising medicines"
+            ],
+            "monitoring": [
+              "serum potassium/renal function and urine pH/stone-risk parameters according to the prevention plan"
+            ]
+          },
+          {
+            "rule_id": "diuretic",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "anuria or severe electrolyte depletion"
+            ],
+            "use_caution_if": [
+              "gout, diabetes, hyponatraemia, dehydration, kidney disease, or lithium use"
+            ],
+            "history_checks": [
+              "renal function",
+              "electrolytes",
+              "gout",
+              "lithium",
+              "volume status"
+            ],
+            "monitoring": [
+              "electrolytes, renal function, blood pressure, weight and gout symptoms"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      },
+      {
+        "option_name": "SWL, ureteroscopy or PCNL",
+        "medication_or_class": "SWL, ureteroscopy or PCNL",
+        "option_type": "specialist_procedure",
+        "role": "stone-clearance procedure",
+        "when_to_consider": "Based on stone site/size, obstruction, pain, renal function and local expertise",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Requires urological imaging, anaesthetic/bleeding/infection assessment and procedure-specific consent.",
+        "source_ids": [
+          "NICE_NG118_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Emergency urology for infected obstruction/sepsis, solitary or transplanted kidney with obstruction, acute kidney injury/anuria, bilateral obstruction, uncontrolled pain/vomiting or pregnancy complexity."
+    ],
+    "source_ids": [
+      "NICE_NG118_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

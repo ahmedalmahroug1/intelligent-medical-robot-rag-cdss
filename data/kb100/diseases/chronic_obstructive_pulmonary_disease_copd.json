@@ -1,0 +1,830 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-013",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-013",
+    "name": "Chronic obstructive pulmonary disease (COPD)",
+    "name_ar": "الداء الرئوي الانسدادي المزمن",
+    "synonyms": [
+      "chronic obstructive pulmonary disease",
+      "chronic bronchitis and emphysema"
+    ],
+    "abbreviations": [
+      "COPD"
+    ],
+    "icd10": {
+      "code": "J44.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA22",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "13645005",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D029424",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic progressive respiratory disease",
+    "organ_system": "Respiratory",
+    "specialty": "Family medicine / Respiratory",
+    "emergency_level": "Chronic - acute exacerbations and respiratory failure are emergencies",
+    "severity": "Progressive; graded by airflow limitation, symptoms and exacerbation risk",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A common, preventable and treatable chronic lung disease with persistent respiratory symptoms and PERSISTENT (largely irreversible) airflow limitation due to airway/alveolar abnormalities, usually from significant exposure to noxious particles or gases (mainly tobacco smoke).",
+    "detailed_description": "COPD is characterised by progressive, persistent airflow limitation confirmed by post-bronchodilator spirometry (FEV1/FVC <0.7). It typically presents after age 35 in smokers with chronic breathlessness, cough and sputum. Management centres on smoking cessation, inhaled therapy, pulmonary rehabilitation, vaccination, and prompt treatment of exacerbations. Distinguishing COPD from asthma (variable, reversible) is important, though they can coexist.",
+    "pathophysiology": "Chronic inflammation from inhaled irritants causes small-airway disease (obstructive bronchiolitis) and parenchymal destruction (emphysema), reducing elastic recoil and airflow, causing air trapping/hyperinflation and impaired gas exchange.",
+    "etiology": "Predominantly tobacco smoking; also biomass fuel smoke, occupational dusts/fumes, air pollution; alpha-1 antitrypsin deficiency in a minority (younger, non-smokers, family history).",
+    "incubation_period": "Not applicable (develops over years of exposure).",
+    "natural_history": "Progressive decline in lung function and exercise tolerance; punctuated by exacerbations that accelerate decline and increase mortality; smoking cessation slows progression.",
+    "prognosis": "Variable; worse with severe airflow limitation, frequent exacerbations, low BMI, comorbidity, and continued smoking. Smoking cessation and appropriate therapy improve outcomes."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "A leading global cause of chronic morbidity; affects hundreds of millions and is a top cause of death worldwide (WHO/GOLD).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increases with age and cumulative smoking exposure.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Among the leading causes of death globally (WHO).",
+      "basis": "estimate"
+    },
+    "age_groups": "Usually >35-40 years; increases with age.",
+    "sex_predominance": "Historically male-predominant; rising in women with smoking patterns.",
+    "geographic_distribution": "Worldwide; high burden where smoking and biomass exposure are common.",
+    "seasonal_pattern": "Exacerbations peak in winter."
+  },
+  "risk_factors": {
+    "lifestyle": "Tobacco smoking (main), biomass/solid-fuel smoke exposure, physical inactivity.",
+    "smoking": "The dominant cause; cumulative exposure (pack-years) determines risk.",
+    "alcohol": "Not a direct cause.",
+    "obesity": "Not causal; low BMI worsens prognosis; obesity affects breathlessness.",
+    "diabetes": "Common comorbidity.",
+    "hypertension": "Common comorbidity (cardiovascular disease frequent in COPD).",
+    "pregnancy": "Not typically relevant (COPD is a later-life disease).",
+    "occupation": "Dusts, chemicals, fumes (mining, farming, welding).",
+    "travel": "Air travel/altitude may cause hypoxia in advanced disease.",
+    "family_history": "Alpha-1 antitrypsin deficiency; familial susceptibility.",
+    "genetic_factors": "Alpha-1 antitrypsin deficiency (consider if young/non-smoker/family history).",
+    "medications": "Not causal.",
+    "previous_diseases": "Childhood respiratory infections, poorly-controlled asthma, recurrent chest infections."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Breathlessness on exertion (progressive)",
+      "frequency": "very common",
+      "importance": "Cardinal, progressive symptom",
+      "source": "GOLD; NICE NG115",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Chronic cough with sputum",
+      "frequency": "common",
+      "importance": "Chronic bronchitis component",
+      "source": "GOLD",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Frequent 'winter' chest infections",
+      "frequency": "common",
+      "importance": "Exacerbation pattern",
+      "source": "NICE NG115",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Wheeze",
+      "frequency": "common",
+      "importance": "Overlaps with asthma",
+      "source": "GOLD",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Progressive exertional breathlessness",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Cardinal; typically persistent and progressive (vs variable in asthma)",
+      "stage": "Throughout",
+      "early_late": "Early and progressive",
+      "source": "GOLD; NICE NG115",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Chronic productive cough (sputum)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Chronic bronchitis feature",
+      "stage": "Throughout",
+      "early_late": "Early",
+      "source": "GOLD",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Wheeze and chest tightness",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Overlaps with asthma",
+      "stage": "Throughout",
+      "early_late": "Any",
+      "source": "GOLD",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Frequent lower respiratory infections/exacerbations",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Exacerbations drive decline",
+      "stage": "Throughout",
+      "early_late": "Any",
+      "source": "NICE NG115",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fatigue, weight loss, reduced exercise tolerance (advanced)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Systemic effects in advanced disease",
+      "stage": "Advanced",
+      "early_late": "Late",
+      "source": "GOLD",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Confusion/drowsiness, marked distress, cyanosis (severe exacerbation/CO2 retention)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - respiratory failure",
+      "stage": "Acute severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Marked symptom variability, reversibility, night-time waking, and strong atopy without smoking history",
+      "why_important": "Favours asthma rather than COPD",
+      "absence_significance": "moderately reduces",
+      "source": "NICE NG115; GINA",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Normal post-bronchodilator spirometry (FEV1/FVC >=0.7)",
+      "why_important": "Excludes COPD by definition",
+      "absence_significance": "excludes if absent",
+      "source": "GOLD",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have a significant smoking (or biomass/occupational) exposure history?",
+      "why_ask": "COPD is exposure-driven; quantify pack-years",
+      "expected_answer": "Usually yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Is the breathlessness persistent and progressive rather than variable/reversible?",
+      "why_ask": "Persistence favours COPD over asthma",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "How many exacerbations/courses of steroids or antibiotics and admissions in the last year?",
+      "why_ask": "Exacerbation risk stratification",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (risk)"
+    },
+    {
+      "question": "Young, non-smoker, or family history of early emphysema?",
+      "why_ask": "Consider alpha-1 antitrypsin deficiency",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any weight loss, haemoptysis, or ankle swelling?",
+      "why_ask": "Red flags (malignancy, cor pulmonale)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Respiratory exam",
+      "expected_finding": "Prolonged expiration, wheeze, hyperinflation (barrel chest), reduced breath sounds; may be normal in mild disease",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Oxygen saturation and respiratory rate",
+      "expected_finding": "May be reduced/raised; important in exacerbations",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Signs of cor pulmonale (raised JVP, oedema)",
+      "expected_finding": "In advanced disease",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "BMI and general nutrition",
+      "expected_finding": "Low BMI worsens prognosis",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal (fever suggests infective exacerbation)",
+    "heart_rate": "May be raised in exacerbation",
+    "blood_pressure": "Usually normal",
+    "respiratory_rate": "Raised in exacerbation; severity marker",
+    "oxygen_saturation": "May be chronically reduced; target 88-92% in those at risk of CO2 retention",
+    "bmi": "Low BMI is a poor prognostic sign"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Spirometry (post-bronchodilator)",
+      "indication": "Diagnosis and staging (essential)",
+      "expected_result": "FEV1/FVC <0.7 (persistent obstruction); FEV1 grades severity",
+      "normal_range": "FEV1/FVC >=0.7",
+      "diagnostic_value": "Diagnostic (required)",
+      "rule_in": "Post-BD FEV1/FVC <0.7 with symptoms/risk",
+      "rule_out": "Normal ratio excludes COPD",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC (polycythaemia/anaemia, eosinophils), alpha-1 antitrypsin (selective), BNP/ECG for comorbidity",
+      "indication": "Assessment and phenotyping",
+      "expected_result": "Variable",
+      "normal_range": "",
+      "diagnostic_value": "Comorbidity/phenotype",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Arterial/capillary blood gas",
+      "indication": "Severe exacerbation or chronic hypoxia assessment",
+      "expected_result": "Hypoxia +/- hypercapnia/acidosis",
+      "normal_range": "",
+      "diagnostic_value": "Assesses respiratory failure",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent in exacerbation"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Chest X-ray",
+      "when_needed": "At diagnosis (exclude other pathology) and in exacerbations",
+      "expected_findings": "Hyperinflation, flattened diaphragms, bullae; excludes cancer/pneumonia/pneumothorax"
+    },
+    {
+      "imaging_type": "CT chest (selective)",
+      "when_needed": "Diagnostic uncertainty, suspected bronchiectasis/malignancy, or surgical/bullae assessment",
+      "expected_findings": "Emphysema, bronchiectasis, nodules"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Assess comorbidity/cor pulmonale or exacerbation",
+    "findings": "Right heart strain, arrhythmia, or ischaemia in comorbidity."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Post-bronchodilator spirometry is REQUIRED to confirm persistent airflow obstruction (FEV1/FVC <0.7).",
+    "endoscopy": "Bronchoscopy only for specific indications",
+    "biopsy": "Not routine",
+    "culture": "Sputum culture in exacerbations not responding or with purulence",
+    "pcr": "Respiratory viral testing where relevant"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Consider COPD in a patient >35 with a risk factor (usually smoking) and typical symptoms (exertional breathlessness, chronic cough/sputum, frequent winter infections). CONFIRM with post-bronchodilator spirometry showing FEV1/FVC <0.7 (persistent airflow obstruction). Assess symptoms (mMRC/CAT) and exacerbation risk (GOLD ABE grouping).",
+    "diagnostic_scores": {
+      "value": "GOLD grading of airflow limitation by FEV1 % predicted; symptom scores mMRC/CAT; GOLD groups A/B/E by symptoms and exacerbation history.",
+      "basis": "sourced"
+    },
+    "cutoff_values": {
+      "value": "Post-bronchodilator FEV1/FVC <0.7 defines airflow obstruction (GOLD). Target SpO2 88-92% in patients at risk of hypercapnic respiratory failure.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Asthma",
+      "why_similar": "Wheeze, breathlessness, cough",
+      "differences": "Variable/reversible airflow limitation, atopy, night symptoms, younger/non-smoker",
+      "red_flags": "",
+      "distinguishing_symptoms": "Variability, reversibility",
+      "distinguishing_exam": "Often normal between episodes",
+      "distinguishing_labs": "Reversibility, FeNO",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are symptoms variable/reversible or steadily progressive?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Heart failure",
+      "why_similar": "Breathlessness, exercise limitation",
+      "differences": "Orthopnoea, oedema, cardiac history, crackles",
+      "red_flags": "Acute pulmonary oedema",
+      "distinguishing_symptoms": "Orthopnoea, ankle swelling",
+      "distinguishing_exam": "Crackles, raised JVP, oedema",
+      "distinguishing_labs": "BNP, echo",
+      "distinguishing_imaging": "CXR congestion",
+      "differential_questions": "Do you get breathless lying flat with ankle swelling?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Lung cancer",
+      "why_similar": "Cough, breathlessness in smokers",
+      "differences": "Haemoptysis, weight loss, focal signs, mass on imaging",
+      "red_flags": "Haemoptysis, weight loss",
+      "distinguishing_symptoms": "New/changed cough, weight loss",
+      "distinguishing_exam": "Clubbing, focal signs, lymphadenopathy",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CXR/CT mass",
+      "differential_questions": "Any coughing up blood or weight loss?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Bronchiectasis",
+      "why_similar": "Chronic productive cough, infections",
+      "differences": "Large-volume daily sputum, recurrent infections",
+      "red_flags": "Haemoptysis",
+      "distinguishing_symptoms": "Copious sputum",
+      "distinguishing_exam": "Coarse crackles",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "HRCT chest",
+      "differential_questions": "Do you cough up large amounts of sputum most days?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Interstitial lung disease",
+      "why_similar": "Progressive breathlessness, cough",
+      "differences": "Restrictive pattern, fine 'velcro' crackles, clubbing",
+      "red_flags": "Progressive hypoxia",
+      "distinguishing_symptoms": "Dry cough, progressive dyspnoea",
+      "distinguishing_exam": "Fine bibasal crackles, clubbing",
+      "distinguishing_labs": "Restrictive spirometry, reduced TLCO",
+      "distinguishing_imaging": "HRCT fibrosis",
+      "differential_questions": "Is your spirometry restrictive with fine crackles?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have a significant smoking history with persistent, progressive breathlessness (rather than variable/reversible)?",
+      "target_disease": "COPD",
+      "competing_disease": "Asthma",
+      "purpose": "Separate COPD from asthma",
+      "interpretation": "Smoking + persistent progressive symptoms -> COPD (confirm with spirometry)",
+      "information_gain": "high",
+      "source": "GOLD; NICE NG115",
+      "basis": "sourced"
+    },
+    {
+      "question": "In an exacerbation: are you more breathless, is sputum increased/purulent, and are you confused/drowsy with low oxygen?",
+      "target_disease": "Severe COPD exacerbation / respiratory failure",
+      "competing_disease": "Mild exacerbation",
+      "purpose": "Grade exacerbation severity",
+      "interpretation": "Confusion/drowsiness, marked hypoxia -> emergency (possible CO2 retention)",
+      "information_gain": "very high",
+      "source": "NICE NG115",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Smoker >35 with chronic breathlessness/cough",
+      "question": "Are symptoms persistent/progressive, how many exacerbations last year, and any red flags (haemoptysis/weight loss)?",
+      "expected_answers": "Typical COPD pattern / risk / red flags",
+      "branching_logic": "Typical -> spirometry to confirm, start inhaled therapy + smoking cessation + rehab; frequent exacerbations -> escalate/prevent; red flags -> urgent CXR/cancer pathway",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Post-bronchodilator spirometry",
+      "why": "Required to confirm persistent airflow obstruction",
+      "expected_outcome": "FEV1/FVC <0.7 confirms COPD"
+    },
+    {
+      "test": "Chest X-ray + FBC (+ alpha-1 antitrypsin if young/non-smoker)",
+      "why": "Exclude alternatives and assess",
+      "expected_outcome": "Supports diagnosis/rules out other pathology"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Acute severe breathlessness with confusion/drowsiness, cyanosis, or exhaustion",
+      "immediate_action": "Emergency - controlled oxygen (target 88-92%), bronchodilators, steroids +/- antibiotics; assess for NIV/ventilation and CO2 retention"
+    },
+    {
+      "finding": "SpO2 falling, rising CO2/acidosis on blood gas",
+      "immediate_action": "Emergency - consider non-invasive ventilation; senior/critical-care input"
+    },
+    {
+      "finding": "Haemoptysis, weight loss, or new focal chest signs",
+      "immediate_action": "Urgent CXR/cancer pathway"
+    },
+    {
+      "finding": "Signs of cor pulmonale or new significant hypoxia",
+      "immediate_action": "Assess for long-term oxygen therapy and heart failure"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Severe exacerbation/respiratory failure (emergency); suspected lung cancer (urgent pathway); diagnostic uncertainty.",
+    "routine_referral": "Severe/rapidly progressive disease, frequent exacerbations despite optimisation, suspected alpha-1 antitrypsin deficiency, assessment for oxygen/rehabilitation/surgery.",
+    "emergency_referral": "Acute hypercapnic/hypoxic respiratory failure."
+  },
+  "complications": {
+    "early": [
+      "Acute exacerbations",
+      "Respiratory failure (hypoxic/hypercapnic)",
+      "Pneumothorax (bullae)"
+    ],
+    "late": [
+      "Cor pulmonale / right heart failure",
+      "Chronic respiratory failure requiring oxygen",
+      "Cachexia and reduced quality of life",
+      "Increased cardiovascular disease and lung cancer risk",
+      "Anxiety/depression"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "SMOKING CESSATION is the single most important intervention; pulmonary rehabilitation; vaccination (influenza, pneumococcal, COVID-19); self-management plan; treat comorbidities; nutritional support.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): LAMA and/or LABA; ICS-containing combination; Short systemic corticosteroid course; Antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG115.",
+    "lifestyle_advice": "Stop smoking, stay active, pulmonary rehabilitation, healthy weight, vaccinations, action plan for exacerbations.",
+    "follow_up": "Regular review of symptoms (mMRC/CAT), exacerbations, inhaler technique/adherence, spirometry, oxygenation, and comorbidities.",
+    "legacy_medications_pre_v13": "Inhaled bronchodilators (LABA and/or LAMA) as maintenance; add inhaled corticosteroid especially with asthmatic features/eosinophilia or frequent exacerbations (LABA/LAMA/ICS triple therapy for higher-risk); ensure correct inhaler technique. Exacerbations: increase bronchodilators, oral corticosteroids, antibiotics if infective (increased purulent sputum), controlled oxygen (target 88-92%), and NIV for hypercapnic respiratory failure."
+  },
+  "patient_education": {
+    "home_advice": "COPD is long-term lung damage, usually from smoking. Stopping smoking is by far the most important step - it slows the disease. Use your inhalers correctly every day, stay active and do pulmonary rehab, and have your flu and pneumonia jabs. Learn to spot a flare-up (more breathless, more or discoloured phlegm) and have a plan. Get emergency help if you are severely breathless, drowsy or confused, or your lips look blue.",
+    "home_advice_ar": "الداء الرئوي الانسدادي المزمن تلف مزمن في الرئة، غالباً بسبب التدخين. التوقّف عن التدخين هو الأهم بلا منازع فهو يُبطئ المرض. استخدم بخّاخاتك بطريقة صحيحة يومياً، وحافظ على النشاط وأعِد التأهيل الرئوي، وخذ لقاحات الإنفلونزا والالتهاب الرئوي. تعلّم علامات النوبة (زيادة ضيق النفس أو زيادة/تغيّر لون البلغم) واحمل خطة. اطلب المساعدة الطارئة عند ضيق نفس شديد أو خمول أو تشوّش أو ازرقاق الشفتين.",
+    "prevention": "Never smoking / smoking cessation; reduce occupational and biomass exposure; vaccination.",
+    "warning_signs": "Increasing breathlessness, more or discoloured/purulent sputum, fever, drowsiness/confusion, or blue lips - seek urgent care."
+  },
+  "prevention": {
+    "vaccination": "Influenza, pneumococcal, and COVID-19 vaccinations recommended.",
+    "lifestyle": "Smoking cessation and avoidance of smoke/occupational exposures are primary prevention.",
+    "screening": "No general screening; case-finding via spirometry in symptomatic smokers."
+  },
+  "evidence": {
+    "evidence_level": "High - smoking cessation, inhaled therapy, pulmonary rehabilitation, and vaccination are evidence-based.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG115; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - GOLD, NICE NG115.",
+    "verified_source_ids": [
+      "NICE_NG115"
+    ]
+  },
+  "references": {
+    "nice": "Chronic obstructive pulmonary disease in over 16s (NG115) — https://www.nice.org.uk/guidance/ng115/chapter/Recommendations",
+    "aafp": "AAFP - COPD management",
+    "bmj_best_practice": "BMJ Best Practice - Chronic obstructive pulmonary disease",
+    "msd_manual": "MSD Manual - Chronic Obstructive Pulmonary Disease (COPD)",
+    "merck_manual": "Merck Manual - COPD",
+    "uptodate": "UpToDate - COPD: Diagnosis and staging; Stable COPD management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Chronic Obstructive Pulmonary Disease",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - COPD",
+    "who": "WHO - Chronic obstructive pulmonary disease (COPD) fact sheet",
+    "cdc": "CDC - COPD",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "GOLD - Global Strategy for the Diagnosis, Management, and Prevention of COPD (current report)",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG115",
+        "organization": "NICE",
+        "title": "Chronic obstructive pulmonary disease in over 16s (NG115)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng115/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "COPD diagnosis, inhaled therapy and exacerbation management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG115"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG115"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG115"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG115",
+        "organization": "NICE",
+        "title": "Chronic obstructive pulmonary disease in over 16s (NG115)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng115/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "COPD diagnosis, inhaled therapy and exacerbation management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Reduce symptoms/exacerbations and preserve function after spirometric confirmation.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): LAMA and/or LABA; ICS-containing combination; Short systemic corticosteroid course; Antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG115.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "spirometry",
+      "exacerbation/pneumonia history",
+      "eosinophils/asthma features",
+      "cardiac disease",
+      "glaucoma/urinary retention",
+      "oxygen status"
+    ],
+    "non_drug_measures": [
+      "Smoking cessation, pulmonary rehabilitation, vaccination, inhaler technique and personalised exacerbation plan."
+    ],
+    "medication_options": [
+      {
+        "option_name": "LAMA and/or LABA",
+        "medication_or_class": "LAMA and/or LABA",
+        "option_type": "medication",
+        "role": "maintenance bronchodilation",
+        "when_to_consider": "Persistent symptoms after diagnosis and non-drug care",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "bronchodilator",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "tachyarrhythmia, ischaemic heart disease, hypokalaemia, urinary retention or narrow-angle glaucoma depending on class"
+            ],
+            "history_checks": [
+              "arrhythmia",
+              "heart disease",
+              "potassium",
+              "glaucoma",
+              "urinary retention"
+            ],
+            "monitoring": [
+              "heart rate, tremor, potassium when high-dose, symptoms and inhaler technique"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG115"
+        ]
+      },
+      {
+        "option_name": "ICS-containing combination",
+        "medication_or_class": "ICS-containing combination",
+        "option_type": "medication",
+        "role": "selected exacerbation prevention",
+        "when_to_consider": "Asthmatic features/eosinophilic phenotype or recurrent exacerbations after risk review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ics_airway",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "recurrent oral candidiasis, dysphonia, high cumulative steroid exposure, or poor inhaler technique"
+            ],
+            "history_checks": [
+              "current inhalers",
+              "exacerbations",
+              "adherence",
+              "technique",
+              "smoking",
+              "oral thrush"
+            ],
+            "monitoring": [
+              "symptom control, exacerbations, inhaler technique, oral effects and growth in children"
+            ]
+          }
+        ],
+        "clinical_note": "Balance exacerbation benefit against pneumonia and oral-effect risk.",
+        "source_ids": [
+          "NICE_NG115"
+        ]
+      },
+      {
+        "option_name": "Short systemic corticosteroid course",
+        "medication_or_class": "Short systemic corticosteroid course",
+        "option_type": "medication",
+        "role": "exacerbation treatment",
+        "when_to_consider": "Clinically significant exacerbation",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "systemic_steroid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "untreated serious systemic infection unless specialist-directed"
+            ],
+            "use_caution_if": [
+              "diabetes, severe hypertension, peptic ulcer, osteoporosis, glaucoma, psychiatric history, or recurrent courses"
+            ],
+            "history_checks": [
+              "infection",
+              "diabetes",
+              "blood pressure",
+              "bone/eye/psychiatric history"
+            ],
+            "monitoring": [
+              "glucose, blood pressure, mood, infection and cumulative exposure"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG115"
+        ]
+      },
+      {
+        "option_name": "Antibiotic",
+        "medication_or_class": "Antibiotic",
+        "option_type": "medication",
+        "role": "selected exacerbation treatment",
+        "when_to_consider": "Purulent sputum and clinical features suggesting bacterial exacerbation",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          },
+          {
+            "rule_id": "doxycycline",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy, breastfeeding where unsuitable, or tetracycline allergy"
+            ],
+            "use_caution_if": [
+              "oesophageal disease, liver disease, photosensitivity, or interacting iron/calcium/antacid products"
+            ],
+            "history_checks": [
+              "pregnancy possibility",
+              "swallowing/oesophageal disease",
+              "supplements and antacids"
+            ],
+            "monitoring": [
+              "clinical response and gastrointestinal/photosensitivity adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "Follow local resistance and prior culture history.",
+        "source_ids": [
+          "NICE_NG115"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Hospital assessment for severe breathlessness, hypoxia, confusion, cyanosis, haemodynamic instability or failure of home treatment."
+    ],
+    "source_ids": [
+      "NICE_NG115"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

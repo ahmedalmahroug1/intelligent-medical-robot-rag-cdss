@@ -1,0 +1,728 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-003",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-003",
+    "name": "Acute bronchitis",
+    "name_ar": "التهاب القصبات الحاد",
+    "synonyms": [
+      "chest cold",
+      "acute tracheobronchitis"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "J20",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA20",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "10509002",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D001991",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute self-limiting lower respiratory infection (mostly viral)",
+    "organ_system": "Respiratory (lower airways)",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine — self-limiting; main task is to exclude pneumonia",
+    "severity": "Mild, self-limiting (cough often 2-3 weeks)",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Self-limiting inflammation of the large airways, usually viral, presenting with an acute cough (often productive) in an otherwise well patient without signs of pneumonia.",
+    "detailed_description": "Acute bronchitis is a common reason for cough presentations. It is predominantly viral and self-limiting; antibiotics provide little benefit in otherwise healthy adults. The central clinical decision is to distinguish it from community-acquired pneumonia (which needs antibiotics) and from asthma/COPD exacerbations, and to avoid unnecessary antibiotics while safety-netting.",
+    "pathophysiology": "Viral infection of bronchial epithelium causes inflammation, mucus production and airway hyper-responsiveness, producing cough that can persist for weeks after the infection clears.",
+    "etiology": "Usually respiratory viruses (influenza, rhinovirus, coronavirus, RSV, adenovirus). Bacteria (e.g., Mycoplasma, Chlamydophila, Bordetella pertussis) are less common causes.",
+    "incubation_period": "Variable (viral, days).",
+    "natural_history": "Cough is the dominant symptom and commonly lasts up to 3 weeks; most recover fully without specific treatment.",
+    "prognosis": "Excellent in healthy adults; consider underlying disease if cough persists beyond 3-4 weeks."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "One of the most common acute respiratory presentations in primary care, especially autumn/winter.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Very common; higher in smokers and during viral seasons.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible in healthy adults.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "More common in colder months."
+  },
+  "risk_factors": {
+    "lifestyle": "Exposure to respiratory viruses; air pollutants.",
+    "smoking": "Major risk factor; worsens and prolongs cough and predisposes to COPD.",
+    "alcohol": "Not directly relevant.",
+    "obesity": "Not directly relevant.",
+    "diabetes": "May increase infection risk slightly.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not a risk factor; affects medication choice.",
+    "occupation": "Exposure to dusts/fumes/irritants.",
+    "travel": "Crowded settings increase viral exposure.",
+    "family_history": "Not relevant.",
+    "genetic_factors": "Not relevant.",
+    "medications": "Immunosuppression increases risk.",
+    "previous_diseases": "Asthma/COPD — presentations may overlap or be exacerbations rather than simple bronchitis."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Cough (dry or productive) for days to weeks",
+      "frequency": "very common",
+      "importance": "Dominant symptom",
+      "source": "NICE NG120; AAFP",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Coughing up sputum",
+      "frequency": "common",
+      "importance": "Sputum colour does NOT reliably indicate bacterial infection",
+      "source": "NICE NG120",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Chest discomfort with coughing / wheeze",
+      "frequency": "common",
+      "importance": "Airway irritation",
+      "source": "AAFP",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Cough (initially dry, may become productive)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Cardinal symptom; may last 2-3 weeks",
+      "stage": "Throughout",
+      "early_late": "Early and persistent",
+      "source": "NICE NG120; AAFP",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Sputum production",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Colour is not a reliable marker of bacterial infection",
+      "stage": "Mid",
+      "early_late": "Mid",
+      "source": "NICE NG120",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Wheeze / chest tightness",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Airway hyper-responsiveness; consider asthma if recurrent",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "AAFP",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Low-grade fever / coryza",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "High fever should raise concern for pneumonia",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "AAFP",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Breathlessness at rest / pleuritic pain / high fever",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG — points to pneumonia rather than bronchitis",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "NICE (pneumonia)",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No focal chest signs (crackles/bronchial breathing), normal saturations, no tachypnoea",
+      "why_important": "Their absence makes pneumonia much less likely and supports bronchitis without antibiotics",
+      "absence_significance": "strongly reduces",
+      "source": "NICE (pneumonia); AAFP",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No high fever or tachycardia",
+      "why_important": "Fewer signs of systemic/severe infection",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How long has the cough lasted and is it improving?",
+      "why_ask": "Bronchitis cough can persist ~3 weeks; longer needs review",
+      "expected_answer": "Days to ~3 weeks",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Do you have breathlessness at rest, high fever, or pleuritic chest pain?",
+      "why_ask": "Screens for pneumonia (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any wheeze, recurrent cough, or history of asthma/COPD?",
+      "why_ask": "Distinguishes/identifies asthma or COPD exacerbation",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Do you smoke, and are you coughing up blood?",
+      "why_ask": "Smoking risk; haemoptysis needs work-up for other causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any paroxysmal coughing fits with whoop/vomiting?",
+      "why_ask": "Consider pertussis (whooping cough)",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Temperature, respiratory rate, oxygen saturation",
+      "expected_finding": "Usually normal or mildly abnormal; tachypnoea/hypoxia suggests pneumonia",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Chest auscultation",
+      "expected_finding": "Clear or scattered wheeze/coarse sounds that clear with cough; NO focal crackles/bronchial breathing",
+      "importance": "High (excludes pneumonia)"
+    },
+    {
+      "examination": "General appearance",
+      "expected_finding": "Well or mildly unwell",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or low-grade fever",
+    "heart_rate": "Normal (tachycardia suggests more significant infection)",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal (tachypnoea is a red flag for pneumonia)",
+    "oxygen_saturation": ">=95% expected; hypoxia is a red flag",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "None routinely",
+      "indication": "Not required for typical acute bronchitis",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "None",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    },
+    {
+      "test_name": "CRP (point-of-care, selective)",
+      "indication": "When pneumonia is a possibility and it would guide antibiotic decision",
+      "expected_result": "Low CRP argues against pneumonia/bacterial infection",
+      "normal_range": "CRP <20 mg/L makes pneumonia unlikely (NICE)",
+      "diagnostic_value": "Guides antibiotic use",
+      "rule_in": "CRP >100 supports antibiotics",
+      "rule_out": "CRP <20 low likelihood",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Chest X-ray",
+      "when_needed": "Suspected pneumonia (focal signs, hypoxia, high fever, or diagnostic uncertainty)",
+      "expected_findings": "Normal in bronchitis; consolidation in pneumonia"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Consider after recovery if asthma/COPD suspected (not acutely diagnostic)",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "Sputum culture not routine; consider pertussis testing if clinically suspected",
+    "pcr": "Respiratory viral / pertussis PCR only if it changes management"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical diagnosis: acute cough (<3 weeks) with or without sputum, in a patient WITHOUT clinical features of pneumonia (no focal chest signs, no significant tachypnoea/hypoxia/tachycardia, not systemically very unwell).",
+    "diagnostic_scores": "No specific score; CRB-65/CURB-65 assess severity if pneumonia is diagnosed. CRP used to guide antibiotics (NICE).",
+    "cutoff_values": {
+      "value": "NICE CRP guidance for lower respiratory infection: <20 mg/L antibiotics not routinely needed; 20-100 delayed antibiotic; >100 offer antibiotics.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Community-acquired pneumonia",
+      "why_similar": "Cough, fever, sputum",
+      "differences": "Focal chest signs, breathlessness, hypoxia, systemically unwell",
+      "red_flags": "Hypoxia, sepsis",
+      "distinguishing_symptoms": "Breathlessness, pleuritic pain",
+      "distinguishing_exam": "Focal crackles/bronchial breathing",
+      "distinguishing_labs": "Raised CRP/WCC",
+      "distinguishing_imaging": "CXR consolidation",
+      "differential_questions": "Are you breathless or is there focal chest pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Asthma / COPD exacerbation",
+      "why_similar": "Cough, wheeze",
+      "differences": "Known airway disease, variable/reversible airflow limitation, recurrent",
+      "red_flags": "Severe airflow obstruction",
+      "distinguishing_symptoms": "Recurrent wheeze/breathlessness",
+      "distinguishing_exam": "Wheeze, prolonged expiration",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have known asthma/COPD or recurrent wheeze?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Pertussis (whooping cough)",
+      "why_similar": "Persistent cough",
+      "differences": "Paroxysms, inspiratory whoop, post-tussive vomiting, weeks-long",
+      "red_flags": "Severe in infants",
+      "distinguishing_symptoms": "Coughing fits with whoop/vomiting",
+      "distinguishing_exam": "Often normal between paroxysms",
+      "distinguishing_labs": "Pertussis PCR/serology",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have coughing fits with a whoop or vomiting?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Other causes of chronic cough (if >3-4 weeks): GERD, asthma, ACE inhibitor, lung cancer",
+      "why_similar": "Cough",
+      "differences": "Duration >3-4 weeks and specific features",
+      "red_flags": "Haemoptysis, weight loss (malignancy)",
+      "distinguishing_symptoms": "Reflux, ACE inhibitor use, smoking history",
+      "distinguishing_exam": "May be normal",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CXR if red flags",
+      "differential_questions": "How long exactly, and any weight loss or coughing blood?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are you breathless at rest or is there focal chest pain, and what are your temperature and breathing like?",
+      "target_disease": "Pneumonia",
+      "competing_disease": "Acute bronchitis",
+      "purpose": "Separate bronchitis from pneumonia (the key decision)",
+      "interpretation": "Focal signs/hypoxia/high fever -> pneumonia; absent -> bronchitis",
+      "information_gain": "very high",
+      "source": "NICE (pneumonia); AAFP",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you have recurrent wheeze or known asthma/COPD?",
+      "target_disease": "Asthma/COPD exacerbation",
+      "competing_disease": "Simple bronchitis",
+      "purpose": "Identify underlying airway disease",
+      "interpretation": "Positive -> treat as exacerbation",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Acute cough, well patient",
+      "question": "Do you have breathlessness, high fever, or chest pain — and how long has the cough lasted?",
+      "expected_answers": "No red flags/<3 weeks vs red flags/prolonged",
+      "branching_logic": "No red flags -> reassure, no antibiotics, safety-net; red flags -> examine chest, consider CXR/CRP and pneumonia pathway",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Usually none",
+      "why": "Clinical diagnosis; antibiotics rarely help",
+      "expected_outcome": "Reassurance"
+    },
+    {
+      "test": "Chest X-ray +/- CRP",
+      "why": "When pneumonia is a realistic possibility",
+      "expected_outcome": "Confirms/excludes pneumonia and guides antibiotics"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Breathlessness at rest, tachypnoea, or oxygen saturation <95%",
+      "immediate_action": "Assess for pneumonia; urgent review/CXR"
+    },
+    {
+      "finding": "High fever, systemically unwell, confusion, or low blood pressure",
+      "immediate_action": "Assess for pneumonia/sepsis"
+    },
+    {
+      "finding": "Haemoptysis, weight loss, or cough >3 weeks",
+      "immediate_action": "Investigate for other causes (CXR; consider malignancy/TB)"
+    },
+    {
+      "finding": "Focal chest signs on examination",
+      "immediate_action": "Treat as possible pneumonia"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected pneumonia not manageable in the community; suspected lung cancer (persistent cough/haemoptysis) via urgent pathway.",
+    "routine_referral": "Persistent or recurrent cough needing spirometry/specialist assessment.",
+    "emergency_referral": "Respiratory distress/hypoxia or sepsis."
+  },
+  "complications": {
+    "early": [
+      "Progression to/misdiagnosed pneumonia",
+      "Asthma/COPD exacerbation"
+    ],
+    "late": [
+      "Prolonged post-viral cough",
+      "Rarely, unmasking of underlying chronic lung disease"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Reassurance about the self-limiting course (cough may last ~3 weeks); rest, fluids.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Antibiotic selected by a clinician. No autonomous selection or dosing is allowed. Source IDs: NICE_NG120.",
+    "lifestyle_advice": "Smoking cessation; hydration.",
+    "follow_up": "Safety-net: return if breathless, high fever, coughing blood, or cough persists beyond 3-4 weeks.",
+    "legacy_medications_pre_v13": "Symptomatic: analgesia/antipyretics; honey or over-the-counter cough remedies (limited evidence). ANTIBIOTICS ARE NOT ROUTINELY INDICATED; consider only if pneumonia suspected, or in selected high-risk/frail patients per NICE CRP-guided approach. Bronchodilator only if wheeze/airflow obstruction."
+  },
+  "patient_education": {
+    "home_advice": "A chest cold (acute bronchitis) is usually caused by a virus. The cough can last up to three weeks even as you recover, and antibiotics usually don't help. Rest, drink fluids, and use paracetamol for aches. See a doctor if you become breathless, have a high fever, cough up blood, or the cough lasts more than three weeks.",
+    "home_advice_ar": "التهاب القصبات الحاد (نزلة صدرية) سببه فيروس غالباً. قد يستمر السعال حتى ثلاثة أسابيع حتى مع التحسّن، والمضادات الحيوية عادةً لا تفيد. ارتَح واشرب السوائل وتناول الباراسيتامول للألم. راجع الطبيب إذا صرت تلهث، أو ارتفعت الحرارة، أو خرج دم مع السعال، أو استمرّ السعال أكثر من ثلاثة أسابيع.",
+    "prevention": "Stop smoking, hand hygiene, and consider influenza vaccination.",
+    "warning_signs": "Breathlessness, chest pain, high fever, coughing blood, or cough lasting more than three weeks."
+  },
+  "prevention": {
+    "vaccination": "Influenza vaccination reduces some cases; no specific bronchitis vaccine.",
+    "lifestyle": "Smoking cessation and hand hygiene.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High — evidence shows minimal antibiotic benefit in healthy adults.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG120; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — NICE, AAFP recommend against routine antibiotics.",
+    "verified_source_ids": [
+      "NICE_NG120"
+    ]
+  },
+  "references": {
+    "nice": "Cough (acute): antimicrobial prescribing (NG120) — https://www.nice.org.uk/guidance/ng120/chapter/Recommendations",
+    "aafp": "AAFP — Acute bronchitis diagnosis and management",
+    "bmj_best_practice": "BMJ Best Practice — Acute bronchitis",
+    "msd_manual": "MSD Manual — Acute Bronchitis",
+    "merck_manual": "Merck Manual — Acute Bronchitis",
+    "uptodate": "UpToDate — Acute bronchitis in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine — Bronchitis",
+    "oxford_handbook": "Oxford Handbook of General Practice — Cough / lower respiratory infection",
+    "who": "",
+    "cdc": "CDC — Chest Cold (Acute Bronchitis)",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "ACP/CDC — appropriate antibiotic use for acute respiratory infection",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG120",
+        "organization": "NICE",
+        "title": "Cough (acute): antimicrobial prescribing (NG120)",
+        "publication_or_update": "2019; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute cough and bronchitis treatment and antibiotic stewardship",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "red_flags"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG120"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG120"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG120"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG120",
+        "organization": "NICE",
+        "title": "Cough (acute): antimicrobial prescribing (NG120)",
+        "publication_or_update": "2019; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute cough and bronchitis treatment and antibiotic stewardship",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Relieve symptoms, exclude pneumonia and avoid unnecessary antibiotics.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Antibiotic selected by a clinician. No autonomous selection or dosing is allowed. Source IDs: NICE_NG120.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "duration and trajectory of cough",
+      "pneumonia signs",
+      "high-risk heart/lung/renal/liver disease or immunosuppression"
+    ],
+    "non_drug_measures": [
+      "Fluids, rest and safety-net advice; honey may be tried only above 1 year of age."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG120"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever when suitable after comorbidity review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG120"
+        ]
+      },
+      {
+        "option_name": "Antibiotic selected by a clinician",
+        "medication_or_class": "Antibiotic selected by a clinician",
+        "option_type": "medication",
+        "role": "exception only",
+        "when_to_consider": "Systemically very unwell or high complication risk after clinical assessment; not routine",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          },
+          {
+            "rule_id": "doxycycline",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy, breastfeeding where unsuitable, or tetracycline allergy"
+            ],
+            "use_caution_if": [
+              "oesophageal disease, liver disease, photosensitivity, or interacting iron/calcium/antacid products"
+            ],
+            "history_checks": [
+              "pregnancy possibility",
+              "swallowing/oesophageal disease",
+              "supplements and antacids"
+            ],
+            "monitoring": [
+              "clinical response and gastrointestinal/photosensitivity adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "Follow local antimicrobial guidance and resistance data.",
+        "source_ids": [
+          "NICE_NG120"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent assessment for hypoxia, sepsis, focal consolidation, haemoptysis or major deterioration."
+    ],
+    "source_ids": [
+      "NICE_NG120"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

@@ -1,0 +1,699 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-040",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-040",
+    "name": "Coeliac disease",
+    "name_ar": "الداء الزلاقي (حساسية القمح/الغلوتين)",
+    "synonyms": [
+      "celiac disease",
+      "coeliac disease",
+      "gluten-sensitive enteropathy"
+    ],
+    "abbreviations": [
+      "tTG",
+      "IgA",
+      "EMA"
+    ],
+    "icd10": {
+      "code": "K90.0",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DA95",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "396331005",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "212750",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D002446",
+      "basis": "estimate"
+    },
+    "disease_category": "Autoimmune / malabsorptive gastrointestinal",
+    "organ_system": "Gastrointestinal (small bowel) / immune",
+    "specialty": "Family medicine / Gastroenterology",
+    "emergency_level": "Routine",
+    "severity": "Chronic; complications (malabsorption, osteoporosis, rare malignancy) if untreated",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "An autoimmune condition in which gluten triggers small-bowel villous damage, causing malabsorption and varied GI and extra-intestinal symptoms; treated with a lifelong gluten-free diet.",
+    "detailed_description": "Coeliac disease is common and frequently underdiagnosed, with diverse presentations (GI symptoms, iron/folate deficiency, fatigue, dermatitis herpetiformis, or asymptomatic). Diagnosis rests on serology (anti-tissue transglutaminase IgA with total IgA) WHILE STILL EATING GLUTEN, confirmed by duodenal biopsy in most adults. Treatment is a strict lifelong gluten-free diet, which resolves symptoms and reduces complications.",
+    "pathophysiology": "In genetically predisposed people (HLA-DQ2/DQ8), gluten peptides trigger an immune response causing small-intestinal villous atrophy and crypt hyperplasia, impairing absorption of nutrients (iron, folate, calcium, fat-soluble vitamins).",
+    "etiology": "Immune reaction to dietary gluten (wheat, barley, rye) in HLA-DQ2/DQ8-positive individuals; environmental triggers modulate onset.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Lifelong; mucosa heals on a gluten-free diet; ongoing gluten exposure perpetuates damage and complications.",
+    "prognosis": "Excellent with dietary adherence; untreated disease risks malabsorption, osteoporosis, and (rarely) small-bowel lymphoma."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common - around 1% in many populations, though many remain undiagnosed.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increasingly recognised with better testing.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low; increased with refractory disease/lymphoma (rare).",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; bimodal (childhood and adulthood).",
+    "sex_predominance": "Slightly more common in women.",
+    "geographic_distribution": "Worldwide (populations consuming wheat).",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Gluten-containing diet (necessary for expression).",
+    "smoking": "Not a major factor.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not typical (can present with normal/high BMI though).",
+    "diabetes": "Type 1 diabetes associated (autoimmune clustering).",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Untreated disease associated with adverse outcomes/infertility.",
+    "occupation": "Not relevant.",
+    "travel": "Not relevant.",
+    "family_history": "First-degree relatives at higher risk (test them).",
+    "genetic_factors": "HLA-DQ2/DQ8 (necessary but not sufficient).",
+    "medications": "Not causal.",
+    "previous_diseases": "Autoimmune thyroid disease, type 1 diabetes, Down/Turner syndromes, IgA deficiency, unexplained iron deficiency."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Chronic GI symptoms (diarrhoea, bloating, abdominal pain)",
+      "frequency": "common",
+      "importance": "Classic but not universal",
+      "source": "NICE NG20; BSG",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Unexplained iron/folate deficiency or fatigue",
+      "frequency": "common",
+      "importance": "Common 'silent' presentation",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Weight loss / faltering growth (children)",
+      "frequency": "sometimes",
+      "importance": "Malabsorption",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Chronic diarrhoea / steatorrhoea",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Classic (but many have minimal GI symptoms)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Bloating, abdominal pain, flatulence",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Overlaps with IBS",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Iron/folate-deficiency anaemia; fatigue",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Common presenting clue (malabsorption)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG20; BSG",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Weight loss / faltering growth (children)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Malabsorption",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Dermatitis herpetiformis (itchy blistering rash)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Skin manifestation strongly linked to coeliac disease",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "BSG",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Osteoporosis, neurological symptoms, mouth ulcers, subfertility",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Extra-intestinal manifestations",
+      "stage": "Any",
+      "early_late": "Late",
+      "source": "BSG",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Negative coeliac serology WHILE eating gluten (with normal total IgA)",
+      "why_important": "Makes coeliac disease unlikely (if truly on a gluten-containing diet)",
+      "absence_significance": "strongly reduces",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Patient already on a gluten-free diet at testing",
+      "why_important": "Can cause false-negative tests - must be eating gluten for valid testing",
+      "absence_significance": "no significant change",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have persistent GI symptoms, unexplained anaemia/fatigue, or a suggestive rash?",
+      "why_ask": "Identifies who to test",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Are you currently eating gluten (or have you cut it out)?",
+      "why_ask": "Testing is only valid on a gluten-containing diet",
+      "expected_answer": "Ideally eating gluten",
+      "diagnostic_value": "High (test validity)"
+    },
+    {
+      "question": "Family history of coeliac disease, or type 1 diabetes/autoimmune thyroid disease?",
+      "why_ask": "Higher-risk groups to test",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any weight loss, growth concern (children), or bone problems?",
+      "why_ask": "Malabsorption/complications",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "General (nutrition, pallor)",
+      "expected_finding": "May show anaemia/weight loss; often normal",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Abdominal examination",
+      "expected_finding": "Usually normal or mild distension",
+      "importance": "Low-moderate"
+    },
+    {
+      "examination": "Skin (dermatitis herpetiformis)",
+      "expected_finding": "Itchy vesicular rash (elbows/knees/buttocks) if present",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable (low with malabsorption, but can be normal/high)"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "IgA tissue transglutaminase (anti-tTG IgA) + total IgA",
+      "indication": "First-line serology (patient must be eating gluten)",
+      "expected_result": "Raised anti-tTG in coeliac disease; total IgA checks for IgA deficiency (which causes false negatives)",
+      "normal_range": "",
+      "diagnostic_value": "Screening/diagnostic serology",
+      "rule_in": "High anti-tTG + biopsy",
+      "rule_out": "Negative on gluten-containing diet",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Endomysial antibodies (EMA) / IgG-based tests if IgA deficient",
+      "indication": "Confirmation / IgA deficiency",
+      "expected_result": "Positive in coeliac disease",
+      "normal_range": "",
+      "diagnostic_value": "Confirmatory",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC, ferritin, folate, B12, calcium/vitamin D, LFTs, TFTs",
+      "indication": "Assess malabsorption and associated conditions",
+      "expected_result": "Deficiencies common",
+      "normal_range": "",
+      "diagnostic_value": "Complications/associations",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "DXA (bone density)",
+      "when_needed": "Assess for osteoporosis (complication)",
+      "expected_findings": "Low bone density"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Upper GI endoscopy with duodenal biopsies confirms diagnosis (villous atrophy, crypt hyperplasia, intraepithelial lymphocytes) in most adults",
+    "biopsy": "Duodenal biopsy - the diagnostic confirmation (Marsh grading); skin biopsy for dermatitis herpetiformis",
+    "culture": "Not applicable",
+    "pcr": "HLA-DQ2/DQ8 typing (high negative predictive value; used in selected cases)"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Positive coeliac serology (anti-tTG IgA, with total IgA) taken while on a gluten-containing diet, CONFIRMED by duodenal biopsy showing villous atrophy in most adults. (Some paediatric pathways allow biopsy-free diagnosis with very high antibody titres and confirmatory tests.) Do NOT start a gluten-free diet before testing.",
+    "diagnostic_scores": "Marsh classification of histology.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Irritable bowel syndrome",
+      "why_similar": "Bloating, altered bowel habit",
+      "differences": "Negative coeliac serology; no malabsorption",
+      "red_flags": "",
+      "distinguishing_symptoms": "No anaemia/weight loss",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Negative anti-tTG",
+      "distinguishing_imaging": "",
+      "differential_questions": "Have you had coeliac serology while eating gluten?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Non-coeliac gluten sensitivity / wheat intolerance",
+      "why_similar": "Symptoms with gluten",
+      "differences": "Negative serology and normal biopsy",
+      "red_flags": "",
+      "distinguishing_symptoms": "Symptoms without autoimmunity",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Negative coeliac tests",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are coeliac tests negative despite gluten-related symptoms?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Other malabsorption (giardiasis, pancreatic insufficiency, IBD)",
+      "why_similar": "Malabsorption/diarrhoea",
+      "differences": "Cause-specific tests",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Stool tests, faecal elastase, calprotectin",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any features of another malabsorptive cause?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Iron-deficiency anaemia from other causes",
+      "why_similar": "Anaemia",
+      "differences": "GI blood loss etc.",
+      "red_flags": "GI cancer",
+      "distinguishing_symptoms": "",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Investigate blood loss",
+      "distinguishing_imaging": "Endoscopy",
+      "differential_questions": "Is the iron deficiency from blood loss rather than malabsorption?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are you eating gluten now, and have you had anti-tTG (with total IgA) tested?",
+      "target_disease": "Coeliac disease",
+      "competing_disease": "Other GI causes",
+      "purpose": "Ensure valid testing before any gluten-free diet",
+      "interpretation": "Test on gluten; positive serology -> biopsy to confirm",
+      "information_gain": "very high",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    },
+    {
+      "question": "Any unexplained iron deficiency, family history, or associated autoimmune disease?",
+      "target_disease": "Coeliac disease (case-finding)",
+      "competing_disease": "N/A",
+      "purpose": "Identify who to test",
+      "interpretation": "Positive -> test serology",
+      "information_gain": "high",
+      "source": "NICE NG20",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Suspected coeliac disease",
+      "question": "Are you still eating gluten, and shall we check anti-tTG with total IgA before any diet change?",
+      "expected_answers": "On gluten / off gluten",
+      "branching_logic": "On gluten + positive serology -> refer for confirmatory biopsy; then gluten-free diet + dietitian; off gluten -> may need gluten reintroduction for valid testing",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Anti-tTG IgA + total IgA (on a gluten-containing diet)",
+      "why": "First-line diagnostic serology",
+      "expected_outcome": "Positive supports coeliac disease"
+    },
+    {
+      "test": "Duodenal biopsy at endoscopy",
+      "why": "Confirm the diagnosis (villous atrophy)",
+      "expected_outcome": "Confirms coeliac disease"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Refractory symptoms despite a strict gluten-free diet",
+      "immediate_action": "Specialist review (check adherence; exclude refractory coeliac disease/complications)"
+    },
+    {
+      "finding": "New alarm features (weight loss, GI bleeding, abdominal mass)",
+      "immediate_action": "Investigate for complications/malignancy (rare small-bowel lymphoma)"
+    },
+    {
+      "finding": "Severe malabsorption/deficiencies (e.g., severe anaemia, osteoporosis)",
+      "immediate_action": "Correct deficiencies and assess bone health"
+    },
+    {
+      "finding": "Already on a gluten-free diet before testing",
+      "immediate_action": "Do not exclude coeliac disease on tests done off gluten - seek specialist advice on gluten challenge"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected complications (refractory disease, malignancy).",
+    "routine_referral": "Positive serology for confirmatory biopsy; dietitian referral for all confirmed cases; management of osteoporosis/deficiencies.",
+    "emergency_referral": "Rarely (severe complication)."
+  },
+  "complications": {
+    "early": [
+      "Nutritional deficiencies (iron, folate, B12, calcium, vitamin D)",
+      "Symptomatic malabsorption"
+    ],
+    "late": [
+      "Osteoporosis/osteomalacia",
+      "Subfertility/adverse pregnancy outcomes",
+      "Functional hyposplenism",
+      "Rare enteropathy-associated T-cell lymphoma / small-bowel adenocarcinoma"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Confirm the diagnosis first (do not start a gluten-free diet before testing); educate about the lifelong gluten-free diet and cross-contamination.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Targeted iron/B12/folate/vitamin D replacement. No autonomous selection or dosing is allowed. Source IDs: NICE_NG20.",
+    "lifestyle_advice": "Strict gluten avoidance, label reading, support groups (coeliac society), and monitoring adherence and symptoms.",
+    "follow_up": "Review symptom/serology response and adherence; monitor deficiencies and bone health; annual review; investigate non-response.",
+    "legacy_medications_pre_v13": "The treatment is a strict, lifelong GLUTEN-FREE DIET (with specialist dietitian input). Correct nutritional deficiencies (iron, folate, B12, vitamin D/calcium). Assess and manage bone health; consider pneumococcal vaccination (functional hyposplenism). Screen for associated autoimmune conditions."
+  },
+  "patient_education": {
+    "home_advice": "Coeliac disease is an immune reaction to gluten (in wheat, barley and rye) that damages the gut and stops it absorbing nutrients. Important: do NOT cut out gluten before you are tested, as this makes the tests unreliable. The treatment is a strict, lifelong gluten-free diet, which heals the gut and relieves symptoms - a dietitian will help. Family members should be tested too, as it runs in families.",
+    "home_advice_ar": "الداء الزلاقي تفاعل مناعي تجاه الغلوتين (في القمح والشعير والجاودار) يُتلف الأمعاء ويمنع امتصاص المغذّيات. مهم: لا تمتنع عن الغلوتين قبل إجراء الفحوصات فذلك يجعلها غير موثوقة. العلاج حِمية صارمة خالية من الغلوتين مدى الحياة، تشفي الأمعاء وتزيل الأعراض - وسيساعدك أخصائي التغذية. ويُنصح بفحص أفراد العائلة لأنه وراثي.",
+    "prevention": "No prevention; early diagnosis prevents complications; family screening.",
+    "warning_signs": "Ongoing symptoms despite the diet, weight loss, bleeding, or a new abdominal mass - seek review."
+  },
+  "prevention": {
+    "vaccination": "Pneumococcal vaccination considered (functional hyposplenism).",
+    "lifestyle": "Strict gluten-free diet prevents complications once diagnosed.",
+    "screening": "Test at-risk/symptomatic individuals and first-degree relatives (case-finding)."
+  },
+  "evidence": {
+    "evidence_level": "High for serology/biopsy diagnosis and gluten-free diet.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG20; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG20, BSG, ESPGHAN (children).",
+    "verified_source_ids": [
+      "NICE_NG20"
+    ]
+  },
+  "references": {
+    "nice": "Coeliac disease: recognition, assessment and management (NG20) — https://www.nice.org.uk/guidance/ng20/chapter/Recommendations",
+    "aafp": "AAFP - Celiac disease",
+    "bmj_best_practice": "BMJ Best Practice - Coeliac disease",
+    "msd_manual": "MSD Manual - Celiac Disease",
+    "merck_manual": "Merck Manual - Celiac Disease",
+    "uptodate": "UpToDate - Diagnosis of celiac disease in adults; management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Malabsorption Syndromes (Celiac Disease)",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Coeliac disease",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG20",
+        "organization": "NICE",
+        "title": "Coeliac disease: recognition, assessment and management (NG20)",
+        "publication_or_update": "2015",
+        "url": "https://www.nice.org.uk/guidance/ng20/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Testing while consuming gluten, confirmation, diet and monitoring",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG20"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG20"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG20"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG20",
+        "organization": "NICE",
+        "title": "Coeliac disease: recognition, assessment and management (NG20)",
+        "publication_or_update": "2015",
+        "url": "https://www.nice.org.uk/guidance/ng20/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Testing while consuming gluten, confirmation, diet and monitoring",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Confirm diagnosis before gluten withdrawal, then maintain strict lifelong gluten exclusion and monitor deficiencies.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Targeted iron/B12/folate/vitamin D replacement. No autonomous selection or dosing is allowed. Source IDs: NICE_NG20.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "current gluten intake",
+      "IgA status/serology",
+      "biopsy pathway",
+      "nutrient/bone status",
+      "associated autoimmune disease"
+    ],
+    "non_drug_measures": [
+      "Dietitian-led education, cross-contamination prevention and annual review; continue gluten during diagnostic testing."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Gluten-free diet",
+        "medication_or_class": "Gluten-free diet",
+        "option_type": "dietary_therapy",
+        "role": "disease-modifying treatment",
+        "when_to_consider": "Only after diagnostic testing/confirmation pathway is complete",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Dietitian input is essential; this is not a drug prescription.",
+        "source_ids": [
+          "NICE_NG20"
+        ]
+      },
+      {
+        "option_name": "Targeted iron/B12/folate/vitamin D replacement",
+        "medication_or_class": "Targeted iron/B12/folate/vitamin D replacement",
+        "option_type": "medication",
+        "role": "deficiency correction",
+        "when_to_consider": "Only for measured deficiency with cause-appropriate monitoring",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "oral_iron",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "iron overload or anaemia not caused by iron deficiency"
+            ],
+            "use_caution_if": [
+              "active GI disease, severe constipation, malabsorption, ongoing bleeding, or interactions with levothyroxine/tetracyclines/quinolones/antacids"
+            ],
+            "history_checks": [
+              "confirmed iron deficiency",
+              "cause of blood loss",
+              "GI history",
+              "medicines"
+            ],
+            "monitoring": [
+              "haemoglobin response, ferritin/iron stores and tolerance; investigate failure to respond"
+            ]
+          },
+          {
+            "rule_id": "vitamin_b12",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "severe hypokalaemia risk during brisk haematologic response, uncertain diagnosis, or folate deficiency"
+            ],
+            "history_checks": [
+              "cause of deficiency",
+              "neurological signs",
+              "diet",
+              "malabsorption/surgery",
+              "metformin/PPI/nitrous oxide"
+            ],
+            "monitoring": [
+              "clinical and haematologic response; investigate cause; do not delay treatment for neurological compromise"
+            ]
+          },
+          {
+            "rule_id": "vitamin_d",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "hypercalcaemia or vitamin D toxicity"
+            ],
+            "use_caution_if": [
+              "renal stones, severe CKD, granulomatous disease, hyperparathyroidism, digoxin or thiazide use"
+            ],
+            "history_checks": [
+              "calcium",
+              "renal disease/stones",
+              "sarcoidosis/TB",
+              "parathyroid disease",
+              "medicines"
+            ],
+            "monitoring": [
+              "calcium and 25-hydroxyvitamin D when treating deficiency; renal function in high-risk patients"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG20"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Specialist review for positive serology, persistent symptoms, refractory disease, weight loss, anaemia or suspected complication."
+    ],
+    "source_ids": [
+      "NICE_NG20"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

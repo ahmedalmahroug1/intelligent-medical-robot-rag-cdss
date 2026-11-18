@@ -1,0 +1,723 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-030",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-030",
+    "name": "Gastritis / functional dyspepsia (upper GI inflammation)",
+    "name_ar": "التهاب المعدة / عسر الهضم",
+    "synonyms": [
+      "gastritis",
+      "gastric inflammation",
+      "dyspepsia (overlapping)"
+    ],
+    "abbreviations": [
+      "H. pylori",
+      "PPI"
+    ],
+    "icd10": {
+      "code": "K29.70",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DA42",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "4556007",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D005756",
+      "basis": "estimate"
+    },
+    "disease_category": "Upper gastrointestinal inflammatory/functional",
+    "organ_system": "Gastrointestinal (stomach)",
+    "specialty": "Family medicine / Gastroenterology",
+    "emergency_level": "Routine - but GI bleeding or alarm features need urgent work-up",
+    "severity": "Usually mild; can cause bleeding/erosions; overlaps with peptic ulcer and dyspepsia",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Inflammation/irritation of the stomach lining causing upper abdominal (epigastric) discomfort, nausea and bloating; commonly related to Helicobacter pylori or NSAIDs, and managed as part of the dyspepsia pathway.",
+    "detailed_description": "In primary care, gastritis and dyspepsia overlap and are managed together. Most patients without alarm features are treated with a 'test and treat' approach for H. pylori and/or a proton-pump inhibitor, reserving endoscopy for alarm features or treatment failure. The key safety task is to detect upper GI bleeding and features suggesting malignancy.",
+    "pathophysiology": "Mucosal injury/inflammation from H. pylori infection, NSAIDs/aspirin, alcohol, bile reflux or stress reduces mucosal defence and can cause erosions; H. pylori also drives chronic gastritis and peptic ulceration.",
+    "etiology": "Helicobacter pylori (common), NSAIDs/aspirin, alcohol, bile reflux, severe physiological stress (critical illness), autoimmune (pernicious anaemia), and rarely other causes.",
+    "incubation_period": "Not applicable (H. pylori infection is often long-standing).",
+    "natural_history": "Often chronic/relapsing; H. pylori eradication and removing NSAIDs usually resolve symptoms; a minority progress to ulcer or (with chronic atrophic gastritis) increased gastric cancer risk.",
+    "prognosis": "Good; depends on cause and on excluding serious pathology."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; dyspepsia affects a large proportion of adults at some point. H. pylori is highly prevalent worldwide.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High; NSAID use and H. pylori are major drivers.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low directly; relevant via bleeding or underlying malignancy.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age.",
+    "sex_predominance": "Both.",
+    "geographic_distribution": "Worldwide; H. pylori prevalence higher in many low/middle-income regions.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Alcohol, spicy/irritant foods (aggravate symptoms), smoking.",
+    "smoking": "Impairs mucosal healing; increases ulcer/cancer risk.",
+    "alcohol": "Direct mucosal irritant.",
+    "obesity": "Associated with reflux/dyspepsia.",
+    "diabetes": "Gastroparesis can cause dyspeptic symptoms.",
+    "hypertension": "Not directly relevant.",
+    "pregnancy": "Common dyspepsia; affects drug choice.",
+    "occupation": "Not directly relevant.",
+    "travel": "H. pylori acquisition in endemic areas.",
+    "family_history": "H. pylori clustering; family history of gastric cancer (a red flag).",
+    "genetic_factors": "Some predisposition to gastric cancer.",
+    "medications": "NSAIDs/aspirin, corticosteroids, bisphosphonates, SSRIs (bleeding risk).",
+    "previous_diseases": "Peptic ulcer disease, prior H. pylori, autoimmune conditions (pernicious anaemia)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Upper abdominal (epigastric) pain or discomfort",
+      "frequency": "very common",
+      "importance": "Core dyspeptic symptom",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Nausea, bloating, early satiety",
+      "frequency": "common",
+      "importance": "Common accompanying symptoms",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Heartburn/indigestion",
+      "frequency": "common",
+      "importance": "Overlaps with reflux",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Epigastric pain/discomfort",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "moderately reduces",
+      "importance": "Core symptom",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Nausea / bloating / early satiety",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common but nonspecific",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Symptoms related to NSAID use / relieved by antacids",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Supports acid/NSAID-related cause",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Haematemesis / melaena (GI bleeding)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - bleeding erosion/ulcer",
+      "stage": "Complicated",
+      "early_late": "Any",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Weight loss / progressive dysphagia / persistent vomiting",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - possible malignancy",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "NICE (suspected cancer)",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No alarm features (bleeding, dysphagia, weight loss, persistent vomiting, mass, anaemia)",
+      "why_important": "Supports empirical management without urgent endoscopy",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Pain clearly cardiac/exertional",
+      "why_important": "Consider a cardiac cause of epigastric pain (do not miss)",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Where is the pain, and is it related to meals, NSAIDs, or relieved by antacids?",
+      "why_ask": "Characterises dyspepsia and likely cause",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any black stools, vomiting blood, difficulty swallowing, weight loss, or persistent vomiting?",
+      "why_ask": "Alarm features (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Do you take NSAIDs/aspirin, and how much alcohol?",
+      "why_ask": "Common causes to modify",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any family history of gastric cancer or prior peptic ulcer/H. pylori?",
+      "why_ask": "Risk and cause",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Is the pain ever brought on by exertion (cardiac)?",
+      "why_ask": "Do not miss cardiac epigastric pain",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Abdominal examination",
+      "expected_finding": "Epigastric tenderness; usually otherwise normal (a mass is a red flag)",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Signs of anaemia/bleeding",
+      "expected_finding": "Pallor suggests chronic blood loss",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Cardiovascular assessment if pain could be cardiac",
+      "expected_finding": "Normal in gastritis",
+      "importance": "High if atypical"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal (raised with significant bleeding)",
+    "blood_pressure": "Normal (low with significant bleeding)",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "H. pylori testing (stool antigen or urea breath test)",
+      "indication": "Test-and-treat in uncomplicated dyspepsia (stop PPI before testing for accuracy)",
+      "expected_result": "Positive or negative",
+      "normal_range": "Negative",
+      "diagnostic_value": "Guides eradication",
+      "rule_in": "Positive -> eradicate",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC (anaemia)",
+      "indication": "If bleeding/anaemia suspected",
+      "expected_result": "May show iron-deficiency anaemia",
+      "normal_range": "",
+      "diagnostic_value": "Detects chronic bleeding",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine (urgent if bleeding)"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "Not first-line (endoscopy is the relevant investigation)",
+      "expected_findings": "N/A"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If epigastric pain could be cardiac",
+    "findings": "Used to help exclude cardiac ischaemia."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Upper GI endoscopy for alarm features, age/risk-based new dyspepsia, or treatment failure; may show gastritis/erosions/ulcer/malignancy; allows biopsy for H. pylori/atrophy/dysplasia.",
+    "biopsy": "Gastric biopsy at endoscopy (H. pylori, atrophy, dysplasia, malignancy)",
+    "culture": "Not routine",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Uninvestigated dyspepsia/gastritis is a clinical diagnosis managed per pathway (NICE CG184): exclude alarm features, review drugs/lifestyle, then H. pylori test-and-treat and/or a PPI trial. Endoscopy defines gastritis/erosions histologically when performed.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Peptic ulcer disease",
+      "why_similar": "Epigastric pain",
+      "differences": "May have distinct hunger/night pain; ulcer on endoscopy",
+      "red_flags": "Bleeding, perforation",
+      "distinguishing_symptoms": "Rhythmic pain",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "H. pylori",
+      "distinguishing_imaging": "Endoscopy",
+      "differential_questions": "Is the pain relieved by food or worse at night?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "GERD",
+      "why_similar": "Upper GI symptoms",
+      "differences": "Heartburn/regurgitation predominate",
+      "red_flags": "Dysphagia",
+      "distinguishing_symptoms": "Retrosternal burning",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is it mainly heartburn/acid coming up?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Gastric/oesophageal cancer",
+      "why_similar": "Dyspepsia",
+      "differences": "Alarm features - weight loss, dysphagia, anaemia, mass, older age",
+      "red_flags": "Weight loss, dysphagia, GI bleeding",
+      "distinguishing_symptoms": "Progressive/systemic",
+      "distinguishing_exam": "Mass, lymphadenopathy",
+      "distinguishing_labs": "Iron-deficiency anaemia",
+      "distinguishing_imaging": "Urgent endoscopy",
+      "differential_questions": "Any weight loss, trouble swallowing, or vomiting blood?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Cardiac ischaemia / biliary or pancreatic disease",
+      "why_similar": "Upper abdominal/epigastric pain",
+      "differences": "Exertional (cardiac); RUQ/back radiation (biliary/pancreatic)",
+      "red_flags": "ACS; pancreatitis",
+      "distinguishing_symptoms": "Exertional or RUQ/back pain",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Troponin/lipase/LFTs",
+      "distinguishing_imaging": "ECG/ultrasound",
+      "differential_questions": "Is it exertional, or right-sided radiating to the back?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Any black stools, vomiting blood, difficulty swallowing, weight loss, or a lump?",
+      "target_disease": "Complicated/serious upper GI disease (bleeding/cancer)",
+      "competing_disease": "Simple gastritis/dyspepsia",
+      "purpose": "Detect alarm features",
+      "interpretation": "Positive -> urgent endoscopy",
+      "information_gain": "very high",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you take NSAIDs/aspirin regularly?",
+      "target_disease": "NSAID gastritis/ulcer",
+      "competing_disease": "Other dyspepsia",
+      "purpose": "Identify a reversible cause",
+      "interpretation": "Positive -> stop/modify NSAID + gastroprotection",
+      "information_gain": "high",
+      "source": "NICE CG184",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Epigastric symptoms, no alarm features",
+      "question": "Any alarm features, NSAID use, and would you prefer test-and-treat for H. pylori or a PPI trial?",
+      "expected_answers": "No alarm features -> empirical; alarm features -> endoscopy",
+      "branching_logic": "No alarm features -> stop NSAIDs, H. pylori test-and-treat and/or PPI; alarm features/older new dyspepsia -> urgent endoscopy",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "H. pylori test (and stop NSAIDs)",
+      "why": "Common treatable cause",
+      "expected_outcome": "Guides eradication"
+    },
+    {
+      "test": "Upper GI endoscopy",
+      "why": "Alarm features/treatment failure",
+      "expected_outcome": "Diagnoses gastritis/ulcer/cancer"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Haematemesis or melaena",
+      "immediate_action": "Urgent/emergency assessment for upper GI bleeding"
+    },
+    {
+      "finding": "Dysphagia, weight loss, persistent vomiting, epigastric mass, or iron-deficiency anaemia",
+      "immediate_action": "Urgent (2-week-wait) upper GI endoscopy"
+    },
+    {
+      "finding": "Epigastric pain with exertional/cardiac features",
+      "immediate_action": "Assess for acute coronary syndrome"
+    },
+    {
+      "finding": "Severe sudden epigastric pain with peritonitis (perforation)",
+      "immediate_action": "Emergency surgical assessment"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Alarm features (2-week-wait endoscopy); GI bleeding.",
+    "routine_referral": "Refractory symptoms despite eradication/PPI; diagnostic uncertainty.",
+    "emergency_referral": "Significant GI bleeding or perforation."
+  },
+  "complications": {
+    "early": [
+      "Erosions and GI bleeding",
+      "Peptic ulcer"
+    ],
+    "late": [
+      "Chronic atrophic gastritis",
+      "Increased gastric cancer risk (chronic H. pylori/atrophy)",
+      "Iron/B12 deficiency (autoimmune/atrophic)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the condition; review and stop NSAIDs where possible; lifestyle advice.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Proton-pump inhibitor; H. pylori eradication regimen; NSAID withdrawal/substitution. No autonomous selection or dosing is allowed. Source IDs: NICE_CG184, ACG_HPYLORI_2024.",
+    "lifestyle_advice": "Reduce alcohol, stop smoking, avoid trigger foods, weight management if reflux overlap.",
+    "follow_up": "Review response; retest/confirm eradication where indicated; endoscopy if not improving or new alarm features.",
+    "legacy_medications_pre_v13": "Stop/limit NSAIDs, alcohol; proton-pump inhibitor for symptom control; H. pylori eradication (triple/quadric therapy per local resistance) if positive - confirm eradication for ulcers/where indicated. Antacids/alginates for symptom relief."
+  },
+  "patient_education": {
+    "home_advice": "Gastritis/indigestion is irritation of the stomach lining, often from a bacterium (H. pylori) or anti-inflammatory painkillers (NSAIDs). Stopping NSAIDs, cutting alcohol, and acid-reducing tablets usually help; if H. pylori is found, a short course of antibiotics clears it. See a doctor promptly if you vomit blood, pass black tarry stools, have trouble swallowing, or lose weight.",
+    "home_advice_ar": "التهاب المعدة/عسر الهضم تهيّج في بطانة المعدة، غالباً من جرثومة (الملوية البوابية) أو مسكّنات مضادة للالتهاب (NSAIDs). يفيد إيقاف هذه المسكّنات وتقليل الكحول وأدوية تقليل الحمض؛ وإن وُجدت الجرثومة فجرعة قصيرة من المضادات تقضي عليها. راجع الطبيب سريعاً إذا تقيّأت دماً، أو نزل براز أسود قطراني، أو صعُب البلع، أو نقص وزنك.",
+    "prevention": "Avoid unnecessary NSAIDs (use gastroprotection if needed), limit alcohol, treat H. pylori.",
+    "warning_signs": "Vomiting blood, black stools, difficulty swallowing, weight loss, or severe/persistent pain."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Limit NSAIDs/alcohol; H. pylori eradication where indicated.",
+    "screening": "Not applicable (surveillance for high-risk premalignant gastric changes per specialist)."
+  },
+  "evidence": {
+    "evidence_level": "High for H. pylori eradication and PPI therapy; strong for alarm-feature-based endoscopy.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_CG184, ACG_HPYLORI_2024; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CG184, ACG/Maastricht (H. pylori).",
+    "verified_source_ids": [
+      "NICE_CG184",
+      "ACG_HPYLORI_2024"
+    ]
+  },
+  "references": {
+    "nice": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184) — https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+    "aafp": "AAFP - Dyspepsia / H. pylori",
+    "bmj_best_practice": "BMJ Best Practice - Gastritis / dyspepsia",
+    "msd_manual": "MSD Manual - Gastritis",
+    "merck_manual": "Merck Manual - Gastritis",
+    "uptodate": "UpToDate - Approach to the adult with dyspepsia; H. pylori management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Gastritis and peptic ulcer disease",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Dyspepsia and gastritis",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_CG184",
+        "organization": "NICE",
+        "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+        "publication_or_update": "2014; updated 2019 and safety links 2024",
+        "url": "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "GORD, dyspepsia, peptic ulcer and H. pylori test-and-treat",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "ACG_HPYLORI_2024",
+        "organization": "American College of Gastroenterology",
+        "title": "Clinical Guideline: Treatment of Helicobacter pylori Infection",
+        "publication_or_update": "2024",
+        "url": "https://gi.org/journals-publications/ebgi/schoenfeld_sep2024/",
+        "accessed": "2026-07-15",
+        "scope": "Resistance-aware H. pylori therapy and test of cure",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_CG184",
+        "ACG_HPYLORI_2024"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_CG184",
+        "ACG_HPYLORI_2024"
+      ],
+      "red_flags_and_referral": [
+        "NICE_CG184",
+        "ACG_HPYLORI_2024"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_CG184",
+        "organization": "NICE",
+        "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+        "publication_or_update": "2014; updated 2019 and safety links 2024",
+        "url": "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "GORD, dyspepsia, peptic ulcer and H. pylori test-and-treat",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "ACG_HPYLORI_2024",
+        "organization": "American College of Gastroenterology",
+        "title": "Clinical Guideline: Treatment of Helicobacter pylori Infection",
+        "publication_or_update": "2024",
+        "url": "https://gi.org/journals-publications/ebgi/schoenfeld_sep2024/",
+        "accessed": "2026-07-15",
+        "scope": "Resistance-aware H. pylori therapy and test of cure",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Treat the cause, protect mucosa and eradicate confirmed H. pylori using resistance-aware therapy.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Proton-pump inhibitor; H. pylori eradication regimen; NSAID withdrawal/substitution. No autonomous selection or dosing is allowed. Source IDs: NICE_CG184, ACG_HPYLORI_2024.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "H. pylori test and prior therapy",
+      "NSAID/aspirin/anticoagulant",
+      "bleeding",
+      "penicillin allergy",
+      "prior macrolide/fluoroquinolone",
+      "pregnancy"
+    ],
+    "non_drug_measures": [
+      "Reduce alcohol/smoking and review irritating medicines; do not assume every dyspeptic symptom is gastritis."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Proton-pump inhibitor",
+        "medication_or_class": "Proton-pump inhibitor",
+        "option_type": "medication",
+        "role": "acid suppression",
+        "when_to_consider": "Symptomatic/erosive disease or gastroprotection when indicated",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ppi",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "long-term use, osteoporosis risk, low magnesium/B12/iron, C. difficile risk, severe liver disease, or clopidogrel interaction for some PPIs"
+            ],
+            "history_checks": [
+              "alarm symptoms",
+              "duration/indication",
+              "fracture risk",
+              "electrolyte/nutrient risk",
+              "clopidogrel"
+            ],
+            "monitoring": [
+              "response and ongoing indication; magnesium/B12/iron or bone risk when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG184"
+        ]
+      },
+      {
+        "option_name": "H. pylori eradication regimen",
+        "medication_or_class": "H. pylori eradication regimen",
+        "option_type": "medication",
+        "role": "cause-directed therapy",
+        "when_to_consider": "Confirmed active infection",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "h_pylori_regimen",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "use of clarithromycin- or levofloxacin-containing empiric therapy without susceptibility/local-resistance justification"
+            ],
+            "use_caution_if": [
+              "penicillin allergy, pregnancy, QT risk, liver/renal disease, prior macrolide/fluoroquinolone exposure, or anticoagulation"
+            ],
+            "history_checks": [
+              "allergy details",
+              "prior antibiotics",
+              "pregnancy",
+              "QT/interactions",
+              "local resistance"
+            ],
+            "monitoring": [
+              "adherence/adverse effects and mandatory test of cure using an accepted method after the recommended washout"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ACG_HPYLORI_2024",
+          "NICE_CG184"
+        ]
+      },
+      {
+        "option_name": "NSAID withdrawal/substitution",
+        "medication_or_class": "NSAID withdrawal/substitution",
+        "option_type": "medication",
+        "role": "cause removal",
+        "when_to_consider": "NSAID-related disease where clinically possible",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG184"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent care/endoscopy for bleeding, anaemia, weight loss, persistent vomiting, severe pain/peritonism or cancer risk."
+    ],
+    "source_ids": [
+      "NICE_CG184",
+      "ACG_HPYLORI_2024"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

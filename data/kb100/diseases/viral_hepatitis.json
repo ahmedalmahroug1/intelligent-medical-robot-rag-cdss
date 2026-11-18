@@ -1,0 +1,755 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-038",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Covers the common viral hepatitides (A/B/C/E) at a family-medicine level. Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-038",
+    "name": "Viral hepatitis (A/B/C/E)",
+    "name_ar": "التهاب الكبد الفيروسي",
+    "synonyms": [
+      "hepatitis A",
+      "hepatitis B",
+      "hepatitis C",
+      "hepatitis E",
+      "infectious hepatitis"
+    ],
+    "abbreviations": [
+      "HAV",
+      "HBV",
+      "HCV",
+      "HEV",
+      "LFTs"
+    ],
+    "icd10": {
+      "code": "B19.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "1E51",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "3738000",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D006525",
+      "basis": "estimate"
+    },
+    "disease_category": "Infectious hepatobiliary disease",
+    "organ_system": "Hepatic",
+    "specialty": "Family medicine / Hepatology / Infectious diseases",
+    "emergency_level": "Usually routine - but acute liver failure is an emergency; some are notifiable",
+    "severity": "From asymptomatic to fulminant liver failure; chronic B/C cause cirrhosis and liver cancer",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Inflammation of the liver caused by hepatitis viruses (A, B, C, E), ranging from a self-limiting acute illness (A, E) to chronic infection with cirrhosis and liver cancer risk (B, C).",
+    "detailed_description": "Viral hepatitis is diagnosed by deranged liver tests plus viral serology/nucleic acid tests. Hepatitis A and E are usually acute and self-limiting (faeco-oral). Hepatitis B and C are blood-borne and can become chronic, causing cirrhosis and hepatocellular carcinoma - both are now highly treatable/preventable (HBV vaccine and antivirals; HCV cure with direct-acting antivirals). Primary-care roles are testing at-risk people, vaccination, recognising acute illness/red flags, and referral for chronic infection.",
+    "pathophysiology": "Viral infection of hepatocytes triggers immune-mediated injury; acute hepatitis causes hepatocellular necrosis (raised transaminases, sometimes jaundice); chronic infection (B/C) drives progressive fibrosis to cirrhosis and increases hepatocellular carcinoma risk.",
+    "etiology": "HAV and HEV (faeco-oral, contaminated food/water); HBV (blood/sexual/perinatal); HCV (blood-borne, injecting drug use). Also hepatitis D (with B).",
+    "incubation_period": "HAV ~2-6 weeks; HEV ~2-9 weeks; HBV ~1-6 months; HCV ~2 weeks-6 months.",
+    "natural_history": "A/E self-limiting; B may become chronic (higher risk if acquired at birth/infancy); C becomes chronic in most untreated. Chronic B/C: cirrhosis and HCC over years.",
+    "prognosis": "Excellent for A/E; chronic B controllable and C curable with modern therapy; prognosis worsens with cirrhosis."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Globally very common; hundreds of millions live with chronic hepatitis B or C (WHO); higher HBV prevalence in parts of Africa/Asia.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Varies by virus and region; outbreaks of A/E where sanitation is poor.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Chronic B and C are major causes of cirrhosis, liver cancer and death worldwide (WHO).",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age.",
+    "sex_predominance": "Varies by virus/exposure.",
+    "geographic_distribution": "Worldwide; regional variation in prevalence.",
+    "seasonal_pattern": "A/E outbreaks may follow contamination events."
+  },
+  "risk_factors": {
+    "lifestyle": "Injecting drug use (B/C), unprotected sex (B), travel/food-water exposure (A/E).",
+    "smoking": "Not a direct risk (worsens liver disease outcomes).",
+    "alcohol": "Accelerates liver damage in chronic viral hepatitis.",
+    "obesity": "Fatty liver worsens outcomes.",
+    "diabetes": "Associated with worse liver outcomes.",
+    "hypertension": "Not directly relevant.",
+    "pregnancy": "HEV can be severe in pregnancy; perinatal HBV transmission (prevented by vaccination/antivirals).",
+    "occupation": "Healthcare workers (needlestick), sex work.",
+    "travel": "HAV/HEV in endemic areas; unsafe medical/tattoo procedures (B/C).",
+    "family_history": "Household/perinatal HBV.",
+    "genetic_factors": "Not primary.",
+    "medications": "Immunosuppression can reactivate HBV.",
+    "previous_diseases": "Other blood-borne infections; chronic liver disease."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Jaundice (yellow eyes/skin), dark urine, pale stools",
+      "frequency": "common",
+      "importance": "Classic of acute hepatitis (often absent, esp. chronic)",
+      "source": "WHO; NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Fatigue, nausea, right-upper-quadrant discomfort",
+      "frequency": "common",
+      "importance": "Prodromal/acute symptoms",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "None (asymptomatic - found on testing)",
+      "frequency": "common",
+      "importance": "Chronic B/C often silent",
+      "source": "WHO",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Jaundice, dark urine, pale stools",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Classic acute feature (often absent in chronic)",
+      "stage": "Acute",
+      "early_late": "Mid",
+      "source": "WHO",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fatigue / malaise",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common but nonspecific",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Nausea, anorexia, right-upper-quadrant discomfort",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Prodromal/acute",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Asymptomatic (chronic B/C)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Chronic infection often silent until cirrhosis",
+      "stage": "Chronic",
+      "early_late": "Any",
+      "source": "WHO",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Confusion/drowsiness, bruising/bleeding, worsening jaundice (acute liver failure)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - fulminant hepatitis/liver failure",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Signs of chronic liver disease/cirrhosis (ascites, spider naevi, splenomegaly)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Indicates advanced chronic disease",
+      "stage": "Chronic/late",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal LFTs and negative viral serology",
+      "why_important": "Makes active viral hepatitis unlikely (window periods considered)",
+      "absence_significance": "strongly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No encephalopathy, normal coagulation (INR)",
+      "why_important": "Argues against acute liver failure",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Any jaundice, dark urine, pale stools, or right-upper-abdominal discomfort?",
+      "why_ask": "Elicits acute hepatitis features",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Risk factors: injecting drug use, blood transfusions/procedures, tattoos, sexual exposure, travel, contaminated food/water?",
+      "why_ask": "Guides which virus and testing",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Alcohol intake and other medications/supplements?",
+      "why_ask": "Alcoholic/drug-induced liver injury differential and co-factors",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any confusion, bleeding, or rapidly worsening jaundice?",
+      "why_ask": "Screens for acute liver failure (emergency)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Vaccination history (hepatitis A/B) and pregnancy?",
+      "why_ask": "Prevention and special considerations",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Assess for jaundice and RUQ tenderness/hepatomegaly",
+      "expected_finding": "Jaundice; tender liver in acute hepatitis",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Signs of chronic liver disease (spider naevi, palmar erythema, ascites, splenomegaly)",
+      "expected_finding": "In advanced chronic disease",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Mental state (encephalopathy) and bruising",
+      "expected_finding": "Confusion/asterixis and bleeding suggest liver failure",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or mildly raised (acute)",
+    "heart_rate": "Usually normal",
+    "blood_pressure": "Usually normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "LFTs (ALT/AST, bilirubin, ALP, albumin) + coagulation (INR)",
+      "indication": "Assess hepatitis and severity",
+      "expected_result": "Raised transaminases (often very high in acute); INR/albumin reflect synthetic function",
+      "normal_range": "",
+      "diagnostic_value": "Detects and grades hepatitis",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine (urgent if severe)"
+    },
+    {
+      "test_name": "Viral serology/NAT (HAV IgM; HBsAg/anti-HBc/HBV DNA; anti-HCV/HCV RNA; HEV IgM)",
+      "indication": "Identify the causative virus and chronicity",
+      "expected_result": "Virus-specific positivity",
+      "normal_range": "",
+      "diagnostic_value": "Aetiological diagnosis",
+      "rule_in": "Positive specific marker",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Screen for co-infection and other liver disease",
+      "indication": "HIV/HBV/HCV co-infection, and exclude other causes",
+      "expected_result": "As indicated",
+      "normal_range": "",
+      "diagnostic_value": "Comprehensive assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Liver ultrasound (+ elastography for fibrosis)",
+      "when_needed": "Chronic hepatitis / assess cirrhosis / HCC surveillance",
+      "expected_findings": "Fatty change, fibrosis/cirrhosis, focal lesions"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Variceal surveillance in cirrhosis (specialist)",
+    "biopsy": "Liver biopsy in selected cases for staging/uncertain diagnosis",
+    "culture": "Not applicable",
+    "pcr": "HBV DNA / HCV RNA quantify viral load and confirm active infection"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Deranged liver tests (raised transaminases +/- bilirubin) with positive virus-specific markers. Chronic hepatitis B: HBsAg positive >6 months. Chronic hepatitis C: HCV RNA positive (anti-HCV indicates exposure). Acute A/E: IgM positive with a compatible acute illness.",
+    "diagnostic_scores": "Fibrosis scores (e.g., FIB-4/APRI) and elastography stage chronic disease.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Alcoholic or drug-induced liver injury",
+      "why_similar": "Deranged LFTs/jaundice",
+      "differences": "Alcohol/drug history; serology negative",
+      "red_flags": "Liver failure",
+      "distinguishing_symptoms": "History-based",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "AST:ALT ratio, negative viral serology",
+      "distinguishing_imaging": "",
+      "differential_questions": "How much alcohol, and any new drugs/supplements?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Biliary obstruction (gallstones/tumour)",
+      "why_similar": "Jaundice",
+      "differences": "Obstructive LFT pattern, RUQ pain, dilated ducts",
+      "red_flags": "Cholangitis",
+      "distinguishing_symptoms": "Colicky RUQ pain",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Raised ALP/bilirubin",
+      "distinguishing_imaging": "US dilated ducts",
+      "differential_questions": "Is there colicky pain with an obstructive picture?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Autoimmune/metabolic liver disease",
+      "why_similar": "Hepatitis",
+      "differences": "Autoantibodies, specific tests",
+      "red_flags": "",
+      "distinguishing_symptoms": "",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Autoantibodies, ferritin/caeruloplasmin",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are viral tests negative with autoimmune/metabolic markers?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Fulminant hepatic failure",
+      "why_similar": "Severe hepatitis",
+      "differences": "Encephalopathy, coagulopathy",
+      "red_flags": "Emergency",
+      "distinguishing_symptoms": "Confusion, bleeding",
+      "distinguishing_exam": "Encephalopathy",
+      "distinguishing_labs": "High INR, rising bilirubin",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any confusion, drowsiness, or easy bleeding?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Any confusion, easy bruising/bleeding, or rapidly deepening jaundice (liver failure)?",
+      "target_disease": "Acute liver failure",
+      "competing_disease": "Uncomplicated acute hepatitis",
+      "purpose": "Detect emergency",
+      "interpretation": "Positive -> emergency admission (specialist liver unit)",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "question": "What are the risk factors (injecting drugs, procedures, sexual exposure, travel, food/water)?",
+      "target_disease": "Specific viral hepatitis",
+      "competing_disease": "Non-viral liver disease",
+      "purpose": "Guide testing and which virus",
+      "interpretation": "Directs serology and management",
+      "information_gain": "high",
+      "source": "WHO/NICE",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Deranged LFTs / suspected hepatitis",
+      "question": "Any liver-failure features, risk factors, alcohol/drug history - and which viral markers are positive?",
+      "expected_answers": "Acute vs chronic; virus; severity",
+      "branching_logic": "Liver failure -> emergency; acute A/E -> supportive + notify; chronic B/C -> refer for antiviral therapy and cancer surveillance; vaccinate contacts (A/B)",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "LFTs + INR + viral serology/NAT",
+      "why": "Diagnose, identify virus, and assess severity",
+      "expected_outcome": "Confirms viral hepatitis and type"
+    },
+    {
+      "test": "Fibrosis assessment/ultrasound (chronic)",
+      "why": "Stage chronic disease and screen for cirrhosis/HCC",
+      "expected_outcome": "Guides treatment and surveillance"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Encephalopathy, coagulopathy (raised INR), or rapidly worsening jaundice (acute liver failure)",
+      "immediate_action": "Emergency - urgent transfer to a specialist liver unit"
+    },
+    {
+      "finding": "Signs of decompensated cirrhosis (ascites, variceal bleeding, encephalopathy)",
+      "immediate_action": "Urgent/emergency hepatology assessment"
+    },
+    {
+      "finding": "Pregnant patient with hepatitis E",
+      "immediate_action": "Urgent specialist input (risk of severe disease)"
+    },
+    {
+      "finding": "Newly diagnosed chronic B/C",
+      "immediate_action": "Refer for assessment/treatment; notify per public-health rules"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Acute liver failure; decompensated cirrhosis (emergency); severe acute hepatitis.",
+    "routine_referral": "All chronic hepatitis B and C for specialist assessment and antiviral treatment; abnormal fibrosis.",
+    "emergency_referral": "Fulminant hepatic failure / decompensation."
+  },
+  "complications": {
+    "early": [
+      "Acute (fulminant) liver failure",
+      "Cholestasis"
+    ],
+    "late": [
+      "Chronic hepatitis (B/C)",
+      "Cirrhosis and portal hypertension",
+      "Hepatocellular carcinoma",
+      "Extrahepatic manifestations"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Supportive care for acute A/E (rest, hydration, avoid hepatotoxins/alcohol); notify notifiable infections; test and vaccinate contacts where relevant.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): HBV nucleos(t)ide analogue; Pan-genotypic direct-acting antiviral; Supportive care/no antiviral. No autonomous selection or dosing is allowed. Source IDs: WHO_HBV_2024, WHO_HCV_2022.",
+    "lifestyle_advice": "Avoid alcohol, safe practices to prevent transmission, vaccination (A/B), and adherence to treatment/surveillance.",
+    "follow_up": "Specialist follow-up for chronic infection; monitor LFTs, viral load, fibrosis, and HCC surveillance in cirrhosis.",
+    "legacy_medications_pre_v13": "Acute A/E: usually supportive only. Chronic hepatitis B: antiviral therapy (e.g., tenofovir/entecavir) per specialist criteria; prevent reactivation before immunosuppression. Chronic hepatitis C: direct-acting antivirals achieve cure in most. Manage co-factors (alcohol, obesity); HCC surveillance in cirrhosis. Avoid hepatotoxic drugs."
+  },
+  "patient_education": {
+    "home_advice": "Viral hepatitis is inflammation of the liver caused by a virus. Hepatitis A and E usually get better on their own with rest and fluids. Hepatitis B and C can become long-term and, over years, damage the liver - but they are now very treatable: hepatitis B can be controlled and hepatitis C can usually be cured with tablets. Avoid alcohol, get vaccinated (A and B), and take steps not to pass it on. Seek urgent help for confusion, drowsiness, easy bruising/bleeding, or deepening yellow colour.",
+    "home_advice_ar": "التهاب الكبد الفيروسي التهاب في الكبد يسبّبه فيروس. النوعان A وE يتحسّنان عادةً وحدهما بالراحة والسوائل. أما B وC فقد يصبحان مزمنَين ويُتلفان الكبد عبر السنين - لكنهما الآن قابلان جداً للعلاج: يمكن ضبط B، وغالباً يُشفى C بالأقراص. تجنّب الكحول، وخذ اللقاحات (A وB)، واتّبع وسائل عدم نقل العدوى. اطلب المساعدة العاجلة عند التشوّش أو الخمول أو سهولة الكدمات/النزيف أو ازدياد الاصفرار.",
+    "prevention": "Hepatitis A and B vaccines; safe injecting/sexual practices; safe food/water; screening at-risk groups.",
+    "warning_signs": "Confusion/drowsiness, easy bruising/bleeding, deepening jaundice, swelling of the abdomen, or vomiting blood."
+  },
+  "prevention": {
+    "vaccination": "Effective vaccines for hepatitis A and B (no vaccine for C); HBV vaccination prevents infection and perinatal transmission.",
+    "lifestyle": "Safe injecting/sexual practices, safe food/water, universal precautions.",
+    "screening": "Screen at-risk groups for B and C (enables cure/control and prevents transmission)."
+  },
+  "evidence": {
+    "evidence_level": "High - HBV vaccine/antivirals and HCV direct-acting antivirals are highly effective.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by WHO_HBV_2024, WHO_HCV_2022; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - WHO, NICE, EASL/AASLD.",
+    "verified_source_ids": [
+      "WHO_HBV_2024",
+      "WHO_HCV_2022"
+    ]
+  },
+  "references": {
+    "nice": "NICE guidance on hepatitis B and C testing and management",
+    "aafp": "AAFP - Viral hepatitis",
+    "bmj_best_practice": "BMJ Best Practice - Hepatitis A/B/C/E",
+    "msd_manual": "MSD Manual - Viral Hepatitis",
+    "merck_manual": "Merck Manual - Hepatitis, Acute Viral",
+    "uptodate": "UpToDate - Overview of viral hepatitis; hepatitis B and C management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Acute and Chronic Viral Hepatitis",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Viral hepatitis",
+    "who": "Guidelines for chronic hepatitis B infection — https://www.who.int/publications/i/item/9789240090903 | Updated recommendations on treatment of hepatitis C — https://www.who.int/news/item/24-06-2022-WHO-publishes-updated-guidance-on-hepatitis-C-infection",
+    "cdc": "CDC - Viral Hepatitis",
+    "idsa": "AASLD/IDSA - HCV guidance",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "WHO_HBV_2024",
+        "organization": "WHO",
+        "title": "Guidelines for chronic hepatitis B infection",
+        "publication_or_update": "2024",
+        "url": "https://www.who.int/publications/i/item/9789240090903",
+        "accessed": "2026-07-15",
+        "scope": "HBV testing, treatment eligibility, antiviral therapy and monitoring",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "WHO_HCV_2022",
+        "organization": "WHO",
+        "title": "Updated recommendations on treatment of hepatitis C",
+        "publication_or_update": "2022",
+        "url": "https://www.who.int/news/item/24-06-2022-WHO-publishes-updated-guidance-on-hepatitis-C-infection",
+        "accessed": "2026-07-15",
+        "scope": "Simplified HCV testing and pan-genotypic direct-acting antiviral therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags",
+      "referral_criteria",
+      "prevention"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "WHO_HBV_2024",
+        "WHO_HCV_2022"
+      ],
+      "treatment_and_monitoring": [
+        "WHO_HBV_2024",
+        "WHO_HCV_2022"
+      ],
+      "red_flags_and_referral": [
+        "WHO_HBV_2024",
+        "WHO_HCV_2022"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "WHO_HBV_2024",
+        "organization": "WHO",
+        "title": "Guidelines for chronic hepatitis B infection",
+        "publication_or_update": "2024",
+        "url": "https://www.who.int/publications/i/item/9789240090903",
+        "accessed": "2026-07-15",
+        "scope": "HBV testing, treatment eligibility, antiviral therapy and monitoring",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "WHO_HCV_2022",
+        "organization": "WHO",
+        "title": "Updated recommendations on treatment of hepatitis C",
+        "publication_or_update": "2022",
+        "url": "https://www.who.int/news/item/24-06-2022-WHO-publishes-updated-guidance-on-hepatitis-C-infection",
+        "accessed": "2026-07-15",
+        "scope": "Simplified HCV testing and pan-genotypic direct-acting antiviral therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Identify hepatitis type and stage before selecting virus-specific treatment and monitoring.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): HBV nucleos(t)ide analogue; Pan-genotypic direct-acting antiviral; Supportive care/no antiviral. No autonomous selection or dosing is allowed. Source IDs: WHO_HBV_2024, WHO_HCV_2022.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "virus and active-viraemia confirmation",
+      "pregnancy",
+      "cirrhosis/decompensation",
+      "renal function",
+      "HIV/coinfection",
+      "full interaction list",
+      "alcohol/herbals"
+    ],
+    "non_drug_measures": [
+      "Vaccination where applicable, alcohol avoidance, transmission counselling and household/partner testing as appropriate."
+    ],
+    "medication_options": [
+      {
+        "option_name": "HBV nucleos(t)ide analogue",
+        "medication_or_class": "HBV nucleos(t)ide analogue",
+        "option_type": "medication",
+        "role": "chronic HBV suppression",
+        "when_to_consider": "Only after confirmed HBV, staging and treatment-eligibility assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "hbv_antiviral",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "agent-specific serious reaction"
+            ],
+            "use_caution_if": [
+              "renal impairment, osteoporosis/bone risk, pregnancy, HIV coinfection, decompensated cirrhosis, or prior antiviral resistance"
+            ],
+            "history_checks": [
+              "confirmed HBV DNA/serology",
+              "cirrhosis",
+              "renal/bone status",
+              "pregnancy",
+              "HIV/coinfection",
+              "prior antivirals"
+            ],
+            "monitoring": [
+              "HBV DNA, ALT, renal/bone parameters by agent, adherence and hepatocellular-carcinoma surveillance when indicated; avoid unsafe abrupt withdrawal"
+            ]
+          }
+        ],
+        "clinical_note": "Choice and renal/bone monitoring depend on agent and patient factors.",
+        "source_ids": [
+          "WHO_HBV_2024"
+        ]
+      },
+      {
+        "option_name": "Pan-genotypic direct-acting antiviral",
+        "medication_or_class": "Pan-genotypic direct-acting antiviral",
+        "option_type": "medication",
+        "role": "HCV cure",
+        "when_to_consider": "Confirmed active HCV infection after interaction and cirrhosis assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "hcv_daa",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "unresolved major interaction or regimen contraindication"
+            ],
+            "use_caution_if": [
+              "decompensated cirrhosis, HBV coinfection/reactivation risk, pregnancy considerations, severe renal disease, prior DAA failure, or interacting acid suppressants/statins/anticonvulsants/herbals"
+            ],
+            "history_checks": [
+              "active HCV RNA",
+              "cirrhosis stage",
+              "HBV/HIV",
+              "renal function",
+              "pregnancy",
+              "full interaction list",
+              "prior treatment"
+            ],
+            "monitoring": [
+              "adherence, liver safety where indicated and sustained virologic response testing after treatment"
+            ]
+          }
+        ],
+        "clinical_note": "Must run a complete interaction check, including acid suppressants, statins, anticonvulsants and herbal products.",
+        "source_ids": [
+          "WHO_HCV_2022"
+        ]
+      },
+      {
+        "option_name": "Supportive care/no antiviral",
+        "medication_or_class": "Supportive care/no antiviral",
+        "option_type": "medication",
+        "role": "acute hepatitis A/E and selected acute illness",
+        "when_to_consider": "Based on virus, severity, pregnancy and public-health guidance",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "Avoid excess paracetamol, alcohol and unreviewed hepatotoxic products.",
+        "source_ids": [
+          "WHO_HBV_2024",
+          "WHO_HCV_2022"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent specialist/hospital care for coagulopathy, encephalopathy, hypoglycaemia, severe jaundice, pregnancy with acute hepatitis or decompensated cirrhosis."
+    ],
+    "source_ids": [
+      "WHO_HBV_2024",
+      "WHO_HCV_2022"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

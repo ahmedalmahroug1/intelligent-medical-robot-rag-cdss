@@ -1,0 +1,672 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-010",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-010",
+    "name": "Ear wax (cerumen) impaction",
+    "name_ar": "انحشار صملاخ الأذن (الشمع)",
+    "synonyms": [
+      "cerumen impaction",
+      "impacted ear wax",
+      "wax blockage"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "H61.2",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "AA20",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "76421000",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D002364",
+      "basis": "estimate"
+    },
+    "disease_category": "Benign ENT condition",
+    "organ_system": "ENT (external ear canal)",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine - benign",
+    "severity": "Mild; causes hearing loss/discomfort but not dangerous",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Accumulation of cerumen obstructing the ear canal, causing hearing loss, blockage, discomfort or tinnitus, easily managed with softening drops and irrigation/microsuction.",
+    "detailed_description": "A very common, benign reason for reduced hearing in primary care. It is often precipitated by cotton-bud use, hearing aids or narrow canals. Management is softening (cerumenolytic) drops followed by irrigation or microsuction. The main task is to confirm wax is the cause of symptoms and exclude other causes of hearing loss or ear pathology.",
+    "pathophysiology": "Normal self-clearing of cerumen fails (excess production, narrow/tortuous canal, pushed-in wax, foreign devices), so wax accumulates and occludes the canal, attenuating sound transmission.",
+    "etiology": "Impaired cerumen clearance; cotton buds, hearing aids/ear plugs, hairy or narrow canals, older age.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Gradual build-up; resolves promptly with removal.",
+    "prognosis": "Excellent; may recur, especially in hearing-aid users."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; a frequent cause of reversible hearing loss in older adults and hearing-aid users.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High across all ages.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "None.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; more troublesome in the elderly.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Cotton-bud use, in-ear devices (earphones), water exposure.",
+    "smoking": "Not relevant.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "Not directly relevant.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not relevant.",
+    "occupation": "Use of ear protection/earpieces.",
+    "travel": "Not relevant.",
+    "family_history": "Tendency to narrow/hairy canals.",
+    "genetic_factors": "Canal anatomy; dry vs wet cerumen types.",
+    "medications": "Not relevant.",
+    "previous_diseases": "Recurrent impaction; hearing aids; prior ear surgery/perforation (affects removal method)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Blocked ear and reduced hearing",
+      "frequency": "very common",
+      "importance": "Most common presentation",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Ear discomfort or fullness",
+      "frequency": "common",
+      "importance": "Supportive",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Tinnitus or itch",
+      "frequency": "sometimes",
+      "importance": "May accompany impaction",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Hearing loss (conductive) in the affected ear",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Main symptom; reversible with removal",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Sensation of blockage/fullness",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Ear discomfort/itch",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Non-specific",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Tinnitus",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "May accompany; consider other causes if persists after removal",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Wax visibly occluding the canal on otoscopy",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Confirms diagnosis",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Hearing loss persists after wax removal",
+      "why_important": "Indicates another cause of hearing loss needing assessment",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No pain, discharge, or vertigo",
+      "why_important": "Absence argues against infection/other ear pathology",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Is the hearing loss gradual, and in one or both ears?",
+      "why_ask": "Wax often unilateral/gradual; sudden loss needs urgent assessment",
+      "expected_answer": "Gradual",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any pain, discharge, vertigo, or a known perforation/ear surgery?",
+      "why_ask": "These change management and safety of irrigation",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Do you use cotton buds, earphones, or hearing aids?",
+      "why_ask": "Precipitants and recurrence risk",
+      "expected_answer": "Often yes",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any sudden hearing loss?",
+      "why_ask": "Sudden sensorineural hearing loss is an emergency (not wax)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Otoscopy",
+      "expected_finding": "Wax occluding the canal; drum not visible",
+      "importance": "High (confirms cause)"
+    },
+    {
+      "examination": "Recheck otoscopy and hearing after removal",
+      "expected_finding": "Clear canal, visible drum, improved hearing",
+      "importance": "High"
+    },
+    {
+      "examination": "Basic hearing assessment (whisper/tuning fork if needed)",
+      "expected_finding": "Conductive pattern that resolves with removal",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "None",
+      "indication": "Not applicable",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "None",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None",
+      "when_needed": "Not applicable",
+      "expected_findings": "N/A"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Microsuction (by trained clinician) for removal, especially if perforation/mastoid cavity",
+    "biopsy": "Not applicable",
+    "culture": "Not applicable",
+    "pcr": "Not applicable",
+    "audiometry": "If hearing loss persists after wax removal"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical: symptoms (hearing loss/blockage) with otoscopic confirmation of wax occluding the canal, and improvement after removal.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Otitis externa",
+      "why_similar": "Ear discomfort/blockage",
+      "differences": "Pain on ear manipulation, inflamed canal, discharge",
+      "red_flags": "Malignant OE in diabetics",
+      "distinguishing_symptoms": "Pain/itch with discharge",
+      "distinguishing_exam": "Inflamed canal",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the ear painful or discharging?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Otitis media with effusion",
+      "why_similar": "Conductive hearing loss/fullness",
+      "differences": "Middle-ear fluid, dull retracted drum",
+      "red_flags": "Unilateral effusion in adult (exclude nasopharyngeal tumour)",
+      "distinguishing_symptoms": "Hearing loss without wax",
+      "distinguishing_exam": "Fluid behind an intact drum",
+      "distinguishing_labs": "Tympanometry",
+      "distinguishing_imaging": "",
+      "differential_questions": "After removing wax, is hearing normal?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Sudden sensorineural hearing loss",
+      "why_similar": "Reduced hearing",
+      "differences": "Sudden, sensorineural, no wax obstructing",
+      "red_flags": "Emergency (time-critical steroids)",
+      "distinguishing_symptoms": "Sudden loss +/- vertigo",
+      "distinguishing_exam": "Normal canal; abnormal tuning-fork tests (sensorineural)",
+      "distinguishing_labs": "Audiometry",
+      "distinguishing_imaging": "MRI later",
+      "differential_questions": "Did the hearing drop suddenly?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Foreign body in the ear",
+      "why_similar": "Blockage",
+      "differences": "History of insertion; object seen",
+      "red_flags": "Button battery (emergency removal)",
+      "distinguishing_symptoms": "Known insertion",
+      "distinguishing_exam": "Foreign body visible",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Was anything put in the ear?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Did the hearing loss come on suddenly, and is there vertigo?",
+      "target_disease": "Sudden sensorineural hearing loss",
+      "competing_disease": "Wax impaction",
+      "purpose": "Do not miss a time-critical sensorineural loss",
+      "interpretation": "Sudden loss -> urgent ENT referral, not simply wax removal",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "question": "Is there a known eardrum perforation or previous ear surgery?",
+      "target_disease": "Contraindication to irrigation",
+      "competing_disease": "Simple wax",
+      "purpose": "Choose safe removal method",
+      "interpretation": "If perforation/surgery -> avoid irrigation, use microsuction",
+      "information_gain": "high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Reduced hearing with wax on otoscopy",
+      "question": "Was the loss gradual, and do you have a perforation, pain, discharge, or sudden onset?",
+      "expected_answers": "Simple gradual wax vs red-flag features",
+      "branching_logic": "Gradual, no red flags -> softening drops then irrigation/microsuction; sudden loss -> urgent ENT; perforation -> microsuction not irrigation",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Otoscopy before and after removal",
+      "why": "Confirms wax as the cause and success of removal",
+      "expected_outcome": "Improved hearing, visible drum"
+    },
+    {
+      "test": "Audiometry",
+      "why": "If hearing loss persists after wax removal",
+      "expected_outcome": "Identifies other hearing loss"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Sudden hearing loss (especially unilateral) with a clear canal",
+      "immediate_action": "Urgent ENT - suspected sudden sensorineural hearing loss (time-critical)"
+    },
+    {
+      "finding": "Ear pain, discharge, or fever",
+      "immediate_action": "Reassess for infection before/instead of routine wax removal"
+    },
+    {
+      "finding": "Vertigo, facial weakness, or neurological symptoms",
+      "immediate_action": "Assess for other pathology"
+    },
+    {
+      "finding": "Persistent unilateral hearing loss/effusion in an adult",
+      "immediate_action": "Refer ENT (exclude nasopharyngeal pathology)"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Sudden sensorineural hearing loss; suspected serious ear pathology.",
+    "routine_referral": "Wax not removable in primary care (needs microsuction), or persistent hearing loss after removal for audiology.",
+    "emergency_referral": "Button battery in ear."
+  },
+  "complications": {
+    "early": [
+      "Minor canal trauma or otitis externa from removal attempts",
+      "Transient dizziness with irrigation"
+    ],
+    "late": [
+      "Recurrent impaction (especially hearing-aid users)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Reassurance; confirm wax is the cause.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Cerumenolytic; Irrigation; Manual removal/microsuction. No autonomous selection or dosing is allowed. Source IDs: AAOHNS_CERUMEN_2017.",
+    "lifestyle_advice": "Do not use cotton buds; use softening drops periodically if prone to build-up (especially hearing-aid users).",
+    "follow_up": "Re-check hearing after removal; audiology if hearing loss persists.",
+    "legacy_medications_pre_v13": "Cerumenolytic drops (e.g., olive oil, sodium bicarbonate, or proprietary drops) for several days to soften wax; then ear irrigation or microsuction if needed. Avoid irrigation if perforation, previous ear surgery, or active infection - use microsuction instead."
+  },
+  "patient_education": {
+    "home_advice": "Ear wax build-up is harmless and a common cause of a blocked, muffled ear. Softening drops (like olive oil) for a few days often help it clear; sometimes the nurse needs to flush or suction it out. Never poke cotton buds into your ear, as this pushes wax deeper. See a doctor promptly if your hearing drops suddenly, or you have pain, discharge, or dizziness.",
+    "home_advice_ar": "تراكم صملاخ الأذن غير خطير وسبب شائع لانسداد الأذن وضعف السمع. تُفيد قطرات التليين (كزيت الزيتون) لبضعة أيام، وقد يحتاج الأمر أحياناً إلى غسل أو شفط في العيادة. لا تُدخل أعواد القطن في الأذن فهي تدفع الشمع أعمق. راجع الطبيب سريعاً إذا هبط سمعك فجأةً، أو ظهر ألم أو إفراز أو دوخة.",
+    "prevention": "Avoid cotton buds; regular softening drops for those prone to build-up.",
+    "warning_signs": "Sudden hearing loss, ear pain, discharge, dizziness, or hearing that stays reduced after wax removal."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Avoid cotton buds; periodic softening drops if prone.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "Moderate-high for cerumenolytics and removal methods.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by AAOHNS_CERUMEN_2017; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, AAO-HNS cerumen guideline.",
+    "verified_source_ids": [
+      "AAOHNS_CERUMEN_2017"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Earwax",
+    "aafp": "AAFP - Cerumen impaction",
+    "bmj_best_practice": "BMJ Best Practice - Earwax",
+    "msd_manual": "MSD Manual - Cerumen (Earwax)",
+    "merck_manual": "Merck Manual - Earwax",
+    "uptodate": "UpToDate - Cerumen impaction",
+    "harrisons": "Harrison's Principles of Internal Medicine - Disorders of the ear",
+    "oxford_handbook": "Oxford Handbook of General Practice - Ear problems",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "AAOHNS_CERUMEN_2017",
+        "organization": "AAO-HNSF",
+        "title": "Clinical Practice Guideline: Cerumen Impaction (Update)",
+        "publication_or_update": "2017",
+        "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/cerumen-impaction/",
+        "accessed": "2026-07-15",
+        "scope": "Cerumen impaction assessment, modifying factors and removal",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "AAOHNS_CERUMEN_2017"
+      ],
+      "treatment_and_monitoring": [
+        "AAOHNS_CERUMEN_2017"
+      ],
+      "red_flags_and_referral": [
+        "AAOHNS_CERUMEN_2017"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "AAOHNS_CERUMEN_2017",
+        "organization": "AAO-HNSF",
+        "title": "Clinical Practice Guideline: Cerumen Impaction (Update)",
+        "publication_or_update": "2017",
+        "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/cerumen-impaction/",
+        "accessed": "2026-07-15",
+        "scope": "Cerumen impaction assessment, modifying factors and removal",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Remove symptomatic/obstructing cerumen safely after checking modifying factors.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Cerumenolytic; Irrigation; Manual removal/microsuction. No autonomous selection or dosing is allowed. Source IDs: AAOHNS_CERUMEN_2017.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "perforation/tubes",
+      "ear surgery",
+      "anticoagulation",
+      "diabetes/immunocompromise",
+      "sole hearing ear"
+    ],
+    "non_drug_measures": [
+      "Do not insert cotton buds or instruments into the canal."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Cerumenolytic",
+        "medication_or_class": "Cerumenolytic",
+        "option_type": "medication",
+        "role": "wax softening",
+        "when_to_consider": "Selected uncomplicated impaction",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_ear",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "ototoxic preparation when the tympanic membrane is perforated or a ventilation tube is present"
+            ],
+            "use_caution_if": [
+              "diabetes, immunocompromise, prior ear surgery, severe pain or cranial-nerve symptoms"
+            ],
+            "history_checks": [
+              "eardrum status",
+              "ear surgery/tubes",
+              "diabetes",
+              "immunosuppression"
+            ],
+            "monitoring": [
+              "response within 48-72 hours and signs of invasive disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_CERUMEN_2017"
+        ]
+      },
+      {
+        "option_name": "Irrigation",
+        "medication_or_class": "Irrigation",
+        "option_type": "medication",
+        "role": "mechanical removal",
+        "when_to_consider": "Only when tympanic membrane is intact and no contraindicating ear history",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_ear",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "ototoxic preparation when the tympanic membrane is perforated or a ventilation tube is present"
+            ],
+            "use_caution_if": [
+              "diabetes, immunocompromise, prior ear surgery, severe pain or cranial-nerve symptoms"
+            ],
+            "history_checks": [
+              "eardrum status",
+              "ear surgery/tubes",
+              "diabetes",
+              "immunosuppression"
+            ],
+            "monitoring": [
+              "response within 48-72 hours and signs of invasive disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_CERUMEN_2017"
+        ]
+      },
+      {
+        "option_name": "Manual removal/microsuction",
+        "medication_or_class": "Manual removal/microsuction",
+        "option_type": "medication",
+        "role": "preferred procedural option in higher-risk ears",
+        "when_to_consider": "Perforation, prior surgery or when irrigation is unsuitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_ear",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "ototoxic preparation when the tympanic membrane is perforated or a ventilation tube is present"
+            ],
+            "use_caution_if": [
+              "diabetes, immunocompromise, prior ear surgery, severe pain or cranial-nerve symptoms"
+            ],
+            "history_checks": [
+              "eardrum status",
+              "ear surgery/tubes",
+              "diabetes",
+              "immunosuppression"
+            ],
+            "monitoring": [
+              "response within 48-72 hours and signs of invasive disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_CERUMEN_2017"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "ENT referral for failed removal, uncertain anatomy, severe pain, discharge, prior complex surgery or sole-hearing ear risk."
+    ],
+    "source_ids": [
+      "AAOHNS_CERUMEN_2017"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

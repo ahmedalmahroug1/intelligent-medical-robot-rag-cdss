@@ -1,0 +1,770 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-016",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: each symptom on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh/omim are estimates to verify.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-016",
+    "name": "Hypertension (essential/primary)",
+    "name_ar": "ارتفاع ضغط الدم (الأساسي)",
+    "synonyms": [
+      "high blood pressure",
+      "essential hypertension",
+      "primary hypertension",
+      "arterial hypertension"
+    ],
+    "abbreviations": [
+      "HTN",
+      "HBP",
+      "BP"
+    ],
+    "icd10": {
+      "code": "I10",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "BA00",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "59621000",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "145500",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D006973",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic non-communicable / cardiovascular",
+    "organ_system": "Cardiovascular",
+    "specialty": "Family medicine / Internal medicine / Cardiology",
+    "emergency_level": "Routine (chronic) — but hypertensive emergency (>180/120 with target-organ damage) is a medical emergency",
+    "severity": "Grade 1 (140-159/90-99), Grade 2 (160-179/100-109), Grade 3 (>=180/110) per ESC/ESH; asymptomatic yet high lifetime cardiovascular risk",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Persistently elevated arterial blood pressure (office BP >=140/90 mmHg, or >=130/80 by ACC/AHA), usually asymptomatic, a leading modifiable risk factor for stroke, ischaemic heart disease, heart failure and chronic kidney disease.",
+    "detailed_description": "Hypertension is a chronic condition defined by sustained elevation of systemic arterial pressure. In >90% of adults it is 'essential/primary' (no single identifiable cause); the remainder is 'secondary' to a definable cause (renal, endocrine, drug-induced, etc.). Diagnosis requires elevated readings confirmed on repeat measurement, ideally with out-of-office measurement (ambulatory or home BP) to exclude white-coat effect. Because it is usually silent, it is detected by screening and its importance lies in long-term cardiovascular and renal risk rather than acute symptoms.",
+    "pathophysiology": "Blood pressure = cardiac output x systemic vascular resistance. Essential hypertension reflects a combination of increased vascular resistance (arteriolar remodelling, endothelial dysfunction, reduced nitric-oxide bioavailability), inappropriate renin-angiotensin-aldosterone system (RAAS) activation, sympathetic overactivity, and renal sodium handling that resets pressure-natriuresis to a higher set point. Chronic elevation causes arterial stiffening, left-ventricular hypertrophy, and end-organ damage.",
+    "etiology": "Primary (essential): polygenic predisposition plus environment (high sodium/low potassium diet, obesity, inactivity, excess alcohol, ageing arterial stiffening). Secondary causes to consider especially if young, resistant, or abrupt onset: chronic kidney disease, renovascular disease, primary aldosteronism, phaeochromocytoma, Cushing syndrome, thyroid/parathyroid disease, obstructive sleep apnoea, coarctation, and drugs (NSAIDs, oral contraceptives, corticosteroids, sympathomimetics/decongestants, ciclosporin, liquorice, cocaine/amphetamines).",
+    "incubation_period": "Not applicable (non-infectious, develops over years).",
+    "natural_history": "Typically develops gradually from middle age; without treatment, sustained elevation accelerates atherosclerosis and produces target-organ damage over years to decades (LVH, heart failure, stroke, CKD, retinopathy, aortic disease).",
+    "prognosis": "Excellent when detected early and controlled; each ~10 mmHg reduction in systolic BP substantially lowers stroke and coronary risk. Prognosis worsens with grade, duration, coexisting diabetes/CKD, and established target-organ damage."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "~30-45% of adults worldwide; rises with age (>60% over age 60). Global estimate ~1.3 billion adults (WHO).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High lifetime incidence; most adults develop hypertension by old age in high-sodium populations.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Leading global contributor to cardiovascular death; attributable to millions of deaths/year via stroke and ischaemic heart disease (WHO).",
+      "basis": "estimate"
+    },
+    "age_groups": "Prevalence increases steadily with age; isolated systolic hypertension predominates in the elderly.",
+    "sex_predominance": "Slightly higher in men before ~55; women catch up and exceed after menopause.",
+    "geographic_distribution": "Worldwide; rising burden in low- and middle-income countries (including North Africa/MENA) with dietary transition and under-treatment.",
+    "seasonal_pattern": "BP tends to be modestly higher in cold weather."
+  },
+  "risk_factors": {
+    "lifestyle": "High dietary sodium, low potassium (low fruit/vegetable intake), physical inactivity, psychosocial stress, poor sleep.",
+    "smoking": "Causes acute BP rises and accelerates atherosclerosis; major additive cardiovascular risk (though chronic smoking's effect on baseline BP is modest).",
+    "alcohol": "Excess intake raises BP dose-dependently; reduction lowers BP.",
+    "obesity": "Strong dose-dependent risk factor; central adiposity especially. Weight loss is one of the most effective non-drug interventions.",
+    "diabetes": "Frequently coexists (metabolic syndrome); together sharply increase cardiovascular and renal risk.",
+    "hypertension": "N/A (this is the condition).",
+    "pregnancy": "Pre-existing (chronic) hypertension and pregnancy-related hypertension/pre-eclampsia are distinct entities requiring specific management.",
+    "occupation": "Shift work, high-strain jobs, noise exposure associated with modestly higher BP.",
+    "travel": "Not a primary risk factor.",
+    "family_history": "Positive family history is a strong risk factor (polygenic heritability).",
+    "genetic_factors": "Polygenic; rare monogenic forms (e.g., Liddle syndrome, glucocorticoid-remediable aldosteronism) — consider in young/resistant cases.",
+    "medications": "NSAIDs, combined oral contraceptives, corticosteroids, sympathomimetic decongestants, ciclosporin/tacrolimus, erythropoietin, VEGF inhibitors, liquorice.",
+    "previous_diseases": "Chronic kidney disease, obstructive sleep apnoea, endocrine disorders (raise secondary-HTN probability)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "None (asymptomatic — found on screening)",
+      "frequency": "very common",
+      "importance": "Defining — most patients are asymptomatic",
+      "source": "NICE NG136; ESC/ESH",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Headache (typically occipital, morning)",
+      "frequency": "uncommon",
+      "importance": "Low — nonspecific; usually only with very high BP",
+      "source": "BMJ Best Practice",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Dizziness / lightheadedness",
+      "frequency": "sometimes",
+      "importance": "Low — nonspecific",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Asymptomatic",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Defining feature — hypertension is 'silent'; diagnosis is by measurement, not symptoms",
+      "stage": "All",
+      "early_late": "Early and late",
+      "source": "NICE NG136; WHO",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Headache",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Low; more with severe/malignant hypertension",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "BMJ Best Practice",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Epistaxis (nosebleed)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Weak/inconsistent association",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Visual disturbance / blurring",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Red flag when acute (retinopathy / malignant hypertension)",
+      "stage": "Severe/malignant",
+      "early_late": "Late",
+      "source": "ESC/ESH; NICE NG136",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Dyspnoea / chest pain / palpitations",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "slightly reduces",
+      "importance": "Indicate target-organ / cardiac involvement",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No headache, visual change, chest pain, or neurological deficit",
+      "why_important": "Makes hypertensive emergency/urgency far less likely — supports routine chronic management",
+      "absence_significance": "moderately reduces",
+      "source": "ESC/ESH",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Normal home/ambulatory BP despite high office readings",
+      "why_important": "Suggests white-coat hypertension rather than sustained hypertension",
+      "absence_significance": "excludes if absent",
+      "source": "NICE NG136 (ABPM/HBPM)",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How long has your blood pressure been high, and what have your home readings been?",
+      "why_ask": "Distinguishes new vs long-standing; home data reduces white-coat effect",
+      "expected_answer": "Variable; often found incidentally",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any headache, chest pain, breathlessness, visual change, or weakness/numbness?",
+      "why_ask": "Screens for hypertensive emergency and target-organ damage",
+      "expected_answer": "Usually none in chronic HTN",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Do you take NSAIDs, decongestants, oral contraceptives, steroids, or use liquorice/stimulants?",
+      "why_ask": "Identifies drug-induced (secondary/aggravating) causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Snoring, witnessed apnoea, daytime sleepiness?",
+      "why_ask": "Obstructive sleep apnoea is a common secondary/contributing cause",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Family history of hypertension, stroke, kidney disease, or early heart disease?",
+      "why_ask": "Risk stratification",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Diet (salt), alcohol, physical activity, smoking?",
+      "why_ask": "Modifiable drivers and treatment targets",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Blood pressure — both arms, correct cuff size, seated after rest; repeat and average",
+      "expected_finding": "Sustained >=140/90 (office); confirm out-of-office",
+      "importance": "Essential — the diagnosis"
+    },
+    {
+      "examination": "BMI / waist circumference",
+      "expected_finding": "Often raised",
+      "importance": "High (risk + treatable driver)"
+    },
+    {
+      "examination": "Cardiovascular exam (apex, murmurs, heaves)",
+      "expected_finding": "May show LVH signs, loud A2",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Fundoscopy",
+      "expected_finding": "Hypertensive retinopathy (AV nicking, haemorrhages, papilloedema in emergency)",
+      "importance": "High in severe HTN"
+    },
+    {
+      "examination": "Peripheral pulses / radio-femoral delay; renal/abdominal bruit",
+      "expected_finding": "Delay suggests coarctation; bruit suggests renovascular disease",
+      "importance": "Moderate (secondary causes)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Usually normal; tachycardia may suggest phaeochromocytoma/hyperthyroidism/anxiety",
+    "blood_pressure": "Elevated by definition; >=180/120 with symptoms = emergency",
+    "respiratory_rate": "Normal unless pulmonary oedema (complication)",
+    "oxygen_saturation": "Normal unless complicated by heart failure",
+    "bmi": "Frequently >=25-30"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Urinalysis + urine albumin:creatinine ratio (ACR)",
+      "indication": "All at diagnosis",
+      "expected_result": "May show proteinuria/albuminuria",
+      "normal_range": "ACR <3 mg/mmol",
+      "diagnostic_value": "Target-organ (renal) damage",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Serum electrolytes, urea, creatinine (eGFR)",
+      "indication": "All at diagnosis and monitoring",
+      "expected_result": "Usually normal; low K+ may suggest primary aldosteronism",
+      "normal_range": "eGFR >=90; K+ 3.5-5.0 mmol/L",
+      "diagnostic_value": "Renal function + secondary clues",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Fasting glucose / HbA1c + lipid profile",
+      "indication": "Cardiovascular risk assessment",
+      "expected_result": "Screens for diabetes/dyslipidaemia",
+      "normal_range": "HbA1c <42 mmol/mol (<6.0%)",
+      "diagnostic_value": "Global risk",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "TSH; aldosterone:renin ratio; metanephrines; overnight dexamethasone",
+      "indication": "Only if secondary hypertension suspected (young, resistant, hypokalaemia, paroxysms)",
+      "expected_result": "Depends on cause",
+      "normal_range": "",
+      "diagnostic_value": "Secondary cause work-up",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine, targeted"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Renal ultrasound / Doppler / CT or MR angiography",
+      "when_needed": "Suspected renovascular or renal parenchymal disease",
+      "expected_findings": "Renal artery stenosis, asymmetric kidneys, structural disease"
+    },
+    {
+      "imaging_type": "Echocardiography",
+      "when_needed": "Suspected LVH or heart failure",
+      "expected_findings": "Left ventricular hypertrophy, diastolic dysfunction"
+    }
+  ],
+  "ecg": {
+    "when_needed": "At diagnosis for all (baseline) and if cardiac symptoms",
+    "findings": "Left ventricular hypertrophy (Sokolow-Lyon/Cornell criteria), strain pattern, prior infarction, LA enlargement, AF."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not routine",
+    "endoscopy": "Not applicable",
+    "biopsy": "Renal biopsy only in specific parenchymal disease work-up",
+    "culture": "Not applicable",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Office BP >=140/90 mmHg on repeated visits (ESC/ESH, WHO) or >=130/80 (ACC/AHA 2017). Confirm with ambulatory (ABPM daytime average >=135/85) or home BP monitoring (HBPM >=135/85) to exclude white-coat hypertension.",
+    "diagnostic_scores": "Cardiovascular risk scores (e.g., SCORE2/SCORE2-OP, QRISK, ASCVD pooled cohort) guide treatment thresholds and targets.",
+    "cutoff_values": {
+      "value": "Grade 1 140-159/90-99; Grade 2 160-179/100-109; Grade 3 >=180/110; ABPM/HBPM diagnostic threshold 135/85; hypertensive emergency >=180/120 with acute target-organ damage.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "White-coat hypertension",
+      "why_similar": "High office readings",
+      "differences": "Normal out-of-office BP",
+      "red_flags": "None",
+      "distinguishing_symptoms": "None",
+      "distinguishing_exam": "Normal home/ambulatory readings",
+      "distinguishing_labs": "No target-organ damage",
+      "distinguishing_imaging": "Normal",
+      "differential_questions": "What are your home readings?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Secondary hypertension (renal, aldosteronism, phaeochromocytoma, OSA, Cushing, coarctation)",
+      "why_similar": "Elevated BP",
+      "differences": "Young onset, resistant, hypokalaemia, paroxysms, specific features",
+      "red_flags": "Resistant/malignant HTN",
+      "distinguishing_symptoms": "Sweating/palpitations/headache (phaeo); snoring (OSA)",
+      "distinguishing_exam": "Radio-femoral delay, bruit, Cushingoid features",
+      "distinguishing_labs": "Low K+, abnormal ARR/metanephrines/cortisol",
+      "distinguishing_imaging": "Renal artery stenosis, adrenal mass",
+      "differential_questions": "Age of onset? Spells? Snoring?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Hypertensive emergency/urgency",
+      "why_similar": "Very high BP",
+      "differences": "Acute target-organ damage present (emergency) vs absent (urgency)",
+      "red_flags": "Chest pain, neuro deficit, dyspnoea, visual loss",
+      "distinguishing_symptoms": "Symptomatic",
+      "distinguishing_exam": "Papilloedema, focal neurology, pulmonary oedema",
+      "distinguishing_labs": "Rising creatinine, troponin",
+      "distinguishing_imaging": "CT head, CXR",
+      "differential_questions": "Any chest pain, weakness, breathlessness, visual change?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "What are your averaged home BP readings over a week?",
+      "target_disease": "Sustained hypertension",
+      "competing_disease": "White-coat hypertension",
+      "purpose": "Confirm true sustained elevation",
+      "interpretation": "Home avg >=135/85 supports true HTN",
+      "information_gain": "very high",
+      "source": "NICE NG136",
+      "basis": "sourced"
+    },
+    {
+      "question": "Any spells of sweating, palpitations, and headache together?",
+      "target_disease": "Phaeochromocytoma (secondary)",
+      "competing_disease": "Essential hypertension",
+      "purpose": "Screen secondary cause",
+      "interpretation": "Paroxysmal triad raises suspicion",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Elevated office BP, no symptoms",
+      "question": "Can you measure and log your BP at home twice daily for 7 days?",
+      "expected_answers": "Home average high vs normal",
+      "branching_logic": "High -> confirm HTN and stage; Normal -> white-coat, reassess risk",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Ambulatory or home BP monitoring",
+      "why": "Confirms diagnosis and excludes white-coat effect before lifelong treatment",
+      "expected_outcome": "Establishes true average BP"
+    },
+    {
+      "test": "Baseline bloods (electrolytes, creatinine/eGFR, HbA1c, lipids), ACR, ECG",
+      "why": "Assess target-organ damage and global cardiovascular risk",
+      "expected_outcome": "Guides treatment threshold and drug choice"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "BP >=180/120 WITH chest pain, breathlessness, neurological deficit, severe headache, or visual loss",
+      "immediate_action": "Treat as hypertensive emergency — same-day emergency assessment; controlled IV BP lowering in hospital"
+    },
+    {
+      "finding": "New confusion, focal weakness, or slurred speech",
+      "immediate_action": "Emergency — exclude stroke/hypertensive encephalopathy"
+    },
+    {
+      "finding": "Severe headache with visual disturbance and papilloedema",
+      "immediate_action": "Emergency — malignant hypertension work-up"
+    },
+    {
+      "finding": "BP high in pregnancy with headache/visual symptoms/epigastric pain",
+      "immediate_action": "Emergency — assess for pre-eclampsia"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected secondary hypertension needing specialist tests; resistant hypertension (uncontrolled on 3 drugs incl. a diuretic); accelerated/malignant hypertension without acute complications (same-day specialist).",
+    "routine_referral": "Young patients (<40) with hypertension; suspected endocrine cause; specialist advice for complex comorbidity.",
+    "emergency_referral": "Hypertensive emergency (BP >=180/120 with acute target-organ damage), eclampsia/pre-eclampsia, aortic dissection, acute pulmonary oedema."
+  },
+  "complications": {
+    "early": [
+      "Hypertensive emergency/urgency",
+      "Epistaxis (rare)"
+    ],
+    "late": [
+      "Stroke (ischaemic and haemorrhagic)",
+      "Ischaemic heart disease / myocardial infarction",
+      "Left ventricular hypertrophy and heart failure",
+      "Chronic kidney disease",
+      "Hypertensive retinopathy",
+      "Aortic aneurysm/dissection",
+      "Peripheral arterial disease",
+      "Vascular dementia"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Confirm diagnosis with out-of-office BP; stage severity; assess total cardiovascular risk and target-organ damage before/with starting treatment.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): ACE inhibitor or ARB; Calcium-channel blocker; Thiazide-like diuretic; Spironolactone. No autonomous selection or dosing is allowed. Source IDs: NICE_NG136_2026.",
+    "lifestyle_advice": "Reduce sodium (<5-6 g salt/day), DASH-style diet rich in fruit/vegetables, weight loss if overweight, regular aerobic activity, limit alcohol, stop smoking, reduce caffeine if excessive.",
+    "follow_up": "Review after starting/adjusting therapy (e.g., every 2-4 weeks until controlled), then at least annually with BP, bloods (U&E after ACEi/ARB/diuretic), and risk review; encourage home monitoring.",
+    "legacy_medications_pre_v13": "First-line per major guidelines: ACE inhibitor or ARB (especially if <55 or diabetic), calcium-channel blocker (especially if >=55 or Black African/Caribbean ancestry), and thiazide-like diuretic; combine stepwise. Add spironolactone for resistant HTN if K+ permits. Beta-blockers for specific indications. Targets individualised (commonly <140/90, tighter e.g. <130/80 in many patients if tolerated)."
+  },
+  "patient_education": {
+    "home_advice": "High blood pressure is usually silent but important; take medicines every day even when you feel well, check your BP at home, cut down salt, stay active, keep a healthy weight, limit alcohol, and stop smoking.",
+    "home_advice_ar": "ارتفاع ضغط الدم غالباً بلا أعراض لكنه خطير. تناول أدويتك يومياً حتى لو شعرت بخير، وقِس ضغطك في المنزل، وقلّل الملح، وحافظ على النشاط والوزن الصحي، وقلّل الكحول وتوقّف عن التدخين.",
+    "prevention": "Maintain healthy weight, low-salt/high-potassium diet, regular exercise, moderate alcohol, no smoking; periodic BP checks from mid-adulthood.",
+    "warning_signs": "Seek urgent care for severe headache, chest pain, breathlessness, sudden weakness/numbness, slurred speech, or visual loss."
+  },
+  "prevention": {
+    "vaccination": "Not applicable",
+    "lifestyle": "Salt reduction, DASH diet, weight control, exercise, limited alcohol, no smoking — primary prevention and treatment.",
+    "screening": "Opportunistic/periodic BP measurement in all adults; more frequent if risk factors."
+  },
+  "evidence": {
+    "evidence_level": "High — large randomised trials and meta-analyses (BP lowering reduces stroke/MI/heart failure).",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG136_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong recommendations across ESC/ESH, NICE NG136, ACC/AHA, WHO.",
+    "verified_source_ids": [
+      "NICE_NG136_2026"
+    ]
+  },
+  "references": {
+    "nice": "Hypertension in adults: diagnosis and management (NG136) — https://www.nice.org.uk/guidance/ng136/chapter/Recommendations",
+    "aafp": "AAFP hypertension guidance summaries",
+    "bmj_best_practice": "BMJ Best Practice — Essential hypertension",
+    "msd_manual": "MSD Manual — Hypertension",
+    "merck_manual": "Merck Manual — Hypertension",
+    "uptodate": "UpToDate — Overview of hypertension in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine — Hypertensive Vascular Disease",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine — Hypertension",
+    "who": "WHO Guideline for the pharmacological treatment of hypertension in adults (2021)",
+    "cdc": "CDC — High Blood Pressure",
+    "idsa": "",
+    "esc": "2023/2024 ESC/ESH Guidelines for the management of arterial hypertension",
+    "ada": "ADA Standards of Care — hypertension in diabetes",
+    "gina": "",
+    "gold": "",
+    "acp": "ACP/AAFP pharmacologic treatment of hypertension in adults >=60",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG136_2026",
+        "organization": "NICE",
+        "title": "Hypertension in adults: diagnosis and management (NG136)",
+        "publication_or_update": "2019; updated 2026-02-26",
+        "url": "https://www.nice.org.uk/guidance/ng136/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Hypertension confirmation, cardiovascular assessment and stepped treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG136_2026"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG136_2026"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG136_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG136_2026",
+        "organization": "NICE",
+        "title": "Hypertension in adults: diagnosis and management (NG136)",
+        "publication_or_update": "2019; updated 2026-02-26",
+        "url": "https://www.nice.org.uk/guidance/ng136/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Hypertension confirmation, cardiovascular assessment and stepped treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Confirm persistent hypertension, reduce cardiovascular risk and avoid treatment-related renal/electrolyte harm.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): ACE inhibitor or ARB; Calcium-channel blocker; Thiazide-like diuretic; Spironolactone. No autonomous selection or dosing is allowed. Source IDs: NICE_NG136_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "ABPM/HBPM confirmation",
+      "pregnancy",
+      "ethnicity",
+      "renal function/potassium",
+      "gout",
+      "postural symptoms",
+      "adherence and interfering medicines"
+    ],
+    "non_drug_measures": [
+      "Salt reduction, healthy diet, activity, weight management, alcohol moderation and smoking cessation."
+    ],
+    "medication_options": [
+      {
+        "option_name": "ACE inhibitor or ARB",
+        "medication_or_class": "ACE inhibitor or ARB",
+        "option_type": "medication",
+        "role": "step-1 option in appropriate patients",
+        "when_to_consider": "Based on age, ethnicity, diabetes and comorbidity",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ace_arb",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy, prior ACE-inhibitor angioedema for ACE inhibitors, bilateral renal artery stenosis, or severe hyperkalaemia"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, dehydration, low blood pressure, or potassium-raising medicines"
+            ],
+            "history_checks": [
+              "pregnancy",
+              "angioedema",
+              "renal disease",
+              "potassium",
+              "NSAIDs/diuretics"
+            ],
+            "monitoring": [
+              "creatinine/eGFR, potassium and blood pressure before and after initiation/titration"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG136_2026"
+        ]
+      },
+      {
+        "option_name": "Calcium-channel blocker",
+        "medication_or_class": "Calcium-channel blocker",
+        "option_type": "medication",
+        "role": "step-1 or combination option",
+        "when_to_consider": "Based on age/ethnicity and comorbidity",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ccb",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "class-specific contraindication such as severe hypotension; avoid verapamil/diltiazem in HFrEF"
+            ],
+            "use_caution_if": [
+              "heart failure, bradycardia/heart block, constipation, oedema, or interacting medicines"
+            ],
+            "history_checks": [
+              "heart-failure phenotype",
+              "heart rate/ECG",
+              "bowel symptoms",
+              "medicines"
+            ],
+            "monitoring": [
+              "blood pressure, heart rate, oedema and constipation"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG136_2026"
+        ]
+      },
+      {
+        "option_name": "Thiazide-like diuretic",
+        "medication_or_class": "Thiazide-like diuretic",
+        "option_type": "medication",
+        "role": "combination/alternative option",
+        "when_to_consider": "When indicated after electrolyte and gout review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "diuretic",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "anuria or severe electrolyte depletion"
+            ],
+            "use_caution_if": [
+              "gout, diabetes, hyponatraemia, dehydration, kidney disease, or lithium use"
+            ],
+            "history_checks": [
+              "renal function",
+              "electrolytes",
+              "gout",
+              "lithium",
+              "volume status"
+            ],
+            "monitoring": [
+              "electrolytes, renal function, blood pressure, weight and gout symptoms"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG136_2026"
+        ]
+      },
+      {
+        "option_name": "Spironolactone",
+        "medication_or_class": "Spironolactone",
+        "option_type": "medication",
+        "role": "selected resistant-hypertension option",
+        "when_to_consider": "Only after confirming resistance and potassium/renal eligibility",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "mra",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "significant hyperkalaemia or renal function below the product/guideline threshold"
+            ],
+            "use_caution_if": [
+              "CKD, ACE inhibitor/ARB/ARNI use, potassium supplements, or dehydration"
+            ],
+            "history_checks": [
+              "renal function",
+              "potassium",
+              "concomitant renin-angiotensin medicines"
+            ],
+            "monitoring": [
+              "potassium and renal function at baseline and after initiation/titration"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG136_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Same-day specialist/hospital assessment for severe hypertension with retinal, neurological, cardiac or renal emergency features."
+    ],
+    "source_ids": [
+      "NICE_NG136_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

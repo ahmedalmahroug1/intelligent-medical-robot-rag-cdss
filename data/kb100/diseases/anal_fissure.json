@@ -1,0 +1,740 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-036",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-036",
+    "name": "Anal fissure",
+    "name_ar": "الشرخ الشرجي",
+    "synonyms": [
+      "fissure-in-ano",
+      "anal fissure"
+    ],
+    "abbreviations": [
+      "GTN"
+    ],
+    "icd10": {
+      "code": "K60.2",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DB50",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "62129003",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D001007",
+      "basis": "estimate"
+    },
+    "disease_category": "Anorectal / benign",
+    "organ_system": "Gastrointestinal (anus)",
+    "specialty": "Family medicine / Colorectal surgery",
+    "emergency_level": "Routine - but atypical/multiple/lateral fissures need investigation (IBD, infection, malignancy)",
+    "severity": "Painful but benign; can become chronic",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A tear in the anal mucosa/skin causing severe sharp pain on defecation with bright-red bleeding; usually related to hard stool and treated conservatively.",
+    "detailed_description": "Anal fissure is a common cause of painful defecation. Most are 'primary' (posterior midline) and heal with stool softening, topical agents that relax the internal sphincter (GTN or diltiazem), and warm baths. Fissures that are atypical (lateral, multiple, non-healing) warrant investigation for secondary causes (Crohn's disease, infection, malignancy). Chronic fissures may need botulinum toxin or surgery.",
+    "pathophysiology": "Passage of a hard stool tears the anoderm; sphincter spasm and reduced blood flow (posterior midline is relatively ischaemic) impair healing, creating a painful cycle.",
+    "etiology": "Constipation/hard stool (most), diarrhoea, childbirth; secondary causes: Crohn's disease, infections (e.g., HIV, syphilis, TB), anal cancer.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Acute fissures often heal within weeks with treatment; some become chronic (>6 weeks) with a skin tag/sentinel pile.",
+    "prognosis": "Good; most heal with conservative measures."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common; affects all ages including infants and young adults.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High; associated with constipation and postpartum.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "None directly.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; young to middle-aged adults commonly.",
+    "sex_predominance": "Both.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Low-fibre diet, constipation/straining.",
+    "smoking": "Not directly relevant.",
+    "alcohol": "Via constipation/diarrhoea.",
+    "obesity": "Not directly relevant.",
+    "diabetes": "Not directly relevant.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Postpartum fissures common.",
+    "occupation": "Not directly relevant.",
+    "travel": "Diarrhoea/constipation from routine change.",
+    "family_history": "Not typically relevant.",
+    "genetic_factors": "Not relevant.",
+    "medications": "Constipating drugs.",
+    "previous_diseases": "Chronic constipation; Crohn's disease (secondary fissures)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Severe sharp anal pain on passing stool",
+      "frequency": "very common",
+      "importance": "Cardinal symptom",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Bright-red bleeding (small amount) on stool/paper",
+      "frequency": "common",
+      "importance": "Common accompanying feature",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Pain persisting after defecation / fear of opening bowels",
+      "frequency": "common",
+      "importance": "Sphincter spasm",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Severe sharp/tearing pain during and after defecation",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Cardinal symptom (often 'like passing glass')",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Bright-red bleeding (small volume)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Visible tear in the anal margin (often posterior midline) +/- sentinel skin tag",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Diagnostic examination finding",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Anal sphincter spasm / pain limiting examination",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Supports the diagnosis and perpetuates it",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Lateral/multiple fissures, or associated features (diarrhoea, ulcers)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - suggests secondary cause (Crohn's, infection, malignancy)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Typical single posterior-midline fissure, no systemic/bowel symptoms",
+      "why_important": "Supports primary benign fissure",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No weight loss, diarrhoea, or other perianal disease",
+      "why_important": "Argues against Crohn's disease/secondary cause",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Is there sharp pain on passing stool, and is the stool hard?",
+      "why_ask": "Typical fissure presentation and cause",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "How long has it lasted (acute vs chronic >6 weeks)?",
+      "why_ask": "Guides treatment escalation",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any diarrhoea, weight loss, other perianal problems, or recurrent/atypical fissures?",
+      "why_ask": "Screens for secondary causes (Crohn's, infection, cancer)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Constipation/straining or recent childbirth?",
+      "why_ask": "Contributory factors",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Gentle inspection (part the buttocks)",
+      "expected_finding": "Visible fissure, typically posterior midline; sentinel tag if chronic",
+      "importance": "High"
+    },
+    {
+      "examination": "Digital rectal exam / proctoscopy",
+      "expected_finding": "Often too painful acutely - do NOT force; defer or use topical anaesthetic",
+      "importance": "Moderate (defer if very painful)"
+    },
+    {
+      "examination": "Assess for atypical features (lateral/multiple/associated disease)",
+      "expected_finding": "Should be a single typical fissure",
+      "importance": "Moderate-high (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "None routinely",
+      "indication": "Clinical diagnosis",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "None",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    },
+    {
+      "test_name": "Investigations for secondary cause (selective)",
+      "indication": "Atypical/non-healing fissures (e.g., calprotectin for Crohn's, infection screen)",
+      "expected_result": "As per suspected cause",
+      "normal_range": "",
+      "diagnostic_value": "Identifies secondary cause",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "As part of secondary-cause work-up (e.g., colonoscopy for Crohn's)",
+      "expected_findings": "As per cause"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Examination under anaesthesia / colonoscopy for atypical or non-healing fissures",
+    "biopsy": "Of atypical fissures to exclude malignancy",
+    "culture": "Swab if infective cause suspected",
+    "pcr": "As indicated (e.g., STI screen)"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical: characteristic severe pain on defecation with a visible fissure (typically posterior midline). Acute (<6 weeks) vs chronic (>6 weeks, often with sentinel tag/exposed sphincter fibres). Atypical features (lateral/multiple/non-healing) prompt investigation for secondary causes.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Haemorrhoids / thrombosed pile",
+      "why_similar": "Anal pain and bleeding",
+      "differences": "Piles usually less sharp pain; thrombosed pile is a tender lump",
+      "red_flags": "",
+      "distinguishing_symptoms": "Lump vs tear",
+      "distinguishing_exam": "Haemorrhoid vs fissure on inspection",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is there a lump, or sharp pain like a cut on passing stool?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Perianal abscess/fistula",
+      "why_similar": "Anal pain",
+      "differences": "Swelling, throbbing pain, fever, discharge",
+      "red_flags": "Sepsis",
+      "distinguishing_symptoms": "Constant throbbing pain, discharge",
+      "distinguishing_exam": "Fluctuant tender swelling",
+      "distinguishing_labs": "Raised inflammatory markers",
+      "distinguishing_imaging": "MRI for fistula",
+      "differential_questions": "Is there swelling/discharge and fever rather than a tear?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Crohn's disease (secondary fissure)",
+      "why_similar": "Anal fissure",
+      "differences": "Atypical/lateral/multiple fissures, diarrhoea, perianal disease",
+      "red_flags": "Perianal Crohn's",
+      "distinguishing_symptoms": "GI/perianal disease",
+      "distinguishing_exam": "Atypical fissures, tags, fistulae",
+      "distinguishing_labs": "Calprotectin",
+      "distinguishing_imaging": "Colonoscopy/MRI",
+      "differential_questions": "Any diarrhoea, weight loss, or other perianal problems?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Anal cancer / infection (STI)",
+      "why_similar": "Anal ulcer/pain",
+      "differences": "Irregular ulcer, risk factors, non-healing",
+      "red_flags": "Non-healing ulcer/mass",
+      "distinguishing_symptoms": "Persistent ulcer",
+      "distinguishing_exam": "Irregular/indurated lesion",
+      "distinguishing_labs": "STI screen",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the sore not healing or irregular, with risk factors?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is this a single typical fissure with hard stools, or atypical (lateral/multiple/non-healing) with diarrhoea/other perianal disease?",
+      "target_disease": "Secondary fissure (Crohn's/infection/cancer)",
+      "competing_disease": "Primary anal fissure",
+      "purpose": "Detect secondary causes needing investigation",
+      "interpretation": "Atypical features -> investigate",
+      "information_gain": "high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the pain sharp specifically on passing stool, with a small amount of bright-red blood?",
+      "target_disease": "Anal fissure",
+      "competing_disease": "Haemorrhoids/other anorectal",
+      "purpose": "Confirm typical fissure",
+      "interpretation": "Yes + visible fissure -> anal fissure",
+      "information_gain": "moderate",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Painful defecation with suspected fissure",
+      "question": "Is it a typical single fissure, how long-standing, and any secondary-cause features?",
+      "expected_answers": "Primary acute/chronic vs secondary",
+      "branching_logic": "Primary -> stool softening + topical GTN/diltiazem + baths; chronic/refractory -> botulinum/surgery; atypical -> investigate",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Gentle inspection",
+      "why": "Confirms the fissure and its position",
+      "expected_outcome": "Visible posterior-midline fissure"
+    },
+    {
+      "test": "Secondary-cause work-up (if atypical)",
+      "why": "Exclude Crohn's/infection/cancer",
+      "expected_outcome": "Identifies/excludes cause"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Lateral, multiple, or non-healing fissures",
+      "immediate_action": "Investigate for secondary cause (Crohn's, infection, malignancy)"
+    },
+    {
+      "finding": "Perianal swelling/throbbing pain with fever (abscess)",
+      "immediate_action": "Urgent surgical assessment"
+    },
+    {
+      "finding": "Associated diarrhoea, weight loss, or perianal Crohn's features",
+      "immediate_action": "Investigate/refer for IBD"
+    },
+    {
+      "finding": "Non-healing anal ulcer/mass",
+      "immediate_action": "Refer to exclude anal cancer"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected abscess; suspected malignancy (non-healing ulcer).",
+    "routine_referral": "Chronic/refractory fissure for second-line therapy (botulinum toxin, sphincterotomy); atypical fissures for investigation.",
+    "emergency_referral": "Anorectal sepsis/abscess."
+  },
+  "complications": {
+    "early": [
+      "Severe pain limiting defecation; worsening constipation (pain-avoidance cycle)"
+    ],
+    "late": [
+      "Chronic fissure with sentinel tag",
+      "Recurrence"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the self-perpetuating pain-spasm cycle; break it by keeping stool soft and relaxing the sphincter.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Fibre/osmotic stool-softening regimen; Topical glyceryl trinitrate; Topical calcium-channel blocker. No autonomous selection or dosing is allowed. Source IDs: ASCRS_FISSURE_2023.",
+    "lifestyle_advice": "High-fibre diet, fluids, avoid straining, good anal hygiene, warm baths after defecation.",
+    "follow_up": "Review healing (weeks); escalate treatment if not healing; investigate atypical/non-healing fissures.",
+    "legacy_medications_pre_v13": "Stool softeners/bulk-forming laxatives and adequate fluids/fibre; warm baths; simple/topical analgesia. For persistent/chronic fissures: topical GTN or diltiazem (relax internal sphincter to aid healing; GTN can cause headache). Second-line: botulinum toxin injection; surgery (lateral internal sphincterotomy) for refractory cases."
+  },
+  "patient_education": {
+    "home_advice": "An anal fissure is a small tear in the skin of the back passage, usually from a hard stool - it causes sharp pain when you go and a little bright-red blood. The key is to keep stools soft and comfortable: plenty of fibre and fluids, warm baths, and a soothing/relaxing cream your doctor may prescribe. Most heal within a few weeks. See a doctor if it doesn't heal, keeps coming back, or you have diarrhoea, weight loss, or other back-passage problems.",
+    "home_advice_ar": "الشرخ الشرجي تمزّق صغير في جلد فتحة الشرج، غالباً من براز صلب - يسبّب ألماً حاداً عند التبرّز وقليلاً من الدم الأحمر الفاتح. الأساس إبقاء البراز ليّناً ومريحاً: ألياف وسوائل وفيرة، وحمّامات دافئة، وكريم مهدّئ/مرخٍ قد يصفه طبيبك. معظمها يلتئم خلال أسابيع. راجع الطبيب إذا لم يلتئم، أو تكرّر، أو صاحبه إسهال أو نقص وزن أو مشاكل أخرى في الشرج.",
+    "prevention": "Avoid constipation (fibre, fluids), avoid straining.",
+    "warning_signs": "Non-healing sore, recurrent/atypical fissures, swelling with fever (abscess), diarrhoea or weight loss."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Prevent constipation and straining.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for topical sphincter relaxants and stool softening; surgery effective for refractory disease.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by ASCRS_FISSURE_2023; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, colorectal society guidance.",
+    "verified_source_ids": [
+      "ASCRS_FISSURE_2023"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Anal fissure",
+    "aafp": "AAFP - Anal fissure",
+    "bmj_best_practice": "BMJ Best Practice - Anal fissure",
+    "msd_manual": "MSD Manual - Anal Fissure",
+    "merck_manual": "Merck Manual - Anal Fissure",
+    "uptodate": "UpToDate - Anal fissure: clinical manifestations, diagnosis, and management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Anorectal diseases",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Anal fissure",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "ASCRS_FISSURE_2023",
+        "organization": "ASCRS",
+        "title": "Clinical Practice Guidelines for the Management of Anal Fissures",
+        "publication_or_update": "2023",
+        "url": "https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf",
+        "accessed": "2026-07-15",
+        "scope": "Conservative, topical, botulinum and surgical fissure management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "ASCRS_FISSURE_2023"
+      ],
+      "treatment_and_monitoring": [
+        "ASCRS_FISSURE_2023"
+      ],
+      "red_flags_and_referral": [
+        "ASCRS_FISSURE_2023"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "ASCRS_FISSURE_2023",
+        "organization": "ASCRS",
+        "title": "Clinical Practice Guidelines for the Management of Anal Fissures",
+        "publication_or_update": "2023",
+        "url": "https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf",
+        "accessed": "2026-07-15",
+        "scope": "Conservative, topical, botulinum and surgical fissure management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Break the pain-spasm cycle, soften stool and refer atypical/refractory fissures.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Fibre/osmotic stool-softening regimen; Topical glyceryl trinitrate; Topical calcium-channel blocker. No autonomous selection or dosing is allowed. Source IDs: ASCRS_FISSURE_2023.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "PDE-5 inhibitor/riociguat",
+      "hypotension/migraine",
+      "pregnancy",
+      "continence history",
+      "IBD/infection risk"
+    ],
+    "non_drug_measures": [
+      "Warm baths, fibre/fluid and avoidance of straining."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Fibre/osmotic stool-softening regimen",
+        "medication_or_class": "Fibre/osmotic stool-softening regimen",
+        "option_type": "medication",
+        "role": "first-line",
+        "when_to_consider": "Acute or chronic fissure unless obstruction",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ASCRS_FISSURE_2023"
+        ]
+      },
+      {
+        "option_name": "Topical glyceryl trinitrate",
+        "medication_or_class": "Topical glyceryl trinitrate",
+        "option_type": "medication",
+        "role": "sphincter relaxation",
+        "when_to_consider": "Chronic fissure after contraindication review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_anorectal",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "undiagnosed rectal bleeding, infection, prolonged corticosteroid exposure, pregnancy, hypotension or headache depending on agent"
+            ],
+            "history_checks": [
+              "bleeding red flags",
+              "pregnancy",
+              "duration",
+              "blood pressure",
+              "PDE-5 inhibitor use for topical nitrate"
+            ],
+            "monitoring": [
+              "short duration for steroid/anaesthetic products; symptom response and local adverse effects"
+            ]
+          },
+          {
+            "rule_id": "nitrate",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "concurrent PDE-5 inhibitor or riociguat use, or severe hypotension"
+            ],
+            "use_caution_if": [
+              "aortic stenosis, hypertrophic obstructive cardiomyopathy, volume depletion or recurrent syncope"
+            ],
+            "history_checks": [
+              "erectile-dysfunction/pulmonary-hypertension medicines",
+              "blood pressure",
+              "valve disease",
+              "syncope"
+            ],
+            "monitoring": [
+              "blood pressure, symptom frequency and headache; emergency action if pain persists"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ASCRS_FISSURE_2023"
+        ]
+      },
+      {
+        "option_name": "Topical calcium-channel blocker",
+        "medication_or_class": "Topical calcium-channel blocker",
+        "option_type": "medication",
+        "role": "alternative sphincter relaxation",
+        "when_to_consider": "Chronic fissure when selected",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_anorectal",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "undiagnosed rectal bleeding, infection, prolonged corticosteroid exposure, pregnancy, hypotension or headache depending on agent"
+            ],
+            "history_checks": [
+              "bleeding red flags",
+              "pregnancy",
+              "duration",
+              "blood pressure",
+              "PDE-5 inhibitor use for topical nitrate"
+            ],
+            "monitoring": [
+              "short duration for steroid/anaesthetic products; symptom response and local adverse effects"
+            ]
+          },
+          {
+            "rule_id": "ccb",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "class-specific contraindication such as severe hypotension; avoid verapamil/diltiazem in HFrEF"
+            ],
+            "use_caution_if": [
+              "heart failure, bradycardia/heart block, constipation, oedema, or interacting medicines"
+            ],
+            "history_checks": [
+              "heart-failure phenotype",
+              "heart rate/ECG",
+              "bowel symptoms",
+              "medicines"
+            ],
+            "monitoring": [
+              "blood pressure, heart rate, oedema and constipation"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ASCRS_FISSURE_2023"
+        ]
+      },
+      {
+        "option_name": "Botulinum toxin or surgery",
+        "medication_or_class": "Botulinum toxin or surgery",
+        "option_type": "specialist_procedure",
+        "role": "refractory treatment",
+        "when_to_consider": "Specialist-confirmed persistent fissure",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Requires continence-risk, obstetric and sphincter-injury assessment before procedural choice.",
+        "source_ids": [
+          "ASCRS_FISSURE_2023"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Colorectal referral for lateral/multiple/atypical fissure, IBD/infection/cancer suspicion, incontinence risk or failed therapy."
+    ],
+    "source_ids": [
+      "ASCRS_FISSURE_2023"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

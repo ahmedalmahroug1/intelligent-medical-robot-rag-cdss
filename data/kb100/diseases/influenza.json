@@ -1,0 +1,764 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-002",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-002",
+    "name": "Influenza (seasonal flu)",
+    "name_ar": "الإنفلونزا (النزلة الوافدة)",
+    "synonyms": [
+      "flu",
+      "seasonal influenza",
+      "grippe"
+    ],
+    "abbreviations": [
+      "flu"
+    ],
+    "icd10": {
+      "code": "J11",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "1E32",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "6142004",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D007251",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute viral respiratory infection",
+    "organ_system": "Respiratory",
+    "specialty": "Family medicine",
+    "emergency_level": "Usually routine — but can cause severe illness/pneumonia in high-risk groups",
+    "severity": "Self-limiting in most; potentially severe in elderly, pregnant, chronic disease, immunocompromised",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "An acute respiratory illness caused by influenza viruses, typically with abrupt high fever, myalgia, headache and prostration, more systemic than a common cold.",
+    "detailed_description": "Influenza A and B viruses cause seasonal epidemics. Illness ranges from mild to severe; most healthy adults recover in about a week, but influenza causes substantial morbidity and mortality in high-risk groups and can be complicated by pneumonia (primary viral or secondary bacterial). Diagnosis is usually clinical during known circulation; antivirals and vaccination are the specific interventions.",
+    "pathophysiology": "Virus infects respiratory epithelium, causing epithelial damage and a strong systemic cytokine response responsible for fever, myalgia and malaise. Epithelial injury and impaired mucociliary clearance predispose to secondary bacterial infection (e.g., Streptococcus pneumoniae, Staphylococcus aureus).",
+    "etiology": "Influenza A (subtypes by H and N surface proteins) and influenza B; antigenic drift causes seasonal epidemics, antigenic shift (influenza A) can cause pandemics. Droplet/aerosol and contact transmission.",
+    "incubation_period": "Typically 1-4 days (average ~2 days).",
+    "natural_history": "Abrupt onset; fever and systemic symptoms usually settle in 3-5 days; cough and malaise may persist 1-2 weeks. Complications more likely at extremes of age and with comorbidity.",
+    "prognosis": "Good in healthy adults; higher risk of severe disease/death in elderly, pregnant, young children, and those with chronic cardiac/respiratory/renal disease, diabetes, or immunosuppression."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Seasonal epidemics affect an estimated 5-15% of the population annually (WHO).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Annual winter epidemics in temperate regions; year-round in tropics.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "WHO estimates hundreds of thousands of respiratory deaths globally each year, concentrated in the elderly and high-risk groups.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; severe disease at extremes of age.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide; seasonal timing varies by hemisphere.",
+    "seasonal_pattern": "Winter epidemics in temperate climates."
+  },
+  "risk_factors": {
+    "lifestyle": "Crowding, close contact; not being vaccinated.",
+    "smoking": "Increases risk of severe respiratory illness and complications.",
+    "alcohol": "Excess associated with higher pneumonia risk.",
+    "obesity": "Independent risk factor for severe influenza.",
+    "diabetes": "Increases risk of complications.",
+    "hypertension": "Not a direct risk factor; comorbid cardiac disease increases risk.",
+    "pregnancy": "Higher risk of severe disease and complications — a priority group for vaccination and antivirals.",
+    "occupation": "Healthcare and frontline workers have higher exposure.",
+    "travel": "Crowded travel and differing hemispheric seasons increase exposure.",
+    "family_history": "Not relevant.",
+    "genetic_factors": "Minor.",
+    "medications": "Immunosuppressants increase severity risk.",
+    "previous_diseases": "Chronic cardiac, respiratory (asthma/COPD), renal, hepatic, neurological disease and immunosuppression increase risk."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sudden high fever and feeling very unwell",
+      "frequency": "very common",
+      "importance": "Hallmark abrupt systemic onset",
+      "source": "CDC; NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Body aches / muscle pains",
+      "frequency": "very common",
+      "importance": "Prominent, helps distinguish from a cold",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Dry cough",
+      "frequency": "common",
+      "importance": "Common respiratory feature",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Headache and exhaustion",
+      "frequency": "common",
+      "importance": "Systemic symptoms",
+      "source": "CDC",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Fever (often sudden and high, 38-40°C)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Key feature; abrupt onset distinguishes from cold",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "CDC; UpToDate",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Myalgia (muscle aches)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Prominent; more than in a cold",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Headache",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Systemic feature",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fatigue / prostration",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Can be marked and prolonged",
+      "stage": "Early-mid",
+      "early_late": "Early",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Dry cough",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Respiratory feature",
+      "stage": "Early-mid",
+      "early_late": "Early",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Sore throat / nasal symptoms",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Overlaps with cold",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "CDC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Breathlessness / chest pain",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG — suggests pneumonia or cardiac complication",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Gradual onset with only mild/low-grade fever",
+      "why_important": "Argues against influenza and towards common cold",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No breathlessness, normal saturations, clear chest",
+      "why_important": "Argues against pneumonia/lower respiratory complication",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Was the onset sudden with high fever and body aches?",
+      "why_ask": "Classic influenza pattern (vs gradual cold)",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Is influenza circulating locally / any known contacts?",
+      "why_ask": "Pre-test probability during epidemic season",
+      "expected_answer": "Often yes in season",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Do you have breathlessness, chest pain, or are you coughing up discoloured sputum/blood?",
+      "why_ask": "Screens for pneumonia (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Are you pregnant, elderly, or do you have a chronic illness or weakened immunity?",
+      "why_ask": "Identifies high-risk groups needing antivirals and closer review",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Have you had the flu vaccine this season?",
+      "why_ask": "Affects probability and future prevention advice",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Temperature and general appearance",
+      "expected_finding": "Febrile, unwell",
+      "importance": "High"
+    },
+    {
+      "examination": "Respiratory rate, oxygen saturation, chest auscultation",
+      "expected_finding": "Usually clear; focal signs/hypoxia suggest pneumonia",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Hydration and mental state (especially elderly)",
+      "expected_finding": "Assess for dehydration/confusion (complication markers)",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Often 38-40°C",
+    "heart_rate": "Raised with fever",
+    "blood_pressure": "Usually normal; low BP suggests sepsis/severe disease",
+    "respiratory_rate": "Raised RR is a red flag for pneumonia",
+    "oxygen_saturation": ">=95% expected; hypoxia is a red flag",
+    "bmi": "Obesity increases severity risk"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Influenza PCR / rapid antigen (selective)",
+      "indication": "Hospitalised, high-risk, or when it changes management/infection control",
+      "expected_result": "Positive in influenza",
+      "normal_range": "Negative",
+      "diagnostic_value": "Confirms diagnosis; not needed for typical outpatient cases in season",
+      "rule_in": "Positive confirms",
+      "rule_out": "Rapid antigen can miss (imperfect sensitivity)",
+      "urgency": "Routine/urgent per setting"
+    },
+    {
+      "test_name": "FBC, CRP, U&E, chest imaging (if complicated)",
+      "indication": "Suspected pneumonia/severe disease",
+      "expected_result": "Assess complications",
+      "normal_range": "",
+      "diagnostic_value": "Severity/complication assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent if unwell"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Chest X-ray",
+      "when_needed": "Suspected pneumonia (focal signs, hypoxia, severe illness)",
+      "expected_findings": "Infiltrates if complicated; normal in uncomplicated influenza"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If cardiac complication suspected (myocarditis, arrhythmia)",
+    "findings": "May show myocarditis-related changes in rare complications."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable acutely",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "Sputum/blood cultures if secondary bacterial infection/sepsis suspected",
+    "pcr": "Respiratory viral PCR panel (including influenza A/B and SARS-CoV-2) where indicated"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical: acute onset of fever plus respiratory symptoms (cough/sore throat) with systemic features (myalgia, headache, malaise) during influenza circulation — 'influenza-like illness (ILI)'. Laboratory confirmation by PCR/antigen when required.",
+    "diagnostic_scores": "ILI case definitions (e.g., fever + cough) used for surveillance; CRB-65/CURB-65 assess pneumonia severity if complicated.",
+    "cutoff_values": "N/A (surveillance ILI definitions vary)."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Common cold",
+      "why_similar": "Respiratory symptoms",
+      "differences": "Gradual onset, low-grade/no fever, less systemic",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Milder, coryza-predominant",
+      "distinguishing_exam": "Well-appearing",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Was onset gradual and mild?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "COVID-19",
+      "why_similar": "Fever, cough, myalgia",
+      "differences": "Anosmia, variable course, epidemiology",
+      "red_flags": "Hypoxia",
+      "distinguishing_symptoms": "Loss of smell/taste",
+      "distinguishing_exam": "May be hypoxic",
+      "distinguishing_labs": "SARS-CoV-2 test",
+      "distinguishing_imaging": "CXR/CT if severe",
+      "differential_questions": "Loss of smell/taste or known COVID contact?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Community-acquired pneumonia",
+      "why_similar": "Fever, cough, malaise",
+      "differences": "Focal chest signs, breathlessness, hypoxia, pleuritic pain",
+      "red_flags": "Hypoxia, sepsis",
+      "distinguishing_symptoms": "Breathlessness, productive cough",
+      "distinguishing_exam": "Focal crackles/bronchial breathing",
+      "distinguishing_labs": "Raised CRP/WCC",
+      "distinguishing_imaging": "CXR consolidation",
+      "differential_questions": "Are you breathless or coughing up discoloured sputum?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Other systemic infection (e.g., early sepsis, malaria if travel, dengue)",
+      "why_similar": "Fever, myalgia, malaise",
+      "differences": "Epidemiology, travel history, specific features",
+      "red_flags": "Sepsis features",
+      "distinguishing_symptoms": "Travel-related exposure",
+      "distinguishing_exam": "Source-specific",
+      "distinguishing_labs": "Malaria films, blood cultures",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any recent travel to endemic areas?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Did your illness start abruptly with high fever and severe body aches?",
+      "target_disease": "Influenza",
+      "competing_disease": "Common cold",
+      "purpose": "Separate influenza from cold",
+      "interpretation": "Abrupt high fever + myalgia favours influenza",
+      "information_gain": "high",
+      "source": "CDC; UpToDate",
+      "basis": "sourced"
+    },
+    {
+      "question": "Are you breathless or is your oxygen level low?",
+      "target_disease": "Influenza pneumonia complication",
+      "competing_disease": "Uncomplicated influenza",
+      "purpose": "Detect pneumonia/severe disease",
+      "interpretation": "Breathlessness/hypoxia -> urgent assessment",
+      "information_gain": "very high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Influenza-like illness in season",
+      "question": "Are you in a high-risk group (pregnant, elderly, chronic illness, immunocompromised) and how breathless are you?",
+      "expected_answers": "Low-risk/well vs high-risk/unwell",
+      "branching_logic": "Low-risk, well -> symptomatic care + safety-net; high-risk or breathless -> consider antivirals and assess for complications/admission",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Usually none in low-risk outpatients",
+      "why": "Clinical diagnosis in season",
+      "expected_outcome": "Reassurance and advice"
+    },
+    {
+      "test": "Influenza PCR + chest X-ray",
+      "why": "High-risk, hospitalised, or suspected pneumonia",
+      "expected_outcome": "Confirms influenza and assesses complications"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Breathlessness, rapid breathing, or oxygen saturation <95%",
+      "immediate_action": "Urgent assessment for pneumonia; consider admission"
+    },
+    {
+      "finding": "Confusion, marked lethargy, low blood pressure, or signs of sepsis",
+      "immediate_action": "Emergency — treat as sepsis"
+    },
+    {
+      "finding": "Chest pain or symptoms of myocarditis",
+      "immediate_action": "Urgent cardiac assessment"
+    },
+    {
+      "finding": "High-risk patient (pregnant, elderly, chronic disease, immunocompromised) with worsening symptoms",
+      "immediate_action": "Early antiviral consideration and close review/admission"
+    },
+    {
+      "finding": "Deterioration after initial improvement (secondary bacterial infection)",
+      "immediate_action": "Reassess for bacterial pneumonia; consider antibiotics"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected pneumonia or severe/complicated influenza; high-risk patient deteriorating.",
+    "routine_referral": "Rarely needed for uncomplicated influenza.",
+    "emergency_referral": "Respiratory failure/hypoxia, sepsis, myocarditis, or seriously unwell high-risk patient."
+  },
+  "complications": {
+    "early": [
+      "Primary viral pneumonia",
+      "Secondary bacterial pneumonia",
+      "Exacerbation of asthma/COPD/heart failure",
+      "Dehydration"
+    ],
+    "late": [
+      "Post-viral fatigue",
+      "Rarely myocarditis, encephalitis, or Guillain-Barré syndrome"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Rest, fluids, antipyretics/analgesia; safety-net advice; isolate to reduce spread.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oseltamivir; Zanamivir; Paracetamol; NSAID. No autonomous selection or dosing is allowed. Source IDs: CDC_FLU_2026.",
+    "lifestyle_advice": "Rest and hydration; stay off work/school while febrile; hand and respiratory hygiene.",
+    "follow_up": "Return/seek help if breathless, not improving after ~1 week, or deteriorating; proactive review of high-risk patients.",
+    "legacy_medications_pre_v13": "Antipyretics (paracetamol/ibuprofen). Antiviral neuraminidase inhibitors (oseltamivir/zanamivir) are recommended for high-risk patients and severe/hospitalised cases, ideally started within 48 hours of onset; consider per local guidance during circulation. Antibiotics ONLY if secondary bacterial infection is suspected."
+  },
+  "patient_education": {
+    "home_advice": "Flu usually comes on suddenly with fever, aches and tiredness and gets better in about a week. Rest, drink fluids, and take paracetamol or ibuprofen. Stay home to avoid spreading it. Get urgent help if you become breathless, have chest pain, cough up blood, become confused, or if you are in a high-risk group and getting worse.",
+    "home_advice_ar": "الإنفلونزا تبدأ عادةً فجأةً بحرارة وآلام وإرهاق وتتحسّن خلال أسبوع تقريباً. ارتَح واشرب السوائل وتناول الباراسيتامول أو الإيبوبروفين، والزم المنزل لتجنّب نقل العدوى. اطلب المساعدة العاجلة إذا صرت تلهث، أو شعرت بألم في الصدر، أو خرج دم مع السعال، أو حدث تشوّش، أو كنت من الفئات عالية الخطورة وتزداد سوءاً.",
+    "prevention": "Annual influenza vaccination (especially high-risk groups), hand hygiene, staying home when unwell.",
+    "warning_signs": "Breathlessness, chest pain, coughing blood, confusion, persistent high fever, or deterioration after initial improvement."
+  },
+  "prevention": {
+    "vaccination": "Annual influenza vaccine is the primary prevention; recommended for elderly, pregnant, young children, chronic disease, immunocompromised, and healthcare workers.",
+    "lifestyle": "Hand and respiratory hygiene; avoiding contact when unwell.",
+    "screening": "Not applicable; surveillance monitors circulating strains."
+  },
+  "evidence": {
+    "evidence_level": "High for vaccination benefit; moderate for antiviral benefit (greatest in high-risk/early treatment).",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by CDC_FLU_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — WHO, CDC, NICE.",
+    "verified_source_ids": [
+      "CDC_FLU_2026"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS — Influenza seasonal; NICE guidance on antivirals for influenza",
+    "aafp": "AAFP — Influenza diagnosis and treatment",
+    "bmj_best_practice": "BMJ Best Practice — Influenza infection",
+    "msd_manual": "MSD Manual — Influenza",
+    "merck_manual": "Merck Manual — Influenza",
+    "uptodate": "UpToDate — Seasonal influenza in adults: clinical manifestations and diagnosis",
+    "harrisons": "Harrison's Principles of Internal Medicine — Influenza",
+    "oxford_handbook": "Oxford Handbook of General Practice — Influenza",
+    "who": "WHO — Influenza (Seasonal) fact sheet and vaccination recommendations",
+    "cdc": "Influenza Antiviral Medications: Summary for Clinicians — https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
+    "idsa": "IDSA — Clinical Practice Guidelines on Seasonal Influenza",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "CDC_FLU_2026",
+        "organization": "US CDC",
+        "title": "Influenza Antiviral Medications: Summary for Clinicians",
+        "publication_or_update": "updated 2026-03-10",
+        "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
+        "accessed": "2026-07-15",
+        "scope": "Influenza antiviral indications, contraindications and special populations",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "initial_management",
+      "red_flags",
+      "referral_criteria",
+      "prevention"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "CDC_FLU_2026"
+      ],
+      "treatment_and_monitoring": [
+        "CDC_FLU_2026"
+      ],
+      "red_flags_and_referral": [
+        "CDC_FLU_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "CDC_FLU_2026",
+        "organization": "US CDC",
+        "title": "Influenza Antiviral Medications: Summary for Clinicians",
+        "publication_or_update": "updated 2026-03-10",
+        "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
+        "accessed": "2026-07-15",
+        "scope": "Influenza antiviral indications, contraindications and special populations",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Start antiviral therapy promptly for severe/high-risk disease and prevent complications.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oseltamivir; Zanamivir; Paracetamol; NSAID. No autonomous selection or dosing is allowed. Source IDs: CDC_FLU_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "illness onset",
+      "pregnancy",
+      "age/weight",
+      "renal function",
+      "high-risk comorbidities",
+      "hospitalisation/severity"
+    ],
+    "non_drug_measures": [
+      "Fluids, rest, isolation/infection-control advice and annual vaccination advice."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Oseltamivir",
+        "medication_or_class": "Oseltamivir",
+        "option_type": "medication",
+        "role": "preferred antiviral for hospitalised/severe/high-risk disease",
+        "when_to_consider": "Start as soon as possible without waiting for confirmation in priority groups",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "oseltamivir",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious oseltamivir allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, severe vomiting, or neuropsychiatric history"
+            ],
+            "history_checks": [
+              "renal function",
+              "age/weight",
+              "pregnancy",
+              "illness severity and onset"
+            ],
+            "monitoring": [
+              "dose adjustment by renal function, clinical response, nausea/vomiting"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "CDC_FLU_2026"
+        ]
+      },
+      {
+        "option_name": "Zanamivir",
+        "medication_or_class": "Zanamivir",
+        "option_type": "medication",
+        "role": "selected outpatient alternative",
+        "when_to_consider": "Eligible uncomplicated influenza when no underlying airways disease",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "zanamivir",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "asthma, COPD, or prior bronchospasm with inhaled powder"
+            ],
+            "use_caution_if": [
+              "milk-protein allergy or inability to use inhaler correctly"
+            ],
+            "history_checks": [
+              "airways disease",
+              "inhaler ability",
+              "allergy"
+            ],
+            "monitoring": [
+              "bronchospasm and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "CDC_FLU_2026"
+        ]
+      },
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Fever or aches",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "CDC_FLU_2026"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "alternative symptom relief",
+        "when_to_consider": "When suitable after comorbidity review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "CDC_FLU_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Hospital assessment for hypoxia, haemodynamic instability, altered mental state, severe dehydration or secondary pneumonia."
+    ],
+    "source_ids": [
+      "CDC_FLU_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

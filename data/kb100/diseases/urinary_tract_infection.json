@@ -1,0 +1,851 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-042",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Ordinal symptom tiers are qualitative ranking aids, not probabilities or likelihood ratios. Uncited quantitative values are not authored.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-042",
+    "name": "Lower urinary tract infection",
+    "name_ar": "التهاب المسالك البولية السفلية",
+    "synonyms": [
+      "cystitis",
+      "lower UTI",
+      "bladder infection"
+    ],
+    "abbreviations": [
+      "UTI"
+    ],
+    "icd10": {
+      "code": "N39.0",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "disease_category": "Genitourinary infection",
+    "organ_system": "Urinary bladder and lower urinary tract",
+    "specialty": "Family medicine / Urology / Paediatrics",
+    "emergency_level": "Usually outpatient; urgent if upper UTI, sepsis, obstruction or high-risk host",
+    "severity": "Usually mild-moderate; potentially serious in pregnancy, men, children or complicated infection",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A symptomatic infection of the bladder/lower urinary tract, commonly causing dysuria, frequency and urgency without systemic upper-tract features.",
+    "detailed_description": "Lower UTI is diagnosed from an age-, sex- and context-appropriate symptom assessment and urine testing strategy. Fever, flank pain, rigors, vomiting, sepsis, obstruction or prostate involvement changes the pathway. Asymptomatic bacteriuria is not the same diagnosis and is generally not treated except in defined groups.",
+    "pathophysiology": "Usually ascending bacterial colonisation of the urethra and bladder, influenced by host anatomy, urinary stasis, instrumentation and antimicrobial exposure.",
+    "etiology": "Most often enteric bacteria; organism and resistance vary with prior antibiotics, healthcare exposure, catheters and local epidemiology.",
+    "incubation_period": "Not usefully defined for routine clinical care.",
+    "natural_history": "Some uncomplicated episodes resolve, but persistent infection can ascend or recur; complicated infection has higher failure risk.",
+    "prognosis": "Generally good with appropriate assessment and treatment; worse with obstruction, pregnancy, renal disease or systemic spread."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common in primary care, especially in women",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Varies by age, sex and urinary risk factors",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Very low in uncomplicated lower UTI; rises with sepsis/complication",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; diagnostic pathways differ for children, adults and older people",
+    "sex_predominance": "More common in people with female urinary anatomy",
+    "geographic_distribution": "Worldwide",
+    "seasonal_pattern": "No reliable clinical seasonal rule"
+  },
+  "risk_factors": {
+    "lifestyle": "",
+    "smoking": "",
+    "alcohol": "",
+    "obesity": "",
+    "diabetes": "Raises complication risk",
+    "hypertension": "",
+    "pregnancy": "Changes testing, antibiotic choice and follow-up",
+    "occupation": "",
+    "travel": "",
+    "family_history": "",
+    "genetic_factors": "",
+    "medications": "Recent antibiotics alter resistance; SGLT2 inhibitors and immunosuppression may change context",
+    "previous_diseases": "Prior UTI, stones, retention, urinary abnormality, catheter or prostate disease"
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Pain or burning when urinating",
+      "frequency": "very common",
+      "importance": "Key lower-UTI symptom",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Urinary frequency or urgency",
+      "frequency": "very common",
+      "importance": "Key lower-UTI symptom",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Suprapubic discomfort or visible/cloudy urine",
+      "frequency": "sometimes",
+      "importance": "Supportive but not diagnostic alone",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Dysuria",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "New urinary frequency",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "New urinary urgency",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Core symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Suprapubic pain/tenderness",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Supportive",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever, rigors, flank pain or vomiting",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Suggests upper/systemic infection, not uncomplicated cystitis",
+      "stage": "Complication",
+      "early_late": "Complication",
+      "source": "NICE_NG109_2025",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No dysuria, frequency or urgency",
+      "why_important": "Reduces likelihood and prompts alternative causes",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "Vaginal discharge/irritation predominates",
+      "why_important": "Vaginitis or STI becomes more likely",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No fever, flank pain, rigors or vomiting",
+      "why_important": "Supports lower rather than upper infection",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have burning, frequency or urgency, and when did they start?",
+      "why_ask": "Establish the lower-UTI symptom cluster",
+      "expected_answer": "Acute urinary symptoms",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any fever, shaking chills, pain in the side/back, vomiting or feeling very unwell?",
+      "why_ask": "Detect pyelonephritis/sepsis",
+      "expected_answer": "Absent in uncomplicated lower UTI",
+      "diagnostic_value": "Very high (safety)"
+    },
+    {
+      "question": "Could you be pregnant, and what is your age and urinary anatomy?",
+      "why_ask": "Select the correct testing/treatment pathway",
+      "expected_answer": "Context-specific",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any vaginal/urethral discharge, irritation, sexual exposure or pelvic pain?",
+      "why_ask": "Identify STI/vaginitis/PID mimics",
+      "expected_answer": "Usually absent",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any catheter, retention, stones, prostate symptoms, kidney disease, diabetes, immunosuppression, prior cultures or recent antibiotics?",
+      "why_ask": "Detect complicated infection and resistance",
+      "expected_answer": "Risk-context dependent",
+      "diagnostic_value": "High"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Temperature, pulse, blood pressure and general appearance",
+      "expected_finding": "Usually stable; systemic abnormality changes pathway",
+      "importance": "High"
+    },
+    {
+      "examination": "Abdominal and costovertebral-angle examination",
+      "expected_finding": "Possible suprapubic tenderness; flank tenderness suggests pyelonephritis",
+      "importance": "High"
+    },
+    {
+      "examination": "Directed genital/pelvic or prostate assessment only when indicated",
+      "expected_finding": "May identify STI, vaginitis, retention or prostatitis",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Usually normal unless infection/systemic illness",
+    "heart_rate": "Usually normal; tachycardia may indicate pain, dehydration or sepsis",
+    "blood_pressure": "Usually normal; hypotension is a red flag",
+    "respiratory_rate": "Usually normal; elevation may indicate sepsis/pain",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Record when relevant to risk or treatment"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Urine dipstick using age/sex pathway",
+      "indication": "Support selected diagnoses; not a stand-alone universal rule",
+      "expected_result": "Nitrite/leukocyte results interpreted with symptoms",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Context-dependent",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    },
+    {
+      "test_name": "Midstream urine culture and susceptibility",
+      "indication": "Men, pregnancy, children, recurrent/complicated infection, treatment failure or when pathway directs",
+      "expected_result": "Organism and susceptibility",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Guides treatment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    },
+    {
+      "test_name": "Pregnancy test",
+      "indication": "When pregnancy is possible and status is unknown",
+      "expected_result": "Positive changes pathway",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "High safety value",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Renal/bladder ultrasound",
+      "when_needed": "Not routine for simple first lower UTI; consider recurrent, atypical, obstruction/retention or paediatric pathway",
+      "expected_findings": "Structural abnormality, hydronephrosis, stone or residual urine"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not routine; use when cardiac disease, electrolyte disturbance or medicine risk indicates",
+    "findings": "No disease-specific ECG pattern"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "",
+    "endoscopy": "",
+    "biopsy": "",
+    "culture": "Urine culture according to population and complication risk",
+    "pcr": "NAAT for STI when exposure/discharge/urethritis or cervicitis is plausible"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "An appropriate cluster of new lower urinary symptoms without upper/systemic features, interpreted through an age-, sex- and context-specific urine-testing pathway.",
+    "diagnostic_scores": {
+      "value": "Use the current UKHSA adult decision tools; do not apply a single rule to every population.",
+      "basis": "sourced",
+      "source": "UKHSA_UTI_DIAG_2025"
+    },
+    "cutoff_values": "No universal single culture or dipstick cutoff is authored here; use the current laboratory and guideline pathway."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Acute pyelonephritis",
+      "why_similar": "Urinary symptoms may overlap",
+      "differences": "Fever, flank pain, rigors, vomiting or systemic illness",
+      "red_flags": "Sepsis/obstruction",
+      "distinguishing_symptoms": "Fever, flank pain, rigors, vomiting or systemic illness",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any fever or flank pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Vaginitis or STI/urethritis",
+      "why_similar": "Dysuria",
+      "differences": "Discharge, irritation, sexual exposure or pelvic/testicular symptoms",
+      "red_flags": "",
+      "distinguishing_symptoms": "Discharge, irritation, sexual exposure or pelvic/testicular symptoms",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any discharge or sexual exposure?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Stone or urinary obstruction",
+      "why_similar": "Pain, blood and urinary symptoms",
+      "differences": "Colicky flank pain, retention or hydronephrosis",
+      "red_flags": "",
+      "distinguishing_symptoms": "Colicky flank pain, retention or hydronephrosis",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Can you pass urine and is pain colicky?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Bladder pain syndrome or noninfectious irritation",
+      "why_similar": "Frequency/dysuria",
+      "differences": "Chronic/recurrent symptoms with negative cultures",
+      "red_flags": "",
+      "distinguishing_symptoms": "Chronic/recurrent symptoms with negative cultures",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Are symptoms persistent between supposed infections?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are there fever, rigors, flank pain or vomiting?",
+      "target_disease": "Pyelonephritis",
+      "competing_disease": "Lower UTI",
+      "purpose": "Separate upper/systemic infection",
+      "interpretation": "Any present changes urgency and antibiotic pathway",
+      "information_gain": "very high",
+      "source": "NICE_NG109_2025",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is there vaginal or urethral discharge/irritation?",
+      "target_disease": "STI/vaginitis",
+      "competing_disease": "Lower UTI",
+      "purpose": "Identify common mimic",
+      "interpretation": "Prominent discharge lowers confidence in simple UTI",
+      "information_gain": "high",
+      "source": "UKHSA_UTI_DIAG_2025",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "New dysuria/frequency/urgency",
+      "question": "Any fever/flank pain, pregnancy, male/prostate involvement, child age, catheter, retention or recent resistant culture?",
+      "expected_answers": "Uncomplicated lower UTI versus upper/complicated pathway",
+      "branching_logic": "High-risk or systemic features -> culture and urgent/specialist pathway; otherwise use lower-UTI decision tool",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Context-appropriate urine dipstick and/or culture",
+      "why": "Testing depends on age, sex, pregnancy and complication risk",
+      "expected_outcome": "Supports diagnosis and guides narrow therapy"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Fever/rigors, flank pain, vomiting or sepsis physiology",
+      "immediate_action": "Assess urgently for pyelonephritis/sepsis"
+    },
+    {
+      "finding": "Urinary retention, anuria or suspected infected obstruction",
+      "immediate_action": "Emergency urological assessment"
+    },
+    {
+      "finding": "Pregnancy with systemic illness or infant under 3 months with suspected UTI",
+      "immediate_action": "Urgent specialist pathway"
+    },
+    {
+      "finding": "Failure to improve within 48 hours or rapid worsening",
+      "immediate_action": "Reassess diagnosis, culture, resistance and complications"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Upper/systemic features, pregnancy with complication, high-risk child, obstruction/retention or significant comorbidity.",
+    "routine_referral": "Recurrent/persistent UTI, haematuria after infection resolves, suspected structural dysfunction.",
+    "emergency_referral": "Sepsis, infected obstruction, anuria or haemodynamic instability."
+  },
+  "complications": {
+    "early": [
+      "Pyelonephritis",
+      "Sepsis",
+      "Treatment failure/resistance"
+    ],
+    "late": [
+      "Recurrence",
+      "Renal injury in selected complicated/paediatric cases"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Assess population and complication risk, obtain urine sample when indicated, provide symptom care and safety-netting.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; Nitrofurantoin; Trimethoprim; Culture- and group-directed beta-lactam; Fosfomycin. No autonomous selection or dosing is allowed. Source IDs: UKHSA_UTI_DIAG_2025, NICE_NG109_2025, NICE_NG224.",
+    "lifestyle_advice": "Maintain hydration; avoid delayed care for systemic symptoms.",
+    "follow_up": "Review culture when sent and reassess if worsening or not improving within 48 hours.",
+    "legacy_medications_pre_v13": "Population-, culture- and local-resistance-directed lower-UTI antibiotic; never use nitrofurantoin for suspected upper infection."
+  },
+  "patient_education": {
+    "home_advice": "Burning and frequent urination may be a bladder infection, but fever, shaking, side/back pain, vomiting or inability to pass urine can mean a more serious infection and need urgent care.",
+    "home_advice_ar": "قد يدل الحرقان وكثرة التبول على التهاب المثانة، لكن الحمى أو الرجفة أو ألم الخاصرة/الظهر أو القيء أو عدم القدرة على التبول قد تعني التهاباً أخطر وتحتاج تقييماً عاجلاً.",
+    "prevention": "Avoid unnecessary antibiotics; investigate recurrent infection rather than repeatedly self-treating.",
+    "warning_signs": "Fever, flank pain, vomiting, confusion, pregnancy with worsening symptoms, retention or no improvement within 48 hours."
+  },
+  "prevention": {
+    "vaccination": "No routine vaccine",
+    "lifestyle": "Hydration and addressing retention/catheters or other individual risk factors",
+    "screening": "Do not screen/treat asymptomatic bacteriuria routinely outside guideline-defined groups"
+  },
+  "evidence": {
+    "evidence_level": "Guideline-grounded direction; no claim that every narrative sentence has clinician verification.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by UKHSA_UTI_DIAG_2025, NICE_NG109_2025, NICE_NG224; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "",
+    "verified_source_ids": [
+      "UKHSA_UTI_DIAG_2025",
+      "NICE_NG109_2025",
+      "NICE_NG224"
+    ]
+  },
+  "references": {
+    "nice": "Urinary tract infection (lower): antimicrobial prescribing (NG109) — https://www.nice.org.uk/guidance/ng109/chapter/Recommendations | Urinary tract infection in under 16s: diagnosis and management (NG224) — https://www.nice.org.uk/guidance/ng224/chapter/Recommendations",
+    "aafp": "",
+    "bmj_best_practice": "",
+    "msd_manual": "",
+    "merck_manual": "",
+    "uptodate": "",
+    "harrisons": "",
+    "oxford_handbook": "",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "UKHSA_UTI_DIAG_2025",
+        "organization": "UK Health Security Agency and NHS England",
+        "title": "Diagnosis of urinary tract infections: quick reference tools for primary care",
+        "publication_or_update": "updated 2025-07-07",
+        "url": "https://www.gov.uk/government/publications/urinary-tract-infection-diagnosis/diagnosis-of-urinary-tract-infections-quick-reference-tools-for-primary-care",
+        "accessed": "2026-07-15",
+        "scope": "Adult lower-UTI symptom assessment, urine sampling and culture interpretation",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG109_2025",
+        "organization": "NICE",
+        "title": "Urinary tract infection (lower): antimicrobial prescribing (NG109)",
+        "publication_or_update": "2018; updated 2025-05",
+        "url": "https://www.nice.org.uk/guidance/ng109/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Lower-UTI self-care, population-specific antibiotic strategy, culture and reassessment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG224",
+        "organization": "NICE",
+        "title": "Urinary tract infection in under 16s: diagnosis and management (NG224)",
+        "publication_or_update": "2022; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng224/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Paediatric UTI symptoms, urine testing, referral and imaging pathways",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "epidemiology without cited numbers",
+      "ICD-11/SNOMED/MeSH identifiers left blank rather than guessed"
+    ],
+    "sourced_sections": [
+      "diagnostic direction",
+      "tests",
+      "red flags/referral",
+      "treatment direction"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "UKHSA_UTI_DIAG_2025",
+        "NICE_NG109_2025",
+        "NICE_NG224"
+      ],
+      "treatment_and_monitoring": [
+        "UKHSA_UTI_DIAG_2025",
+        "NICE_NG109_2025",
+        "NICE_NG224"
+      ],
+      "red_flags_and_referral": [
+        "UKHSA_UTI_DIAG_2025",
+        "NICE_NG109_2025",
+        "NICE_NG224"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "UKHSA_UTI_DIAG_2025",
+        "organization": "UK Health Security Agency and NHS England",
+        "title": "Diagnosis of urinary tract infections: quick reference tools for primary care",
+        "publication_or_update": "updated 2025-07-07",
+        "url": "https://www.gov.uk/government/publications/urinary-tract-infection-diagnosis/diagnosis-of-urinary-tract-infections-quick-reference-tools-for-primary-care",
+        "accessed": "2026-07-15",
+        "scope": "Adult lower-UTI symptom assessment, urine sampling and culture interpretation",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG109_2025",
+        "organization": "NICE",
+        "title": "Urinary tract infection (lower): antimicrobial prescribing (NG109)",
+        "publication_or_update": "2018; updated 2025-05",
+        "url": "https://www.nice.org.uk/guidance/ng109/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Lower-UTI self-care, population-specific antibiotic strategy, culture and reassessment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG224",
+        "organization": "NICE",
+        "title": "Urinary tract infection in under 16s: diagnosis and management (NG224)",
+        "publication_or_update": "2022; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng224/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Paediatric UTI symptoms, urine testing, referral and imaging pathways",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Confirm likely lower UTI, distinguish upper/complicated infection and use the narrowest effective culture- and population-appropriate antibiotic.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; Nitrofurantoin; Trimethoprim; Culture- and group-directed beta-lactam; Fosfomycin. No autonomous selection or dosing is allowed. Source IDs: UKHSA_UTI_DIAG_2025, NICE_NG109_2025, NICE_NG224.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "age/sex and urinary anatomy",
+      "pregnancy",
+      "fever/flank pain/vomiting",
+      "renal function",
+      "catheter/retention/stone",
+      "prostate symptoms",
+      "prior cultures/antibiotics/resistance",
+      "immunosuppression/diabetes"
+    ],
+    "non_drug_measures": [
+      "Hydration to avoid dehydration, symptom relief and clear safety-netting; do not treat asymptomatic bacteriuria except guideline-defined groups such as pregnancy."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "short-term symptom relief",
+        "when_to_consider": "Pain or fever while diagnostic and antibiotic decisions are made",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG109_2025"
+        ]
+      },
+      {
+        "option_name": "Nitrofurantoin",
+        "medication_or_class": "Nitrofurantoin",
+        "option_type": "medication",
+        "role": "first-choice lower-UTI antibiotic in eligible groups",
+        "when_to_consider": "Only for lower UTI after renal, pregnancy, upper-UTI and prostate-involvement review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nitrofurantoin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected pyelonephritis/systemic infection, significant renal impairment below the current product threshold, previous nitrofurantoin lung/liver injury, or serious allergy"
+            ],
+            "use_caution_if": [
+              "pregnancy near term, G6PD deficiency, anaemia, pulmonary or hepatic disease, peripheral neuropathy, older/frail patient, or repeated/prolonged courses"
+            ],
+            "history_checks": [
+              "upper-UTI symptoms",
+              "eGFR",
+              "pregnancy stage",
+              "G6PD/anaemia",
+              "lung/liver/neuropathy history",
+              "previous nitrofurantoin exposure"
+            ],
+            "monitoring": [
+              "clinical response, renal eligibility, and pulmonary/hepatic/neurological symptoms; reassess promptly if systemic symptoms develop"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG109_2025"
+        ]
+      },
+      {
+        "option_name": "Trimethoprim",
+        "medication_or_class": "Trimethoprim",
+        "option_type": "medication",
+        "role": "selected lower-UTI antibiotic",
+        "when_to_consider": "Only when resistance risk/culture, pregnancy, renal function and interactions permit",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "trimethoprim",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious trimethoprim allergy, severe folate-deficiency blood disorder, or pregnancy when contraindicated by the selected product/local guideline"
+            ],
+            "use_caution_if": [
+              "renal impairment, hyperkalaemia risk, folate deficiency, older/frail patient, or ACE inhibitor/ARB/MRA/potassium/methotrexate interaction"
+            ],
+            "history_checks": [
+              "pregnancy",
+              "renal function",
+              "potassium",
+              "blood-count/folate history",
+              "methotrexate and potassium-raising medicines",
+              "prior culture/resistance"
+            ],
+            "monitoring": [
+              "clinical response; potassium, renal function and blood count when risk or duration warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG109_2025"
+        ]
+      },
+      {
+        "option_name": "Culture- and group-directed beta-lactam",
+        "medication_or_class": "Culture- and group-directed beta-lactam",
+        "option_type": "medication",
+        "role": "alternative treatment",
+        "when_to_consider": "Pregnancy, children, men or resistant infection according to culture and current local guidance",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "cephalosporin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "previous serious cephalosporin reaction; avoid selected beta-lactam if cross-reactive severe allergy risk is unacceptable"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior severe penicillin reaction, previous C. difficile, recent antibiotics, or seizure risk with selected high-dose agents"
+            ],
+            "history_checks": [
+              "exact beta-lactam allergy reaction",
+              "renal function",
+              "C. difficile history",
+              "recent antibiotics",
+              "culture and local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy, renal-adjusted dosing and antibiotic-associated diarrhoea"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG109_2025",
+          "NICE_NG224"
+        ]
+      },
+      {
+        "option_name": "Fosfomycin",
+        "medication_or_class": "Fosfomycin",
+        "option_type": "medication",
+        "role": "selected lower-UTI alternative",
+        "when_to_consider": "When listed by the current local pathway and upper/systemic infection has been excluded",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "fosfomycin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious fosfomycin reaction or use for suspected upper/systemic UTI where adequate renal-tissue treatment is required"
+            ],
+            "use_caution_if": [
+              "significant renal impairment, pregnancy, recurrent/complicated infection, or high sodium load for selected IV formulations"
+            ],
+            "history_checks": [
+              "upper-UTI features",
+              "renal function",
+              "pregnancy",
+              "culture/resistance",
+              "infection complexity and formulation"
+            ],
+            "monitoring": [
+              "clinical response, gastrointestinal adverse effects and culture-directed reassessment"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG109_2025"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent assessment for sepsis, pyelonephritis, pregnancy with systemic illness, urinary obstruction/retention, very young infant, immunocompromise or failure to improve within 48 hours."
+    ],
+    "source_ids": [
+      "UKHSA_UTI_DIAG_2025",
+      "NICE_NG109_2025",
+      "NICE_NG224"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

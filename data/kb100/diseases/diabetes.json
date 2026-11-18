@@ -1,0 +1,848 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-018",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Focused on Type 2 diabetes mellitus; Type 1/other forms in differentials. Scheme v1.2: each symptom on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 + diagnostic cutoffs sourced (WHO/ADA); icd11/snomed/mesh/omim estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-018",
+    "name": "Diabetes mellitus (Type 2)",
+    "name_ar": "داء السكري (النوع الثاني)",
+    "synonyms": [
+      "type 2 diabetes",
+      "T2DM",
+      "adult-onset diabetes",
+      "non-insulin-dependent diabetes"
+    ],
+    "abbreviations": [
+      "T2DM",
+      "DM2",
+      "DM"
+    ],
+    "icd10": {
+      "code": "E11",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "5A11",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "44054006",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "125853",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D003924",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic non-communicable / endocrine-metabolic",
+    "organ_system": "Endocrine / metabolic",
+    "specialty": "Family medicine / Endocrinology",
+    "emergency_level": "Routine (chronic) — but DKA and hyperosmolar hyperglycaemic state (HHS) are emergencies",
+    "severity": "Ranges from diet-controlled to complicated with end-organ damage; acute hyperglycaemic crises are life-threatening",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A chronic metabolic disorder of insulin resistance with relative insulin deficiency causing hyperglycaemia; usually adult-onset, strongly linked to obesity and inactivity, and a major cause of cardiovascular, renal, retinal and neurological disease.",
+    "detailed_description": "Type 2 diabetes accounts for ~90% of diabetes. It develops when peripheral insulin resistance is no longer compensated by pancreatic beta-cell insulin secretion, producing chronic hyperglycaemia. It is frequently preceded by years of prediabetes and is often asymptomatic at diagnosis, detected on screening. Long-term hyperglycaemia drives microvascular (retinopathy, nephropathy, neuropathy) and macrovascular (coronary, cerebrovascular, peripheral arterial) complications. Management is multifactorial: glycaemia, blood pressure, lipids, weight, and cardiovascular/renal protection.",
+    "pathophysiology": "Core defects: (1) insulin resistance in muscle, liver and adipose tissue; (2) progressive beta-cell dysfunction/failure; (3) increased hepatic glucose output; plus incretin deficiency, increased glucagon, renal glucose reabsorption, and adipose lipolysis (the 'ominous octet'). Chronic hyperglycaemia causes advanced glycation, oxidative stress and microvascular damage.",
+    "etiology": "Polygenic predisposition combined with obesity (especially visceral), physical inactivity, high-calorie diet, ageing, and ethnicity (higher risk in South Asian, MENA, African, Hispanic populations). Secondary/other forms: pancreatic disease, steroid-induced, endocrinopathies (Cushing, acromegaly), monogenic (MODY), gestational.",
+    "incubation_period": "Not applicable; prediabetes may precede diagnosis by years.",
+    "natural_history": "Gradual progression from insulin resistance/prediabetes to overt diabetes; beta-cell function declines over time so many patients eventually need intensifying therapy including insulin. Good early control reduces long-term complications ('legacy effect').",
+    "prognosis": "Good with early, sustained multifactorial control; substantial excess cardiovascular and renal risk if poorly controlled. Remission is possible in some with major weight loss early in disease."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "~10% of adults globally and rising; higher in MENA/North Africa. IDF estimates >500 million adults with diabetes worldwide.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Rising with obesity epidemic; increasing onset in younger adults and adolescents.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Major cause of premature death, chiefly via cardiovascular disease and renal failure.",
+      "basis": "estimate"
+    },
+    "age_groups": "Typically >40 but increasingly in younger adults; prediabetes very common in mid-life.",
+    "sex_predominance": "Roughly equal; some regional/ethnic variation.",
+    "geographic_distribution": "Worldwide; especially high burden in MENA, South Asia, Pacific Islands.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Physical inactivity, energy-dense diet, sugary drinks, poor sleep.",
+    "smoking": "Increases insulin resistance and cardiovascular/renal complication risk.",
+    "alcohol": "Excess contributes to weight gain and can cause hypo/hyperglycaemia; moderation advised.",
+    "obesity": "Strongest modifiable risk factor, especially central/visceral adiposity.",
+    "diabetes": "N/A (this is the condition).",
+    "hypertension": "Commonly coexists (metabolic syndrome); compounds cardiovascular/renal risk.",
+    "pregnancy": "Prior gestational diabetes markedly raises future T2DM risk; PCOS also associated.",
+    "occupation": "Sedentary/shift work indirectly via lifestyle.",
+    "travel": "Not a risk factor.",
+    "family_history": "Strong; first-degree relative substantially increases risk.",
+    "genetic_factors": "Polygenic; monogenic MODY in a minority (young, lean, strong family history).",
+    "medications": "Corticosteroids, some antipsychotics, thiazides (high dose), protease inhibitors can precipitate/unmask diabetes.",
+    "previous_diseases": "Prediabetes, gestational diabetes, PCOS, pancreatitis, hypertension, dyslipidaemia."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "None (asymptomatic, found on screening)",
+      "frequency": "very common",
+      "importance": "Many T2DM diagnosed on screening while asymptomatic",
+      "source": "NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Increased thirst and urination (polydipsia/polyuria)",
+      "frequency": "common",
+      "importance": "Classic osmotic presentation when hyperglycaemic",
+      "source": "NICE NG28; ADA",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Fatigue",
+      "frequency": "common",
+      "importance": "Low — nonspecific",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Recurrent infections (thrush, skin, UTI) or slow-healing wounds",
+      "frequency": "sometimes",
+      "importance": "Often the presenting clue",
+      "source": "NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Blurred vision",
+      "frequency": "sometimes",
+      "importance": "Reversible osmotic lens change",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Polyuria (excessive urination)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Classic osmotic symptom of hyperglycaemia",
+      "stage": "Overt",
+      "early_late": "Early-overt",
+      "source": "ADA; NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Polydipsia (excessive thirst)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Classic osmotic symptom",
+      "stage": "Overt",
+      "early_late": "Early-overt",
+      "source": "ADA; NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Unintentional weight loss",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Red flag for insulin deficiency (consider T1DM)",
+      "stage": "Overt/severe",
+      "early_late": "Late",
+      "source": "NICE NG17/NG28",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fatigue / lethargy",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Very low specificity",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Blurred vision",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Reversible with glycaemic control",
+      "stage": "Overt",
+      "early_late": "Early-overt",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Genital candidiasis / recurrent infections",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Often the presenting clue in primary care",
+      "stage": "Overt",
+      "early_late": "Early-overt",
+      "source": "NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Peripheral numbness/tingling (neuropathy)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Indicates chronic complication (long-standing/poor control)",
+      "stage": "Chronic complication",
+      "early_late": "Late",
+      "source": "ADA",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No polyuria/polydipsia/weight loss",
+      "why_important": "Common in early T2DM — absence does NOT exclude; diagnosis is biochemical",
+      "absence_significance": "no significant change",
+      "source": "NICE NG28",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No ketones / not acidotic / not dehydrated",
+      "why_important": "Makes DKA/HHS unlikely — supports routine outpatient management",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Any increased thirst, urination, weight loss, fatigue, or recurrent thrush/infections?",
+      "why_ask": "Classic hyperglycaemic symptoms and presenting clues",
+      "expected_answer": "Variable; often absent",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Family history of diabetes; personal history of gestational diabetes or PCOS?",
+      "why_ask": "Strong risk factors",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Diet, physical activity, weight change?",
+      "why_ask": "Modifiable drivers and management targets",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any numbness/tingling in feet, visual change, chest pain, or foot ulcers?",
+      "why_ask": "Screens for existing complications at diagnosis",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (staging)"
+    },
+    {
+      "question": "Medications such as steroids or antipsychotics?",
+      "why_ask": "Drug-induced hyperglycaemia",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Rapid onset, marked weight loss, young/lean, or ketosis?",
+      "why_ask": "Suggests Type 1 or ketosis-prone diabetes needing insulin urgently",
+      "expected_answer": "Usually no in classic T2DM",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "BMI, waist circumference, blood pressure",
+      "expected_finding": "Often raised BMI/waist and BP",
+      "importance": "High (risk + targets)"
+    },
+    {
+      "examination": "Foot examination (pulses, sensation with 10 g monofilament, skin/ulcers, deformity)",
+      "expected_finding": "May show neuropathy/vasculopathy/ulcer",
+      "importance": "High — prevents amputations"
+    },
+    {
+      "examination": "Skin — acanthosis nigricans",
+      "expected_finding": "Velvety hyperpigmentation (insulin resistance marker)",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Fundoscopy / retinal screening referral",
+      "expected_finding": "Diabetic retinopathy may already be present",
+      "importance": "High"
+    },
+    {
+      "examination": "Hydration status / conscious level (if acutely unwell)",
+      "expected_finding": "Dehydration/altered consciousness suggests DKA/HHS",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal (fever may indicate precipitating infection)",
+    "heart_rate": "Normal; tachycardia in hyperglycaemic crisis/sepsis",
+    "blood_pressure": "Often elevated (comorbid hypertension); low in HHS with dehydration",
+    "respiratory_rate": "Normal; Kussmaul (deep) breathing in DKA",
+    "oxygen_saturation": "Normal unless comorbid illness",
+    "bmi": "Frequently >=25-30 (may be normal/low if insulin-deficient)"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "HbA1c",
+      "indication": "Diagnosis and monitoring (not in rapid-onset/pregnancy/anaemia/haemoglobinopathy)",
+      "expected_result": ">=48 mmol/mol (6.5%) diagnostic on two occasions if asymptomatic",
+      "normal_range": "<42 mmol/mol (<6.0%); 42-47 (6.0-6.4%) = prediabetes",
+      "diagnostic_value": "Primary diagnostic + control marker",
+      "rule_in": ">=48 mmol/mol (with confirmation)",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Fasting plasma glucose",
+      "indication": "Diagnosis",
+      "expected_result": ">=7.0 mmol/L diagnostic",
+      "normal_range": "<5.6 mmol/L; 5.6-6.9 = impaired fasting glucose",
+      "diagnostic_value": "Diagnostic",
+      "rule_in": ">=7.0 mmol/L (confirmed)",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Random plasma glucose / OGTT 2-h glucose",
+      "indication": "Symptomatic (random) or equivocal (OGTT)",
+      "expected_result": "Random >=11.1 with symptoms diagnostic; 2-h OGTT >=11.1 diagnostic",
+      "normal_range": "2-h <7.8 mmol/L",
+      "diagnostic_value": "Diagnostic",
+      "rule_in": ">=11.1 mmol/L",
+      "rule_out": "",
+      "urgency": "Routine (urgent if very high + unwell)"
+    },
+    {
+      "test_name": "Lipid profile, U&E/eGFR, urine ACR, LFTs",
+      "indication": "At diagnosis and monitoring",
+      "expected_result": "Assess complications and comorbidity",
+      "normal_range": "ACR <3 mg/mmol",
+      "diagnostic_value": "Complication + risk assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Blood/urine ketones",
+      "indication": "If unwell, marked hyperglycaemia, or suspected T1DM/DKA",
+      "expected_result": "Elevated in DKA",
+      "normal_range": "Blood beta-hydroxybutyrate <0.6 mmol/L",
+      "diagnostic_value": "Detects ketoacidosis",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Retinal photography (screening)",
+      "when_needed": "At/after diagnosis and annually",
+      "expected_findings": "Diabetic retinopathy/maculopathy"
+    },
+    {
+      "imaging_type": "Vascular imaging (as indicated)",
+      "when_needed": "Suspected peripheral arterial disease or foot complications",
+      "expected_findings": "Arterial disease"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Cardiovascular risk assessment / symptoms",
+    "findings": "May show silent ischaemia, prior infarction, LVH."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "Urine/skin culture if infection suspected",
+    "pcr": "Not applicable (consider C-peptide and islet autoantibodies to distinguish T1 vs T2 if uncertain)"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "WHO/ADA: HbA1c >=48 mmol/mol (6.5%), OR fasting plasma glucose >=7.0 mmol/L, OR 2-h OGTT glucose >=11.1 mmol/L, OR random glucose >=11.1 mmol/L with classic symptoms. In the absence of unequivocal hyperglycaemia, confirm with a repeat test.",
+    "diagnostic_scores": "Risk scores (e.g., FINDRISC, QDiabetes) identify high-risk individuals for screening; not diagnostic.",
+    "cutoff_values": {
+      "value": "HbA1c: <42 normal, 42-47 prediabetes, >=48 mmol/mol diabetes. FPG: <5.6 normal, 5.6-6.9 IFG, >=7.0 diabetes. 2-h OGTT: <7.8 normal, 7.8-11.0 IGT, >=11.1 diabetes (mmol/L).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Type 1 diabetes / LADA",
+      "why_similar": "Hyperglycaemia, thirst, polyuria",
+      "differences": "Younger/leaner, rapid onset, marked weight loss, ketosis, insulin-deficient",
+      "red_flags": "Ketoacidosis",
+      "distinguishing_symptoms": "Rapid symptomatic onset, weight loss",
+      "distinguishing_exam": "Often lean, may be dehydrated/acidotic",
+      "distinguishing_labs": "Positive islet autoantibodies (GAD), low C-peptide, ketones",
+      "distinguishing_imaging": "N/A",
+      "differential_questions": "How quickly did symptoms develop? Weight loss? Ketones?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Diabetic ketoacidosis (DKA) / Hyperosmolar hyperglycaemic state (HHS)",
+      "why_similar": "Hyperglycaemia",
+      "differences": "Acute, unwell, dehydrated, acidotic (DKA) or profoundly hyperosmolar (HHS)",
+      "red_flags": "Acute emergency",
+      "distinguishing_symptoms": "Vomiting, abdominal pain, drowsiness",
+      "distinguishing_exam": "Kussmaul breathing, dehydration, reduced consciousness",
+      "distinguishing_labs": "Ketones/acidosis (DKA); glucose often >30, high osmolality (HHS)",
+      "distinguishing_imaging": "N/A",
+      "differential_questions": "Are you vomiting/very unwell/drowsy?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Secondary diabetes (steroid-induced, pancreatic, endocrine, MODY)",
+      "why_similar": "Hyperglycaemia",
+      "differences": "Identifiable cause / atypical features",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "Cushingoid, pancreatic disease features",
+      "distinguishing_labs": "Cause-specific; genetic testing for MODY",
+      "distinguishing_imaging": "Pancreatic imaging if indicated",
+      "differential_questions": "Steroid use? Pancreatic disease? Young lean strong family history?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Diabetes insipidus",
+      "why_similar": "Polyuria/polydipsia",
+      "differences": "Normoglycaemic; dilute urine",
+      "red_flags": "",
+      "distinguishing_symptoms": "Very large volumes of dilute urine",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal glucose, low urine osmolality",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is your blood sugar normal despite thirst?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "How quickly did the thirst/weight loss develop, and are you passing ketones or feeling very unwell?",
+      "target_disease": "Type 1 diabetes / DKA",
+      "competing_disease": "Type 2 diabetes",
+      "purpose": "Detect insulin-deficient/emergency presentation",
+      "interpretation": "Rapid onset + weight loss + ketones -> urgent insulin/T1",
+      "information_gain": "very high",
+      "source": "NICE NG17",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you take steroids or antipsychotics?",
+      "target_disease": "Drug-induced diabetes",
+      "competing_disease": "Primary T2DM",
+      "purpose": "Identify reversible/secondary cause",
+      "interpretation": "Positive suggests contributory cause",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Screening HbA1c 48-53 mmol/mol, asymptomatic",
+      "question": "Can we repeat the HbA1c to confirm before diagnosis?",
+      "expected_answers": "Confirms vs not",
+      "branching_logic": "Confirmed -> diagnose and stage; borderline -> prediabetes pathway and lifestyle",
+      "information_gain": "high"
+    },
+    {
+      "current_situation": "Symptomatic with very high glucose",
+      "question": "Do you have vomiting, drowsiness, or deep rapid breathing?",
+      "expected_answers": "Yes/No",
+      "branching_logic": "Yes -> urgent assessment for DKA/HHS; No -> start outpatient management",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Confirmatory HbA1c or fasting glucose",
+      "why": "Establish diagnosis (repeat unless unequivocal symptomatic hyperglycaemia)",
+      "expected_outcome": "Confirms diabetes vs prediabetes"
+    },
+    {
+      "test": "Baseline complications screen (ACR, eGFR, lipids, retinal, foot exam)",
+      "why": "Many have complications at diagnosis",
+      "expected_outcome": "Guides risk-based targets and therapy"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Marked hyperglycaemia with vomiting, abdominal pain, drowsiness, deep breathing, ketones",
+      "immediate_action": "Emergency — assess/treat DKA (IV fluids, insulin, potassium) in hospital"
+    },
+    {
+      "finding": "Very high glucose with severe dehydration and confusion in older adult",
+      "immediate_action": "Emergency — hyperosmolar hyperglycaemic state; urgent admission"
+    },
+    {
+      "finding": "Diabetic foot with spreading infection, deep ulcer, or critical ischaemia",
+      "immediate_action": "Urgent same-day multidisciplinary foot service / admission"
+    },
+    {
+      "finding": "Rapid weight loss with ketosis in a lean patient",
+      "immediate_action": "Urgent — likely Type 1; do not delay insulin"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected Type 1/ketosis-prone diabetes, pregnancy with diabetes, suspected DKA/HHS (emergency), acute diabetic foot.",
+    "routine_referral": "Poor control despite optimisation, suspected MODY/secondary cause, complex comorbidity, complications needing specialist care (nephrology, ophthalmology, podiatry).",
+    "emergency_referral": "DKA, HHS, severe hypoglycaemia not responding, limb-threatening foot sepsis/ischaemia."
+  },
+  "complications": {
+    "early": [
+      "Hypoglycaemia (treatment-related)",
+      "Diabetic ketoacidosis",
+      "Hyperosmolar hyperglycaemic state",
+      "Infections (skin, urinary, candidiasis)"
+    ],
+    "late": [
+      "Retinopathy (leading cause of adult blindness)",
+      "Nephropathy / chronic kidney disease",
+      "Peripheral and autonomic neuropathy",
+      "Diabetic foot ulceration and amputation",
+      "Coronary artery disease / myocardial infarction",
+      "Stroke and peripheral arterial disease",
+      "Erectile dysfunction",
+      "Increased infection risk"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Structured education, dietary and physical-activity support, smoking cessation, individualised HbA1c target (often ~48-58 mmol/mol / 6.5-7.5%). Address all cardiovascular risk factors, not glucose alone.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Modified-release metformin; SGLT-2 inhibitor; GLP-1 receptor agonist or tirzepatide; Insulin or hypoglycaemia-causing agent. No autonomous selection or dosing is allowed. Source IDs: NICE_NG28_2026.",
+    "lifestyle_advice": "Weight loss (5-10%+ can markedly improve control; early substantial weight loss can induce remission in some), reduced refined carbohydrate/sugary drinks, Mediterranean-style diet, regular activity, alcohol moderation, smoking cessation.",
+    "follow_up": "HbA1c every 3-6 months until stable then 6-monthly; annual review of renal function (eGFR/ACR), lipids, BP, feet, and retinal screening; medication review and hypoglycaemia/sick-day education.",
+    "legacy_medications_pre_v13": "Metformin first-line (unless contraindicated). Add agents with proven cardiovascular/renal benefit early, especially SGLT2 inhibitors and/or GLP-1 receptor agonists in those with established/high cardiovascular risk, heart failure, or CKD. Other options: DPP-4 inhibitors, sulfonylureas, pioglitazone, insulin when needed. Statin for cardiovascular risk; manage BP; consider antiplatelet in secondary prevention."
+  },
+  "patient_education": {
+    "home_advice": "Diabetes is a long-term condition you can manage well: eat healthily and cut sugary drinks, stay active, lose excess weight, take your medicines, check and protect your feet daily, attend eye and kidney checks, and don't smoke.",
+    "home_advice_ar": "السكري حالة مزمنة يمكن التحكم بها جيداً: تناول طعاماً صحياً وقلّل المشروبات السكرية، وحافظ على النشاط وأنقِص الوزن الزائد، وتناول أدويتك، وافحص قدميك واعتنِ بهما يومياً، والتزم بفحوصات العين والكلى، ولا تدخّن.",
+    "prevention": "For prediabetes/high risk: weight loss, activity, healthy diet reduce progression; metformin in selected high-risk people.",
+    "warning_signs": "Seek urgent care for vomiting with high sugars, drowsiness, deep/rapid breathing, severe dehydration, a foot ulcer/spreading redness, or repeated hypoglycaemia."
+  },
+  "prevention": {
+    "vaccination": "Recommend annual influenza and pneumococcal (and other indicated) vaccines given higher infection risk.",
+    "lifestyle": "Weight management, physical activity, healthy diet, no smoking — primary prevention in at-risk individuals.",
+    "screening": "Screen high-risk adults (obesity, family history, prior GDM, high-risk ethnicity, hypertension) with HbA1c/fasting glucose; identify and manage prediabetes."
+  },
+  "evidence": {
+    "evidence_level": "High — large RCTs and cardiovascular/renal outcome trials (UKPDS, EMPA-REG, LEADER, CREDENCE, DAPA-CKD, etc.).",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG28_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — ADA/EASD consensus, NICE NG28, WHO.",
+    "verified_source_ids": [
+      "NICE_NG28_2026"
+    ]
+  },
+  "references": {
+    "nice": "Type 2 diabetes in adults: management (NG28) — https://www.nice.org.uk/guidance/ng28/chapter/initial-medicines",
+    "aafp": "AAFP type 2 diabetes management summaries",
+    "bmj_best_practice": "BMJ Best Practice — Type 2 diabetes",
+    "msd_manual": "MSD Manual — Diabetes Mellitus",
+    "merck_manual": "Merck Manual — Diabetes Mellitus (DM)",
+    "uptodate": "UpToDate — Overview of the management of type 2 diabetes",
+    "harrisons": "Harrison's Principles of Internal Medicine — Diabetes Mellitus",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine — Diabetes mellitus",
+    "who": "WHO — Classification of diabetes mellitus (2019); Diagnostic criteria",
+    "cdc": "CDC — Diabetes",
+    "idsa": "",
+    "esc": "ESC Guidelines on diabetes, pre-diabetes and cardiovascular disease",
+    "ada": "ADA Standards of Care in Diabetes (current year)",
+    "gina": "",
+    "gold": "",
+    "acp": "ACP guidance on HbA1c targets",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG28_2026",
+        "organization": "NICE",
+        "title": "Type 2 diabetes in adults: management (NG28)",
+        "publication_or_update": "updated 2026-02-18",
+        "url": "https://www.nice.org.uk/guidance/ng28/chapter/initial-medicines",
+        "accessed": "2026-07-15",
+        "scope": "Current initial and comorbidity-directed medicines for type 2 diabetes",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG28_2026"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG28_2026"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG28_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG28_2026",
+        "organization": "NICE",
+        "title": "Type 2 diabetes in adults: management (NG28)",
+        "publication_or_update": "updated 2026-02-18",
+        "url": "https://www.nice.org.uk/guidance/ng28/chapter/initial-medicines",
+        "accessed": "2026-07-15",
+        "scope": "Current initial and comorbidity-directed medicines for type 2 diabetes",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Individualise glucose treatment while prioritising cardiovascular/renal protection and avoiding hypoglycaemia/DKA.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Modified-release metformin; SGLT-2 inhibitor; GLP-1 receptor agonist or tirzepatide; Insulin or hypoglycaemia-causing agent. No autonomous selection or dosing is allowed. Source IDs: NICE_NG28_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "diabetes type",
+      "HbA1c and symptoms",
+      "eGFR",
+      "heart failure/CKD/CVD",
+      "pregnancy",
+      "DKA/hypoglycaemia",
+      "weight goals",
+      "infections",
+      "frailty"
+    ],
+    "non_drug_measures": [
+      "Structured education, nutrition/activity support, foot care, smoking cessation and eye/renal/cardiovascular risk management."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Modified-release metformin",
+        "medication_or_class": "Modified-release metformin",
+        "option_type": "medication",
+        "role": "initial medicine for many adults",
+        "when_to_consider": "After eGFR, tolerance and comorbidity review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "metformin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe renal impairment below the licensed threshold or acute metabolic acidosis"
+            ],
+            "use_caution_if": [
+              "acute illness/dehydration, hypoxia, liver failure, heavy alcohol use, contrast studies, or vitamin B12 deficiency"
+            ],
+            "history_checks": [
+              "eGFR",
+              "acute illness",
+              "hypoxia",
+              "alcohol",
+              "contrast procedures",
+              "B12 risk"
+            ],
+            "monitoring": [
+              "eGFR, gastrointestinal tolerance, HbA1c and periodic B12 in at-risk patients"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG28_2026"
+        ]
+      },
+      {
+        "option_name": "SGLT-2 inhibitor",
+        "medication_or_class": "SGLT-2 inhibitor",
+        "option_type": "medication",
+        "role": "initial or early cardiorenal therapy",
+        "when_to_consider": "Current NICE pathway based on comorbidity and eligibility",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "sglt2",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active diabetic ketoacidosis or inability to follow sick-day rules"
+            ],
+            "use_caution_if": [
+              "recurrent genital infection, volume depletion, low carbohydrate intake, frailty, CKD, pregnancy, or planned surgery"
+            ],
+            "history_checks": [
+              "DKA history",
+              "renal function",
+              "infection history",
+              "volume status",
+              "pregnancy",
+              "surgery/fasting"
+            ],
+            "monitoring": [
+              "renal function, volume status, genital/urinary symptoms; ketones when unwell; temporary withholding during acute illness/fasting/surgery"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG28_2026"
+        ]
+      },
+      {
+        "option_name": "GLP-1 receptor agonist or tirzepatide",
+        "medication_or_class": "GLP-1 receptor agonist or tirzepatide",
+        "option_type": "medication",
+        "role": "selected intensification/weight-cardiorenal option",
+        "when_to_consider": "When eligibility and patient factors support it",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "glp1",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy or serious product allergy"
+            ],
+            "use_caution_if": [
+              "prior pancreatitis, severe gastroparesis, gallbladder disease, dehydration risk, or concurrent insulin/sulfonylurea"
+            ],
+            "history_checks": [
+              "pregnancy",
+              "pancreatitis",
+              "gastroparesis",
+              "gallstones",
+              "hypoglycaemic medicines"
+            ],
+            "monitoring": [
+              "weight, glucose, gastrointestinal tolerance, hydration and symptoms of pancreatitis/gallbladder disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG28_2026"
+        ]
+      },
+      {
+        "option_name": "Insulin or hypoglycaemia-causing agent",
+        "medication_or_class": "Insulin or hypoglycaemia-causing agent",
+        "option_type": "medication",
+        "role": "selected intensification",
+        "when_to_consider": "Symptomatic/severe hyperglycaemia or inadequate control under clinician supervision",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "insulin_hypoglycaemia",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "no absolute disease-wide exclusion when insulin is urgently required; selection must be clinician-directed"
+            ],
+            "use_caution_if": [
+              "recurrent hypoglycaemia, renal/hepatic impairment, frailty, irregular meals, driving, cognitive impairment, or concomitant glucose-lowering medicines"
+            ],
+            "history_checks": [
+              "hypoglycaemia history",
+              "renal/liver function",
+              "meal pattern",
+              "driving",
+              "self-management ability",
+              "other diabetes medicines"
+            ],
+            "monitoring": [
+              "glucose/HbA1c, hypoglycaemia, weight, injection technique and sick-day management"
+            ]
+          }
+        ],
+        "clinical_note": "Must include hypoglycaemia education, driving advice, dose individualisation and monitoring.",
+        "source_ids": [
+          "NICE_NG28_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent care for ketones/acidosis, hyperosmolar state, severe hypoglycaemia, pregnancy with uncontrolled glucose or acute diabetic foot."
+    ],
+    "source_ids": [
+      "NICE_NG28_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

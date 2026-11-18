@@ -1,0 +1,704 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-020",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-020",
+    "name": "Hypothyroidism",
+    "name_ar": "قصور الغدة الدرقية",
+    "synonyms": [
+      "underactive thyroid",
+      "primary hypothyroidism",
+      "myxoedema (severe)"
+    ],
+    "abbreviations": [
+      "TSH",
+      "T4"
+    ],
+    "icd10": {
+      "code": "E03.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "5A00",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "40930008",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D007037",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic endocrine disorder",
+    "organ_system": "Endocrine (thyroid)",
+    "specialty": "Family medicine / Endocrinology",
+    "emergency_level": "Routine - but myxoedema coma is a rare emergency",
+    "severity": "Usually mild-moderate and easily treated; subclinical to overt to (rarely) myxoedema coma",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Deficiency of thyroid hormone causing a slowing of metabolism with fatigue, weight gain, cold intolerance and constipation; diagnosed biochemically (raised TSH, low free T4) and easily treated with levothyroxine.",
+    "detailed_description": "Primary hypothyroidism is common, most often autoimmune (Hashimoto's) or iatrogenic (post-thyroidectomy/radioiodine, drugs). Symptoms are nonspecific and insidious, so diagnosis rests on thyroid function tests. Treatment is levothyroxine titrated to normalise TSH. Subclinical hypothyroidism (raised TSH, normal free T4) is managed selectively.",
+    "pathophysiology": "Reduced thyroid hormone output lowers basal metabolic rate across tissues; loss of negative feedback raises pituitary TSH (primary hypothyroidism). Autoimmune destruction (Hashimoto's) is the commonest mechanism.",
+    "etiology": "Autoimmune (Hashimoto's) thyroiditis; iatrogenic (thyroid surgery, radioiodine, external radiotherapy); drugs (amiodarone, lithium, some tyrosine-kinase inhibitors); iodine deficiency or excess; transient (postpartum/subacute thyroiditis); central (pituitary) causes are rare.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Usually chronic and progressive (autoimmune); requires lifelong replacement in most. Some transient forms recover.",
+    "prognosis": "Excellent with treatment; untreated severe disease can cause myxoedema and rarely myxoedema coma."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common; overt hypothyroidism affects a few percent of adults, more in women and with age; subclinical is more frequent.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Rises with age; much higher in women.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Very low with treatment; myxoedema coma has high mortality but is rare.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; increases with age.",
+    "sex_predominance": "Much more common in women.",
+    "geographic_distribution": "Worldwide; iodine deficiency important in some regions.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Iodine deficiency (dietary) in some regions.",
+    "smoking": "Modest effects on thyroid function/autoimmunity.",
+    "alcohol": "Not a major factor.",
+    "obesity": "Bidirectional association (overlapping symptoms).",
+    "diabetes": "Type 1 diabetes and other autoimmune conditions cluster with autoimmune thyroid disease.",
+    "hypertension": "Not a direct risk factor.",
+    "pregnancy": "Postpartum thyroiditis; hypothyroidism in pregnancy needs careful management (affects the baby).",
+    "occupation": "Not relevant.",
+    "travel": "Not relevant.",
+    "family_history": "Autoimmune thyroid/other autoimmune disease.",
+    "genetic_factors": "Autoimmune predisposition.",
+    "medications": "Amiodarone, lithium, interferons, tyrosine-kinase inhibitors, iodine.",
+    "previous_diseases": "Other autoimmune disease, prior thyroid surgery/radioiodine, neck radiotherapy, Down/Turner syndromes."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Tiredness and low energy",
+      "frequency": "very common",
+      "importance": "Common but nonspecific presenting symptom",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Weight gain",
+      "frequency": "common",
+      "importance": "Modest; overlaps with other causes",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Cold intolerance and constipation",
+      "frequency": "common",
+      "importance": "More specific pointers",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Fatigue / lethargy",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "slightly reduces",
+      "importance": "Common but very nonspecific",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Cold intolerance",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "More suggestive pointer",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Weight gain",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Usually modest",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Constipation",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Slowed gut transit",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Dry skin, hair thinning, hoarse voice",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Supportive signs",
+      "stage": "Any",
+      "early_late": "Mid",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Low mood / poor concentration, menstrual changes (menorrhagia)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Nonspecific but common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Reduced consciousness/hypothermia (myxoedema coma)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - endocrine emergency",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal TSH and free T4",
+      "why_important": "Excludes primary hypothyroidism as the cause of symptoms",
+      "absence_significance": "excludes if absent",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No cold intolerance, normal reflexes, normal bowel habit",
+      "why_important": "Reduces likelihood (though tests are definitive)",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you feel tired, cold, and constipated, with weight gain?",
+      "why_ask": "Elicits the hypothyroid symptom cluster",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any prior thyroid surgery/radioiodine, neck radiotherapy, or drugs like amiodarone/lithium?",
+      "why_ask": "Identifies iatrogenic/drug causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Family or personal history of autoimmune/thyroid disease?",
+      "why_ask": "Autoimmune (Hashimoto's) is the commonest cause",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Are you pregnant or planning pregnancy?",
+      "why_ask": "Requires prompt, careful management for the baby",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any neck swelling (goitre) or symptoms of other autoimmune disease?",
+      "why_ask": "Associated features",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "General - skin, hair, voice, weight",
+      "expected_finding": "Dry skin, coarse hair, hoarse voice",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Thyroid palpation",
+      "expected_finding": "Goitre (Hashimoto's) or absent thyroid (post-surgery)",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Pulse and reflexes",
+      "expected_finding": "Bradycardia; delayed relaxation of ankle reflex",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Signs of complications (effusions, oedema, mental state if severe)",
+      "expected_finding": "In advanced disease",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or low (hypothermia in myxoedema coma)",
+    "heart_rate": "Bradycardia may occur",
+    "blood_pressure": "May have diastolic hypertension; hypotension in myxoedema coma",
+    "respiratory_rate": "Normal (depressed in myxoedema coma)",
+    "oxygen_saturation": "Normal",
+    "bmi": "May be raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Thyroid function tests (TSH, free T4)",
+      "indication": "Diagnosis and monitoring",
+      "expected_result": "Primary hypothyroidism: raised TSH with low free T4; subclinical: raised TSH, normal free T4",
+      "normal_range": "Lab-specific (e.g., TSH ~0.4-4.0 mU/L)",
+      "diagnostic_value": "Diagnostic",
+      "rule_in": "Raised TSH + low free T4",
+      "rule_out": "Normal TSH/T4",
+      "urgency": "Routine (urgent if very unwell)"
+    },
+    {
+      "test_name": "Thyroid peroxidase (TPO) antibodies",
+      "indication": "Confirm autoimmune cause / predict progression in subclinical disease",
+      "expected_result": "Positive in Hashimoto's",
+      "normal_range": "Negative",
+      "diagnostic_value": "Aetiological",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC, lipids, glucose (associated findings)",
+      "indication": "Assess associated features",
+      "expected_result": "May show anaemia, raised cholesterol",
+      "normal_range": "",
+      "diagnostic_value": "Supportive",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Thyroid ultrasound (selective)",
+      "when_needed": "Palpable nodule/goitre needing characterisation",
+      "expected_findings": "Diffuse change (Hashimoto's) or nodules"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If bradycardia/cardiac symptoms or severe disease",
+    "findings": "Sinus bradycardia, low voltage, prolonged QT in severe hypothyroidism."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Fine-needle aspiration only for suspicious nodules",
+    "culture": "Not applicable",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Primary hypothyroidism: raised TSH with low free T4. Subclinical hypothyroidism: raised TSH with normal free T4 (confirm on repeat). Central hypothyroidism (rare): low/normal TSH with low free T4.",
+    "diagnostic_scores": "No routine score; symptom scores are unreliable (biochemistry is definitive).",
+    "cutoff_values": {
+      "value": "Diagnosis and treatment thresholds are laboratory- and guideline-specific; subclinical management often considers TSH >10 mU/L, symptoms, age, and pregnancy status (NICE NG145).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Non-thyroidal illness / other causes of fatigue (anaemia, depression, diabetes)",
+      "why_similar": "Fatigue, weight change, low mood",
+      "differences": "Normal thyroid tests; other findings",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal TFTs; abnormal other tests",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are the thyroid tests normal with another explanation?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Subclinical hypothyroidism",
+      "why_similar": "Mildly raised TSH",
+      "differences": "Normal free T4, often minimal symptoms",
+      "red_flags": "",
+      "distinguishing_symptoms": "Often none",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Raised TSH, normal free T4",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the free T4 normal with only a raised TSH?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Central (secondary) hypothyroidism",
+      "why_similar": "Low thyroid hormone",
+      "differences": "Pituitary/hypothalamic disease; TSH not appropriately raised",
+      "red_flags": "Other pituitary hormone deficiencies",
+      "distinguishing_symptoms": "Features of pituitary disease",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Low free T4 with low/normal TSH",
+      "distinguishing_imaging": "Pituitary MRI",
+      "differential_questions": "Is TSH low/normal despite low T4?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Myxoedema coma",
+      "why_similar": "Severe hypothyroidism",
+      "differences": "Reduced consciousness, hypothermia, hyponatraemia, precipitant",
+      "red_flags": "Emergency",
+      "distinguishing_symptoms": "Confusion/coma, hypothermia",
+      "distinguishing_exam": "Hypothermia, bradycardia",
+      "distinguishing_labs": "Very abnormal TFTs, hyponatraemia",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the patient drowsy/hypothermic and severely unwell?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "What do the thyroid function tests (TSH and free T4) show?",
+      "target_disease": "Hypothyroidism",
+      "competing_disease": "Other causes of fatigue",
+      "purpose": "Biochemistry is definitive",
+      "interpretation": "Raised TSH + low free T4 -> primary hypothyroidism",
+      "information_gain": "very high",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    },
+    {
+      "question": "Are you pregnant or planning pregnancy?",
+      "target_disease": "Hypothyroidism in pregnancy",
+      "competing_disease": "Non-pregnant hypothyroidism",
+      "purpose": "Pregnancy changes urgency/targets",
+      "interpretation": "Positive -> prompt treatment and specialist input",
+      "information_gain": "high",
+      "source": "NICE NG145",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Nonspecific fatigue/weight gain",
+      "question": "Shall we check thyroid function (and antibodies), and are you pregnant or on relevant drugs?",
+      "expected_answers": "Abnormal vs normal TFTs; pregnancy",
+      "branching_logic": "Raised TSH/low T4 -> levothyroxine; subclinical -> selective treatment/monitor; pregnancy -> prompt management; normal TFTs -> seek other cause",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "TSH and free T4 (+ TPO antibodies)",
+      "why": "Confirms diagnosis and cause",
+      "expected_outcome": "Defines hypothyroidism and autoimmune aetiology"
+    },
+    {
+      "test": "Repeat/confirm and baseline bloods",
+      "why": "Confirm subclinical results and assess associated features",
+      "expected_outcome": "Guides treatment decision"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Reduced consciousness, hypothermia, and severe illness (myxoedema coma)",
+      "immediate_action": "Emergency - admit for IV thyroid hormone, supportive care, treat precipitant/adrenal cover"
+    },
+    {
+      "finding": "Hypothyroidism in pregnancy or planning pregnancy",
+      "immediate_action": "Prompt treatment and specialist input (affects fetal development)"
+    },
+    {
+      "finding": "Suspected central hypothyroidism (low T4 with non-raised TSH)",
+      "immediate_action": "Investigate pituitary function; check cortisol before starting thyroxine"
+    },
+    {
+      "finding": "Angina worsening on starting levothyroxine (elderly/cardiac disease)",
+      "immediate_action": "Start low, go slow; cardiac review"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Myxoedema coma (emergency); hypothyroidism in pregnancy; suspected central hypothyroidism.",
+    "routine_referral": "Diagnostic uncertainty, unusual causes, difficult-to-control disease, or suspicious thyroid nodule.",
+    "emergency_referral": "Myxoedema coma."
+  },
+  "complications": {
+    "early": [
+      "Dyslipidaemia",
+      "Anaemia",
+      "Low mood"
+    ],
+    "late": [
+      "Cardiovascular disease",
+      "Myxoedema coma (rare)",
+      "Adverse pregnancy/fetal outcomes if untreated"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the lifelong nature (usually), the need for adherence and monitoring.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Levothyroxine; Liothyronine. No autonomous selection or dosing is allowed. Source IDs: NICE_NG145.",
+    "lifestyle_advice": "Consistent medication timing; adequate but not excessive iodine; report symptoms of over/under-replacement.",
+    "follow_up": "TSH monitoring after dose changes and at least annually once stable; adjust dose in pregnancy promptly.",
+    "legacy_medications_pre_v13": "Levothyroxine, titrated to normalise TSH (and clinical response); start low and titrate slowly in the elderly or those with cardiac disease. Take on an empty stomach, consistently. Monitor TSH after ~6-8 weeks of a dose change, then periodically. Subclinical hypothyroidism: treat selectively (e.g., TSH >10, symptoms, pregnancy)."
+  },
+  "patient_education": {
+    "home_advice": "An underactive thyroid slows the body down, causing tiredness, weight gain, feeling cold and constipation. It is easily treated with a daily thyroxine tablet, usually for life. Take it every day on an empty stomach, and have your blood level checked as advised. Tell your doctor promptly if you become pregnant, as your dose may need increasing.",
+    "home_advice_ar": "خمول الغدة الدرقية يُبطئ الجسم فيسبّب التعب وزيادة الوزن والإحساس بالبرد والإمساك. علاجه سهل بحبة ثيروكسين يومية، غالباً مدى الحياة. تناولها يومياً على معدة فارغة، وافحص مستوى الدم كما يُنصح. أخبر طبيبك فوراً إذا حملتِ، فقد تحتاج الجرعة للزيادة.",
+    "prevention": "Adequate dietary iodine (where deficient); no primary prevention for autoimmune disease.",
+    "warning_signs": "Marked drowsiness/hypothermia, worsening chest pain on treatment, or symptoms during pregnancy."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Adequate iodine intake where relevant.",
+    "screening": "Test thyroid function in those with symptoms, other autoimmune disease, or relevant drugs; screen in pregnancy/high-risk per guidance."
+  },
+  "evidence": {
+    "evidence_level": "High for levothyroxine replacement.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG145; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG145, ETA/ATA.",
+    "verified_source_ids": [
+      "NICE_NG145"
+    ]
+  },
+  "references": {
+    "nice": "Thyroid disease: assessment and management (NG145) — https://www.nice.org.uk/guidance/ng145/chapter/Recommendations",
+    "aafp": "AAFP - Hypothyroidism",
+    "bmj_best_practice": "BMJ Best Practice - Hypothyroidism",
+    "msd_manual": "MSD Manual - Hypothyroidism",
+    "merck_manual": "Merck Manual - Hypothyroidism",
+    "uptodate": "UpToDate - Clinical manifestations and diagnosis of hypothyroidism; treatment",
+    "harrisons": "Harrison's Principles of Internal Medicine - Hypothyroidism",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Hypothyroidism",
+    "who": "WHO - Iodine deficiency disorders",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG145",
+        "organization": "NICE",
+        "title": "Thyroid disease: assessment and management (NG145)",
+        "publication_or_update": "2019; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng145/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Hypothyroidism and thyrotoxicosis assessment and treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG145"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG145"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG145"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG145",
+        "organization": "NICE",
+        "title": "Thyroid disease: assessment and management (NG145)",
+        "publication_or_update": "2019; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng145/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Hypothyroidism and thyrotoxicosis assessment and treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Restore euthyroidism safely and identify reversible/central causes.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Levothyroxine; Liothyronine. No autonomous selection or dosing is allowed. Source IDs: NICE_NG145.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "cardiac disease",
+      "pregnancy",
+      "adrenal/central disease",
+      "adherence",
+      "iron/calcium/PPI use",
+      "malabsorption"
+    ],
+    "non_drug_measures": [
+      "Explain consistent administration and separation from iron/calcium/antacids; correct the cause where possible."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Levothyroxine",
+        "medication_or_class": "Levothyroxine",
+        "option_type": "medication",
+        "role": "first-line replacement",
+        "when_to_consider": "Confirmed primary hypothyroidism with dose individualised to age, cardiac status and pregnancy",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "levothyroxine",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "untreated thyrotoxicosis or uncorrected adrenal insufficiency"
+            ],
+            "use_caution_if": [
+              "coronary disease, arrhythmia, older/frail patient, pregnancy, or malabsorption"
+            ],
+            "history_checks": [
+              "cardiac history",
+              "pregnancy",
+              "adrenal disease",
+              "iron/calcium/antacid use",
+              "adherence"
+            ],
+            "monitoring": [
+              "TSH after initiation/dose changes and periodically; closer monitoring in pregnancy and cardiac disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG145"
+        ]
+      },
+      {
+        "option_name": "Liothyronine",
+        "medication_or_class": "Liothyronine",
+        "option_type": "medication",
+        "role": "exception/specialist consideration",
+        "when_to_consider": "Not routine; only after specialist assessment in selected persistent cases",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "liothyronine",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "untreated thyrotoxicosis or uncorrected adrenal insufficiency"
+            ],
+            "use_caution_if": [
+              "coronary disease, arrhythmia, older/frail patient, pregnancy, osteoporosis, or concomitant thyroid hormone"
+            ],
+            "history_checks": [
+              "specialist indication",
+              "cardiac history",
+              "pregnancy",
+              "bone risk",
+              "current thyroid dose"
+            ],
+            "monitoring": [
+              "TSH and thyroid hormones, pulse/ECG when indicated, symptoms and bone/cardiac adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "Avoid unregulated thyroid extracts.",
+        "source_ids": [
+          "NICE_NG145"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent hospital care for suspected myxoedema coma; endocrine referral for central disease, pregnancy complexity or diagnostic uncertainty."
+    ],
+    "source_ids": [
+      "NICE_NG145"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

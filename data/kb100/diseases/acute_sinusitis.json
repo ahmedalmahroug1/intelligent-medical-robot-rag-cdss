@@ -1,0 +1,810 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-004",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-004",
+    "name": "Acute sinusitis (acute rhinosinusitis)",
+    "name_ar": "التهاب الجيوب الأنفية الحاد",
+    "synonyms": [
+      "acute rhinosinusitis",
+      "sinus infection"
+    ],
+    "abbreviations": [
+      "ARS"
+    ],
+    "icd10": {
+      "code": "J01.90",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA0A",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "75498004",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D012852",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute upper respiratory infection / ENT",
+    "organ_system": "ENT (paranasal sinuses)",
+    "specialty": "Family medicine / ENT",
+    "emergency_level": "Routine — mostly viral and self-limiting; rare orbital/intracranial complications are emergencies",
+    "severity": "Usually mild-moderate and self-limiting; bacterial cases and complications are less common",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute inflammation of the paranasal sinuses and nasal mucosa, usually following a viral cold, presenting with nasal blockage, facial pain/pressure and nasal discharge for less than 12 weeks.",
+    "detailed_description": "Acute rhinosinusitis is common and mostly viral; only a minority are bacterial. Most cases resolve without antibiotics. Key clinical tasks are to identify the few likely-bacterial cases (persistent >10 days or 'double-sickening'), avoid unnecessary antibiotics, and recognise the rare but serious complications (orbital or intracranial spread).",
+    "pathophysiology": "Mucosal inflammation and oedema (usually post-viral) obstruct sinus ostia, impairing drainage and mucociliary clearance; secretions stagnate, occasionally allowing secondary bacterial infection (commonly Streptococcus pneumoniae, Haemophilus influenzae, Moraxella catarrhalis).",
+    "etiology": "Most commonly viral (as part of a cold). Bacterial superinfection in a minority. Predisposing factors: allergic rhinitis, anatomical variants (deviated septum), dental infection, smoking.",
+    "incubation_period": "Follows a viral URTI (days).",
+    "natural_history": "Most improve within 2-3 weeks; symptoms worsening after ~5 days or persisting beyond 10 days suggest possible bacterial infection.",
+    "prognosis": "Excellent; complications are rare. Recurrent/persistent (>12 weeks) becomes chronic rhinosinusitis."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; many adults have at least one episode yearly, usually viral.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High, peaking in colder months alongside viral URTIs.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible; deaths only via rare intracranial complications.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "More common in autumn/winter."
+  },
+  "risk_factors": {
+    "lifestyle": "Recent viral URTI, swimming/diving, air travel.",
+    "smoking": "Impairs mucociliary clearance; predisposes.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "Poor control raises risk of invasive fungal sinusitis (rare, serious).",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not a risk factor; affects medication choice (decongestants).",
+    "occupation": "Exposure to irritants/allergens.",
+    "travel": "Air travel/barotrauma can precipitate.",
+    "family_history": "Atopy/allergic rhinitis clustering.",
+    "genetic_factors": "Not significant (except cystic fibrosis/ciliary disorders).",
+    "medications": "Immunosuppression raises complication risk.",
+    "previous_diseases": "Allergic rhinitis, nasal polyps, deviated septum, dental infection (upper molars)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Blocked nose with facial pain/pressure",
+      "frequency": "very common",
+      "importance": "Core symptom pair",
+      "source": "EPOS; NICE NG79",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Nasal discharge (may be purulent)",
+      "frequency": "common",
+      "importance": "Purulence alone does not confirm bacterial cause",
+      "source": "NICE NG79",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Reduced sense of smell",
+      "frequency": "common",
+      "importance": "Supportive diagnostic feature",
+      "source": "EPOS",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Nasal blockage/congestion",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "moderately reduces",
+      "importance": "One of the two required features (with discharge or facial pain)",
+      "stage": "Throughout",
+      "early_late": "Early",
+      "source": "EPOS; NICE NG79",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Facial pain/pressure (over sinuses, worse on bending)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Localises to sinuses",
+      "stage": "Throughout",
+      "early_late": "Early",
+      "source": "EPOS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Nasal discharge (anterior or postnasal, may be purulent)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Colour does not reliably indicate bacterial infection",
+      "stage": "Throughout",
+      "early_late": "Early",
+      "source": "NICE NG79",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Reduced/loss of sense of smell (hyposmia)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Supports rhinosinusitis",
+      "stage": "Throughout",
+      "early_late": "Early",
+      "source": "EPOS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "'Double-sickening' (worsening after initial improvement) / symptoms >10 days",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Raises probability of BACTERIAL sinusitis",
+      "stage": "Late",
+      "early_late": "Late",
+      "source": "NICE NG79; EPOS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "High fever with severe unilateral pain may suggest bacterial cause",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "EPOS",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No eye swelling/redness, no diplopia or reduced eye movements, no proptosis",
+      "why_important": "Absence argues strongly against orbital complications (a key safety check)",
+      "absence_significance": "strongly reduces",
+      "source": "EPOS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No severe headache, neck stiffness, focal neurology, or altered consciousness",
+      "why_important": "Absence argues against intracranial complications",
+      "absence_significance": "strongly reduces",
+      "source": "EPOS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Symptoms <10 days and improving",
+      "why_important": "Favours viral (self-limiting) rather than bacterial sinusitis",
+      "absence_significance": "moderately reduces",
+      "source": "NICE NG79",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How long have symptoms lasted and did they improve then worsen?",
+      "why_ask": "Duration >10 days or double-sickening suggests bacterial cause",
+      "expected_answer": "Often <10 days (viral)",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Do you have blocked nose PLUS facial pain/pressure or discharge or reduced smell?",
+      "why_ask": "Establishes the diagnostic feature set",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any eye swelling/redness, double vision, severe headache, or neck stiffness?",
+      "why_ask": "Screens for orbital/intracranial complications (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "History of allergies, nasal polyps, or recurrent sinusitis?",
+      "why_ask": "Predisposing/associated conditions",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any recent dental problems in the upper teeth?",
+      "why_ask": "Odontogenic sinusitis (usually unilateral, foul discharge)",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Facial/sinus palpation and anterior rhinoscopy",
+      "expected_finding": "Tenderness over sinuses; congested nasal mucosa, discharge",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Eyes — periorbital swelling, proptosis, eye movements, vision",
+      "expected_finding": "Should be normal; abnormality signals orbital complication",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Temperature and general appearance",
+      "expected_finding": "Usually well or mildly unwell",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Neurological screen if severe headache",
+      "expected_finding": "Normal; deficits suggest intracranial spread",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or mild fever (high fever may suggest bacterial cause/complication)",
+    "heart_rate": "Usually normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "None routinely",
+      "indication": "Diagnosis is clinical",
+      "expected_result": "N/A",
+      "normal_range": "",
+      "diagnostic_value": "None",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "N/A"
+    },
+    {
+      "test_name": "FBC/CRP (only if complication/severe infection suspected)",
+      "indication": "Systemically unwell or suspected complication",
+      "expected_result": "Raised inflammatory markers if bacterial/complicated",
+      "normal_range": "",
+      "diagnostic_value": "Supportive",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent if complication"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "CT sinuses (NOT routine)",
+      "when_needed": "Suspected complications, chronic/recurrent disease, or before surgery",
+      "expected_findings": "Sinus opacification; orbital/intracranial extension if complicated"
+    },
+    {
+      "imaging_type": "Contrast CT/MRI orbit and brain",
+      "when_needed": "Suspected orbital or intracranial complication (emergency)",
+      "expected_findings": "Orbital cellulitis/abscess, intracranial collection"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Nasal endoscopy by ENT for chronic/recurrent or complicated disease",
+    "biopsy": "Only if malignancy or invasive fungal disease suspected",
+    "culture": "Endoscopically-guided culture in refractory/complicated cases (not routine sinus swab)",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "EPOS: sudden onset of >=2 symptoms, one of which is nasal blockage/obstruction OR nasal discharge (anterior/posterior), +/- facial pain/pressure, +/- reduction/loss of smell, for <12 weeks. Likely BACTERIAL if: symptoms >10 days without improvement, OR severe symptoms/high fever, OR 'double-sickening' (worsening after initial improvement).",
+    "diagnostic_scores": "No routine score; clinical criteria (EPOS/NICE) guide viral vs likely-bacterial.",
+    "cutoff_values": {
+      "value": "Duration <12 weeks = acute; >12 weeks = chronic rhinosinusitis. >10 days or double-sickening raises bacterial likelihood.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Viral URTI / common cold",
+      "why_similar": "Nasal symptoms, facial fullness",
+      "differences": "Shorter, no marked localised facial pain, resolves by ~10 days",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Coryza-predominant, improving",
+      "distinguishing_exam": "Mild",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are symptoms improving within 10 days?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Allergic rhinitis",
+      "why_similar": "Congestion, discharge, reduced smell",
+      "differences": "Itchy eyes/nose, sneezing, seasonal/trigger pattern, no purulence/fever",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Itch, sneezing, clear rhinorrhoea",
+      "distinguishing_exam": "Pale boggy turbinates",
+      "distinguishing_labs": "Allergy testing",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are your nose/eyes itchy and is it triggered by allergens?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Dental (odontogenic) infection",
+      "why_similar": "Unilateral facial pain, discharge",
+      "differences": "Related to upper molar disease, foul unilateral discharge",
+      "red_flags": "Spreading facial infection",
+      "distinguishing_symptoms": "Toothache, unilateral foul discharge",
+      "distinguishing_exam": "Dental tenderness",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "Dental/CT",
+      "differential_questions": "Any upper tooth pain or recent dental work?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Orbital cellulitis / intracranial complication",
+      "why_similar": "Arises from sinusitis",
+      "differences": "Eye swelling/proptosis, painful/restricted eye movements, vision change, severe headache, neurology",
+      "red_flags": "Ophthalmoplegia, proptosis, reduced vision, meningism",
+      "distinguishing_symptoms": "Eye/vision symptoms, severe headache",
+      "distinguishing_exam": "Proptosis, restricted eye movement, focal neurology",
+      "distinguishing_labs": "Raised inflammatory markers",
+      "distinguishing_imaging": "Contrast CT/MRI",
+      "differential_questions": "Any eye swelling, double vision, or severe headache?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Migraine / trigeminal or facial pain syndromes",
+      "why_similar": "Facial pain/headache",
+      "differences": "Recurrent, no nasal purulence, migraine features",
+      "red_flags": "None typically",
+      "distinguishing_symptoms": "Photophobia, throbbing, aura",
+      "distinguishing_exam": "Normal ENT",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you get recurrent headaches with light sensitivity rather than nasal symptoms?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Have symptoms lasted more than 10 days, or did you improve then get worse?",
+      "target_disease": "Bacterial sinusitis",
+      "competing_disease": "Viral sinusitis",
+      "purpose": "Identify likely-bacterial cases for antibiotic consideration",
+      "interpretation": ">10 days or double-sickening -> consider antibiotics",
+      "information_gain": "high",
+      "source": "NICE NG79; EPOS",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you have any eye swelling, double vision, or a severe headache?",
+      "target_disease": "Orbital/intracranial complication",
+      "competing_disease": "Uncomplicated sinusitis",
+      "purpose": "Safety screen for complications",
+      "interpretation": "Positive -> emergency referral",
+      "information_gain": "very high",
+      "source": "EPOS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Nasal blockage + facial pain, <10 days, well",
+      "question": "Are your symptoms improving, and do you have any eye or severe headache symptoms?",
+      "expected_answers": "Improving/no red flags vs persistent/red flags",
+      "branching_logic": "Improving, no red flags -> symptomatic advice, no antibiotics; >10 days/double-sickening -> consider antibiotics; eye/neuro red flags -> emergency referral",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Usually none",
+      "why": "Clinical diagnosis",
+      "expected_outcome": "Reassurance/symptomatic management"
+    },
+    {
+      "test": "Urgent contrast CT/MRI orbit and brain",
+      "why": "Suspected orbital/intracranial complication",
+      "expected_outcome": "Detects abscess/spread requiring emergency treatment"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Periorbital swelling, proptosis, painful/restricted eye movements, or reduced/double vision",
+      "immediate_action": "Emergency — same-day ENT/ophthalmology; suspect orbital cellulitis/abscess"
+    },
+    {
+      "finding": "Severe frontal headache, neck stiffness, focal neurology, or altered consciousness",
+      "immediate_action": "Emergency — suspect intracranial complication"
+    },
+    {
+      "finding": "Systemically very unwell / signs of sepsis",
+      "immediate_action": "Emergency assessment"
+    },
+    {
+      "finding": "Immunocompromised or poorly-controlled diabetic with severe/necrotic sinusitis",
+      "immediate_action": "Urgent — exclude invasive fungal sinusitis"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Recurrent acute or chronic rhinosinusitis for ENT assessment; unilateral symptoms or unilateral bloody discharge (exclude tumour).",
+    "routine_referral": "Persistent symptoms despite treatment; suspected allergic or anatomical cause.",
+    "emergency_referral": "Orbital or intracranial complications; suspected invasive fungal sinusitis."
+  },
+  "complications": {
+    "early": [
+      "Orbital cellulitis/abscess",
+      "Intracranial spread (meningitis, epidural/subdural/brain abscess, cavernous sinus thrombosis)"
+    ],
+    "late": [
+      "Chronic rhinosinusitis",
+      "Recurrent acute sinusitis",
+      "Mucocele"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Reassurance (most are viral and self-limiting); analgesia; nasal saline irrigation; adequate fluids.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; High-dose intranasal corticosteroid; Guideline-directed antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG79.",
+    "lifestyle_advice": "Steam inhalation and saline may ease symptoms; smoking cessation; manage underlying allergy.",
+    "follow_up": "Safety-net: return if eye symptoms, severe headache, or no improvement; review recurrent cases.",
+    "legacy_medications_pre_v13": "Symptomatic: analgesia/antipyretics, saline irrigation, short-term decongestants (avoid prolonged use). Intranasal corticosteroid may help symptoms in persistent cases (>10 days). ANTIBIOTICS NOT ROUTINE; reserve for likely-bacterial cases (>10 days without improvement, marked worsening/double-sickening, or systemically very unwell) per NICE NG79."
+  },
+  "patient_education": {
+    "home_advice": "Sinus infections are usually caused by viruses and get better within 2-3 weeks without antibiotics. Salt-water rinses, steam, pain relief and decongestants can ease symptoms. See a doctor urgently if you get swelling or redness around an eye, double vision, a severe headache, or a stiff neck.",
+    "home_advice_ar": "التهاب الجيوب غالباً فيروسي ويتحسّن خلال أسبوعين إلى ثلاثة دون مضادات حيوية. غسول الماء والملح والبخار ومسكّنات الألم ومزيلات الاحتقان تخفّف الأعراض. راجع الطبيب فوراً إذا حدث تورّم أو احمرار حول العين، أو ازدواج الرؤية، أو صداع شديد، أو تيبّس الرقبة.",
+    "prevention": "Manage allergic rhinitis, avoid smoking, hand hygiene to reduce colds.",
+    "warning_signs": "Eye swelling/redness, double or reduced vision, severe headache, neck stiffness, or symptoms worsening after 10 days."
+  },
+  "prevention": {
+    "vaccination": "No specific vaccine; influenza vaccination reduces some precipitating URTIs.",
+    "lifestyle": "Allergy control, smoking cessation, hand hygiene.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High — most acute sinusitis is viral and self-limiting; antibiotics give limited benefit.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG79; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong — NICE NG79, EPOS, IDSA.",
+    "verified_source_ids": [
+      "NICE_NG79"
+    ]
+  },
+  "references": {
+    "nice": "Sinusitis (acute): antimicrobial prescribing (NG79) — https://www.nice.org.uk/guidance/ng79/chapter/Recommendations",
+    "aafp": "AAFP — Acute rhinosinusitis in adults",
+    "bmj_best_practice": "BMJ Best Practice — Acute sinusitis",
+    "msd_manual": "MSD Manual — Sinusitis",
+    "merck_manual": "Merck Manual — Sinusitis",
+    "uptodate": "UpToDate — Acute sinusitis and rhinosinusitis in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine — Sinusitis",
+    "oxford_handbook": "Oxford Handbook of General Practice — Rhinosinusitis",
+    "who": "",
+    "cdc": "CDC — Sinus Infection (Sinusitis)",
+    "idsa": "IDSA — Clinical Practice Guideline for Acute Bacterial Rhinosinusitis",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG79",
+        "organization": "NICE",
+        "title": "Sinusitis (acute): antimicrobial prescribing (NG79)",
+        "publication_or_update": "2017; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng79/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute sinusitis self-care, intranasal steroids and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG79"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG79"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG79"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG79",
+        "organization": "NICE",
+        "title": "Sinusitis (acute): antimicrobial prescribing (NG79)",
+        "publication_or_update": "2017; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ng79/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute sinusitis self-care, intranasal steroids and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Provide self-care, identify complications and limit antibiotics.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; High-dose intranasal corticosteroid; Guideline-directed antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG79.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "symptom duration",
+      "double worsening",
+      "unilateral severe dental/facial pain",
+      "orbital or neurological symptoms"
+    ],
+    "non_drug_measures": [
+      "Explain expected course and use saline only as an optional comfort measure with limited evidence."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG79"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG79"
+        ]
+      },
+      {
+        "option_name": "High-dose intranasal corticosteroid",
+        "medication_or_class": "High-dose intranasal corticosteroid",
+        "option_type": "medication",
+        "role": "selected symptom treatment",
+        "when_to_consider": "Persistent symptoms around 10 days or more in eligible people",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "intranasal_steroid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "recurrent epistaxis, recent nasal surgery/trauma, glaucoma, or concurrent high-dose corticosteroids"
+            ],
+            "history_checks": [
+              "nosebleeds",
+              "eye disease",
+              "other steroids",
+              "technique"
+            ],
+            "monitoring": [
+              "nasal irritation/bleeding, growth in children when prolonged, and total steroid burden"
+            ]
+          }
+        ],
+        "clinical_note": "Some regimens are off-label; account for total corticosteroid burden.",
+        "source_ids": [
+          "NICE_NG79"
+        ]
+      },
+      {
+        "option_name": "Guideline-directed antibiotic",
+        "medication_or_class": "Guideline-directed antibiotic",
+        "option_type": "medication",
+        "role": "exception only",
+        "when_to_consider": "Systemically very unwell, high-risk, or selected persistent/worsening bacterial pattern",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          },
+          {
+            "rule_id": "doxycycline",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy, breastfeeding where unsuitable, or tetracycline allergy"
+            ],
+            "use_caution_if": [
+              "oesophageal disease, liver disease, photosensitivity, or interacting iron/calcium/antacid products"
+            ],
+            "history_checks": [
+              "pregnancy possibility",
+              "swallowing/oesophageal disease",
+              "supplements and antacids"
+            ],
+            "monitoring": [
+              "clinical response and gastrointestinal/photosensitivity adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG79"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent referral for orbital swelling, diplopia, reduced vision, severe frontal headache, neurological signs or sepsis."
+    ],
+    "source_ids": [
+      "NICE_NG79"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

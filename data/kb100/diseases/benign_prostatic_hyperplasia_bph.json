@@ -1,0 +1,791 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-045",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Ordinal symptom tiers are qualitative ranking aids, not probabilities or likelihood ratios. Uncited quantitative values are not authored.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-045",
+    "name": "Benign prostatic enlargement with lower urinary tract symptoms",
+    "name_ar": "تضخم البروستاتا الحميد مع أعراض المسالك البولية السفلية",
+    "synonyms": [
+      "benign prostatic hyperplasia",
+      "benign prostatic enlargement",
+      "male LUTS"
+    ],
+    "abbreviations": [
+      "BPH",
+      "BPE",
+      "LUTS",
+      "IPSS"
+    ],
+    "icd10": {
+      "code": "N40",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "",
+      "basis": "estimate"
+    },
+    "disease_category": "Male lower urinary tract disorder",
+    "organ_system": "Prostate, bladder outlet and lower urinary tract",
+    "specialty": "Family medicine / Urology",
+    "emergency_level": "Usually routine; emergency with acute retention, renal compromise, sepsis or severe haematuria",
+    "severity": "Chronic quality-of-life condition with potentially serious retention/renal complications",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Non-malignant prostate enlargement that may contribute to bothersome voiding and storage urinary symptoms in adults with a prostate.",
+    "detailed_description": "Male LUTS are not synonymous with BPH: infection, medicines, overactive/underactive bladder, neurological disease, stricture and prostate/bladder cancer must be considered. Initial assessment measures symptom impact and detects retention, renal or cancer red flags before conservative, drug or surgical treatment.",
+    "pathophysiology": "Prostatic stromal/epithelial enlargement and smooth-muscle tone can increase bladder-outlet resistance; bladder compensation and later dysfunction create mixed voiding, storage and post-micturition symptoms.",
+    "etiology": "Age-related androgen-dependent prostate growth interacting with bladder and neurological factors.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Usually gradual; symptoms and prostate size correlate imperfectly. Some remain stable while others develop retention, infection, stones or renal effects.",
+    "prognosis": "Usually manageable; progression risk varies by enlargement, symptoms and complications."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common with increasing age in people with a prostate",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Rises with age",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Not usually fatal; complications and missed cancer are the key risks",
+      "basis": "estimate"
+    },
+    "age_groups": "Adults, especially later life",
+    "sex_predominance": "People with a prostate",
+    "geographic_distribution": "Worldwide",
+    "seasonal_pattern": "None"
+  },
+  "risk_factors": {
+    "lifestyle": "",
+    "smoking": "",
+    "alcohol": "",
+    "obesity": "Metabolic factors may associate with LUTS",
+    "diabetes": "",
+    "hypertension": "",
+    "pregnancy": "",
+    "occupation": "",
+    "travel": "",
+    "family_history": "May contribute",
+    "genetic_factors": "",
+    "medications": "Decongestants, anticholinergics, opioids, diuretics and others may worsen symptoms/retention",
+    "previous_diseases": "Diabetes, neurological disease, UTI, stones, urethral stricture or prior pelvic/prostate procedures"
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Weak stream, hesitancy or straining",
+      "frequency": "very common",
+      "importance": "Voiding LUTS",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Frequency, urgency or nocturia",
+      "frequency": "very common",
+      "importance": "Storage LUTS; not specific to BPH",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Incomplete emptying or post-void dribble",
+      "frequency": "common",
+      "importance": "Post-micturition/obstruction symptoms",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Weak urinary stream",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Voiding symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Hesitancy/straining/intermittency",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Voiding symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Frequency/urgency/nocturia",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Storage symptoms have many causes",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Feeling of incomplete emptying/post-void dribble",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Post-micturition symptom",
+      "stage": "Presentation",
+      "early_late": "Early",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Inability to pass urine with painful bladder",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Acute retention emergency",
+      "stage": "Complication",
+      "early_late": "Complication",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No bothersome urinary symptoms",
+      "why_important": "BPH histology/enlargement alone does not require symptom treatment",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "Normal prostate examination",
+      "why_important": "Does not exclude functional LUTS or modest enlargement",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No retention, infection, haematuria, renal impairment or cancer features",
+      "why_important": "Supports uncomplicated pathway",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Which symptoms: weak stream/hesitancy, urgency/frequency, nocturia or dribbling, and how much do they bother you?",
+      "why_ask": "Classify LUTS and impact",
+      "expected_answer": "Variable pattern",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any complete retention, recurrent infection, visible blood, fever or flank pain?",
+      "why_ask": "Detect complications",
+      "expected_answer": "Usually absent",
+      "diagnostic_value": "Very high (safety)"
+    },
+    {
+      "question": "Any weight loss, bone pain, abnormal prostate history or family cancer risk?",
+      "why_ask": "Detect cancer concern",
+      "expected_answer": "Usually absent",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Review all medicines, fluids, caffeine/alcohol, constipation and sleep-apnoea/diabetes/heart-failure symptoms?",
+      "why_ask": "Find contributors to LUTS/nocturia",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any dizziness/falls, cataract surgery, sexual/fertility priorities or cognitive/constipation issues?",
+      "why_ask": "Select safe treatment",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Abdominal examination for palpable bladder",
+      "expected_finding": "Distension suggests retention",
+      "importance": "High"
+    },
+    {
+      "examination": "External genital and digital rectal examination when appropriate",
+      "expected_finding": "Assess prostate and alternative genital causes; suspicious abnormality changes pathway",
+      "importance": "High"
+    },
+    {
+      "examination": "Neurological lower-limb/perineal assessment when indicated",
+      "expected_finding": "Detect neurogenic bladder/cauda equina",
+      "importance": "High when neurological features"
+    },
+    {
+      "examination": "Lying and standing blood pressure",
+      "expected_finding": "Baseline before alpha blocker; detect postural hypotension",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Usually normal unless infection/systemic illness",
+    "heart_rate": "Usually normal; tachycardia may indicate pain, dehydration or sepsis",
+    "blood_pressure": "Include postural measurement when considering alpha blocker",
+    "respiratory_rate": "Usually normal; elevation may indicate sepsis/pain",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Record when relevant to risk or treatment"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Urinalysis",
+      "indication": "Initial LUTS assessment",
+      "expected_result": "Detect blood, glucose, protein or infection",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Alternative/complication detection",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    },
+    {
+      "test_name": "Serum creatinine/eGFR",
+      "indication": "When renal impairment is suspected, such as palpable bladder, enuresis, recurrent UTI or stone history",
+      "expected_result": "Renal status",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Complication assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    },
+    {
+      "test_name": "PSA after informed discussion when indicated",
+      "indication": "Cancer concern, abnormal prostate or symptoms suggesting outlet obstruction/BPE",
+      "expected_result": "Interpret by age/context and before/with 5-ARI effects",
+      "normal_range": "Use current local laboratory reference range",
+      "diagnostic_value": "Shared decision/cancer pathway",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine/urgent by severity"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Bladder/prostate/upper-tract ultrasound with residual measurement",
+      "when_needed": "Not routine in uncomplicated initial assessment; use in specialist/retention/renal/stone/recurrent-infection pathways",
+      "expected_findings": "Prostate size, residual urine, hydronephrosis, bladder/stone findings"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not routine; use when cardiac disease, electrolyte disturbance or medicine risk indicates",
+    "findings": "No disease-specific ECG pattern"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "",
+    "endoscopy": "",
+    "biopsy": "Not a BPH test; prostate-cancer pathway only when indicated",
+    "culture": "Urine culture if infection suspected",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Bothersome LUTS assessed by history and examination, with plausible benign prostatic/bladder-outlet contribution after considering infection, medicines, neurological/bladder disease and cancer. IPSS quantifies symptoms but does not prove BPH.",
+    "diagnostic_scores": {
+      "value": "Use a validated symptom score such as IPSS before treatment and for follow-up.",
+      "basis": "sourced",
+      "source": "NICE_CG97_2024"
+    },
+    "cutoff_values": "Use current guideline criteria for prostate size/PSA and retention; do not treat a copied cutoff without context."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Prostate or bladder cancer",
+      "why_similar": "LUTS/haematuria",
+      "differences": "Abnormal prostate, visible haematuria, weight loss or bone pain",
+      "red_flags": "Cancer referral pathway",
+      "distinguishing_symptoms": "Abnormal prostate, visible haematuria, weight loss or bone pain",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any blood, weight loss or bone pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Urinary tract infection/prostatitis",
+      "why_similar": "Frequency/dysuria/poor flow",
+      "differences": "Pain, fever, acute onset, culture",
+      "red_flags": "",
+      "distinguishing_symptoms": "Pain, fever, acute onset, culture",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any fever, pain or burning?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Overactive or neurogenic bladder",
+      "why_similar": "Urgency/frequency/nocturia",
+      "differences": "Neurological disease or storage-predominant pattern",
+      "red_flags": "",
+      "distinguishing_symptoms": "Neurological disease or storage-predominant pattern",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any neurological symptoms or urgency leakage?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Urethral stricture",
+      "why_similar": "Weak stream/retention",
+      "differences": "Trauma, instrumentation, STI or surgery history",
+      "red_flags": "",
+      "distinguishing_symptoms": "Trauma, instrumentation, STI or surgery history",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any urethral procedure or injury?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Cauda equina syndrome",
+      "why_similar": "Retention",
+      "differences": "Back pain, saddle anaesthesia, leg weakness",
+      "red_flags": "Emergency spinal pathway",
+      "distinguishing_symptoms": "Back pain, saddle anaesthesia, leg weakness",
+      "distinguishing_exam": "Directed examination",
+      "distinguishing_labs": "Directed testing",
+      "distinguishing_imaging": "When indicated",
+      "differential_questions": "Any new saddle numbness or leg weakness?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is there retention, recurrent UTI, suspected renal impairment or cancer concern?",
+      "target_disease": "Complicated LUTS",
+      "competing_disease": "Uncomplicated LUTS/BPE",
+      "purpose": "Set referral urgency",
+      "interpretation": "Any complication -> specialist/urgent pathway",
+      "information_gain": "very high",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    },
+    {
+      "question": "Are symptoms mainly voiding or storage, and what is the IPSS impact?",
+      "target_disease": "BPE/outlet-predominant LUTS",
+      "competing_disease": "Storage bladder disorder",
+      "purpose": "Select treatment class",
+      "interpretation": "Pattern and bother guide management",
+      "information_gain": "high",
+      "source": "NICE_CG97_2024",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Adult with male LUTS",
+      "question": "Any retention, recurrent infection, haematuria/cancer features, renal concern, neurological red flags, and is the pattern voiding or storage?",
+      "expected_answers": "Complicated versus uncomplicated and symptom subtype",
+      "branching_logic": "Complication/red flag -> urgent/specialist; uncomplicated -> score, conservative care and matched medicine if needed",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Urinalysis plus focused examination and symptom score",
+      "why": "Detect alternatives/complications and quantify impact",
+      "expected_outcome": "Safe initial management pathway"
+    },
+    {
+      "test": "Creatinine/PSA/imaging only when indicated",
+      "why": "Avoid routine low-value testing while detecting renal/cancer/retention risk",
+      "expected_outcome": "Targeted referral or treatment"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Acute painful inability to urinate",
+      "immediate_action": "Immediate catheter/urgent-care pathway"
+    },
+    {
+      "finding": "Retention with renal impairment/hydronephrosis or anuria",
+      "immediate_action": "Urgent catheterisation and urology"
+    },
+    {
+      "finding": "Visible haematuria, abnormal hard/nodular prostate, weight loss or bone pain",
+      "immediate_action": "Cancer referral pathway"
+    },
+    {
+      "finding": "Retention with saddle anaesthesia, leg weakness or severe back pain",
+      "immediate_action": "Emergency cauda equina assessment"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Acute retention, renal impairment/hydronephrosis, recurrent/persistent UTI, significant haematuria or cancer concern.",
+    "routine_referral": "Bothersome LUTS unresponsive to conservative/drug treatment or diagnostic uncertainty.",
+    "emergency_referral": "Retention with sepsis, anuria/renal compromise or cauda equina features."
+  },
+  "complications": {
+    "early": [
+      "Acute urinary retention",
+      "UTI",
+      "Haematuria"
+    ],
+    "late": [
+      "Recurrent retention/infection",
+      "Bladder stones",
+      "Hydronephrosis and renal impairment",
+      "Bladder dysfunction"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Classify symptoms and complications, review medicines/lifestyle and use a symptom score.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Alpha blocker; 5-alpha-reductase inhibitor; Antimuscarinic; Beta-3 adrenoceptor agonist. No autonomous selection or dosing is allowed. Source IDs: NICE_CG97_2024.",
+    "lifestyle_advice": "Adjust fluid timing, caffeine/alcohol and constipation; bladder training when appropriate.",
+    "follow_up": "Review response and adverse effects at medicine-specific intervals; refer failure/complications.",
+    "legacy_medications_pre_v13": "Matched alpha blocker, 5-ARI or storage-symptom medicine only after contraindication and retention/cancer assessment."
+  },
+  "patient_education": {
+    "home_advice": "An enlarged prostate is benign, but urinary symptoms can have other causes. Inability to pass urine, blood in urine, fever, severe back/leg neurological symptoms or worsening kidney function need urgent assessment.",
+    "home_advice_ar": "تضخم البروستاتا الحميد ليس سرطاناً، لكن أعراض البول قد تكون لها أسباب أخرى. عدم القدرة على التبول، أو وجود دم في البول، أو الحمى، أو أعراض عصبية شديدة في الظهر/الساقين، أو تدهور وظائف الكلى تحتاج تقييماً عاجلاً.",
+    "prevention": "No proven prevention; reduce aggravating factors and monitor progression/complications.",
+    "warning_signs": "Complete retention, haematuria, fever, flank pain, weakness/numbness or reduced urine."
+  },
+  "prevention": {
+    "vaccination": "None",
+    "lifestyle": "Manage fluids/caffeine/alcohol, constipation and contributing medicines",
+    "screening": "No BPH screening programme; evaluate symptoms and discuss PSA when indicated"
+  },
+  "evidence": {
+    "evidence_level": "Guideline-grounded direction; no claim that every narrative sentence has clinician verification.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_CG97_2024; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "",
+    "verified_source_ids": [
+      "NICE_CG97_2024"
+    ]
+  },
+  "references": {
+    "nice": "Lower urinary tract symptoms in men: management (CG97) — https://www.nice.org.uk/guidance/cg97/chapter/Recommendations",
+    "aafp": "",
+    "bmj_best_practice": "",
+    "msd_manual": "",
+    "merck_manual": "",
+    "uptodate": "",
+    "harrisons": "",
+    "oxford_handbook": "",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_CG97_2024",
+        "organization": "NICE",
+        "title": "Lower urinary tract symptoms in men: management (CG97)",
+        "publication_or_update": "2010; updated 2015; surveillance reviewed 2024",
+        "url": "https://www.nice.org.uk/guidance/cg97/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Male LUTS/BPE assessment, conservative care, medicines, retention and surgery",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "epidemiology without cited numbers",
+      "ICD-11/SNOMED/MeSH identifiers left blank rather than guessed"
+    ],
+    "sourced_sections": [
+      "diagnostic direction",
+      "tests",
+      "red flags/referral",
+      "treatment direction"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_CG97_2024"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_CG97_2024"
+      ],
+      "red_flags_and_referral": [
+        "NICE_CG97_2024"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_CG97_2024",
+        "organization": "NICE",
+        "title": "Lower urinary tract symptoms in men: management (CG97)",
+        "publication_or_update": "2010; updated 2015; surveillance reviewed 2024",
+        "url": "https://www.nice.org.uk/guidance/cg97/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Male LUTS/BPE assessment, conservative care, medicines, retention and surgery",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Relieve bothersome male lower-urinary-tract symptoms, identify retention/renal or cancer red flags and match treatment to symptom type and progression risk.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Alpha blocker; 5-alpha-reductase inhibitor; Antimuscarinic; Beta-3 adrenoceptor agonist. No autonomous selection or dosing is allowed. Source IDs: NICE_CG97_2024.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "symptom subtype and IPSS impact",
+      "retention/post-void residual risk",
+      "haematuria/weight loss/bone pain",
+      "prostate examination and PSA decision",
+      "renal function",
+      "postural hypotension/falls",
+      "cataract surgery",
+      "sexual/fertility priorities",
+      "anticholinergic burden"
+    ],
+    "non_drug_measures": [
+      "Review fluid timing, caffeine/alcohol, constipation and contributing medicines; use bladder training for storage symptoms and a validated symptom score for baseline/follow-up."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Alpha blocker",
+        "medication_or_class": "Alpha blocker",
+        "option_type": "medication",
+        "role": "first-line medicine for moderate-severe voiding LUTS",
+        "when_to_consider": "After postural blood pressure, falls, cataract-surgery and interaction assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "urology_alpha_blocker",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "symptomatic severe hypotension or serious product reaction"
+            ],
+            "use_caution_if": [
+              "postural hypotension/syncope, falls, cataract surgery, PDE-5 inhibitor/other antihypertensive use, hepatic/renal impairment, or pregnancy when used off-label for stones"
+            ],
+            "history_checks": [
+              "lying/standing blood pressure",
+              "falls/syncope",
+              "cataract surgery plans",
+              "PDE-5 inhibitors and antihypertensives",
+              "renal/liver function",
+              "pregnancy"
+            ],
+            "monitoring": [
+              "blood pressure, dizziness/falls, symptom response and ejaculatory adverse effects; alert cataract surgeon"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG97_2024"
+        ]
+      },
+      {
+        "option_name": "5-alpha-reductase inhibitor",
+        "medication_or_class": "5-alpha-reductase inhibitor",
+        "option_type": "medication",
+        "role": "progression-risk reduction for enlarged prostate",
+        "when_to_consider": "When prostate size/PSA and progression risk meet guideline criteria and delayed benefit is acceptable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "five_alpha_reductase",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy exposure to crushed/leaking product or serious product reaction"
+            ],
+            "use_caution_if": [
+              "liver disease, planned PSA interpretation, sexual/fertility concerns, depression history, or suspected prostate cancer"
+            ],
+            "history_checks": [
+              "prostate size/PSA before treatment",
+              "cancer red flags",
+              "liver disease",
+              "sexual/fertility priorities",
+              "mood history",
+              "pregnant household contact"
+            ],
+            "monitoring": [
+              "symptoms and adverse effects; PSA must be interpreted in light of therapy; response is delayed and requires scheduled review"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG97_2024"
+        ]
+      },
+      {
+        "option_name": "Antimuscarinic",
+        "medication_or_class": "Antimuscarinic",
+        "option_type": "medication",
+        "role": "storage-symptom treatment",
+        "when_to_consider": "Overactive-bladder symptoms after retention/obstruction and cognitive/anticholinergic-risk review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "antimuscarinic_bladder",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "urinary retention, gastric retention, uncontrolled narrow-angle glaucoma, or serious product reaction"
+            ],
+            "use_caution_if": [
+              "high post-void residual/obstruction, cognitive impairment, older/frail patient, constipation, autonomic neuropathy, QT risk, or anticholinergic burden"
+            ],
+            "history_checks": [
+              "retention/residual risk",
+              "glaucoma",
+              "cognition",
+              "bowel function",
+              "cardiac/QT history",
+              "all anticholinergic medicines"
+            ],
+            "monitoring": [
+              "voiding/retention, cognition, constipation, dry mouth, vision and symptom response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG97_2024"
+        ]
+      },
+      {
+        "option_name": "Beta-3 adrenoceptor agonist",
+        "medication_or_class": "Beta-3 adrenoceptor agonist",
+        "option_type": "medication",
+        "role": "storage-symptom alternative",
+        "when_to_consider": "When a current technology-appraisal/local pathway supports it and antimuscarinic is unsuitable or ineffective",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "beta3_bladder",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe uncontrolled hypertension for mirabegron or serious product reaction"
+            ],
+            "use_caution_if": [
+              "hypertension, tachyarrhythmia/QT risk, urinary retention/obstruction, renal/hepatic impairment, pregnancy, or interacting CYP medicines depending on agent"
+            ],
+            "history_checks": [
+              "blood pressure",
+              "pulse/arrhythmia",
+              "retention risk",
+              "renal/liver function",
+              "pregnancy",
+              "interactions"
+            ],
+            "monitoring": [
+              "blood pressure, pulse, urinary retention and symptom response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG97_2024"
+        ]
+      },
+      {
+        "option_name": "Catheterisation, TURP, HoLEP or other selected urological procedure",
+        "medication_or_class": "Catheterisation, TURP, HoLEP or other selected urological procedure",
+        "option_type": "specialist_procedure",
+        "role": "retention or refractory/severe symptom treatment",
+        "when_to_consider": "Acute retention, renal compromise, recurrent complications or failed/inappropriate conservative and drug treatment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Procedure selection requires prostate anatomy, bleeding/anticoagulation, continence, sexual-function and anaesthetic assessment.",
+        "source_ids": [
+          "NICE_CG97_2024"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Immediate catheter pathway for acute retention; specialist referral for recurrent/persistent UTI, retention, suspected LUTS-related renal impairment, haematuria/cancer concern, abnormal prostate examination or failed treatment."
+    ],
+    "source_ids": [
+      "NICE_CG97_2024"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

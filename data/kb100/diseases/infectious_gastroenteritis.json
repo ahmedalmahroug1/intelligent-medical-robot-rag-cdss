@@ -1,0 +1,730 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-033",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-033",
+    "name": "Infectious gastroenteritis",
+    "name_ar": "النزلة المعوية (التهاب المعدة والأمعاء المُعدي)",
+    "synonyms": [
+      "gastroenteritis",
+      "stomach bug",
+      "food poisoning",
+      "infective diarrhoea"
+    ],
+    "abbreviations": [
+      "ORS"
+    ],
+    "icd10": {
+      "code": "A09",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "1A40",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "25374005",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D005759",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute infectious GI illness",
+    "organ_system": "Gastrointestinal",
+    "specialty": "Family medicine",
+    "emergency_level": "Usually routine/self-limiting - but dehydration and dysentery/sepsis can be serious",
+    "severity": "Usually mild and self-limiting; risk from dehydration, especially extremes of age",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute infection of the gastrointestinal tract causing diarrhoea and/or vomiting, usually viral and self-limiting, whose main risk is dehydration.",
+    "detailed_description": "Gastroenteritis is very common and usually caused by viruses (norovirus, rotavirus) or bacteria (Campylobacter, Salmonella, E. coli) or, less often, parasites. Most cases are self-limiting and managed with fluids (oral rehydration). The main tasks are preventing/treating dehydration, recognising features suggesting invasive/bacterial disease or a non-infective cause, using antibiotics selectively, and infection control (including notification of certain organisms).",
+    "pathophysiology": "Enteropathogens cause fluid loss via secretory or osmotic mechanisms (viruses/toxins) or mucosal invasion/inflammation (invasive bacteria - dysentery), producing diarrhoea +/- vomiting and, if severe, dehydration and electrolyte disturbance.",
+    "etiology": "Viral (norovirus, rotavirus, adenovirus), bacterial (Campylobacter, Salmonella, Shigella, E. coli including toxin-producing, C. difficile with antibiotics), and parasitic (Giardia, Cryptosporidium); often food/water-borne or person-to-person.",
+    "incubation_period": "Hours to a few days depending on pathogen (toxin-mediated food poisoning can be very rapid).",
+    "natural_history": "Most resolve within a few days to a week; some bacterial/parasitic infections last longer.",
+    "prognosis": "Excellent in healthy adults; serious in infants, the elderly, and immunocompromised (dehydration/complications)."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Extremely common; a leading cause of illness and, globally, of childhood death from dehydration.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Very high; outbreaks common (norovirus in closed settings).",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low in healthy adults; significant global paediatric mortality from dehydration.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; most dangerous at extremes of age.",
+    "sex_predominance": "None.",
+    "geographic_distribution": "Worldwide; higher burden with poor sanitation.",
+    "seasonal_pattern": "Norovirus in winter; some bacterial causes in warmer months."
+  },
+  "risk_factors": {
+    "lifestyle": "Contaminated food/water, poor hand hygiene, close-contact settings.",
+    "smoking": "Not relevant.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "May worsen with illness (dehydration, glycaemic control).",
+    "hypertension": "Not directly relevant.",
+    "pregnancy": "Listeria/other risks; dehydration considerations.",
+    "occupation": "Food handlers, healthcare/childcare workers (transmission and exclusion rules).",
+    "travel": "Travellers' diarrhoea (bacterial/parasitic).",
+    "family_history": "Not relevant.",
+    "genetic_factors": "Not relevant.",
+    "medications": "Recent antibiotics (C. difficile), acid suppression (increased susceptibility), immunosuppressants.",
+    "previous_diseases": "Immunocompromise, inflammatory bowel disease (differential/flare)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Diarrhoea",
+      "frequency": "very common",
+      "importance": "Core symptom",
+      "source": "NICE CKS; WHO",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Vomiting and nausea",
+      "frequency": "common",
+      "importance": "Fluid loss and impaired intake",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Abdominal cramps and fever",
+      "frequency": "common",
+      "importance": "Common accompanying features",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Acute diarrhoea (watery)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Core symptom",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Vomiting",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Common (prominent in viral/toxin causes)",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Abdominal cramps",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "More with invasive bacterial causes",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Bloody diarrhoea (dysentery)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Suggests invasive bacterial infection - RED FLAG (also consider IBD)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Signs of dehydration (thirst, reduced urine, dizziness, lethargy)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - dehydration/severity",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "WHO; NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No dehydration, no blood in stool, systemically well",
+      "why_important": "Supports simple self-limiting viral gastroenteritis managed at home",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No severe/localised abdominal pain or peritonism",
+      "why_important": "Argues against a surgical abdomen (e.g., appendicitis) presenting with GI symptoms",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How much diarrhoea/vomiting, and are you able to keep fluids down and passing urine?",
+      "why_ask": "Assess dehydration risk (safety)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any blood in the stool, high fever, or severe/localised abdominal pain?",
+      "why_ask": "Screens for invasive infection or surgical cause",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Recent travel, suspect food, contacts, or antibiotics?",
+      "why_ask": "Aetiology (travellers'/bacterial/C. difficile)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Are you a food handler/healthcare/childcare worker, and any vulnerable contacts?",
+      "why_ask": "Exclusion and public-health measures",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any comorbidity/immunosuppression, pregnancy, or extremes of age?",
+      "why_ask": "Higher-risk groups",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Hydration assessment (pulse, BP/postural drop, mucous membranes, capillary refill, skin turgor)",
+      "expected_finding": "Assess dehydration severity",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Abdominal examination",
+      "expected_finding": "Generalised mild tenderness; localised/peritonitic signs suggest another cause",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Temperature and general appearance / sepsis screen",
+      "expected_finding": "Assess for systemic illness",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or raised",
+    "heart_rate": "May be raised with dehydration/sepsis",
+    "blood_pressure": "May be low (postural) with dehydration",
+    "respiratory_rate": "Raised in severe dehydration/sepsis",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Not central"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Stool culture / PCR / microscopy (selective)",
+      "indication": "Blood in stool, severe/persistent illness, immunocompromise, recent travel/antibiotics, public-health need",
+      "expected_result": "Identifies bacterial/parasitic pathogen",
+      "normal_range": "",
+      "diagnostic_value": "Targets treatment and public health",
+      "rule_in": "Positive pathogen",
+      "rule_out": "",
+      "urgency": "Routine (urgent if severe)"
+    },
+    {
+      "test_name": "U&E, FBC, CRP (if dehydrated/unwell)",
+      "indication": "Assess dehydration/electrolytes and severity",
+      "expected_result": "Electrolyte disturbance/AKI if severe",
+      "normal_range": "",
+      "diagnostic_value": "Severity assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent if unwell"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "Only if surgical/other abdominal pathology suspected",
+      "expected_findings": "N/A"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable (consider if IBD suspected)",
+    "biopsy": "Not applicable",
+    "culture": "Stool culture as above; C. difficile testing if recent antibiotics/hospital",
+    "pcr": "Stool multiplex PCR where available"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical diagnosis: acute onset diarrhoea +/- vomiting, usually with a compatible history (food/contacts/travel) and no features of an alternative/surgical cause. Stool testing is selective (not routine for simple cases). Assess dehydration and severity.",
+    "diagnostic_scores": "Dehydration assessment scales (especially in children).",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Non-infective diarrhoea (IBD flare, medication, coeliac)",
+      "why_similar": "Diarrhoea",
+      "differences": "Chronic/recurrent, blood, systemic features, drug history",
+      "red_flags": "Bleeding, weight loss",
+      "distinguishing_symptoms": "Chronic pattern",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Calprotectin/coeliac serology",
+      "distinguishing_imaging": "Colonoscopy",
+      "differential_questions": "Is this a new acute illness or a chronic/recurrent problem?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Surgical abdomen (appendicitis, obstruction, ischaemia)",
+      "why_similar": "Vomiting, abdominal pain",
+      "differences": "Localised/severe pain, peritonism, no significant diarrhoea",
+      "red_flags": "Peritonitis",
+      "distinguishing_symptoms": "Localised severe pain",
+      "distinguishing_exam": "Peritonism/guarding",
+      "distinguishing_labs": "Raised inflammatory markers",
+      "distinguishing_imaging": "Ultrasound/CT",
+      "differential_questions": "Is the pain severe and localised rather than crampy with diarrhoea?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Sepsis / severe invasive infection",
+      "why_similar": "Fever, unwell",
+      "differences": "Systemic sepsis features",
+      "red_flags": "Sepsis",
+      "distinguishing_symptoms": "Very unwell",
+      "distinguishing_exam": "Sepsis signs",
+      "distinguishing_labs": "Raised markers/lactate",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are you systemically very unwell with signs of sepsis?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Other causes of vomiting (DKA, raised ICP, etc.)",
+      "why_similar": "Vomiting",
+      "differences": "Context-specific",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Glucose/ketones",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any diabetes, headache, or other features rather than a GI bug?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are you able to keep fluids down and are you passing urine (hydration)?",
+      "target_disease": "Dehydration/severity",
+      "competing_disease": "Simple self-limiting illness",
+      "purpose": "The key safety assessment",
+      "interpretation": "Unable to maintain hydration / signs of dehydration -> escalate care",
+      "information_gain": "very high",
+      "source": "WHO; NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is there blood in the stool or high fever (invasive/dysenteric features)?",
+      "target_disease": "Invasive bacterial infection",
+      "competing_disease": "Viral gastroenteritis",
+      "purpose": "Guide stool testing/antibiotics and safety",
+      "interpretation": "Bloody diarrhoea/high fever -> stool testing, assess for antibiotics/complications",
+      "information_gain": "high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Acute diarrhoea and vomiting",
+      "question": "Can you keep fluids down, any blood in stool/high fever, and any high-risk features (age, immunosuppression, travel)?",
+      "expected_answers": "Simple case vs red flags/high risk",
+      "branching_logic": "Well, hydrated, no red flags -> oral rehydration + safety-net; dehydration/dysentery/high-risk -> assess, stool tests, consider fluids/antibiotics/admission",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Clinical hydration assessment",
+      "why": "Determines management setting",
+      "expected_outcome": "Guides oral vs IV rehydration"
+    },
+    {
+      "test": "Stool testing (selective)",
+      "why": "Blood in stool, severe/persistent, travel, immunocompromise, or public health",
+      "expected_outcome": "Identifies pathogen"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Signs of significant dehydration or shock (especially infants/elderly)",
+      "immediate_action": "Urgent rehydration (IV if needed) and assessment/admission"
+    },
+    {
+      "finding": "Bloody diarrhoea with high fever / systemic illness (dysentery/sepsis)",
+      "immediate_action": "Assess urgently; stool testing; consider antibiotics/admission"
+    },
+    {
+      "finding": "Severe or localised abdominal pain / peritonism",
+      "immediate_action": "Assess for a surgical cause"
+    },
+    {
+      "finding": "Prolonged illness (>1-2 weeks) or immunocompromised patient",
+      "immediate_action": "Investigate (parasites/persistent pathogens) and treat"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Significant dehydration/shock; suspected surgical abdomen or sepsis; vulnerable patient unable to maintain hydration.",
+    "routine_referral": "Persistent diarrhoea for investigation; suspected non-infective cause.",
+    "emergency_referral": "Shock/severe dehydration or sepsis."
+  },
+  "complications": {
+    "early": [
+      "Dehydration and electrolyte disturbance",
+      "Acute kidney injury",
+      "Sepsis (invasive infection)"
+    ],
+    "late": [
+      "Post-infectious IBS",
+      "Reactive arthritis (some bacteria)",
+      "Haemolytic uraemic syndrome (E. coli O157 - do NOT give antibiotics if suspected)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Maintain hydration - oral rehydration solution, small frequent sips; continue eating as tolerated; rest; strict hand hygiene and infection control (stay off work/school until 48 hours after symptoms settle).",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral rehydration solution; Loperamide; Pathogen-directed antimicrobial. No autonomous selection or dosing is allowed. Source IDs: IDSA_DIARRHEA_2017.",
+    "lifestyle_advice": "Hydration, hygiene, food safety; exclusion for food handlers/healthcare workers per local rules; notify notifiable organisms.",
+    "follow_up": "Safety-net for dehydration/deterioration; investigate persistent symptoms.",
+    "legacy_medications_pre_v13": "Usually none; oral rehydration is key. Antiemetics/antidiarrhoeals used cautiously (avoid loperamide in dysentery/possible invasive infection or children). ANTIBIOTICS ONLY when indicated (severe/invasive bacterial infection, specific pathogens, high-risk patients) - avoid empirical antibiotics in simple cases and if E. coli O157 possible."
+  },
+  "patient_education": {
+    "home_advice": "A tummy bug usually clears on its own in a few days. The most important thing is to keep drinking - take small frequent sips of water or oral rehydration solution and keep eating if you can. Wash your hands well and stay off work/school until 48 hours after the diarrhoea and vomiting stop. Get medical help if you can't keep fluids down, pass little urine, feel very unwell, or have blood in your stool.",
+    "home_advice_ar": "النزلة المعوية تزول عادةً وحدها خلال أيام. الأهم هو الاستمرار في الشرب - رشفات صغيرة متكرّرة من الماء أو محلول الإماهة الفموي مع الأكل قدر الإمكان. اغسل يديك جيداً والزم المنزل حتى 48 ساعة بعد توقّف الإسهال والقيء. اطلب المساعدة الطبية إذا لم تستطع الاحتفاظ بالسوائل، أو قلّ التبوّل، أو شعرت بتوعّك شديد، أو ظهر دم في البراز.",
+    "prevention": "Hand hygiene, safe food/water, and (for children) rotavirus vaccination.",
+    "warning_signs": "Unable to keep fluids down, reduced urine, dizziness, blood in stool, high fever, severe abdominal pain, or a very unwell child/elderly person."
+  },
+  "prevention": {
+    "vaccination": "Rotavirus vaccine (infants); typhoid/cholera vaccines for travel where relevant.",
+    "lifestyle": "Hand hygiene, safe food and water, food-handler hygiene.",
+    "screening": "Not applicable (public-health surveillance/notification for certain organisms)."
+  },
+  "evidence": {
+    "evidence_level": "High for oral rehydration; selective antibiotic use.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by IDSA_DIARRHEA_2017; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - WHO, NICE CKS, IDSA.",
+    "verified_source_ids": [
+      "IDSA_DIARRHEA_2017"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Gastroenteritis; Diarrhoea (adults/children)",
+    "aafp": "AAFP - Acute diarrhea in adults",
+    "bmj_best_practice": "BMJ Best Practice - Gastroenteritis in adults",
+    "msd_manual": "MSD Manual - Gastroenteritis",
+    "merck_manual": "Merck Manual - Gastroenteritis",
+    "uptodate": "UpToDate - Approach to the adult with acute diarrhea",
+    "harrisons": "Harrison's Principles of Internal Medicine - Acute Infectious Diarrheal Diseases",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Gastroenteritis",
+    "who": "WHO - Diarrhoeal disease; oral rehydration therapy",
+    "cdc": "CDC - Diarrhea / foodborne illness",
+    "idsa": "Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea — https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "IDSA_DIARRHEA_2017",
+        "organization": "IDSA",
+        "title": "Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea",
+        "publication_or_update": "2017",
+        "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+        "accessed": "2026-07-15",
+        "scope": "Stool testing, rehydration and pathogen-directed antimicrobial use",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "initial_management",
+      "red_flags",
+      "referral_criteria",
+      "prevention"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "IDSA_DIARRHEA_2017"
+      ],
+      "treatment_and_monitoring": [
+        "IDSA_DIARRHEA_2017"
+      ],
+      "red_flags_and_referral": [
+        "IDSA_DIARRHEA_2017"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "IDSA_DIARRHEA_2017",
+        "organization": "IDSA",
+        "title": "Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea",
+        "publication_or_update": "2017",
+        "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+        "accessed": "2026-07-15",
+        "scope": "Stool testing, rehydration and pathogen-directed antimicrobial use",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Prevent/treat dehydration, identify invasive disease and restrict antimicrobials to defined indications.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral rehydration solution; Loperamide; Pathogen-directed antimicrobial. No autonomous selection or dosing is allowed. Source IDs: IDSA_DIARRHEA_2017.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "blood/fever",
+      "travel/outbreak",
+      "recent antibiotics/hospital",
+      "immunocompromise",
+      "pregnancy",
+      "renal disease",
+      "ACE/ARB/diuretic/NSAID during dehydration"
+    ],
+    "non_drug_measures": [
+      "Continue appropriate nutrition, hand hygiene and public-health advice; use sick-day medicine review when dehydrated."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Oral rehydration solution",
+        "medication_or_class": "Oral rehydration solution",
+        "option_type": "medication",
+        "role": "first-line fluid/electrolyte replacement",
+        "when_to_consider": "Mild-moderate dehydration when oral route is safe",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "oral_rehydration",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "unsafe oral route because of shock, ileus, altered consciousness or persistent uncontrollable vomiting"
+            ],
+            "use_caution_if": [
+              "heart failure, advanced renal disease, severe electrolyte disturbance, diabetes, or need for precisely controlled fluids"
+            ],
+            "history_checks": [
+              "dehydration severity",
+              "ability to drink",
+              "renal/heart disease",
+              "electrolytes/glucose when indicated"
+            ],
+            "monitoring": [
+              "hydration, urine output, weight and electrolytes when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "IDSA_DIARRHEA_2017"
+        ]
+      },
+      {
+        "option_name": "Loperamide",
+        "medication_or_class": "Loperamide",
+        "option_type": "medication",
+        "role": "selected adult symptom relief",
+        "when_to_consider": "Watery diarrhoea only after excluding invasive/C. difficile disease",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "loperamide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "bloody diarrhoea, high fever, suspected invasive infection/C. difficile, ileus, toxic megacolon, or young child without specialist direction"
+            ],
+            "use_caution_if": [
+              "liver disease, acute ulcerative colitis flare, dehydration, or uncertain diagnosis"
+            ],
+            "history_checks": [
+              "blood/fever",
+              "recent antibiotics",
+              "travel",
+              "IBD",
+              "age",
+              "dehydration"
+            ],
+            "monitoring": [
+              "stop if worsening pain/distension, fever, blood or lack of improvement"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "IDSA_DIARRHEA_2017"
+        ]
+      },
+      {
+        "option_name": "Pathogen-directed antimicrobial",
+        "medication_or_class": "Pathogen-directed antimicrobial",
+        "option_type": "medication",
+        "role": "selected cause treatment",
+        "when_to_consider": "Severe/invasive disease, defined pathogen, traveller/high-risk indication or specialist/public-health advice",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "Avoid empiric therapy when STEC is possible; use local microbiology/resistance advice.",
+        "source_ids": [
+          "IDSA_DIARRHEA_2017"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Hospital care for shock, severe dehydration, altered consciousness, peritonism, severe bloody diarrhoea, sepsis or high-risk host."
+    ],
+    "source_ids": [
+      "IDSA_DIARRHEA_2017"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

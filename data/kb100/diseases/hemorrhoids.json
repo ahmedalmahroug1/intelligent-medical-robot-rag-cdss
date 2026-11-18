@@ -1,0 +1,671 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-035",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-035",
+    "name": "Haemorrhoids (piles)",
+    "name_ar": "البواسير",
+    "synonyms": [
+      "piles",
+      "haemorrhoids",
+      "hemorrhoids"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "K64.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DB60",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "70153002",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D006484",
+      "basis": "estimate"
+    },
+    "disease_category": "Anorectal / benign vascular",
+    "organ_system": "Gastrointestinal (anorectum)",
+    "specialty": "Family medicine / Colorectal surgery",
+    "emergency_level": "Routine - but do NOT attribute rectal bleeding to piles without excluding cancer; thrombosed pile is acutely painful",
+    "severity": "Usually mild; bleeding, prolapse and pain can affect quality of life",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Enlarged, symptomatic anal vascular cushions causing bright-red rectal bleeding on defecation, itching, prolapse or discomfort; usually managed conservatively.",
+    "detailed_description": "Haemorrhoids are very common and usually benign. The cardinal caution is that rectal bleeding must not be assumed to be from piles until colorectal cancer has been considered/excluded, especially with red flags or in older patients. Internal haemorrhoids are graded I-IV; treatment is stepwise from lifestyle/topical measures to outpatient procedures (banding) and surgery. Thrombosed external haemorrhoids cause acute severe pain.",
+    "pathophysiology": "Increased pressure/straining and connective-tissue laxity engorge and prolapse the anal vascular cushions; internal (above dentate line, painless bleeding) and external (below, can thrombose and be painful).",
+    "etiology": "Chronic straining/constipation, low-fibre diet, prolonged sitting, pregnancy, ageing, raised intra-abdominal pressure.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Often intermittent and chronic; may improve with bowel-habit correction or progress/prolapse.",
+    "prognosis": "Good; the key risk is a missed colorectal cancer if bleeding is not properly assessed."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; a large proportion of adults are affected at some time.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High; peaks in middle age and pregnancy.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "None directly.",
+      "basis": "estimate"
+    },
+    "age_groups": "Adults; common in pregnancy and with age.",
+    "sex_predominance": "Both.",
+    "geographic_distribution": "Worldwide; higher with low-fibre diets.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Low-fibre diet, straining, prolonged sitting/toilet time, heavy lifting.",
+    "smoking": "Not directly relevant.",
+    "alcohol": "May contribute via constipation.",
+    "obesity": "Associated (raised intra-abdominal pressure).",
+    "diabetes": "Not directly relevant.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Common (pressure and constipation).",
+    "occupation": "Prolonged sitting/heavy lifting.",
+    "travel": "Constipation from routine change.",
+    "family_history": "Colorectal cancer history (red flag for bleeding assessment).",
+    "genetic_factors": "Connective-tissue predisposition.",
+    "medications": "Constipating drugs contribute.",
+    "previous_diseases": "Chronic constipation; portal hypertension (anorectal varices - a mimic)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Bright-red rectal bleeding on defecation",
+      "frequency": "very common",
+      "importance": "Classic symptom - but must exclude cancer",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Anal lump / prolapse",
+      "frequency": "common",
+      "importance": "Prolapsing haemorrhoid",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Anal itching, discomfort or mucus",
+      "frequency": "common",
+      "importance": "Common associated symptoms",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Bright-red painless bleeding, coating stool or on paper",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "moderately reduces",
+      "importance": "Cardinal symptom of internal haemorrhoids (colour/pattern; still exclude cancer)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Prolapsing anal lump (reduces spontaneously or manually)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Grading feature",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Anal itching / irritation / mucus discharge",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Acute severe anal pain with a tender lump (thrombosed external haemorrhoid)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Acute painful presentation",
+      "stage": "Acute",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Change in bowel habit, weight loss, dark blood/mixed in stool (RED FLAGS)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "RED FLAGS - not typical of piles; investigate for cancer",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE (suspected cancer)",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Bleeding is bright red, on the surface/paper, without change in bowel habit, weight loss or anaemia",
+      "why_important": "More consistent with haemorrhoids - but does NOT exclude cancer; assess by age/risk",
+      "absence_significance": "slightly reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Normal examination apart from haemorrhoids; no mass on rectal exam",
+      "why_important": "Supports benign cause (but proximal lesions need endoscopy where indicated)",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Is the blood bright red on the surface/paper, and is there a lump?",
+      "why_ask": "Characterises haemorrhoidal bleeding",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any change in bowel habit, weight loss, dark or mixed-in blood, or anaemia symptoms?",
+      "why_ask": "Red flags for colorectal cancer (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "How old are you and any family history of bowel cancer?",
+      "why_ask": "Determines need for further investigation",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Constipation/straining, diet, pregnancy?",
+      "why_ask": "Contributory factors to manage",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any severe acute anal pain (thrombosis) or signs of anaemia?",
+      "why_ask": "Acute painful pile / significant blood loss",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Inspection of the anus (prolapse, external/thrombosed haemorrhoids, skin tags, fissure)",
+      "expected_finding": "Visible haemorrhoids/prolapse; thrombosed pile is a tender purple lump",
+      "importance": "High"
+    },
+    {
+      "examination": "Digital rectal examination",
+      "expected_finding": "Assess for a mass (internal haemorrhoids are often not palpable); exclude rectal tumour",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Proctoscopy (where available)",
+      "expected_finding": "Confirms/grades internal haemorrhoids",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal (raised if significant bleeding)",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Often raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "FBC (if significant/recurrent bleeding)",
+      "indication": "Assess for anaemia",
+      "expected_result": "May show iron-deficiency anaemia (anaemia is a red flag - not to be attributed to piles alone)",
+      "normal_range": "",
+      "diagnostic_value": "Detects significant blood loss",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FIT / colorectal referral (as per pathway)",
+      "indication": "Red flags, older age, or diagnostic uncertainty about the bleeding source",
+      "expected_result": "Guides need for colonoscopy",
+      "normal_range": "",
+      "diagnostic_value": "Cancer pathway",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "As per pathway"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "Colonoscopy/flexible sigmoidoscopy if proximal source needs exclusion",
+      "expected_findings": "Excludes/identifies colorectal pathology"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Proctoscopy to confirm/grade haemorrhoids; colonoscopy if red flags/older to exclude proximal disease",
+    "biopsy": "Of any suspicious lesion",
+    "culture": "Not applicable",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical diagnosis on history and examination (inspection, digital rectal exam, proctoscopy). Internal haemorrhoids graded I (bleed, no prolapse) to IV (irreducible prolapse). Crucially, rectal bleeding is only attributed to haemorrhoids AFTER excluding colorectal cancer per age/risk and red flags.",
+    "diagnostic_scores": "Grading I-IV.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Colorectal cancer",
+      "why_similar": "Rectal bleeding",
+      "differences": "Change in bowel habit, weight loss, anaemia, dark/mixed blood, older age",
+      "red_flags": "Weight loss, altered bowel habit, anaemia",
+      "distinguishing_symptoms": "Systemic/progressive",
+      "distinguishing_exam": "Mass",
+      "distinguishing_labs": "Anaemia, FIT",
+      "distinguishing_imaging": "Colonoscopy",
+      "differential_questions": "Any change in bowel habit, weight loss, or blood mixed in the stool?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Anal fissure",
+      "why_similar": "Bleeding, anal symptoms",
+      "differences": "Severe pain ON defecation, small tear seen posteriorly",
+      "red_flags": "",
+      "distinguishing_symptoms": "Sharp pain when passing stool",
+      "distinguishing_exam": "Visible fissure",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is there sharp pain on passing stool?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Inflammatory bowel disease / proctitis",
+      "why_similar": "Rectal bleeding",
+      "differences": "Diarrhoea, mucus, systemic features",
+      "red_flags": "Bleeding with diarrhoea/weight loss",
+      "distinguishing_symptoms": "Diarrhoea/urgency",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Calprotectin",
+      "distinguishing_imaging": "Endoscopy",
+      "differential_questions": "Any diarrhoea, urgency, or mucus with the bleeding?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Anorectal varices (portal hypertension)",
+      "why_similar": "Anorectal bleeding",
+      "differences": "Liver disease/portal hypertension",
+      "red_flags": "Variceal bleeding",
+      "distinguishing_symptoms": "Liver disease features",
+      "distinguishing_exam": "Stigmata of chronic liver disease",
+      "distinguishing_labs": "LFTs",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have liver disease?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Any change in bowel habit, weight loss, anaemia, or dark/mixed-in blood?",
+      "target_disease": "Colorectal cancer",
+      "competing_disease": "Haemorrhoids",
+      "purpose": "Ensure bleeding is not from cancer",
+      "interpretation": "Red flags -> investigate/refer; do not attribute to piles",
+      "information_gain": "very high",
+      "source": "NICE (suspected cancer)",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the pain acute and severe with a tender lump (thrombosis)?",
+      "target_disease": "Thrombosed external haemorrhoid",
+      "competing_disease": "Uncomplicated haemorrhoid",
+      "purpose": "Identify acute painful pile",
+      "interpretation": "Positive -> analgesia; consider excision if within ~72h and severe",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Rectal bleeding with suspected haemorrhoids",
+      "question": "Any red flags, your age/family history, and examination findings (mass on rectal exam)?",
+      "expected_answers": "Benign pattern vs red flags",
+      "branching_logic": "Red flags/older -> colorectal investigation; benign -> conservative haemorrhoid management + bowel-habit correction; large/refractory -> banding/surgery",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Anorectal examination + proctoscopy",
+      "why": "Confirm/grade haemorrhoids and exclude a low rectal mass",
+      "expected_outcome": "Diagnosis/grade"
+    },
+    {
+      "test": "Colonoscopy (if red flags/older/uncertain)",
+      "why": "Exclude proximal colorectal pathology",
+      "expected_outcome": "Excludes cancer/IBD"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Rectal bleeding with change in bowel habit, weight loss, anaemia, or dark/mixed-in blood",
+      "immediate_action": "Urgent colorectal investigation - do not attribute to haemorrhoids"
+    },
+    {
+      "finding": "Abdominal or rectal mass on examination",
+      "immediate_action": "Urgent suspected-cancer referral"
+    },
+    {
+      "finding": "Significant ongoing bleeding / symptomatic anaemia",
+      "immediate_action": "Urgent assessment"
+    },
+    {
+      "finding": "Irreducible/strangulated prolapsed haemorrhoids",
+      "immediate_action": "Urgent surgical assessment"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Red-flag rectal bleeding (cancer pathway); strangulated haemorrhoids.",
+    "routine_referral": "Symptomatic haemorrhoids not responding to conservative measures (for banding/surgery).",
+    "emergency_referral": "Severe bleeding or strangulation."
+  },
+  "complications": {
+    "early": [
+      "Thrombosis (acute pain)",
+      "Bleeding (occasionally significant)"
+    ],
+    "late": [
+      "Iron-deficiency anaemia (from chronic bleeding)",
+      "Prolapse/strangulation",
+      "Skin tags"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain and reassure after excluding serious causes; correct constipation/straining.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Fibre and stool-softening regimen; Short-course topical anorectal preparation. No autonomous selection or dosing is allowed. Source IDs: ASCRS_HEM_2024.",
+    "lifestyle_advice": "Increase fibre/fluids, avoid straining and prolonged toilet sitting, good anal hygiene.",
+    "follow_up": "Review response; refer for procedures if persistent; ensure red-flag bleeding is investigated.",
+    "legacy_medications_pre_v13": "High-fibre diet and fluids; bulk-forming laxatives to avoid straining; topical preparations (soothing +/- short-term local anaesthetic/steroid) for symptom relief; simple analgesia and topical measures for thrombosed piles. Outpatient procedures (rubber-band ligation) or surgery (haemorrhoidectomy) for higher-grade/refractory disease."
+  },
+  "patient_education": {
+    "home_advice": "Piles are swollen blood vessels around the back passage that can cause bright-red bleeding, itching or a lump. They are common and usually settle with more fibre and fluids to keep stools soft, avoiding straining, and soothing creams. Importantly, never assume bleeding is 'just piles' - see a doctor to be checked, especially if you have a change in bowel habit, weight loss, or the blood is dark or mixed into the stool.",
+    "home_advice_ar": "البواسير أوعية دموية منتفخة حول فتحة الشرج قد تسبّب نزفاً أحمر فاتحاً أو حكّة أو كتلة. وهي شائعة وتتحسّن عادةً بزيادة الألياف والسوائل لتليين البراز، وتجنّب الحزق، والمراهم المهدّئة. والمهم: لا تفترض أن النزف «مجرّد بواسير» - راجع الطبيب للفحص، خاصةً إن تغيّرت عادة الأمعاء، أو نقص وزنك، أو كان الدم غامقاً أو مختلطاً بالبراز.",
+    "prevention": "Fibre, fluids, avoid straining and prolonged sitting on the toilet.",
+    "warning_signs": "Change in bowel habit, weight loss, dark/mixed-in blood, heavy bleeding, or a painful irreducible lump."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "High-fibre diet, hydration, avoid straining.",
+    "screening": "Age-appropriate bowel cancer screening applies."
+  },
+  "evidence": {
+    "evidence_level": "Moderate-high for fibre and procedural treatments.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by ASCRS_HEM_2024; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, ASCRS/colorectal society guidance.",
+    "verified_source_ids": [
+      "ASCRS_HEM_2024"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Haemorrhoids; NICE suspected cancer (rectal bleeding)",
+    "aafp": "AAFP - Hemorrhoids",
+    "bmj_best_practice": "BMJ Best Practice - Haemorrhoids",
+    "msd_manual": "MSD Manual - Hemorrhoids",
+    "merck_manual": "Merck Manual - Hemorrhoids",
+    "uptodate": "UpToDate - Hemorrhoids: clinical features and diagnosis; management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Anorectal diseases",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Haemorrhoids",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "ASCRS_HEM_2024",
+        "organization": "ASCRS",
+        "title": "Clinical Practice Guidelines for the Management of Hemorrhoids",
+        "publication_or_update": "2024",
+        "url": "https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf",
+        "accessed": "2026-07-15",
+        "scope": "Conservative, office and surgical haemorrhoid management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "ASCRS_HEM_2024"
+      ],
+      "treatment_and_monitoring": [
+        "ASCRS_HEM_2024"
+      ],
+      "red_flags_and_referral": [
+        "ASCRS_HEM_2024"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "ASCRS_HEM_2024",
+        "organization": "ASCRS",
+        "title": "Clinical Practice Guidelines for the Management of Hemorrhoids",
+        "publication_or_update": "2024",
+        "url": "https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf",
+        "accessed": "2026-07-15",
+        "scope": "Conservative, office and surgical haemorrhoid management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Reduce straining and symptoms while ensuring rectal bleeding is not misattributed.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Fibre and stool-softening regimen; Short-course topical anorectal preparation. No autonomous selection or dosing is allowed. Source IDs: ASCRS_HEM_2024.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "bleeding quantity",
+      "anticoagulant/antiplatelet",
+      "bowel habit/weight loss",
+      "pregnancy",
+      "prior colorectal disease"
+    ],
+    "non_drug_measures": [
+      "Adequate fibre/fluid, avoid straining and prolonged sitting on the toilet."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Fibre and stool-softening regimen",
+        "medication_or_class": "Fibre and stool-softening regimen",
+        "option_type": "medication",
+        "role": "first-line conservative care",
+        "when_to_consider": "Symptomatic haemorrhoids with constipation/straining",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "laxative",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "suspected bowel obstruction, perforation, or acute surgical abdomen"
+            ],
+            "use_caution_if": [
+              "faecal impaction, severe dehydration, CKD for magnesium/phosphate products, electrolyte disturbance, or swallowing difficulty for bulk fibre"
+            ],
+            "history_checks": [
+              "obstruction/red flags",
+              "impaction",
+              "renal function",
+              "hydration",
+              "medicines causing constipation"
+            ],
+            "monitoring": [
+              "stool response, hydration and electrolytes when risk/product warrants"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ASCRS_HEM_2024"
+        ]
+      },
+      {
+        "option_name": "Short-course topical anorectal preparation",
+        "medication_or_class": "Short-course topical anorectal preparation",
+        "option_type": "medication",
+        "role": "temporary symptom relief",
+        "when_to_consider": "Selected itching/pain after diagnosis",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_anorectal",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "undiagnosed rectal bleeding, infection, prolonged corticosteroid exposure, pregnancy, hypotension or headache depending on agent"
+            ],
+            "history_checks": [
+              "bleeding red flags",
+              "pregnancy",
+              "duration",
+              "blood pressure",
+              "PDE-5 inhibitor use for topical nitrate"
+            ],
+            "monitoring": [
+              "short duration for steroid/anaesthetic products; symptom response and local adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "ASCRS_HEM_2024"
+        ]
+      },
+      {
+        "option_name": "Office procedure or surgery",
+        "medication_or_class": "Office procedure or surgery",
+        "option_type": "specialist_procedure",
+        "role": "definitive treatment",
+        "when_to_consider": "Persistent bleeding/prolapse or advanced disease after examination",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Requires examination plus bleeding, continence, anticoagulation and procedural-risk assessment.",
+        "source_ids": [
+          "ASCRS_HEM_2024"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent evaluation for major bleeding, anaemia, severe thrombosis/necrosis or alternative colorectal pathology."
+    ],
+    "source_ids": [
+      "ASCRS_HEM_2024"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

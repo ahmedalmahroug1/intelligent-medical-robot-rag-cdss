@@ -1,0 +1,420 @@
+{
+  "schema_version": "1.0",
+  "accessed": "2026-07-15",
+  "sources": {
+    "NICE_NG120": {
+      "organization": "NICE",
+      "title": "Cough (acute): antimicrobial prescribing (NG120)",
+      "publication_or_update": "2019; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ng120/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Acute cough and bronchitis treatment and antibiotic stewardship",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG91": {
+      "organization": "NICE",
+      "title": "Otitis media (acute): antimicrobial prescribing (NG91)",
+      "publication_or_update": "2018; updated 2022",
+      "url": "https://www.nice.org.uk/guidance/ng91/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Acute otitis media analgesia, observation and antibiotic criteria",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG79": {
+      "organization": "NICE",
+      "title": "Sinusitis (acute): antimicrobial prescribing (NG79)",
+      "publication_or_update": "2017; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ng79/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Acute sinusitis self-care, intranasal steroids and antibiotic criteria",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG84": {
+      "organization": "NICE",
+      "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+      "publication_or_update": "2018; links updated 2025",
+      "url": "https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Acute pharyngitis/tonsillitis scoring, self-care and antibiotic criteria",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "CDC_COLD_2026": {
+      "organization": "US CDC",
+      "title": "Manage Common Cold",
+      "publication_or_update": "updated 2026-03-11",
+      "url": "https://www.cdc.gov/common-cold/treatment/index.html",
+      "accessed": "2026-07-15",
+      "scope": "Common-cold self-care and avoidance of antibiotics",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "CDC_FLU_2026": {
+      "organization": "US CDC",
+      "title": "Influenza Antiviral Medications: Summary for Clinicians",
+      "publication_or_update": "updated 2026-03-10",
+      "url": "https://www.cdc.gov/flu/hcp/antivirals/summary-clinicians.html",
+      "accessed": "2026-07-15",
+      "scope": "Influenza antiviral indications, contraindications and special populations",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "AAOHNS_AOE_2014": {
+      "organization": "AAO-HNSF",
+      "title": "Clinical Practice Guideline: Acute Otitis Externa (Update)",
+      "publication_or_update": "2014",
+      "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/aoe/",
+      "accessed": "2026-07-15",
+      "scope": "Diffuse acute otitis externa management and topical therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "AAOHNS_CERUMEN_2017": {
+      "organization": "AAO-HNSF",
+      "title": "Clinical Practice Guideline: Cerumen Impaction (Update)",
+      "publication_or_update": "2017",
+      "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/cerumen-impaction/",
+      "accessed": "2026-07-15",
+      "scope": "Cerumen impaction assessment, modifying factors and removal",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "ARIA_2024_25": {
+      "organization": "ARIA-EAACI",
+      "title": "Allergic Rhinitis and Its Impact on Asthma Guidelines: 2024-2025 Revision",
+      "publication_or_update": "2024-2025",
+      "url": "https://aria.med.up.pt/aria-eaaci-2024-2025-guidelines",
+      "accessed": "2026-07-15",
+      "scope": "Allergic-rhinitis intranasal treatment strategy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG245": {
+      "organization": "BTS/NICE/SIGN",
+      "title": "Asthma: diagnosis, monitoring and chronic asthma management (NG245)",
+      "publication_or_update": "2024; updated 2025",
+      "url": "https://www.nice.org.uk/guidance/ng245/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Asthma objective diagnosis and age-specific pharmacological management",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG115": {
+      "organization": "NICE",
+      "title": "Chronic obstructive pulmonary disease in over 16s (NG115)",
+      "publication_or_update": "2018; links updated 2025",
+      "url": "https://www.nice.org.uk/guidance/ng115/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "COPD diagnosis, inhaled therapy and exacerbation management",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG250": {
+      "organization": "NICE",
+      "title": "Pneumonia: diagnosis and management (NG250)",
+      "publication_or_update": "2025; updated 2026",
+      "url": "https://www.nice.org.uk/guidance/ng250/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Current pneumonia severity, investigation and treatment guidance",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "AAOHNS_DYSPHONIA_2018": {
+      "organization": "AAO-HNSF",
+      "title": "Clinical Practice Guideline: Hoarseness (Dysphonia) (Update)",
+      "publication_or_update": "2018; quality measure updated 2026",
+      "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/hoarseness-dysphonia/",
+      "accessed": "2026-07-15",
+      "scope": "Hoarseness assessment and avoidance of unsupported empiric treatment",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG136_2026": {
+      "organization": "NICE",
+      "title": "Hypertension in adults: diagnosis and management (NG136)",
+      "publication_or_update": "2019; updated 2026-02-26",
+      "url": "https://www.nice.org.uk/guidance/ng136/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Hypertension confirmation, cardiovascular assessment and stepped treatment",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG238": {
+      "organization": "NICE",
+      "title": "Cardiovascular disease: risk assessment and reduction, including lipid modification (NG238)",
+      "publication_or_update": "2023; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ng238/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Cardiovascular risk assessment and lipid-lowering therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG28_2026": {
+      "organization": "NICE",
+      "title": "Type 2 diabetes in adults: management (NG28)",
+      "publication_or_update": "updated 2026-02-18",
+      "url": "https://www.nice.org.uk/guidance/ng28/chapter/initial-medicines",
+      "accessed": "2026-07-15",
+      "scope": "Current initial and comorbidity-directed medicines for type 2 diabetes",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG246_2026": {
+      "organization": "NICE",
+      "title": "Overweight and obesity management (NG246)",
+      "publication_or_update": "2025; updated 2026-01-08",
+      "url": "https://www.nice.org.uk/guidance/ng246",
+      "accessed": "2026-07-15",
+      "scope": "Assessment, behavioural treatment, medicines and bariatric referral",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG145": {
+      "organization": "NICE",
+      "title": "Thyroid disease: assessment and management (NG145)",
+      "publication_or_update": "2019; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ng145/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Hypothyroidism and thyrotoxicosis assessment and treatment",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG219": {
+      "organization": "NICE",
+      "title": "Gout: diagnosis and management (NG219)",
+      "publication_or_update": "2022",
+      "url": "https://www.nice.org.uk/guidance/ng219/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Gout flare treatment and treat-to-target urate-lowering therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "BSG_IDA_2021": {
+      "organization": "British Society of Gastroenterology",
+      "title": "Guidelines for the management of iron deficiency anaemia in adults",
+      "publication_or_update": "2021",
+      "url": "https://www.bsg.org.uk/clinical-resource/guidelines-iron-deficiency-anaemia-in-adults",
+      "accessed": "2026-07-15",
+      "scope": "Investigation of cause and oral/intravenous iron therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "SACN_VITD": {
+      "organization": "UK Scientific Advisory Committee on Nutrition",
+      "title": "Vitamin D and health report",
+      "publication_or_update": "2016; page updated 2023",
+      "url": "https://www.gov.uk/government/publications/sacn-vitamin-d-and-health-report",
+      "accessed": "2026-07-15",
+      "scope": "Vitamin D intake, deficiency threshold context and toxicity prevention",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_PH56": {
+      "organization": "NICE",
+      "title": "Vitamin D: supplement use in specific population groups (PH56)",
+      "publication_or_update": "2014; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ph56/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Risk-based vitamin D supplementation and testing",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG239": {
+      "organization": "NICE",
+      "title": "Vitamin B12 deficiency in over 16s (NG239)",
+      "publication_or_update": "2024",
+      "url": "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Diagnosis by cause, oral/intramuscular replacement and follow-up",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG126": {
+      "organization": "NICE",
+      "title": "Stable angina: management (CG126)",
+      "publication_or_update": "2011; updated 2016",
+      "url": "https://www.nice.org.uk/guidance/cg126/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Anti-anginal therapy, secondary prevention and revascularisation",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG106_2025": {
+      "organization": "NICE",
+      "title": "Chronic heart failure in adults (NG106)",
+      "publication_or_update": "2018; updated 2025-09-03",
+      "url": "https://www.nice.org.uk/guidance/ng106/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Current heart-failure phenotypes, medicines and monitoring",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG196": {
+      "organization": "NICE",
+      "title": "Atrial fibrillation: diagnosis and management (NG196)",
+      "publication_or_update": "2021",
+      "url": "https://www.nice.org.uk/guidance/ng196/chapter/recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Stroke prevention, anticoagulation and rate/rhythm control",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG184": {
+      "organization": "NICE",
+      "title": "Gastro-oesophageal reflux disease and dyspepsia in adults (CG184)",
+      "publication_or_update": "2014; updated 2019 and safety links 2024",
+      "url": "https://www.nice.org.uk/guidance/cg184/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "GORD, dyspepsia, peptic ulcer and H. pylori test-and-treat",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "ACG_HPYLORI_2024": {
+      "organization": "American College of Gastroenterology",
+      "title": "Clinical Guideline: Treatment of Helicobacter pylori Infection",
+      "publication_or_update": "2024",
+      "url": "https://gi.org/journals-publications/ebgi/schoenfeld_sep2024/",
+      "accessed": "2026-07-15",
+      "scope": "Resistance-aware H. pylori therapy and test of cure",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG61": {
+      "organization": "NICE",
+      "title": "Irritable bowel syndrome in adults (CG61)",
+      "publication_or_update": "2008; updated 2017; reviewed 2025",
+      "url": "https://www.nice.org.uk/guidance/cg61/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Positive diagnosis, diet and symptom-directed therapy for IBS",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "IDSA_DIARRHEA_2017": {
+      "organization": "IDSA",
+      "title": "Clinical Practice Guidelines for the Diagnosis and Management of Infectious Diarrhea",
+      "publication_or_update": "2017",
+      "url": "https://www.idsociety.org/practice-guideline/infectious-diarrhea/",
+      "accessed": "2026-07-15",
+      "scope": "Stool testing, rehydration and pathogen-directed antimicrobial use",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "AGA_ACG_CIC_2023": {
+      "organization": "AGA/ACG",
+      "title": "Clinical Practice Guideline: Pharmacological Management of Chronic Idiopathic Constipation",
+      "publication_or_update": "2023",
+      "url": "https://gi.org/journals-publications/ebgi/schoenfeld2_june2023/",
+      "accessed": "2026-07-15",
+      "scope": "Evidence-based fibre, osmotic, stimulant and prescription therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "ASCRS_HEM_2024": {
+      "organization": "ASCRS",
+      "title": "Clinical Practice Guidelines for the Management of Hemorrhoids",
+      "publication_or_update": "2024",
+      "url": "https://fascrs.org/ascrs/media/files/2024-Hemorrhoids-CPG.pdf",
+      "accessed": "2026-07-15",
+      "scope": "Conservative, office and surgical haemorrhoid management",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "ASCRS_FISSURE_2023": {
+      "organization": "ASCRS",
+      "title": "Clinical Practice Guidelines for the Management of Anal Fissures",
+      "publication_or_update": "2023",
+      "url": "https://fascrs.org/ascrs/media/files/Education/2023-Anal-Fissures-CPG.pdf",
+      "accessed": "2026-07-15",
+      "scope": "Conservative, topical, botulinum and surgical fissure management",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG188": {
+      "organization": "NICE",
+      "title": "Gallstone disease: diagnosis and management (CG188)",
+      "publication_or_update": "2014",
+      "url": "https://www.nice.org.uk/guidance/cg188/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Imaging, cholecystectomy and duct-stone pathways",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "WHO_HBV_2024": {
+      "organization": "WHO",
+      "title": "Guidelines for chronic hepatitis B infection",
+      "publication_or_update": "2024",
+      "url": "https://www.who.int/publications/i/item/9789240090903",
+      "accessed": "2026-07-15",
+      "scope": "HBV testing, treatment eligibility, antiviral therapy and monitoring",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "WHO_HCV_2022": {
+      "organization": "WHO",
+      "title": "Updated recommendations on treatment of hepatitis C",
+      "publication_or_update": "2022",
+      "url": "https://www.who.int/news/item/24-06-2022-WHO-publishes-updated-guidance-on-hepatitis-C-infection",
+      "accessed": "2026-07-15",
+      "scope": "Simplified HCV testing and pan-genotypic direct-acting antiviral therapy",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG258_2026": {
+      "organization": "NICE",
+      "title": "Anaphylaxis: assessment and referral after emergency treatment (NG258)",
+      "publication_or_update": "2026-05-27",
+      "url": "https://www.nice.org.uk/guidance/ng258",
+      "accessed": "2026-07-15",
+      "scope": "Emergency follow-up, observation, auto-injectors and specialist referral",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG116": {
+      "organization": "NICE",
+      "title": "Food allergy in under 19s: assessment and diagnosis (CG116)",
+      "publication_or_update": "2011; surveillance reviewed",
+      "url": "https://www.nice.org.uk/guidance/cg116/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Allergy-focused history, testing and supervised elimination/reintroduction",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG20": {
+      "organization": "NICE",
+      "title": "Coeliac disease: recognition, assessment and management (NG20)",
+      "publication_or_update": "2015",
+      "url": "https://www.nice.org.uk/guidance/ng20/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Testing while consuming gluten, confirmation, diet and monitoring",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "WSES_APPENDICITIS_2025": {
+      "organization": "World Society of Emergency Surgery",
+      "title": "Jerusalem Guidelines for Acute Appendicitis, 2025 edition",
+      "publication_or_update": "2025/2026 publication",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41604201/",
+      "accessed": "2026-07-15",
+      "scope": "Risk scoring, imaging, surgery and selected non-operative treatment",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "UKHSA_UTI_DIAG_2025": {
+      "organization": "UK Health Security Agency and NHS England",
+      "title": "Diagnosis of urinary tract infections: quick reference tools for primary care",
+      "publication_or_update": "updated 2025-07-07",
+      "url": "https://www.gov.uk/government/publications/urinary-tract-infection-diagnosis/diagnosis-of-urinary-tract-infections-quick-reference-tools-for-primary-care",
+      "accessed": "2026-07-15",
+      "scope": "Adult lower-UTI symptom assessment, urine sampling and culture interpretation",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG109_2025": {
+      "organization": "NICE",
+      "title": "Urinary tract infection (lower): antimicrobial prescribing (NG109)",
+      "publication_or_update": "2018; updated 2025-05",
+      "url": "https://www.nice.org.uk/guidance/ng109/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Lower-UTI self-care, population-specific antibiotic strategy, culture and reassessment",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG224": {
+      "organization": "NICE",
+      "title": "Urinary tract infection in under 16s: diagnosis and management (NG224)",
+      "publication_or_update": "2022; current page checked 2026",
+      "url": "https://www.nice.org.uk/guidance/ng224/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Paediatric UTI symptoms, urine testing, referral and imaging pathways",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG111_2024": {
+      "organization": "NICE",
+      "title": "Pyelonephritis (acute): antimicrobial prescribing (NG111)",
+      "publication_or_update": "2018; updated 2024-09",
+      "url": "https://www.nice.org.uk/guidance/ng111/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Acute pyelonephritis culture, oral/IV antibiotic strategy, reassessment and hospital referral",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_NG118_2026": {
+      "organization": "NICE",
+      "title": "Renal and ureteric stones: assessment and management (NG118)",
+      "publication_or_update": "2019; updated 2026-05",
+      "url": "https://www.nice.org.uk/guidance/ng118/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Renal colic imaging, analgesia, expulsive therapy, intervention and recurrence prevention",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    },
+    "NICE_CG97_2024": {
+      "organization": "NICE",
+      "title": "Lower urinary tract symptoms in men: management (CG97)",
+      "publication_or_update": "2010; updated 2015; surveillance reviewed 2024",
+      "url": "https://www.nice.org.uk/guidance/cg97/chapter/Recommendations",
+      "accessed": "2026-07-15",
+      "scope": "Male LUTS/BPE assessment, conservative care, medicines, retention and surgery",
+      "source_type": "official_guideline_or_professional_society_guideline"
+    }
+  }
+}

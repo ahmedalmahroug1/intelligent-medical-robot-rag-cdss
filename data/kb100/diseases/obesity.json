@@ -1,0 +1,672 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-019",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-019",
+    "name": "Obesity",
+    "name_ar": "السِّمنة",
+    "synonyms": [
+      "adiposity",
+      "overweight/obesity"
+    ],
+    "abbreviations": [
+      "BMI"
+    ],
+    "icd10": {
+      "code": "E66.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "5B81",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "414916001",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "601665",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D009765",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic metabolic disease / risk factor",
+    "organ_system": "Metabolic / multisystem",
+    "specialty": "Family medicine / Endocrinology / Bariatric",
+    "emergency_level": "Routine (chronic)",
+    "severity": "Graded by BMI and complications; a driver of many diseases",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A chronic, relapsing disease of excess body fat that impairs health, defined in adults by BMI >=30 kg/m2, and a major driver of diabetes, cardiovascular disease, sleep apnoea and other conditions.",
+    "detailed_description": "Obesity is a common, complex chronic condition arising from an interaction of genetics, environment and behaviour. It is assessed by BMI plus waist circumference and complication burden, and managed long-term with lifestyle change, structured weight-management programmes, pharmacotherapy (including newer incretin-based agents), and bariatric surgery for selected patients. It should be addressed non-judgementally as a medical condition.",
+    "pathophysiology": "Chronic positive energy balance (intake exceeding expenditure) with complex neuroendocrine regulation (leptin, ghrelin, gut hormones) promotes fat accumulation. Adipose tissue is metabolically active, causing insulin resistance and chronic low-grade inflammation.",
+    "etiology": "Multifactorial: genetic predisposition, obesogenic environment (energy-dense diets, inactivity), socioeconomic factors, medications (steroids, some antipsychotics/antidepressants, insulin/sulfonylureas), endocrine causes (hypothyroidism, Cushing - uncommon), and monogenic/syndromic causes (rare).",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Tends to be progressive and relapsing without sustained intervention; weight regain after loss is common due to physiological adaptations.",
+    "prognosis": "Modest sustained weight loss (5-10%) markedly improves metabolic risk; bariatric surgery can produce large, durable loss and remission of comorbidities."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common and rising globally; a large and increasing proportion of adults and children are affected (WHO).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Rising worldwide with dietary and activity transitions.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Contributes substantially to premature death via cardiovascular disease, diabetes and cancer.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; childhood obesity tracks into adulthood.",
+    "sex_predominance": "Both; distribution varies by region.",
+    "geographic_distribution": "Worldwide; high and rising in MENA and many regions.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Energy-dense diet, sugary drinks, physical inactivity, poor sleep, sedentary occupations.",
+    "smoking": "Cessation may cause modest weight gain (not a reason to continue smoking).",
+    "alcohol": "High-calorie; contributes to weight gain.",
+    "obesity": "N/A (this is the condition).",
+    "diabetes": "Bidirectional link (obesity causes type 2 diabetes).",
+    "hypertension": "Commonly coexists.",
+    "pregnancy": "Pregnancy-related weight retention; gestational diabetes risk.",
+    "occupation": "Sedentary/shift work.",
+    "travel": "Not relevant.",
+    "family_history": "Strong genetic/familial component.",
+    "genetic_factors": "Polygenic; rare monogenic (e.g., MC4R) and syndromic (Prader-Willi) forms.",
+    "medications": "Corticosteroids, some antipsychotics/antidepressants, insulin, sulfonylureas, certain anticonvulsants.",
+    "previous_diseases": "Hypothyroidism, Cushing syndrome (uncommon secondary causes); psychological factors/eating disorders."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Concern about weight / difficulty losing weight",
+      "frequency": "very common",
+      "importance": "Common presenting reason",
+      "source": "NICE NG246",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Complication-related symptoms (breathlessness, joint pain, snoring, low mood)",
+      "frequency": "common",
+      "importance": "Often what prompts help-seeking",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Found during review of other conditions",
+      "frequency": "common",
+      "importance": "Opportunistic identification",
+      "source": "NICE NG246",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Elevated BMI / increased waist circumference",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "excludes if absent",
+      "importance": "Defining measurement",
+      "stage": "All",
+      "early_late": "All",
+      "source": "WHO; NICE NG246",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Exertional breathlessness / reduced exercise tolerance",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Functional impact",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Joint pain (weight-bearing joints)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Mechanical complication",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Snoring / daytime sleepiness (obstructive sleep apnoea)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Screen for OSA",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Low mood, low self-esteem, or disordered eating",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Psychological dimension",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No features of a secondary cause (e.g., hypothyroid symptoms, Cushingoid features)",
+      "why_important": "Supports primary obesity rather than an endocrine cause",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No rapid unexplained weight change or red-flag symptoms",
+      "why_important": "Argues against secondary pathology (e.g., malignancy, endocrine)",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "How has weight changed over time and what have you tried?",
+      "why_ask": "Trajectory and prior interventions guide the plan",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Diet pattern, physical activity, sleep, alcohol, and eating behaviours (binge/comfort eating)?",
+      "why_ask": "Identifies modifiable drivers and disordered eating",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any symptoms of hypothyroidism, Cushing's, or medications that cause weight gain?",
+      "why_ask": "Screens for secondary/contributory causes",
+      "expected_answer": "Usually none",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Snoring, witnessed apnoea, daytime sleepiness?",
+      "why_ask": "Screens for obstructive sleep apnoea",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Complications: diabetes, hypertension, joint pain, fertility/PCOS, mood?",
+      "why_ask": "Assesses complication burden and priorities",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Height, weight (BMI), waist circumference",
+      "expected_finding": "BMI >=30; central adiposity",
+      "importance": "High (defining)"
+    },
+    {
+      "examination": "Blood pressure",
+      "expected_finding": "Often raised",
+      "importance": "High"
+    },
+    {
+      "examination": "Signs of secondary cause (thyroid, Cushingoid features, acanthosis nigricans)",
+      "expected_finding": "Usually absent; acanthosis suggests insulin resistance",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Assessment of comorbidity (joints, respiratory, skin)",
+      "expected_finding": "Variable",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Often raised (use appropriate large cuff)",
+    "respiratory_rate": "Normal (raised if obesity hypoventilation)",
+    "oxygen_saturation": "Usually normal (low in obesity hypoventilation/OSA complications)",
+    "bmi": ">=30 kg/m2 defines obesity (>=25 overweight); ethnicity-adjusted lower thresholds for some groups"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "HbA1c/fasting glucose, lipid profile, blood pressure, LFTs",
+      "indication": "Screen for metabolic complications",
+      "expected_result": "May show diabetes/prediabetes, dyslipidaemia, fatty liver",
+      "normal_range": "",
+      "diagnostic_value": "Complication assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "TFTs (+/- cortisol testing if clinically indicated)",
+      "indication": "If secondary endocrine cause suspected",
+      "expected_result": "Usually normal",
+      "normal_range": "",
+      "diagnostic_value": "Excludes secondary causes",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Liver ultrasound (selective)",
+      "when_needed": "Suspected non-alcoholic fatty liver disease",
+      "expected_findings": "Hepatic steatosis"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Cardiovascular assessment if indicated",
+    "findings": "May reflect comorbid hypertension/cardiac disease."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "If respiratory comorbidity",
+    "endoscopy": "Not applicable",
+    "biopsy": "Liver biopsy only in selected NAFLD staging",
+    "culture": "Not applicable",
+    "pcr": "Genetic testing for monogenic/syndromic obesity in early-onset/severe cases",
+    "sleep_study": "Polysomnography/home sleep test if obstructive sleep apnoea suspected"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Adults: BMI 25-29.9 overweight; >=30 obesity (class I 30-34.9, II 35-39.9, III >=40). Interpret with waist circumference and ethnicity (lower thresholds for South Asian and some other groups) and complication burden. Children: use age/sex-specific centiles.",
+    "diagnostic_scores": "BMI classification + waist circumference; complication-centred staging (e.g., Edmonton Obesity Staging System).",
+    "cutoff_values": {
+      "value": "BMI >=30 kg/m2 = obesity (>=27.5 in some Asian populations); waist circumference thresholds indicate central adiposity risk.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Hypothyroidism",
+      "why_similar": "Weight gain, fatigue",
+      "differences": "Cold intolerance, dry skin, bradycardia, raised TSH",
+      "red_flags": "Myxoedema (rare)",
+      "distinguishing_symptoms": "Cold intolerance, constipation",
+      "distinguishing_exam": "Dry skin, slow reflexes",
+      "distinguishing_labs": "Raised TSH, low free T4",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you feel cold, tired, and constipated?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Cushing's syndrome",
+      "why_similar": "Central weight gain",
+      "differences": "Purple striae, proximal weakness, easy bruising, hypertension, diabetes",
+      "red_flags": "",
+      "distinguishing_symptoms": "Rapid central weight gain, weakness",
+      "distinguishing_exam": "Moon face, striae, proximal myopathy",
+      "distinguishing_labs": "Abnormal cortisol tests",
+      "distinguishing_imaging": "Pituitary/adrenal imaging",
+      "differential_questions": "Any purple stretch marks, easy bruising, or muscle weakness?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Drug-induced weight gain",
+      "why_similar": "Weight gain",
+      "differences": "Temporal link to medication",
+      "red_flags": "",
+      "distinguishing_symptoms": "Onset with a new drug",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Did weight gain start with a new medicine (steroids, antipsychotics, insulin)?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Fluid overload / oedematous states",
+      "why_similar": "Weight increase",
+      "differences": "Oedema, cardiac/renal/hepatic disease",
+      "red_flags": "Heart/renal failure",
+      "distinguishing_symptoms": "Swelling, breathlessness",
+      "distinguishing_exam": "Pitting oedema, raised JVP",
+      "distinguishing_labs": "BNP, renal/liver tests",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the weight due to swelling rather than fat?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have symptoms of an underlying cause (cold intolerance, weakness, striae) or take weight-gaining medicines?",
+      "target_disease": "Secondary obesity",
+      "competing_disease": "Primary obesity",
+      "purpose": "Identify treatable secondary causes",
+      "interpretation": "Positive -> investigate/treat cause",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "question": "Do you snore with daytime sleepiness, or have you developed diabetes/high blood pressure?",
+      "target_disease": "Complications (OSA, metabolic)",
+      "competing_disease": "Uncomplicated obesity",
+      "purpose": "Assess complication burden and priorities",
+      "interpretation": "Positive -> targeted assessment (sleep study, metabolic work-up)",
+      "information_gain": "high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Adult with BMI >=30 seeking help",
+      "question": "What are your main goals, eating/activity patterns, complications, and any secondary-cause features?",
+      "expected_answers": "Drivers, complications, readiness",
+      "branching_logic": "Primary obesity -> tiered weight-management plan (lifestyle, +/- pharmacotherapy, +/- surgery by criteria); secondary features -> investigate; complications -> manage them",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Metabolic screen (HbA1c, lipids, BP, LFTs) + waist circumference",
+      "why": "Quantifies complication risk",
+      "expected_outcome": "Guides priorities"
+    },
+    {
+      "test": "Sleep study / TFTs (selective)",
+      "why": "If OSA or endocrine cause suspected",
+      "expected_outcome": "Confirms/excludes complication or secondary cause"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Features of obstructive sleep apnoea with severe daytime sleepiness (e.g., driver)",
+      "immediate_action": "Urgent sleep assessment; safety advice"
+    },
+    {
+      "finding": "Obesity hypoventilation (drowsiness, morning headache, hypoxia/hypercapnia)",
+      "immediate_action": "Urgent respiratory assessment"
+    },
+    {
+      "finding": "Rapid unexplained weight gain with Cushingoid features",
+      "immediate_action": "Investigate for Cushing's syndrome"
+    },
+    {
+      "finding": "Suspected eating disorder",
+      "immediate_action": "Refer to appropriate services"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Complications needing prompt care (severe OSA, obesity hypoventilation).",
+    "routine_referral": "Specialist/tier-3 weight management, consideration of bariatric surgery (per BMI/complication criteria), suspected endocrine cause, or complex/monogenic obesity.",
+    "emergency_referral": "Acute complications (e.g., respiratory failure)."
+  },
+  "complications": {
+    "early": [
+      "Reduced mobility and function",
+      "Psychological impact / stigma"
+    ],
+    "late": [
+      "Type 2 diabetes",
+      "Hypertension and cardiovascular disease",
+      "Dyslipidaemia and fatty liver (NAFLD)",
+      "Obstructive sleep apnoea",
+      "Osteoarthritis",
+      "Several cancers",
+      "Infertility/PCOS",
+      "Depression"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Compassionate, non-stigmatising approach; agree realistic goals (e.g., 5-10% loss); address drivers and comorbidities; multidisciplinary support.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): GLP-1 receptor agonist or tirzepatide; Orlistat. No autonomous selection or dosing is allowed. Source IDs: NICE_NG246_2026.",
+    "lifestyle_advice": "Sustainable dietary change (calorie deficit, quality of diet), increased physical activity, behavioural support, sleep and stress management.",
+    "follow_up": "Regular review of weight, complications and adherence; long-term support given the relapsing nature.",
+    "legacy_medications_pre_v13": "Consider pharmacotherapy alongside lifestyle for eligible patients: GLP-1 receptor agonists (e.g., semaglutide, liraglutide) and dual agonists (e.g., tirzepatide) produce significant weight loss; orlistat as an option. Use within specialist/eligibility criteria. Bariatric/metabolic surgery for selected patients (e.g., BMI >=40, or >=35 with comorbidity - lower thresholds with type 2 diabetes) via specialist services."
+  },
+  "patient_education": {
+    "home_advice": "Obesity is a long-term medical condition, not a lack of willpower. Losing even 5-10% of your weight brings real health benefits. Focus on gradual, sustainable changes to eating and activity; medicines and, for some people, surgery can help alongside these. Support and follow-up matter because weight tends to creep back without them.",
+    "home_advice_ar": "السِّمنة حالة طبية مزمنة وليست ضعفاً في الإرادة. حتى فقدان 5-10% من وزنك يمنح فوائد صحية حقيقية. ركّز على تغييرات تدريجية ومستدامة في الأكل والنشاط؛ وقد تساعد الأدوية، ولبعض الناس الجراحة، إلى جانب ذلك. الدعم والمتابعة مهمّان لأن الوزن يميل للعودة بدونهما.",
+    "prevention": "Healthy eating, regular activity, limiting sugary drinks, adequate sleep; early support for weight gain.",
+    "warning_signs": "Severe daytime sleepiness (unsafe driving), breathlessness/drowsiness, or features suggesting a hormonal cause."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Population and individual measures: healthy diet, activity, limiting sugary drinks, sleep.",
+    "screening": "Opportunistic BMI/waist measurement; identify and support at-risk individuals."
+  },
+  "evidence": {
+    "evidence_level": "High for lifestyle, incretin-based pharmacotherapy, and bariatric surgery outcomes.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG246_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG246, WHO, specialist obesity guidelines.",
+    "verified_source_ids": [
+      "NICE_NG246_2026"
+    ]
+  },
+  "references": {
+    "nice": "Overweight and obesity management (NG246) — https://www.nice.org.uk/guidance/ng246",
+    "aafp": "AAFP - Obesity management",
+    "bmj_best_practice": "BMJ Best Practice - Obesity in adults",
+    "msd_manual": "MSD Manual - Obesity",
+    "merck_manual": "Merck Manual - Obesity",
+    "uptodate": "UpToDate - Obesity in adults: overview of management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Obesity",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Obesity",
+    "who": "WHO - Obesity and overweight fact sheet",
+    "cdc": "CDC - Overweight & Obesity",
+    "idsa": "",
+    "esc": "",
+    "ada": "ADA - Obesity and weight management for the prevention and treatment of type 2 diabetes",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG246_2026",
+        "organization": "NICE",
+        "title": "Overweight and obesity management (NG246)",
+        "publication_or_update": "2025; updated 2026-01-08",
+        "url": "https://www.nice.org.uk/guidance/ng246",
+        "accessed": "2026-07-15",
+        "scope": "Assessment, behavioural treatment, medicines and bariatric referral",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG246_2026"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG246_2026"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG246_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG246_2026",
+        "organization": "NICE",
+        "title": "Overweight and obesity management (NG246)",
+        "publication_or_update": "2025; updated 2026-01-08",
+        "url": "https://www.nice.org.uk/guidance/ng246",
+        "accessed": "2026-07-15",
+        "scope": "Assessment, behavioural treatment, medicines and bariatric referral",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Provide non-stigmatising, long-term weight and comorbidity management.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): GLP-1 receptor agonist or tirzepatide; Orlistat. No autonomous selection or dosing is allowed. Source IDs: NICE_NG246_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "pregnancy plans",
+      "BMI and waist",
+      "diabetes/CVD/OSA",
+      "eating disorder",
+      "pancreatitis/gallstones/gastroparesis",
+      "weight-promoting medicines"
+    ],
+    "non_drug_measures": [
+      "Person-centred nutrition, activity, behavioural and psychological support; address weight-promoting medicines and sleep."
+    ],
+    "medication_options": [
+      {
+        "option_name": "GLP-1 receptor agonist or tirzepatide",
+        "medication_or_class": "GLP-1 receptor agonist or tirzepatide",
+        "option_type": "medication",
+        "role": "eligible adjunct to behavioural treatment",
+        "when_to_consider": "Only under current indication, BMI/comorbidity and service criteria",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "glp1",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy or serious product allergy"
+            ],
+            "use_caution_if": [
+              "prior pancreatitis, severe gastroparesis, gallbladder disease, dehydration risk, or concurrent insulin/sulfonylurea"
+            ],
+            "history_checks": [
+              "pregnancy",
+              "pancreatitis",
+              "gastroparesis",
+              "gallstones",
+              "hypoglycaemic medicines"
+            ],
+            "monitoring": [
+              "weight, glucose, gastrointestinal tolerance, hydration and symptoms of pancreatitis/gallbladder disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG246_2026"
+        ]
+      },
+      {
+        "option_name": "Orlistat",
+        "medication_or_class": "Orlistat",
+        "option_type": "medication",
+        "role": "alternative adjunct",
+        "when_to_consider": "Eligible patient who accepts gastrointestinal effects and has no malabsorption/cholestasis",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "orlistat",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "chronic malabsorption or cholestasis"
+            ],
+            "use_caution_if": [
+              "warfarin, ciclosporin, antiepileptics, levothyroxine, kidney-stone risk, or fat-soluble vitamin deficiency"
+            ],
+            "history_checks": [
+              "malabsorption",
+              "biliary disease",
+              "medicines",
+              "vitamin status"
+            ],
+            "monitoring": [
+              "weight, gastrointestinal effects, interacting-drug levels and fat-soluble vitamins when prolonged"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG246_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Specialist weight service/bariatric assessment under current BMI/comorbidity criteria; urgent evaluation for eating disorder or endocrine red flags."
+    ],
+    "source_ids": [
+      "NICE_NG246_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

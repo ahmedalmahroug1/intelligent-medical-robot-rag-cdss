@@ -1,0 +1,807 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-014",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Focused on community-acquired pneumonia (CAP), the main family-medicine presentation. Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-014",
+    "name": "Pneumonia (community-acquired)",
+    "name_ar": "الالتهاب الرئوي (المكتسب من المجتمع)",
+    "synonyms": [
+      "community-acquired pneumonia",
+      "chest infection (lower respiratory)",
+      "lung infection"
+    ],
+    "abbreviations": [
+      "CAP",
+      "LRTI"
+    ],
+    "icd10": {
+      "code": "J18.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA40",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "233604007",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D011014",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute lower respiratory infection",
+    "organ_system": "Respiratory",
+    "specialty": "Family medicine / Respiratory / Acute medicine",
+    "emergency_level": "Can be an emergency - severity-assessed (CRB-65/CURB-65); sepsis is life-threatening",
+    "severity": "Ranges from mild (home) to severe (ICU); a leading infectious cause of death",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute infection of the lung parenchyma causing cough, fever, breathlessness and pleuritic pain, with focal chest signs and (where imaged) consolidation, requiring severity assessment to guide treatment setting.",
+    "detailed_description": "Community-acquired pneumonia (CAP) is common and potentially life-threatening. Diagnosis is clinical (symptoms + focal chest signs), supported by chest X-ray where available. The central task is severity assessment (CRB-65 in the community, CURB-65 in hospital) to decide home vs hospital care, prompt antibiotics, and recognition of sepsis. Streptococcus pneumoniae is the commonest cause.",
+    "pathophysiology": "Pathogens reach distal airways/alveoli, provoking an inflammatory exudate that fills alveoli (consolidation), impairing gas exchange and causing hypoxia, systemic inflammatory response and sometimes sepsis.",
+    "etiology": "Bacterial (Streptococcus pneumoniae most common; also Haemophilus influenzae, Mycoplasma pneumoniae, Chlamydophila, Legionella, Staphylococcus aureus) and viral (influenza, SARS-CoV-2, RSV). Aspiration in those with swallowing impairment.",
+    "incubation_period": "Variable by pathogen (days).",
+    "natural_history": "Fever/symptoms improve over days with effective treatment; radiographic changes lag and can persist weeks. Complications include effusion/empyema, sepsis and respiratory failure.",
+    "prognosis": "Good in low-severity CAP treated promptly; mortality rises with age, comorbidity and severity (CURB-65)."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "A common cause of primary-care and hospital presentations; incidence rises with age.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Higher in winter and in the very young and elderly.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "A leading infectious cause of death worldwide; low in mild CAP, high in severe/elderly (WHO).",
+      "basis": "estimate"
+    },
+    "age_groups": "Extremes of age at highest risk.",
+    "sex_predominance": "Roughly equal.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "Winter predominance (with respiratory viruses)."
+  },
+  "risk_factors": {
+    "lifestyle": "Crowding; poor nutrition.",
+    "smoking": "Major risk factor; impairs mucociliary defence.",
+    "alcohol": "Excess increases risk and aspiration.",
+    "obesity": "Modest association with severity.",
+    "diabetes": "Increases risk and severity.",
+    "hypertension": "Not a direct risk factor; cardiovascular comorbidity worsens outcomes.",
+    "pregnancy": "Increased susceptibility to some pneumonias/influenza.",
+    "occupation": "Certain exposures (e.g., Legionella from water systems).",
+    "travel": "Legionella (travel/hotels), regional pathogens.",
+    "family_history": "Not relevant.",
+    "genetic_factors": "Immunodeficiency states.",
+    "medications": "Immunosuppressants, inhaled/oral steroids, acid suppression (aspiration), sedatives (aspiration).",
+    "previous_diseases": "COPD/asthma, heart failure, chronic kidney/liver disease, neurological disease with swallowing impairment, immunosuppression, recent influenza."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Cough (often productive) with fever",
+      "frequency": "very common",
+      "importance": "Core presentation",
+      "source": "NICE NG250; BTS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Breathlessness",
+      "frequency": "common",
+      "importance": "Severity marker",
+      "source": "BTS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Pleuritic chest pain",
+      "frequency": "common",
+      "importance": "Suggests pleural involvement",
+      "source": "BTS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Feeling very unwell / confusion (elderly)",
+      "frequency": "common",
+      "importance": "May be the main sign in the elderly",
+      "source": "NICE NG250",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Cough (often productive/purulent)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "moderately reduces",
+      "importance": "Core symptom",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "BTS; NICE NG250",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever / sweats / rigors",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Systemic infection; may be absent in the elderly",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "BTS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Breathlessness / tachypnoea",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Severity marker",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "BTS; NICE NG250",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Pleuritic chest pain",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Suggests pleural involvement",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "BTS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Focal chest signs (crackles, bronchial breathing, dullness)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Focal signs strongly support pneumonia over bronchitis",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "BTS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Confusion (especially elderly), or new-onset delirium",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Severity marker (CRB-65) and may be presenting sign in elderly",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG250; CRB-65",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Hypotension, marked hypoxia, cyanosis, severe tachypnoea (severe/sepsis)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - severe pneumonia/sepsis",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "BTS; Sepsis criteria",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No focal chest signs, normal saturations, not tachypnoeic, systemically well",
+      "why_important": "Makes pneumonia much less likely and supports acute bronchitis (usually no antibiotics)",
+      "absence_significance": "moderately reduces",
+      "source": "NICE (pneumonia/bronchitis)",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Clear chest X-ray",
+      "why_important": "Argues strongly against pneumonia (though early X-rays can lag)",
+      "absence_significance": "strongly reduces",
+      "source": "BTS",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have cough with fever, breathlessness, and chest pain, and how quickly did it start?",
+      "why_ask": "Establishes pneumonia symptom cluster",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any confusion, and (for scoring) age >=65?",
+      "why_ask": "CRB-65 severity components",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (severity)"
+    },
+    {
+      "question": "How breathless are you, and can you manage at home (oral intake, support)?",
+      "why_ask": "Guides home vs hospital care",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any comorbidity (COPD, heart failure, diabetes, immunosuppression) or recent travel/influenza?",
+      "why_ask": "Risk stratification and atypical pathogen clues",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any features of sepsis (very unwell, confusion, low output, cold/clammy)?",
+      "why_ask": "Detect sepsis (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Chest auscultation/percussion",
+      "expected_finding": "Focal crackles, bronchial breathing, dullness to percussion",
+      "importance": "High (diagnostic)"
+    },
+    {
+      "examination": "Respiratory rate and oxygen saturation",
+      "expected_finding": "Tachypnoea/hypoxia in significant pneumonia",
+      "importance": "High (severity)"
+    },
+    {
+      "examination": "Blood pressure, heart rate, temperature, mental state (CRB-65 components)",
+      "expected_finding": "Assess severity/sepsis",
+      "importance": "High (severity)"
+    },
+    {
+      "examination": "Hydration and general appearance",
+      "expected_finding": "Assess ability to manage at home",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Often raised (may be normal/low in elderly or severe sepsis)",
+    "heart_rate": "Often raised",
+    "blood_pressure": "Low BP (e.g., diastolic <=60) is a severity/sepsis marker",
+    "respiratory_rate": "Raised RR (>=30) is a severity marker",
+    "oxygen_saturation": "May be reduced; hypoxia indicates severity",
+    "bmi": "Not central"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Chest X-ray",
+      "indication": "To confirm pneumonia where diagnosis uncertain or in hospital",
+      "expected_result": "Consolidation",
+      "normal_range": "",
+      "diagnostic_value": "Confirms pneumonia; identifies effusion/complications",
+      "rule_in": "Consolidation",
+      "rule_out": "Clear film argues against",
+      "urgency": "Urgent if unwell"
+    },
+    {
+      "test_name": "CRP / FBC / U&E (CURB-65 uses urea) / blood cultures",
+      "indication": "Assessment and severity (hospital)",
+      "expected_result": "Raised inflammatory markers; urea for CURB-65",
+      "normal_range": "",
+      "diagnostic_value": "Severity and monitoring",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent in moderate-severe"
+    },
+    {
+      "test_name": "Pulse oximetry / blood gas; sputum, urinary antigens (pneumococcal/Legionella), viral PCR",
+      "indication": "Severity and microbiology in moderate-severe CAP",
+      "expected_result": "Guides oxygen and targeted therapy",
+      "normal_range": "",
+      "diagnostic_value": "Oxygenation/microbiology",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent as needed"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Chest X-ray",
+      "when_needed": "Confirm diagnosis/complications (standard in hospital; selectively in community)",
+      "expected_findings": "Lobar or patchy consolidation; parapneumonic effusion"
+    },
+    {
+      "imaging_type": "CT chest / thoracic ultrasound",
+      "when_needed": "Complications (empyema), non-resolving pneumonia, or uncertainty",
+      "expected_findings": "Effusion/empyema, abscess, underlying lesion"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If cardiac comorbidity/complication or severe illness",
+    "findings": "Sinus tachycardia; assess arrhythmia/ischaemia in comorbidity."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable acutely",
+    "endoscopy": "Bronchoscopy only for non-resolving/complex cases",
+    "biopsy": "Not routine",
+    "culture": "Sputum and blood cultures in moderate-severe CAP; pleural fluid if effusion",
+    "pcr": "Respiratory viral PCR (influenza, SARS-CoV-2) where relevant"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical CAP: symptoms of an acute lower respiratory tract infection (cough plus at least one of fever, breathlessness, pleuritic pain, focal chest signs) with NEW focal chest signs and/or radiographic consolidation, in a patient not hospitalised. Assess severity with CRB-65 (community) or CURB-65 (hospital).",
+    "diagnostic_scores": {
+      "value": "CRB-65 (1 point each): Confusion; Respiratory rate >=30; Blood pressure (systolic <90 or diastolic <=60); age >=65. CURB-65 adds Urea >7 mmol/L.",
+      "basis": "sourced"
+    },
+    "cutoff_values": {
+      "value": "CRB-65: 0 low risk (consider home), 1-2 intermediate, 3-4 high risk (urgent hospital assessment). CURB-65: 0-1 low, 2 moderate, 3-5 high severity.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Acute bronchitis",
+      "why_similar": "Cough, fever, sputum",
+      "differences": "No focal chest signs/consolidation, systemically well",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Cough without focal signs",
+      "distinguishing_exam": "Clear chest",
+      "distinguishing_labs": "Low CRP",
+      "distinguishing_imaging": "Normal CXR",
+      "differential_questions": "Are there focal chest signs or breathlessness/high fever?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "COPD/asthma exacerbation",
+      "why_similar": "Cough, breathlessness, wheeze",
+      "differences": "Known airway disease, wheeze-predominant, no consolidation",
+      "red_flags": "Respiratory failure",
+      "distinguishing_symptoms": "Wheeze, known COPD/asthma",
+      "distinguishing_exam": "Wheeze without focal consolidation",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "No consolidation",
+      "differential_questions": "Do you have known COPD/asthma and is it wheeze-predominant?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Pulmonary embolism",
+      "why_similar": "Breathlessness, pleuritic pain, hypoxia",
+      "differences": "Often less fever/sputum, risk factors (immobility, surgery, malignancy), sudden onset",
+      "red_flags": "Haemodynamic instability",
+      "distinguishing_symptoms": "Sudden dyspnoea, pleuritic pain, leg swelling",
+      "distinguishing_exam": "Tachycardia, hypoxia, DVT signs",
+      "distinguishing_labs": "D-dimer",
+      "distinguishing_imaging": "CTPA",
+      "differential_questions": "Sudden breathlessness with risk factors and little sputum?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Heart failure / pulmonary oedema",
+      "why_similar": "Breathlessness, crackles",
+      "differences": "Orthopnoea, oedema, cardiac history, bilateral basal crackles",
+      "red_flags": "Acute pulmonary oedema",
+      "distinguishing_symptoms": "Orthopnoea, ankle swelling",
+      "distinguishing_exam": "Bilateral crackles, raised JVP",
+      "distinguishing_labs": "BNP",
+      "distinguishing_imaging": "CXR congestion (not consolidation)",
+      "differential_questions": "Breathless lying flat with ankle swelling?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Lung cancer (non-resolving pneumonia)",
+      "why_similar": "Cough, consolidation",
+      "differences": "Non-resolving on repeat imaging, weight loss, haemoptysis, smoker",
+      "red_flags": "Haemoptysis, weight loss",
+      "distinguishing_symptoms": "Persistent, systemic",
+      "distinguishing_exam": "Clubbing, lymphadenopathy",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "Persistent shadowing/mass on repeat CXR/CT",
+      "differential_questions": "Any weight loss or coughing blood, and does it resolve?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are there focal chest signs, high fever, breathlessness, or hypoxia (rather than a well patient with just a cough)?",
+      "target_disease": "Pneumonia",
+      "competing_disease": "Acute bronchitis",
+      "purpose": "Separate pneumonia from bronchitis (antibiotic decision)",
+      "interpretation": "Focal signs/hypoxia/systemic illness -> pneumonia",
+      "information_gain": "very high",
+      "source": "NICE NG250; BTS",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you have confusion, a fast breathing rate, low blood pressure, or are you 65+?",
+      "target_disease": "Severe pneumonia",
+      "competing_disease": "Low-severity pneumonia",
+      "purpose": "CRB-65 severity assessment",
+      "interpretation": "Higher CRB-65 -> hospital assessment",
+      "information_gain": "very high",
+      "source": "CRB-65/CURB-65",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Suspected pneumonia in the community",
+      "question": "What is your CRB-65 (confusion, RR>=30, low BP, age>=65), oxygen level, and can you cope at home?",
+      "expected_answers": "Low vs higher severity",
+      "branching_logic": "CRB-65 0 and well/normal SpO2 -> home antibiotics + safety-net; CRB-65 1-2 or hypoxia/comorbidity -> consider hospital; CRB-65 3-4 or sepsis -> urgent hospital admission",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "CRB-65 severity assessment + pulse oximetry",
+      "why": "Decides treatment setting and urgency",
+      "expected_outcome": "Risk-stratifies for home vs hospital"
+    },
+    {
+      "test": "Chest X-ray (+ bloods in hospital)",
+      "why": "Confirms consolidation and complications",
+      "expected_outcome": "Confirms pneumonia and severity"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Signs of sepsis: confusion, RR >=30, SpO2 <92%, systolic BP <90, mottled/cold, reduced urine output",
+      "immediate_action": "Emergency - sepsis pathway: oxygen, fluids, urgent antibiotics, hospital admission"
+    },
+    {
+      "finding": "High CRB-65 (3-4) or CURB-65 (>=3)",
+      "immediate_action": "Urgent hospital admission (consider critical care)"
+    },
+    {
+      "finding": "Haemoptysis, weight loss, or non-resolving consolidation",
+      "immediate_action": "Investigate for malignancy/other pathology (repeat imaging, refer)"
+    },
+    {
+      "finding": "Large pleural effusion / suspected empyema (persistent fever, sepsis)",
+      "immediate_action": "Urgent assessment and pleural drainage"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Moderate-high severity CAP (CRB-65/CURB-65), hypoxia, sepsis, inability to cope at home, or significant comorbidity - hospital assessment.",
+    "routine_referral": "Non-resolving pneumonia for further investigation (exclude malignancy); recurrent pneumonia in the same area.",
+    "emergency_referral": "Sepsis/septic shock or respiratory failure."
+  },
+  "complications": {
+    "early": [
+      "Sepsis / septic shock",
+      "Respiratory failure",
+      "Parapneumonic effusion",
+      "Acute kidney injury"
+    ],
+    "late": [
+      "Empyema",
+      "Lung abscess",
+      "Non-resolving pneumonia (may reveal underlying malignancy)",
+      "Post-infective fatigue"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Severity assessment (CRB-65/CURB-65), oxygen to target saturations, fluids/antipyretics, and choosing the correct treatment setting.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Severity- and setting-directed antibiotic; Paracetamol; Antiviral. No autonomous selection or dosing is allowed. Source IDs: NICE_NG250.",
+    "lifestyle_advice": "Rest, fluids, smoking cessation; safety-net advice on deterioration; ensure follow-up.",
+    "follow_up": "Review response at ~48-72 hours; arrange follow-up chest X-ray at ~6 weeks for those at higher risk of malignancy (e.g., smokers, >50) to confirm resolution.",
+    "legacy_medications_pre_v13": "Prompt antibiotics guided by severity and local guidance: low-severity CAP usually amoxicillin (or a macrolide/doxycycline if penicillin-allergic); moderate-high severity uses broader/combination regimens per local policy. Start within recommended timeframes, especially in severe disease/sepsis. Add antiviral/other cover where indicated (e.g., influenza)."
+  },
+  "patient_education": {
+    "home_advice": "Pneumonia is a lung infection that usually needs antibiotics. If you are being treated at home, take the full course, rest, drink fluids, and use paracetamol for fever. It is important to know the danger signs. Get emergency help if you become confused, very breathless, your lips turn blue, you can't keep fluids down, or you feel you are getting worse.",
+    "home_advice_ar": "الالتهاب الرئوي عدوى في الرئة تحتاج عادةً إلى مضادات حيوية. إن كنت تُعالَج في المنزل، أكمل الجرعة كاملة وارتَح واشرب السوائل واستخدم الباراسيتامول للحرارة. من المهم معرفة علامات الخطر. اطلب المساعدة الطارئة إذا حدث تشوّش، أو ضيق نفس شديد، أو ازرقّت الشفتان، أو لم تستطع الاحتفاظ بالسوائل، أو شعرت أنك تزداد سوءاً.",
+    "prevention": "Smoking cessation; influenza and pneumococcal vaccination for at-risk groups.",
+    "warning_signs": "Confusion, severe breathlessness, blue lips, high or persistent fever, inability to keep fluids down, or feeling markedly worse - seek emergency care."
+  },
+  "prevention": {
+    "vaccination": "Pneumococcal and influenza (and COVID-19) vaccination for at-risk groups reduces incidence/severity.",
+    "lifestyle": "Smoking cessation; good nutrition; manage comorbidity.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for severity-guided management and prompt antibiotics; high for vaccination in prevention.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG250; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG250, BTS CAP guideline, IDSA/ATS.",
+    "verified_source_ids": [
+      "NICE_NG250"
+    ]
+  },
+  "references": {
+    "nice": "Pneumonia: diagnosis and management (NG250) — https://www.nice.org.uk/guidance/ng250/chapter/recommendations",
+    "aafp": "AAFP - Community-acquired pneumonia",
+    "bmj_best_practice": "BMJ Best Practice - Community-acquired pneumonia",
+    "msd_manual": "MSD Manual - Community-Acquired Pneumonia",
+    "merck_manual": "Merck Manual - Community-Acquired Pneumonia",
+    "uptodate": "UpToDate - Clinical evaluation and diagnosis of CAP in adults; treatment of CAP",
+    "harrisons": "Harrison's Principles of Internal Medicine - Pneumonia",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Pneumonia",
+    "who": "WHO - Pneumonia",
+    "cdc": "CDC - Pneumonia",
+    "idsa": "IDSA/ATS - Diagnosis and Treatment of Adults with Community-Acquired Pneumonia",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG250",
+        "organization": "NICE",
+        "title": "Pneumonia: diagnosis and management (NG250)",
+        "publication_or_update": "2025; updated 2026",
+        "url": "https://www.nice.org.uk/guidance/ng250/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Current pneumonia severity, investigation and treatment guidance",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG250"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG250"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG250"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG250",
+        "organization": "NICE",
+        "title": "Pneumonia: diagnosis and management (NG250)",
+        "publication_or_update": "2025; updated 2026",
+        "url": "https://www.nice.org.uk/guidance/ng250/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Current pneumonia severity, investigation and treatment guidance",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Assess severity promptly, start appropriate antimicrobials and detect respiratory failure/sepsis.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Severity- and setting-directed antibiotic; Paracetamol; Antiviral. No autonomous selection or dosing is allowed. Source IDs: NICE_NG250.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "severity score plus clinical judgement",
+      "oxygen saturation",
+      "pregnancy",
+      "allergy",
+      "renal/liver function",
+      "recent antibiotics/hospitalisation",
+      "aspiration risk"
+    ],
+    "non_drug_measures": [
+      "Hydration, smoking cessation and safety-netting; oxygen/fluids are prescribed to physiological targets in monitored care."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Severity- and setting-directed antibiotic",
+        "medication_or_class": "Severity- and setting-directed antibiotic",
+        "option_type": "medication",
+        "role": "definitive treatment for bacterial pneumonia",
+        "when_to_consider": "After clinical diagnosis and severity assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          },
+          {
+            "rule_id": "doxycycline",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "pregnancy, breastfeeding where unsuitable, or tetracycline allergy"
+            ],
+            "use_caution_if": [
+              "oesophageal disease, liver disease, photosensitivity, or interacting iron/calcium/antacid products"
+            ],
+            "history_checks": [
+              "pregnancy possibility",
+              "swallowing/oesophageal disease",
+              "supplements and antacids"
+            ],
+            "monitoring": [
+              "clinical response and gastrointestinal/photosensitivity adverse effects"
+            ]
+          }
+        ],
+        "clinical_note": "Use current local formulary, resistance data, allergy history and renal/hepatic dosing; do not hard-code one regimen for all patients.",
+        "source_ids": [
+          "NICE_NG250"
+        ]
+      },
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Fever or pain",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG250"
+        ]
+      },
+      {
+        "option_name": "Antiviral",
+        "medication_or_class": "Antiviral",
+        "option_type": "medication",
+        "role": "pathogen-directed adjunct",
+        "when_to_consider": "Influenza or other treatable virus when indicated",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "oseltamivir",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious oseltamivir allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, severe vomiting, or neuropsychiatric history"
+            ],
+            "history_checks": [
+              "renal function",
+              "age/weight",
+              "pregnancy",
+              "illness severity and onset"
+            ],
+            "monitoring": [
+              "dose adjustment by renal function, clinical response, nausea/vomiting"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG250",
+          "CDC_FLU_2026"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent hospital care for high severity, hypoxia, sepsis, confusion, hypotension, inability to take oral treatment or rapid deterioration."
+    ],
+    "source_ids": [
+      "NICE_NG250"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

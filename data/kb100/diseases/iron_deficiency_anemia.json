@@ -1,0 +1,676 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-023",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-023",
+    "name": "Iron-deficiency anaemia",
+    "name_ar": "فقر الدم بعوز الحديد",
+    "synonyms": [
+      "iron deficiency anaemia",
+      "microcytic anaemia (iron deficiency)",
+      "IDA"
+    ],
+    "abbreviations": [
+      "IDA",
+      "Hb",
+      "MCV"
+    ],
+    "icd10": {
+      "code": "D50.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "3A00",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "87522002",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D018798",
+      "basis": "estimate"
+    },
+    "disease_category": "Haematological / nutritional deficiency",
+    "organ_system": "Haematological",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine - but the CAUSE (e.g., GI cancer, severe bleeding) may be urgent",
+    "severity": "Ranges from mild/asymptomatic to symptomatic; severity of the underlying cause matters most",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Anaemia due to insufficient iron for haemoglobin production, causing fatigue, breathlessness and pallor; a microcytic, hypochromic anaemia whose crucial task is finding the CAUSE (often blood loss).",
+    "detailed_description": "Iron-deficiency anaemia is very common. Symptoms are nonspecific; the diagnosis is confirmed by a low ferritin (with microcytosis). The essential clinical priority is to identify the cause - menstrual/pregnancy demands, dietary insufficiency, malabsorption (coeliac), or, importantly, gastrointestinal blood loss (including cancer). Treatment is iron replacement plus treating the cause.",
+    "pathophysiology": "Iron is required for haemoglobin synthesis; a negative iron balance (loss > intake/absorption) depletes stores (low ferritin), then reduces haemoglobin production, producing small (microcytic), pale (hypochromic) red cells.",
+    "etiology": "Blood loss (menstrual, gastrointestinal - ulcers, cancer, NSAIDs, hookworm in endemic areas), increased demand (pregnancy, infancy/growth), reduced intake (poor diet), and malabsorption (coeliac disease, post-gastric surgery, H. pylori).",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Develops gradually as stores deplete; corrects with iron once the cause is addressed.",
+    "prognosis": "Excellent once treated and the cause managed; prognosis depends on the underlying cause (e.g., malignancy)."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "One of the most common nutritional disorders worldwide; especially frequent in menstruating and pregnant women and young children.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High globally, particularly in low-resource settings.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low directly; significant if the cause is serious (e.g., malignancy) or in severe anaemia.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; menstruating women, pregnancy, infants, and the elderly (GI causes).",
+    "sex_predominance": "More common in women of reproductive age.",
+    "geographic_distribution": "Worldwide; higher in areas with hookworm and dietary insufficiency.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Vegetarian/vegan or iron-poor diet.",
+    "smoking": "Not directly relevant.",
+    "alcohol": "Excess associated with GI bleeding and poor diet.",
+    "obesity": "Not directly relevant.",
+    "diabetes": "Not directly relevant.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Increased demand; common cause.",
+    "occupation": "Not directly relevant.",
+    "travel": "Hookworm exposure in endemic regions.",
+    "family_history": "Coeliac disease; telangiectasia (rare bleeding disorders).",
+    "genetic_factors": "Coeliac disease predisposition; rare iron-refractory forms.",
+    "medications": "NSAIDs/aspirin (GI bleeding), acid suppressants (reduced absorption).",
+    "previous_diseases": "Menorrhagia, peptic ulcer, coeliac disease, gastric surgery, chronic kidney disease, colorectal disease."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Tiredness and reduced energy",
+      "frequency": "very common",
+      "importance": "Common but nonspecific",
+      "source": "NICE CKS; BSG",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Breathlessness on exertion and palpitations",
+      "frequency": "common",
+      "importance": "Anaemia symptoms",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Pallor / looking pale",
+      "frequency": "common",
+      "importance": "Sign of anaemia",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Fatigue / lethargy",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "slightly reduces",
+      "importance": "Common but very nonspecific",
+      "stage": "Any",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Exertional breathlessness / palpitations",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Anaemia symptom",
+      "stage": "Any",
+      "early_late": "Mid",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Pallor (conjunctival/palmar)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Clinical sign of anaemia",
+      "stage": "Any",
+      "early_late": "Mid",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Koilonychia, angular cheilitis, glossitis, pica",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "More specific for iron deficiency",
+      "stage": "Chronic",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Symptoms of the cause (menorrhagia, GI bleeding, weight loss)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Direct clues to aetiology (crucial)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "BSG",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal ferritin (in the absence of inflammation)",
+      "why_important": "A normal/high ferritin makes iron deficiency unlikely (but ferritin rises with inflammation)",
+      "absence_significance": "strongly reduces",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No GI symptoms, normal menstrual history, adequate diet",
+      "why_important": "Guides where to look for the cause",
+      "absence_significance": "slightly reduces",
+      "source": "BSG",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "For women: heavy periods? For everyone: any GI symptoms, black stools, or blood in stool?",
+      "why_ask": "Blood loss is the commonest cause; GI loss may signal cancer",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Diet (vegetarian/vegan), and any coeliac symptoms (diarrhoea, bloating, weight loss)?",
+      "why_ask": "Reduced intake/malabsorption",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any weight loss, change in bowel habit, or family history of GI cancer?",
+      "why_ask": "Red flags for GI malignancy",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "NSAID/aspirin use?",
+      "why_ask": "GI blood loss",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Are you pregnant?",
+      "why_ask": "Common cause with different management targets",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Pallor (conjunctivae, palms), nails, mouth",
+      "expected_finding": "Pallor; koilonychia, cheilitis, glossitis in chronic deficiency",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Abdominal examination and (as indicated) rectal examination",
+      "expected_finding": "Assess for masses/tenderness; melaena",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Cardiovascular (flow murmur, signs of heart failure if severe)",
+      "expected_finding": "Tachycardia, flow murmur in significant anaemia",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "May be raised in significant anaemia",
+    "blood_pressure": "Usually normal (low if acute bleeding)",
+    "respiratory_rate": "May be raised in severe anaemia",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Variable"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Full blood count + blood film",
+      "indication": "Diagnose anaemia and pattern",
+      "expected_result": "Low Hb, low MCV/MCH (microcytic, hypochromic); anisocytosis/pencil cells on film",
+      "normal_range": "Hb: lab/sex-specific",
+      "diagnostic_value": "Detects and characterises anaemia",
+      "rule_in": "Microcytic anaemia with low ferritin",
+      "rule_out": "",
+      "urgency": "Routine (urgent if severe)"
+    },
+    {
+      "test_name": "Ferritin (+/- transferrin saturation, CRP)",
+      "indication": "Confirm iron deficiency",
+      "expected_result": "Low ferritin confirms iron deficiency; ferritin can be falsely normal/high with inflammation (check CRP; use transferrin saturation)",
+      "normal_range": "Low ferritin diagnostic; thresholds vary",
+      "diagnostic_value": "Confirms iron deficiency",
+      "rule_in": "Low ferritin",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Coeliac serology (tissue transglutaminase); consider H. pylori",
+      "indication": "Investigate malabsorptive cause",
+      "expected_result": "Positive in coeliac disease",
+      "normal_range": "Negative",
+      "diagnostic_value": "Identifies coeliac disease",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "GI endoscopy (OGD and colonoscopy)",
+      "when_needed": "Iron deficiency anaemia in men and postmenopausal women (and others without a clear cause) to exclude GI malignancy",
+      "expected_findings": "Source of bleeding / malignancy if present"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If cardiac symptoms with severe anaemia",
+    "findings": "May show ischaemic changes/tachycardia."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Upper and lower GI endoscopy is the key investigation for the cause in unexplained iron deficiency",
+    "biopsy": "Duodenal biopsy for coeliac disease; biopsy of GI lesions",
+    "culture": "Stool tests / H. pylori as indicated",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Anaemia (low haemoglobin for age/sex) with laboratory evidence of iron deficiency, typically a LOW FERRITIN with microcytic, hypochromic indices. Where ferritin is confounded by inflammation, low transferrin saturation supports iron deficiency. Diagnosis is incomplete until the CAUSE is sought.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": {
+      "value": "Anaemia and ferritin thresholds are guideline/lab-specific; unexplained iron-deficiency anaemia in men and postmenopausal women warrants GI investigation (BSG).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Anaemia of chronic disease/inflammation",
+      "why_similar": "Anaemia, can be microcytic",
+      "differences": "Normal/high ferritin, chronic illness present, low transferrin saturation with normal/raised ferritin",
+      "red_flags": "",
+      "distinguishing_symptoms": "Chronic disease features",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal/high ferritin, raised CRP",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is there a chronic inflammatory illness with normal ferritin?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Thalassaemia trait",
+      "why_similar": "Microcytic anaemia",
+      "differences": "Longstanding, disproportionately low MCV for mild anaemia, normal ferritin, family/ethnic background",
+      "red_flags": "",
+      "distinguishing_symptoms": "Lifelong, often asymptomatic",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal ferritin; haemoglobinopathy screen",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is this longstanding with normal iron and relevant family history?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "GI malignancy (as the cause)",
+      "why_similar": "Iron deficiency from occult bleeding",
+      "differences": "Weight loss, change in bowel habit, older age, rectal bleeding",
+      "red_flags": "Weight loss, altered bowel habit, rectal bleeding",
+      "distinguishing_symptoms": "GI red flags",
+      "distinguishing_exam": "Abdominal/rectal mass",
+      "distinguishing_labs": "Faecal tests",
+      "distinguishing_imaging": "Endoscopy/colonoscopy",
+      "differential_questions": "Any weight loss, bowel change, or rectal bleeding?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is there a clear blood-loss source (heavy periods) or GI symptoms/red flags?",
+      "target_disease": "Cause of iron deficiency (esp. GI malignancy)",
+      "competing_disease": "Simple dietary deficiency",
+      "purpose": "Find the cause - the most important step",
+      "interpretation": "GI red flags or unexplained IDA in men/postmenopausal women -> endoscopy",
+      "information_gain": "very high",
+      "source": "BSG",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do the indices show low MCV and is ferritin low?",
+      "target_disease": "Iron-deficiency anaemia",
+      "competing_disease": "Other anaemias",
+      "purpose": "Confirm iron deficiency",
+      "interpretation": "Microcytic anaemia + low ferritin -> IDA",
+      "information_gain": "high",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Microcytic anaemia with low ferritin",
+      "question": "What is the likely source of blood loss, and are there GI red flags or coeliac features?",
+      "expected_answers": "Menstrual / dietary / GI red flags",
+      "branching_logic": "Menstrual/dietary -> iron + address source; men/postmenopausal or red flags -> urgent GI investigation; coeliac features -> coeliac serology",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Ferritin (+ transferrin saturation/CRP) to confirm iron deficiency",
+      "why": "Confirms the diagnosis",
+      "expected_outcome": "Low ferritin"
+    },
+    {
+      "test": "GI endoscopy + coeliac serology (as indicated)",
+      "why": "Identify the cause (exclude malignancy/coeliac)",
+      "expected_outcome": "Finds/excludes GI source"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Iron-deficiency anaemia in a man or postmenopausal woman without obvious cause",
+      "immediate_action": "Refer for urgent GI investigation (exclude cancer)"
+    },
+    {
+      "finding": "Weight loss, change in bowel habit, rectal bleeding, or abdominal/rectal mass",
+      "immediate_action": "Urgent suspected-cancer referral"
+    },
+    {
+      "finding": "Severe symptomatic anaemia (chest pain, marked breathlessness, haemodynamic compromise)",
+      "immediate_action": "Urgent assessment; consider transfusion"
+    },
+    {
+      "finding": "Ongoing significant bleeding",
+      "immediate_action": "Urgent management of the bleeding source"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Unexplained iron-deficiency anaemia (GI investigation); GI cancer red flags; severe symptomatic anaemia.",
+    "routine_referral": "Refractory anaemia, malabsorption work-up, or haematology input for uncertain diagnosis.",
+    "emergency_referral": "Haemodynamic compromise from bleeding/severe anaemia."
+  },
+  "complications": {
+    "early": [
+      "Symptomatic anaemia (fatigue, reduced function)",
+      "Cardiac decompensation if severe"
+    ],
+    "late": [
+      "Complications of an untreated underlying cause (e.g., malignancy)",
+      "Impaired growth/development in children",
+      "Adverse pregnancy outcomes"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the diagnosis and the need to find the cause; dietary advice.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral iron; Intravenous iron. No autonomous selection or dosing is allowed. Source IDs: BSG_IDA_2021.",
+    "lifestyle_advice": "Iron-rich diet (with vitamin C to aid absorption); take iron away from tea/calcium; address the underlying cause.",
+    "follow_up": "Recheck FBC to confirm response (e.g., Hb rise within weeks); ensure stores replenished; complete cause work-up.",
+    "legacy_medications_pre_v13": "Oral iron (e.g., ferrous sulfate/fumarate) - alternate-day dosing may improve tolerance/absorption; continue for ~3 months after Hb normalises to replenish stores. Intravenous iron if oral not tolerated/ineffective or malabsorption. Transfusion only for severe symptomatic anaemia. TREAT THE CAUSE (e.g., menorrhagia, coeliac disease, GI lesion)."
+  },
+  "patient_education": {
+    "home_advice": "Iron-deficiency anaemia means low iron, often from blood loss or diet. It causes tiredness, breathlessness and looking pale. Iron tablets treat it - take them as advised, continue for a few months after your blood count recovers, and expect darker stools. Just as important is finding the cause, which may need further tests. See a doctor promptly if you notice black stools, blood in your stool, or unexplained weight loss.",
+    "home_advice_ar": "فقر الدم بعوز الحديد يعني نقص الحديد، غالباً من فقدان الدم أو الغذاء، ويسبّب التعب وضيق النفس والشحوب. تعالجه حبوب الحديد - تناولها كما يُنصح، واستمرّ بضعة أشهر بعد تحسّن الدم، وتوقّع اسوداد البراز. ولا يقلّ أهميةً إيجاد السبب، وقد يحتاج فحوصات إضافية. راجع الطبيب سريعاً إذا لاحظت براز أسود، أو دماً في البراز، أو نقص وزن غير مبرّر.",
+    "prevention": "Iron-rich balanced diet; manage heavy periods; iron in pregnancy per guidance.",
+    "warning_signs": "Black/tarry stools, blood in stool, unexplained weight loss, severe breathlessness or chest pain."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Balanced iron-rich diet; treat/limit blood loss; iron supplementation in pregnancy/high-risk groups per guidance.",
+    "screening": "Screening in pregnancy and selected high-risk groups."
+  },
+  "evidence": {
+    "evidence_level": "High for iron replacement; strong for GI investigation of unexplained IDA.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by BSG_IDA_2021; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, BSG (GI investigation).",
+    "verified_source_ids": [
+      "BSG_IDA_2021"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Anaemia (iron deficiency)",
+    "aafp": "AAFP - Iron deficiency anemia",
+    "bmj_best_practice": "BMJ Best Practice - Iron deficiency anaemia",
+    "msd_manual": "MSD Manual - Iron Deficiency Anemia",
+    "merck_manual": "Merck Manual - Iron Deficiency Anemia",
+    "uptodate": "UpToDate - Causes and diagnosis of iron deficiency and iron deficiency anemia in adults",
+    "harrisons": "Harrison's Principles of Internal Medicine - Iron Deficiency and Other Hypoproliferative Anemias",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Iron-deficiency anaemia",
+    "who": "WHO - Anaemia",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "BSG_IDA_2021",
+        "organization": "British Society of Gastroenterology",
+        "title": "Guidelines for the management of iron deficiency anaemia in adults",
+        "publication_or_update": "2021",
+        "url": "https://www.bsg.org.uk/clinical-resource/guidelines-iron-deficiency-anaemia-in-adults",
+        "accessed": "2026-07-15",
+        "scope": "Investigation of cause and oral/intravenous iron therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "BSG_IDA_2021"
+      ],
+      "treatment_and_monitoring": [
+        "BSG_IDA_2021"
+      ],
+      "red_flags_and_referral": [
+        "BSG_IDA_2021"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "BSG_IDA_2021",
+        "organization": "British Society of Gastroenterology",
+        "title": "Guidelines for the management of iron deficiency anaemia in adults",
+        "publication_or_update": "2021",
+        "url": "https://www.bsg.org.uk/clinical-resource/guidelines-iron-deficiency-anaemia-in-adults",
+        "accessed": "2026-07-15",
+        "scope": "Investigation of cause and oral/intravenous iron therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Correct iron deficiency and identify the cause, especially occult blood loss or malabsorption.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral iron; Intravenous iron. No autonomous selection or dosing is allowed. Source IDs: BSG_IDA_2021.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "ferritin and inflammation context",
+      "GI/gynaecological bleeding",
+      "pregnancy",
+      "coeliac/malabsorption",
+      "renal disease",
+      "medicine interactions"
+    ],
+    "non_drug_measures": [
+      "Treat the bleeding, dietary or malabsorption cause; do not label unexplained adult IDA as dietary without evaluation."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Oral iron",
+        "medication_or_class": "Oral iron",
+        "option_type": "medication",
+        "role": "first-line replacement for many patients",
+        "when_to_consider": "Confirmed iron deficiency when absorption and tolerance are adequate",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "oral_iron",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "iron overload or anaemia not caused by iron deficiency"
+            ],
+            "use_caution_if": [
+              "active GI disease, severe constipation, malabsorption, ongoing bleeding, or interactions with levothyroxine/tetracyclines/quinolones/antacids"
+            ],
+            "history_checks": [
+              "confirmed iron deficiency",
+              "cause of blood loss",
+              "GI history",
+              "medicines"
+            ],
+            "monitoring": [
+              "haemoglobin response, ferritin/iron stores and tolerance; investigate failure to respond"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "BSG_IDA_2021"
+        ]
+      },
+      {
+        "option_name": "Intravenous iron",
+        "medication_or_class": "Intravenous iron",
+        "option_type": "medication",
+        "role": "replacement when oral therapy is unsuitable",
+        "when_to_consider": "Intolerance, malabsorption, ongoing major loss or need for faster replacement under supervised care",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "iv_iron",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active serious hypersensitivity to the selected preparation"
+            ],
+            "use_caution_if": [
+              "active infection, pregnancy trimester, severe liver disease, prior infusion reaction, or phosphate-depletion risk"
+            ],
+            "history_checks": [
+              "prior infusion reaction",
+              "infection",
+              "pregnancy",
+              "liver disease",
+              "phosphate risk",
+              "calculated iron need"
+            ],
+            "monitoring": [
+              "observed infusion reaction, haemoglobin/iron response and phosphate for preparations/risk groups where indicated"
+            ]
+          }
+        ],
+        "clinical_note": "Requires product-specific hypersensitivity and phosphate monitoring policy.",
+        "source_ids": [
+          "BSG_IDA_2021"
+        ]
+      },
+      {
+        "option_name": "Red-cell transfusion",
+        "medication_or_class": "Red-cell transfusion",
+        "option_type": "blood_product_procedure",
+        "role": "rescue only",
+        "when_to_consider": "Severe symptomatic/unstable anaemia under hospital protocols",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Does not replace investigation or iron repletion.",
+        "source_ids": [
+          "BSG_IDA_2021"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent assessment for haemodynamic instability, active bleeding, chest pain/syncope or very severe symptoms; GI/gynaecological referral by age/sex/risk."
+    ],
+    "source_ids": [
+      "BSG_IDA_2021"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

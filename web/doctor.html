@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clinical Review Console</title>
+<style>
+  :root {
+    --navy:#173b57; --blue:#2d6f9f; --blue-soft:#e9f2f8; --green:#367a51;
+    --green-soft:#e8f4ec; --red:#a83c46; --red-soft:#faecee; --amber:#a56b00;
+    --amber-soft:#fff4d6; --ink:#17212b; --muted:#657483; --line:#dce4ea;
+    --panel:#fff; --bg:#f3f6f8; --shadow:0 8px 24px rgba(23,59,87,.08);
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; min-height:100vh; font-family:"Segoe UI",Tahoma,Arial,sans-serif;
+         color:var(--ink); background:var(--bg); }
+  button,input,select,textarea { font:inherit; }
+  header { min-height:64px; padding:10px 18px; color:#fff; background:var(--navy);
+           display:flex; align-items:center; gap:12px; box-shadow:var(--shadow); }
+  .brand { min-width:230px; }
+  .brand h1 { margin:0; font-size:18px; letter-spacing:.2px; }
+  .brand small { color:#c8d9e5; }
+  .tabs { display:flex; gap:7px; flex:1; }
+  button { border:0; border-radius:8px; padding:8px 12px; cursor:pointer; font-weight:600; }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  .tab { color:#dbe9f2; background:transparent; border:1px solid #42647d; }
+  .tab.active,.tab:hover { color:var(--navy); background:#fff; }
+  .header-field { width:150px; padding:8px 10px; border:1px solid #55758d;
+                  border-radius:8px; color:#fff; background:#214b69; }
+  .header-field::placeholder { color:#bdd0dd; }
+  #connection { width:10px; height:10px; border-radius:50%; background:#9aa9b4; }
+  #connection.ok { background:#6ed497; } #connection.bad { background:#ff8b95; }
+
+  .layout { display:grid; grid-template-columns:360px minmax(0,1fr); height:calc(100vh - 64px); }
+  aside { display:flex; flex-direction:column; min-width:0; background:#fff;
+          border-right:1px solid var(--line); }
+  .queue-tools { padding:12px; border-bottom:1px solid var(--line); display:grid;
+                 grid-template-columns:1fr 125px; gap:8px; }
+  .queue-tools input,.queue-tools select { min-width:0; padding:8px 9px; border:1px solid var(--line);
+                                           border-radius:8px; background:#fff; }
+  #queue { overflow:auto; flex:1; }
+  .item { padding:13px 15px; border-bottom:1px solid var(--line); cursor:pointer; }
+  .item:hover { background:#f5f9fc; } .item.selected { background:var(--blue-soft); }
+  .item-title { display:flex; align-items:flex-start; justify-content:space-between; gap:8px;
+                font-weight:700; }
+  .item-sub { color:var(--muted); font-size:12px; line-height:1.45; margin-top:5px; }
+  main { min-width:0; overflow:auto; padding:22px; }
+  .empty { padding:48px 20px; text-align:center; color:var(--muted); }
+  .empty strong { display:block; color:var(--ink); margin-bottom:6px; }
+  .card { max-width:1100px; margin:0 auto 16px; padding:17px; background:var(--panel);
+          border:1px solid var(--line); border-radius:12px; box-shadow:0 2px 8px rgba(23,59,87,.03); }
+  .card h2,.card h3 { margin:0 0 11px; }
+  .card h2 { font-size:20px; } .card h3 { font-size:15px; }
+  .muted { color:var(--muted); font-size:13px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:10px; }
+  .metric { padding:13px; border:1px solid var(--line); border-radius:10px; background:#fbfcfd; }
+  .metric b { display:block; font-size:22px; margin-top:4px; }
+  .badge { display:inline-flex; align-items:center; white-space:nowrap; padding:3px 8px;
+           border-radius:999px; font-size:11px; font-weight:700; background:#edf1f4; color:#53616d; }
+  .badge.pending,.badge.pending_approval { background:var(--amber-soft); color:var(--amber); }
+  .badge.approved,.badge.ready,.badge.active { background:var(--green-soft); color:var(--green); }
+  .badge.rejected,.badge.deleted,.badge.blocked,.badge.failed { background:var(--red-soft); color:var(--red); }
+  .badge.draft,.badge.none { background:#edf1f4; color:#5f6c76; }
+  .pill { display:inline-block; margin:2px 3px 2px 0; padding:3px 8px; border-radius:7px;
+          font-size:12px; background:#eef4f8; }
+  .review-box { margin-top:10px; padding:12px; border:1px solid var(--line); border-radius:10px; }
+  .transcript { max-height:300px; overflow:auto; padding:10px 12px; border:1px solid var(--line);
+                border-radius:9px; background:#fafcfd; }
+  .turn { margin:7px 0; line-height:1.55; } .turn.patient b { color:var(--blue); }
+  .turn.doctor_ai b { color:var(--green); }
+  .actions { display:flex; flex-wrap:wrap; gap:7px; margin-top:12px; }
+  .ok { color:#fff; background:var(--green); } .edit { color:#fff; background:var(--blue); }
+  .reject { color:#fff; background:var(--red); } .secondary { color:var(--ink); background:#edf2f5; }
+  .warning { margin-top:10px; padding:10px 12px; border-radius:8px; color:#704900;
+             background:var(--amber-soft); border-left:4px solid var(--amber); }
+  .error { color:var(--red); background:var(--red-soft); padding:9px 11px; border-radius:8px; }
+  .source { padding:8px 0; border-bottom:1px solid #edf1f4; font-size:13px; }
+  .source:last-child { border-bottom:0; }
+  .source a { color:var(--blue); }
+  details.issues { margin-top:12px; border:1px solid var(--line); border-radius:10px;
+                   background:#fbfcfd; overflow:hidden; }
+  details.issues summary { cursor:pointer; padding:11px 13px; font-weight:700;
+                           color:var(--red); background:var(--red-soft); }
+  details.issues .issue-list { max-height:390px; overflow:auto; padding:2px 13px 8px; }
+  textarea { width:100%; min-height:360px; resize:vertical; padding:11px; border:1px solid var(--line);
+             border-radius:9px; font:12px/1.45 Consolas,"Courier New",monospace; background:#fbfcfd; }
+  #toast { position:fixed; right:20px; bottom:20px; max-width:420px; padding:11px 15px;
+           color:#fff; background:var(--navy); border-radius:9px; box-shadow:var(--shadow);
+           opacity:0; transform:translateY(8px); pointer-events:none; transition:.2s; }
+  #toast.show { opacity:1; transform:none; }
+  @media (max-width:820px) {
+    header { flex-wrap:wrap; } .brand { min-width:180px; }
+    .layout { grid-template-columns:1fr; height:auto; } aside { height:360px; border-right:0;
+      border-bottom:1px solid var(--line); } main { min-height:500px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><h1>Clinical Review Console</h1><small>Visits, prescriptions and governed knowledge</small></div>
+  <nav class="tabs" aria-label="Console sections">
+    <button id="tab-visits" class="tab active" onclick="switchMode('visits')">Consultations</button>
+    <button id="tab-knowledge" class="tab" onclick="switchMode('knowledge')">Knowledge governance</button>
+  </nav>
+  <input id="doctor-name" class="header-field" placeholder="Reviewer name" aria-label="Reviewer name">
+  <input id="token" class="header-field" placeholder="Doctor token" aria-label="Doctor token">
+  <span id="connection" title="Connection status"></span>
+</header>
+
+<div class="layout">
+  <aside>
+    <div class="queue-tools">
+      <input id="search" placeholder="Search queue" oninput="renderQueue()">
+      <select id="filter" onchange="reloadCurrent()" aria-label="Queue filter"></select>
+    </div>
+    <div id="queue"><div class="empty">Loading…</div></div>
+  </aside>
+  <main id="detail"><div class="empty"><strong>Select a consultation</strong>Review the diagnosis, prescriptions and cited evidence.</div></main>
+</div>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const el = id => document.getElementById(id);
+const queue = el('queue'), detail = el('detail'), filter = el('filter'), search = el('search');
+let mode = 'visits', selected = null, queueData = [], knowledgeStatus = null;
+
+el('doctor-name').value = localStorage.getItem('doctor_name') || 'Dr. Abdullah Oshah';
+el('doctor-name').addEventListener('change', () => localStorage.setItem('doctor_name', el('doctor-name').value.trim()));
+el('token').value = localStorage.getItem('doctor_token') || '';
+el('token').addEventListener('change', () => { localStorage.setItem('doctor_token', el('token').value); reloadCurrent(); });
+
+function headers(){ const h={'Content-Type':'application/json'}; if(el('token').value) h['X-Doctor-Token']=el('token').value; return h; }
+function esc(value){ const d=document.createElement('div'); d.textContent=value==null?'':String(value); return d.innerHTML; }
+function reviewer(){ const name=el('doctor-name').value.trim()||'doctor'; localStorage.setItem('doctor_name',name); return name; }
+function badge(value){ const v=(value||'none').toLowerCase(); return `<span class="badge ${esc(v)}">${esc(v.replaceAll('_',' '))}</span>`; }
+function arg(value){ return encodeURIComponent(value||'').replaceAll("'",'%27'); }
+function toast(message,bad=false){ const t=el('toast'); t.textContent=message; t.style.background=bad?'var(--red)':'var(--navy)'; t.classList.add('show'); setTimeout(()=>t.classList.remove('show'),2800); }
+function connected(ok){ el('connection').className=ok?'ok':'bad'; }
+function dateText(value){ if(!value) return '—'; const d=new Date(value); return Number.isNaN(d.valueOf())?value:d.toLocaleString(); }
+
+async function api(url, options={}){
+  const response=await fetch(url,{...options,headers:{...headers(),...(options.headers||{})}});
+  connected(response.ok);
+  if(!response.ok){ let message=`Request failed (${response.status})`; try{ const data=await response.json(); message=data.detail||message; }catch(_){} throw new Error(message); }
+  return response.status===204?null:response.json();
+}
+
+function setFilter(options){ filter.innerHTML=options.map(([v,l])=>`<option value="${v}">${l}</option>`).join(''); }
+function switchMode(next){ mode=next; selected=null; search.value=''; el('tab-visits').classList.toggle('active',next==='visits'); el('tab-knowledge').classList.toggle('active',next==='knowledge');
+  if(next==='visits'){ setFilter([['all','All visits'],['pending','Pending review'],['approved','Approved'],['rejected','Rejected']]); detail.innerHTML='<div class="empty"><strong>Select a consultation</strong>Review diagnosis, prescriptions and evidence.</div>'; loadVisits(); }
+  else { setFilter([['pending','Unapproved / live'],['approved','Approved'],['rejected','Rejected'],['deleted','Deleted'],['all','All proposals']]); detail.innerHTML='<div class="empty"><strong>Select a knowledge addition</strong>New sourced records are available to diagnosis immediately and remain visibly unapproved until reviewed.</div>'; loadKnowledge(); }
+}
+function reloadCurrent(){ return mode==='visits'?loadVisits():loadKnowledge(); }
+
+async function loadVisits(){
+  try{ queueData=await api('/doctor/visits'); renderQueue(); }
+  catch(e){ queue.innerHTML=`<div class="empty"><strong>Queue unavailable</strong>${esc(e.message)}</div>`; }
+}
+async function loadKnowledge(){
+  try{
+    [knowledgeStatus,queueData]=await Promise.all([
+      api('/doctor/knowledge/status'),
+      api('/doctor/knowledge/proposals'+(filter.value==='all'?'':`?status=${encodeURIComponent(filter.value)}`))
+    ]);
+    renderQueue(); if(!selected) renderKnowledgeDashboard();
+  }catch(e){ queue.innerHTML=`<div class="empty"><strong>Knowledge queue unavailable</strong>${esc(e.message)}</div>`; }
+}
+
+function renderQueue(){
+  const q=search.value.trim().toLowerCase(); const f=filter.value;
+  let rows=queueData.filter(item=>JSON.stringify(item).toLowerCase().includes(q));
+  if(mode==='visits'&&f!=='all') rows=rows.filter(v=>{
+    const status=v.report_status||'none'; return f==='pending'?status==='pending_approval':status===f;
+  });
+  if(!rows.length){ queue.innerHTML='<div class="empty"><strong>Nothing here</strong>No matching records.</div>'; return; }
+  queue.innerHTML=rows.map(item=>mode==='visits'?visitItem(item):knowledgeItem(item)).join('');
+}
+function visitItem(v){ return `<div class="item ${selected===v.visit_id?'selected':''}" onclick="openVisit('${v.visit_id}')">
+  <div class="item-title"><span>${esc(v.chief_complaint||'No complaint recorded')}</span>${badge(v.report_status)}</div>
+  <div class="item-sub">${esc(v.condition||'No working diagnosis')} · ${v.pending_prescriptions||0} prescription(s) pending<br>${dateText(v.started_at)}</div></div>`; }
+function knowledgeItem(p){ const readiness=p.approvable?'ready':'blocked'; return `<div class="item ${selected===p.proposal_id?'selected':''}" onclick="openKnowledge('${p.proposal_id}')">
+  <div class="item-title"><span>${esc(p.target_condition)}</span>${badge(p.status)}</div>
+  <div class="item-sub">${badge(readiness)} ${esc(p.gap_kind)} · ${esc(p.model_name||'model not recorded')}<br>${dateText(p.created_at)}</div></div>`; }
+
+function renderKnowledgeDashboard(){ const s=knowledgeStatus; if(!s)return;
+  detail.innerHTML=`<div class="card"><h2>Knowledge governance</h2><p class="muted">Sourced machine additions enter the operational corpus immediately with an explicit unapproved label. The doctor may approve them or remove them from diagnosis by rejection or deletion.</p>
+    <div class="grid"><div class="metric">Operational records<b>${s.operational_records}</b></div><div class="metric">Seed records<b>${s.seed_records}</b></div><div class="metric">Unapproved additions<b>${s.provisional_dynamic_records||0}</b></div><div class="metric">Approved additions<b>${s.approved_dynamic_records}</b></div></div>
+    <div class="warning">Dynamic RAG: ${badge(s.dynamic_rag_enabled?'active':'blocked')} &nbsp; Curator process: ${badge(s.curator_available?'active':'blocked')}<br><span class="muted">${esc(s.authority_rule)}</span></div></div>`; }
+
+async function openVisit(id){
+  try{ selected=id; renderQueue(); const d=await api('/doctor/visits/'+id); const p=d.patient||{}, wd=d.working_diagnosis;
+  detail.innerHTML=`
+    <div class="card"><h2>${esc(d.chief_complaint||'Clinical consultation')} ${badge(d.report?.status)}</h2><div class="muted">Visit ${esc(d.visit_id)} · patient ${esc(d.patient_id)}</div></div>
+    <div class="card"><h3>Patient context</h3><div class="grid"><div><b>Age / sex</b><div class="muted">${esc(p.age??'—')} / ${esc(p.sex||'—')}</div></div><div><b>Chronic conditions</b><div>${(p.chronic_conditions||[]).map(x=>`<span class="pill">${esc(x)}</span>`).join('')||'<span class="muted">None recorded</span>'}</div></div><div><b>Allergies</b><div>${(p.allergies||[]).map(x=>`<span class="pill">⚠ ${esc(x.substance)}</span>`).join('')||'<span class="muted">None recorded</span>'}</div></div><div><b>Current medication</b><div>${(p.medications||[]).map(x=>`<span class="pill">${esc(x.name)}</span>`).join('')||'<span class="muted">None recorded</span>'}</div></div></div></div>
+    <div class="card"><h3>Conversation</h3><div class="transcript">${(d.transcript||[]).map(t=>`<div class="turn ${esc(t.role)}"><b>${t.role==='patient'?'Patient':'Assistant'}:</b> ${esc(t.content)}</div>`).join('')||'<span class="muted">No transcript.</span>'}</div></div>
+    <div class="card"><h3>Working diagnosis</h3>${wd?`<div class="review-box"><b>${esc(wd.condition)}</b> <span class="muted">confidence ${Math.round((wd.confidence||0)*100)}% · risk ${esc(wd.risk_tier)}</span><p>${esc(wd.reasoning||'')}</p>${wd.confirmation_pathway?`<div class="warning"><b>Confirmation:</b> ${esc(wd.confirmation_pathway)}</div>`:''}<div class="actions"><button class="ok" onclick="actDx('${id}','approve')">Approve</button><button class="edit" onclick="editDx('${id}','${arg(wd.condition)}')">Edit</button><button class="reject" onclick="actDx('${id}','reject')">Reject</button></div></div>`:'<div class="muted">No diagnosis produced.</div>'}</div>
+    <div class="card"><h3>Prescriptions</h3>${(d.prescriptions||[]).map(rx=>`<div class="review-box"><b>${esc(rx.medication)}</b> ${esc(rx.dose||'')} ${esc(rx.frequency||'')} ${badge(rx.status)}<div class="muted">${esc(rx.rationale||'')}</div><div class="actions"><button class="ok" onclick="actRx('${id}','${rx.prescription_id}','approve')">Approve</button><button class="edit" onclick="editRx('${id}','${rx.prescription_id}','${arg(rx.medication)}')">Edit</button><button class="reject" onclick="actRx('${id}','${rx.prescription_id}','reject')">Reject</button></div></div>`).join('')||'<div class="muted">No prescriptions.</div>'}</div>
+    <div class="card"><h3>Evidence and recommended tests</h3>${(d.evidence||[]).map(e=>`<div class="source"><b>${esc(e.title)}</b><br><span class="muted">${esc(e.source)} ${esc(e.identifier)}</span></div>`).join('')||'<div class="muted">No external evidence recorded.</div>'}<div style="margin-top:12px">${(d.recommended_tests||[]).map(t=>`<span class="pill">${esc(t.name)}</span>`).join('')||'<span class="muted">No tests recommended.</span>'}</div></div>`;
+  }catch(e){ toast(e.message,true); }
+}
+
+async function openKnowledge(id){
+  try{ selected=id; renderQueue(); const p=await api('/doctor/knowledge/proposals/'+id), record=p.record||null, sources=record?.sources||[], audit=p.research_audit, verification=p.verification;
+  const issues=verification?.issues||[], majorIssues=issues.filter(i=>i.severity==='major').length, pending=p.status==='pending', canDelete=p.status!=='deleted';
+  detail.innerHTML=`
+    <div class="card"><h2>${esc(p.target_condition)} ${badge(p.status)} ${badge(p.approvable?'ready':'blocked')}</h2><div class="muted"><b>Gap:</b> ${esc(p.gap_kind)} — ${esc(p.gap_reason)}<br><b>Trigger:</b> ${esc(p.trigger_visit_id||'manual')} · <b>Model:</b> ${esc((p.model_provider||'')+'/'+(p.model_name||''))}</div>${p.generation_error?`<div class="error" style="margin-top:10px">This proposal is blocked by automated validation. Review the structured verifier findings below before editing or approval.</div>`:''}</div>
+    <div class="card"><h3>Evidence sources</h3>${sources.map(s=>`<div class="source"><a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.title)}</a><br><span class="muted">${esc(s.identifier)} · ${esc(s.publisher||'')}</span></div>`).join('')||'<div class="warning">No traceable source is attached; approval is blocked.</div>'}</div>
+    <div class="card"><h3>Research and independent verification</h3>${audit?`<div class="grid"><div class="metric">Official guideline<b>${audit.official_guideline_coverage?'Yes':'No'}</b></div><div class="metric">Repair attempts<b>${audit.repair_attempts||0}</b></div><div class="metric">Verifier<b>${verification?.passed?'Passed':'Not passed'}</b></div></div>`:'<div class="warning">No staged research audit is present.</div>'}${issues.length?`<details class="issues"><summary>${issues.length} verification issue(s) · ${majorIssues} major — expand for clinical detail</summary><div class="issue-list">${issues.map(i=>`<div class="source">${badge(i.severity)} <b>${esc(i.location)}</b>: ${esc(i.message)}</div>`).join('')}</div></details>`:'<div class="warning">No verifier issues were recorded.</div>'}</div>
+    <div class="card"><h3>Operational knowledge record</h3>${record?`<textarea id="record-editor" spellcheck="false">${esc(JSON.stringify(record,null,2))}</textarea>`:'<div class="warning">No record was generated.</div>'}<div class="actions">${record&&pending?`<button class="secondary" onclick="validateRecord()">Validate JSON</button><button class="edit" onclick="saveKnowledge('${id}')">Save live edits</button><button class="ok" onclick="approveKnowledge('${id}')">Approve</button>`:''}${pending?`<button class="reject" onclick="actKnowledge('${id}','reject')">Reject & remove</button>`:''}${canDelete?`<button class="reject" onclick="actKnowledge('${id}','delete')">Delete addition</button>`:''}</div><p class="muted">${pending?'This record is already available to diagnosis with an UNAPPROVED label. Approval changes its status; rejection or deletion removes it from operational retrieval.':'The saved review decision controls whether this addition remains in operational retrieval.'}</p></div>`;
+  }catch(e){ toast(e.message,true); }
+}
+
+function editedRecord(){ const editor=el('record-editor'); if(!editor)return null; return JSON.parse(editor.value); }
+function validateRecord(){ try{ editedRecord(); toast('JSON is syntactically valid.'); }catch(e){ toast('Invalid JSON: '+e.message,true); } }
+async function knowledgePost(id,body){ try{ await api('/doctor/knowledge/proposals/'+id,{method:'POST',body:JSON.stringify(body)}); toast('Knowledge decision saved.'); selected=null; await loadKnowledge(); }catch(e){ toast(e.message,true); } }
+function saveKnowledge(id){ try{ knowledgePost(id,{action:'edit',reviewed_by:reviewer(),record:editedRecord(),notes:'Clinician-edited draft'}); }catch(e){ toast('Invalid JSON: '+e.message,true); } }
+function approveKnowledge(id){ try{ const note=prompt('Approval note (optional):','Reviewed against attached sources')||null; knowledgePost(id,{action:'approve',reviewed_by:reviewer(),record:editedRecord(),notes:note}); }catch(e){ toast('Invalid JSON: '+e.message,true); } }
+function actKnowledge(id,action){ const promptText=action==='delete'?'Reason for deletion:':action==='reject'?'Reason for rejection:':'Review note:'; const notes=prompt(promptText,'')||null; knowledgePost(id,{action,reviewed_by:reviewer(),notes}); }
+
+async function postVisit(url,body){ try{ await api(url,{method:'POST',body:JSON.stringify(body)}); toast('Clinical review saved.'); await openVisit(selected); await loadVisits(); }catch(e){ toast(e.message,true); } }
+function actDx(id,action){ const notes=action==='reject'?(prompt('Reason for rejection:','')||null):null; postVisit(`/doctor/visits/${id}/diagnosis`,{action,reviewed_by:reviewer(),notes}); }
+function editDx(id,current){ const condition=prompt('Corrected diagnosis:',decodeURIComponent(current)); if(condition===null)return; const reasoning=prompt('Corrected reasoning / note:','')||null; postVisit(`/doctor/visits/${id}/diagnosis`,{action:'edit',condition,reasoning,reviewed_by:reviewer()}); }
+function actRx(id,rid,action){ postVisit(`/doctor/visits/${id}/prescriptions/${rid}`,{action,reviewed_by:reviewer()}); }
+function editRx(id,rid,current){ const medication=prompt('Corrected medication:',decodeURIComponent(current)); if(medication===null)return; const dose=prompt('Dose:','')||null, frequency=prompt('Frequency:','')||null; postVisit(`/doctor/visits/${id}/prescriptions/${rid}`,{action:'edit',medication,dose,frequency,reviewed_by:reviewer()}); }
+
+switchMode('visits');
+setInterval(()=>{ if(document.visibilityState==='visible'&&!selected) reloadCurrent(); },10000);
+</script>
+</body>
+</html>

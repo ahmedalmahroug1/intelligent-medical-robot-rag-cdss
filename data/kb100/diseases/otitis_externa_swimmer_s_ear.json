@@ -1,0 +1,753 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-009",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-009",
+    "name": "Otitis externa (swimmer's ear)",
+    "name_ar": "التهاب الأذن الخارجية (أذن السبّاح)",
+    "synonyms": [
+      "swimmer's ear",
+      "external ear infection",
+      "acute otitis externa"
+    ],
+    "abbreviations": [
+      "OE",
+      "AOE"
+    ],
+    "icd10": {
+      "code": "H60.3",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "AA80",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "3135009",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D010032",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute ENT infection (external ear canal)",
+    "organ_system": "ENT (external ear canal)",
+    "specialty": "Family medicine / ENT",
+    "emergency_level": "Routine - but malignant (necrotising) otitis externa in diabetic/immunocompromised is an emergency",
+    "severity": "Usually mild-moderate and treatable topically",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Inflammation/infection of the external ear canal causing ear pain (especially on moving the ear), itch, discharge and a swollen, tender canal, usually treated with topical therapy.",
+    "detailed_description": "Acute otitis externa is common, often triggered by water exposure or local trauma (cotton buds). It is treated primarily with aural toilet and topical antibiotic/steroid drops. The critical exception is malignant (necrotising) otitis externa - an invasive infection (usually Pseudomonas) in older diabetics or the immunocompromised - which is an emergency.",
+    "pathophysiology": "Disruption of the protective cerumen barrier and canal skin (moisture, trauma, dermatitis) allows bacterial (Pseudomonas aeruginosa, Staphylococcus aureus) or fungal overgrowth, producing canal inflammation, oedema and discharge.",
+    "etiology": "Bacterial (Pseudomonas, Staph) most common; fungal (Aspergillus, Candida) especially after antibiotic drops; eczema/psoriasis predispose.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Usually resolves within days to a couple of weeks with topical treatment.",
+    "prognosis": "Excellent with treatment; recurrence common with ongoing water exposure. Malignant OE can be life-threatening if missed."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common, especially in swimmers and humid climates.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Higher in summer/warm humid conditions.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible except for malignant otitis externa.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; malignant OE mainly older diabetics/immunocompromised.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide; more in warm/humid regions.",
+    "seasonal_pattern": "More common in summer."
+  },
+  "risk_factors": {
+    "lifestyle": "Swimming/water exposure, humid climate, cotton-bud use, ear plugs/hearing aids, self-cleaning trauma.",
+    "smoking": "Not relevant.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "Major risk factor for malignant (necrotising) otitis externa.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Not relevant.",
+    "occupation": "Water sports, diving.",
+    "travel": "Warm humid destinations.",
+    "family_history": "Not relevant.",
+    "genetic_factors": "Not relevant.",
+    "medications": "Immunosuppression predisposes to severe/invasive disease.",
+    "previous_diseases": "Eczema/psoriasis/seborrhoeic dermatitis of the canal; narrow canals."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Ear pain, worse when touching/pulling the ear",
+      "frequency": "very common",
+      "importance": "Characteristic of external ear involvement",
+      "source": "NICE CKS; AAO-HNS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Itchy ear and discharge",
+      "frequency": "common",
+      "importance": "Supports canal inflammation",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Blocked ear / reduced hearing",
+      "frequency": "common",
+      "importance": "Due to canal swelling/debris",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Ear pain worse on moving pinna/pressing tragus",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Key discriminator from middle-ear pain",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "AAO-HNS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Itch in the ear canal",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Often precedes/accompanies infection",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Ear discharge (otorrhoea)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "May be scanty; fungal debris if mycotic",
+      "stage": "Early-mid",
+      "early_late": "Early",
+      "source": "NICE CKS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Swollen, tender, erythematous ear canal +/- debris",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Key examination finding; normal tympanic membrane if visible",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "AAO-HNS",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Severe unremitting pain, granulation tissue in canal, cranial nerve palsy (esp. diabetic/elderly)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - malignant (necrotising) otitis externa",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No pain on ear manipulation; pain worse with a normal-looking canal and abnormal drum",
+      "why_important": "Points away from otitis externa and towards middle-ear disease",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "No severe deep pain, granulation, facial weakness in a diabetic/immunocompromised patient",
+      "why_important": "Absence argues against malignant otitis externa",
+      "absence_significance": "strongly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Is the pain worse when you touch or pull the ear?",
+      "why_ask": "Suggests external (canal) rather than middle-ear origin",
+      "expected_answer": "Yes in OE",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any recent swimming, water exposure, or cotton-bud/ear-cleaning use?",
+      "why_ask": "Common precipitants",
+      "expected_answer": "Often yes",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Do you have diabetes or a weakened immune system, and is the pain severe/persistent?",
+      "why_ask": "Screens for malignant otitis externa (safety)",
+      "expected_answer": "Ideally no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any facial weakness, severe deep-seated pain, or discharge not settling with drops?",
+      "why_ask": "Red flags for necrotising OE",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "History of eczema/psoriasis or recurrent ear problems?",
+      "why_ask": "Predisposing skin conditions",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Inspect/move pinna and press tragus",
+      "expected_finding": "Pain on manipulation (characteristic)",
+      "importance": "High"
+    },
+    {
+      "examination": "Otoscopy",
+      "expected_finding": "Red, swollen canal with debris/discharge; tympanic membrane normal if visualised",
+      "importance": "High"
+    },
+    {
+      "examination": "Assess canal patency and periauricular tissues/lymph nodes",
+      "expected_finding": "May be swollen; spreading cellulitis suggests severity",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Cranial nerves (esp. facial) if severe/at-risk",
+      "expected_finding": "Normal; palsy suggests malignant OE",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Usually normal (fever suggests spreading infection)",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Ear swab (selective)",
+      "indication": "Treatment failure, recurrent, or suspected fungal/resistant infection",
+      "expected_result": "Identifies bacteria/fungi",
+      "normal_range": "",
+      "diagnostic_value": "Guides targeted therapy",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Blood glucose/HbA1c + inflammatory markers",
+      "indication": "Suspected malignant otitis externa",
+      "expected_result": "Often poorly-controlled diabetes; raised ESR/CRP",
+      "normal_range": "",
+      "diagnostic_value": "Supports necrotising OE assessment",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "CT/MRI temporal bone + isotope bone scan",
+      "when_needed": "Suspected malignant (necrotising) otitis externa",
+      "expected_findings": "Skull-base osteomyelitis / soft-tissue involvement"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Microsuction/aural toilet by ENT for debris clearance",
+    "biopsy": "Granulation tissue biopsy if malignant OE/neoplasm suspected",
+    "culture": "Swab of discharge in resistant/complicated cases",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical: rapid onset of ear canal symptoms (pain, itch, fullness) WITH signs of canal inflammation (tenderness on tragus/pinna movement, canal oedema/erythema, +/- discharge), with an intact/normal tympanic membrane where visible.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Acute otitis media (esp. with perforation)",
+      "why_similar": "Ear pain, discharge",
+      "differences": "Deep pain, no pain on ear manipulation, abnormal/bulging drum, preceding URTI",
+      "red_flags": "Mastoiditis",
+      "distinguishing_symptoms": "Deep-seated pain, fever, hearing loss",
+      "distinguishing_exam": "Abnormal tympanic membrane; canal normal",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is it painful to pull the ear, or is the pain deeper inside?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Fungal otitis externa (otomycosis)",
+      "why_similar": "Itch, discharge, canal debris",
+      "differences": "Marked itch, fluffy/black-spore debris, often after antibiotic drops",
+      "red_flags": "None specific",
+      "distinguishing_symptoms": "Prominent itch",
+      "distinguishing_exam": "Fungal hyphae/spores in canal",
+      "distinguishing_labs": "Swab/microscopy",
+      "distinguishing_imaging": "",
+      "differential_questions": "Very itchy and did drops not help?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Malignant (necrotising) otitis externa",
+      "why_similar": "Ear pain/discharge",
+      "differences": "Severe unremitting pain, granulation tissue, cranial nerve palsy, diabetic/immunocompromised",
+      "red_flags": "Skull-base osteomyelitis",
+      "distinguishing_symptoms": "Severe night pain, facial weakness",
+      "distinguishing_exam": "Granulation at bony-cartilaginous junction, CN palsy",
+      "distinguishing_labs": "Raised ESR/CRP, hyperglycaemia",
+      "distinguishing_imaging": "CT/MRI, bone scan",
+      "differential_questions": "Are you diabetic with severe persistent ear pain or facial weakness?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Ear canal foreign body / dermatitis",
+      "why_similar": "Canal irritation/discharge",
+      "differences": "Foreign body seen; eczema pattern",
+      "red_flags": "None",
+      "distinguishing_symptoms": "History of insertion; chronic itch",
+      "distinguishing_exam": "Foreign body or eczematous skin",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any object placed in the ear or ongoing skin problems?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Is the pain clearly worse when you press the tragus or pull the ear?",
+      "target_disease": "Otitis externa",
+      "competing_disease": "Otitis media",
+      "purpose": "Separate external from middle-ear pain",
+      "interpretation": "Pain on manipulation favours OE",
+      "information_gain": "high",
+      "source": "AAO-HNS",
+      "basis": "sourced"
+    },
+    {
+      "question": "Do you have diabetes/immunosuppression with severe persistent pain or facial weakness?",
+      "target_disease": "Malignant otitis externa",
+      "competing_disease": "Simple otitis externa",
+      "purpose": "Detect necrotising OE",
+      "interpretation": "Positive -> urgent ENT referral/imaging",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Ear pain with inflamed canal on otoscopy",
+      "question": "Is it painful to move the ear, and do you have diabetes or a weak immune system?",
+      "expected_answers": "Simple OE vs at-risk for necrotising",
+      "branching_logic": "Simple OE -> aural toilet + topical drops + keep dry; at-risk with severe/persistent pain, granulation, or CN palsy -> urgent ENT for necrotising OE",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Otoscopy +/- aural toilet",
+      "why": "Confirms canal inflammation and clears debris for treatment",
+      "expected_outcome": "Diagnosis and better drop delivery"
+    },
+    {
+      "test": "CT/MRI + inflammatory markers (only if malignant OE suspected)",
+      "why": "Assess skull-base osteomyelitis",
+      "expected_outcome": "Confirms/excludes necrotising OE"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Diabetic/immunocompromised with severe, unremitting or night-time ear pain",
+      "immediate_action": "Urgent ENT - suspect malignant otitis externa"
+    },
+    {
+      "finding": "Granulation tissue in the canal, facial or other cranial nerve palsy",
+      "immediate_action": "Urgent ENT/imaging - necrotising OE"
+    },
+    {
+      "finding": "Spreading periauricular cellulitis, fever, or systemic illness",
+      "immediate_action": "Urgent assessment; consider systemic antibiotics"
+    },
+    {
+      "finding": "Not improving with appropriate topical treatment",
+      "immediate_action": "Reassess (fungal, resistant, or alternative diagnosis); consider ENT"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected malignant otitis externa; severe/spreading infection; need for microsuction not available in primary care.",
+    "routine_referral": "Recurrent/chronic otitis externa; persistent debris needing aural toilet; suspected canal stenosis.",
+    "emergency_referral": "Necrotising otitis externa with cranial nerve involvement."
+  },
+  "complications": {
+    "early": [
+      "Cellulitis of the pinna/periauricular tissues",
+      "Canal stenosis/obstruction"
+    ],
+    "late": [
+      "Chronic otitis externa",
+      "Malignant (necrotising) otitis externa (skull-base osteomyelitis)",
+      "Hearing impairment from persistent obstruction"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Analgesia; keep the ear dry; aural toilet (microsuction/dry mopping) to remove debris improves topical treatment.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Non-ototoxic topical antimicrobial with or without corticosteroid; Paracetamol; NSAID; Systemic antibiotic. No autonomous selection or dosing is allowed. Source IDs: AAOHNS_AOE_2014.",
+    "lifestyle_advice": "Keep water out of the ear (avoid swimming) during treatment; do not use cotton buds; treat underlying skin conditions.",
+    "follow_up": "Review if not improving; consider swab, aural toilet, or ENT referral.",
+    "legacy_medications_pre_v13": "Topical antibiotic +/- corticosteroid ear drops/spray (e.g., aminoglycoside or quinolone with steroid) for 7-14 days; use an ear wick if the canal is very swollen. Topical antifungal if fungal. Oral antibiotics only if spreading cellulitis/systemic illness or immunocompromise. Avoid aminoglycoside drops if the drum is known to be perforated (use quinolone)."
+  },
+  "patient_education": {
+    "home_advice": "Swimmer's ear is inflammation of the ear canal, often after water or ear-cleaning. Ear drops usually clear it in about a week. Keep the ear dry, don't use cotton buds, and take painkillers. See a doctor urgently if you have diabetes or a weak immune system with severe or lasting pain, or if you develop facial weakness.",
+    "home_advice_ar": "أذن السبّاح التهاب في قناة الأذن، غالباً بعد الماء أو تنظيف الأذن. تشفيها القطرات عادةً خلال أسبوع. أبقِ الأذن جافة، ولا تستخدم أعواد القطن، وتناول مسكّنات الألم. راجع الطبيب فوراً إذا كنت مصاباً بالسكري أو ضعف المناعة مع ألم شديد أو مستمر، أو إذا ظهر ضعف في عضلات الوجه.",
+    "prevention": "Dry ears after swimming, avoid cotton buds, consider acidifying/drying drops for frequent swimmers, treat eczema.",
+    "warning_signs": "Severe or persistent pain (especially if diabetic), facial weakness, spreading redness/swelling, fever, or no improvement with drops."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Keep ears dry, avoid trauma/cotton buds; drying drops for frequent swimmers.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for topical treatment efficacy.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by AAOHNS_AOE_2014; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CKS, AAO-HNS.",
+    "verified_source_ids": [
+      "AAOHNS_AOE_2014"
+    ]
+  },
+  "references": {
+    "nice": "NICE CKS - Otitis externa",
+    "aafp": "AAFP - Otitis externa: diagnosis and treatment",
+    "bmj_best_practice": "BMJ Best Practice - Otitis externa",
+    "msd_manual": "MSD Manual - External Otitis",
+    "merck_manual": "Merck Manual - External Otitis (Swimmer's Ear)",
+    "uptodate": "UpToDate - External otitis: pathogenesis, clinical features, and diagnosis",
+    "harrisons": "Harrison's Principles of Internal Medicine - Otitis externa",
+    "oxford_handbook": "Oxford Handbook of General Practice - Ear problems",
+    "who": "",
+    "cdc": "CDC - Swimmer's Ear (Otitis Externa)",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "AAOHNS_AOE_2014",
+        "organization": "AAO-HNSF",
+        "title": "Clinical Practice Guideline: Acute Otitis Externa (Update)",
+        "publication_or_update": "2014",
+        "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/aoe/",
+        "accessed": "2026-07-15",
+        "scope": "Diffuse acute otitis externa management and topical therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "AAOHNS_AOE_2014"
+      ],
+      "treatment_and_monitoring": [
+        "AAOHNS_AOE_2014"
+      ],
+      "red_flags_and_referral": [
+        "AAOHNS_AOE_2014"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "AAOHNS_AOE_2014",
+        "organization": "AAO-HNSF",
+        "title": "Clinical Practice Guideline: Acute Otitis Externa (Update)",
+        "publication_or_update": "2014",
+        "url": "https://www.entnet.org/quality-practice/quality-products/clinical-practice-guidelines/aoe/",
+        "accessed": "2026-07-15",
+        "scope": "Diffuse acute otitis externa management and topical therapy",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Treat canal infection topically, control pain and identify invasive disease.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Non-ototoxic topical antimicrobial with or without corticosteroid; Paracetamol; NSAID; Systemic antibiotic. No autonomous selection or dosing is allowed. Source IDs: AAOHNS_AOE_2014.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "tympanic-membrane integrity",
+      "ear surgery/tubes",
+      "diabetes",
+      "immune status"
+    ],
+    "non_drug_measures": [
+      "Keep ear dry; correct drop technique; canal cleaning or wick may be needed by a clinician."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Non-ototoxic topical antimicrobial with or without corticosteroid",
+        "medication_or_class": "Non-ototoxic topical antimicrobial with or without corticosteroid",
+        "option_type": "medication",
+        "role": "first-line treatment",
+        "when_to_consider": "Uncomplicated diffuse acute otitis externa",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "topical_ear",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "ototoxic preparation when the tympanic membrane is perforated or a ventilation tube is present"
+            ],
+            "use_caution_if": [
+              "diabetes, immunocompromise, prior ear surgery, severe pain or cranial-nerve symptoms"
+            ],
+            "history_checks": [
+              "eardrum status",
+              "ear surgery/tubes",
+              "diabetes",
+              "immunosuppression"
+            ],
+            "monitoring": [
+              "response within 48-72 hours and signs of invasive disease"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_AOE_2014"
+        ]
+      },
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "analgesia",
+        "when_to_consider": "Pain",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_AOE_2014"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "alternative analgesia",
+        "when_to_consider": "Pain when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "AAOHNS_AOE_2014"
+        ]
+      },
+      {
+        "option_name": "Systemic antibiotic",
+        "medication_or_class": "Systemic antibiotic",
+        "option_type": "medication",
+        "role": "exception only",
+        "when_to_consider": "Spread beyond canal, systemic illness or host factors after clinician assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "Choice must cover likely organisms and follow local policy.",
+        "source_ids": [
+          "AAOHNS_AOE_2014"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Urgent ENT assessment for diabetes/immunocompromise with severe nocturnal pain, granulation, cranial-nerve signs or treatment failure."
+    ],
+    "source_ids": [
+      "AAOHNS_AOE_2014"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

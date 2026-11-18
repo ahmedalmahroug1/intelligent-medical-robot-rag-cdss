@@ -1,0 +1,73 @@
+[
+  {
+    "conditions": ["Migraine", "Migraine without aura", "Migraine with aura", "Chronic migraine"],
+    "source": {
+      "source_id": "ICHD3_MIGRAINE_WITHOUT_AURA",
+      "source_type": "Official diagnostic classification",
+      "title": "ICHD-3: 1.1 Migraine without aura",
+      "identifier": "ICHD-3 1.1",
+      "url": "https://ichd-3.org/1-migraine/1-1-migraine-without-aura/",
+      "study_type": "International diagnostic criteria",
+      "summary": "Migraine without aura is described as recurrent headache attacks lasting 4 to 72 hours. Diagnostic criteria require at least five attacks, headache lasting 4 to 72 hours when untreated or unsuccessfully treated, at least two of unilateral location, pulsating quality, moderate or severe intensity, or aggravation by/routine avoidance of physical activity, and during headache at least nausea/vomiting or both photophobia and phonophobia. The presentation must not be better accounted for by another ICHD-3 diagnosis. In children and adolescents attacks may last 2 to 72 hours and pain is more often bilateral. The page notes that occipital headache in children is rare and calls for diagnostic caution.",
+      "evidence_scope": ["diagnosis"]
+    }
+  },
+  {
+    "conditions": ["Migraine", "Headache", "Migraine without aura", "Migraine with aura", "Chronic migraine"],
+    "medication_search_terms": ["sumatriptan", "topiramate", "propranolol", "amitriptyline", "onabotulinumtoxinA"],
+    "source": {
+      "source_id": "NICE_CG150_HEADACHE",
+      "source_type": "Official guideline",
+      "title": "NICE CG150: Headaches in over 12s — recommendations",
+      "identifier": "NICE CG150",
+      "url": "https://www.nice.org.uk/guidance/cg150/chapter/recommendations",
+      "published_year": 2025,
+      "study_type": "Clinical guideline",
+      "summary": "NICE recommends evaluating headache patients for features requiring investigation or referral, including worsening headache with fever, sudden onset reaching maximum intensity within five minutes, new neurological deficit, new cognitive dysfunction or personality change, impaired consciousness, recent head trauma, headache triggered by cough/Valsalva or exercise, orthostatic headache, symptoms suggestive of giant cell arteritis or acute narrow-angle glaucoma, or a substantial unexplained change in headache characteristics. It advises against neuroimaging solely for reassurance in people diagnosed with migraine without signs or symptoms of secondary headache. For acute migraine, offer combination therapy with an oral triptan and an NSAID or an oral triptan and paracetamol, taking preferences, comorbidities and adverse-event risks into account; monotherapy can be considered when preferred. Do not offer ergots or opioids. For prevention, discuss benefits and risks and consider propranolol, topiramate or amitriptyline. Topiramate must not be used for migraine prophylaxis in pregnancy and pregnancy-prevention requirements apply to people able to become pregnant. Botulinum toxin type A is limited to chronic migraine after at least three preventive medicines were ineffective, not tolerated or unsuitable, and after medication overuse is appropriately managed. Review prophylaxis after 3 to 6 months. Riboflavin may reduce frequency and intensity for some people. Pregnancy, breastfeeding, age, comorbidities and current medicines materially affect treatment choice.",
+      "evidence_scope": ["diagnosis", "treatment", "medication_safety"]
+    }
+  },
+  {
+    "conditions": ["Migraine", "Migraine with aura", "Migraine without aura"],
+    "source": {
+      "source_id": "NICE_QS42_MIGRAINE_TREATMENT",
+      "source_type": "Official quality standard",
+      "title": "NICE QS42: Combined treatment for migraine",
+      "identifier": "NICE QS42 statement 4",
+      "url": "https://www.nice.org.uk/guidance/qs42/chapter/quality-statement-4-combined-treatment-for-migraine",
+      "published_year": 2013,
+      "study_type": "Quality standard",
+      "summary": "Adults and young people aged 12 and over with migraine should be offered combination therapy with a triptan and either an NSAID or paracetamol for acute treatment. The statement explains that combination treatment is more effective than monotherapy, while choice must consider preference, comorbidities and adverse-event risk. When one triptan is consistently ineffective, another triptan may be tried. This source does not by itself provide a complete contraindication or monitoring checklist for an individual medicine.",
+      "evidence_scope": ["treatment"]
+    }
+  },
+  {
+    "conditions": ["Knee osteoarthritis", "Osteoarthritis of the knee", "Osteoarthritis"],
+    "source": {
+      "source_id": "NICE_NG226_OA_DIAGNOSIS",
+      "source_type": "Official guideline",
+      "title": "NICE NG226: Osteoarthritis — diagnosis and assessment",
+      "identifier": "NICE NG226 diagnosis",
+      "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations#diagnosis",
+      "published_year": 2022,
+      "study_type": "Clinical guideline",
+      "summary": "NICE recommends diagnosing osteoarthritis clinically without imaging in people aged 45 or over who have activity-related joint pain and either no morning stiffness or morning stiffness lasting no longer than 30 minutes. Imaging is not routinely needed unless there are atypical features or an alternative/additional diagnosis is suspected. Atypical features include recent trauma, prolonged morning stiffness, rapid worsening of symptoms or deformity, and a hot swollen joint; these should prompt consideration of alternative or additional diagnoses such as inflammatory arthritis, gout, septic arthritis or significant injury. Assessment should be guided by symptoms and physical function rather than imaging severity, and should consider the effect on daily activities, quality of life, work, sleep, mood, comorbidities and medicines.",
+      "evidence_scope": ["diagnosis"]
+    }
+  },
+  {
+    "conditions": ["Knee osteoarthritis", "Osteoarthritis of the knee", "Osteoarthritis"],
+    "medication_search_terms": ["diclofenac sodium", "ibuprofen", "naproxen", "triamcinolone acetonide"],
+    "source": {
+      "source_id": "NICE_NG226_OA_MANAGEMENT",
+      "source_type": "Official guideline",
+      "title": "NICE NG226: Osteoarthritis — management recommendations",
+      "identifier": "NICE NG226 management",
+      "url": "https://www.nice.org.uk/guidance/ng226/chapter/Recommendations#non-pharmacological-management",
+      "published_year": 2022,
+      "study_type": "Clinical guideline",
+      "summary": "Core management is therapeutic exercise tailored to the person and, for people living with overweight or obesity, weight management. Explain that pain may initially increase with exercise but regular long-term exercise improves pain, function and quality of life. For knee osteoarthritis requiring medicine, offer a topical NSAID. If topical treatment is ineffective or unsuitable, consider an oral NSAID only after accounting for gastrointestinal, renal, liver and cardiovascular toxicity, age, pregnancy, current medicines and comorbidities; use the lowest effective dose for the shortest time and offer gastroprotection such as a proton-pump inhibitor. Do not routinely offer paracetamol or weak opioids except infrequently for short-term relief when other medicines are contraindicated, not tolerated or ineffective, and do not offer strong opioids. Do not offer glucosamine or intra-articular hyaluronan injections. Intra-articular corticosteroid injection may be considered for short-term relief, generally 2 to 10 weeks, when other pharmacological treatments are ineffective or unsuitable or to support therapeutic exercise. Consider referral for joint replacement when symptoms substantially affect quality of life and non-surgical management is ineffective or unsuitable; use clinical assessment rather than a numerical severity score alone.",
+      "evidence_scope": ["treatment", "medication_safety"]
+    }
+  }
+]

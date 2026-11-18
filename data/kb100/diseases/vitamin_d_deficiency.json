@@ -1,0 +1,665 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-024",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-024",
+    "name": "Vitamin D deficiency",
+    "name_ar": "عوز فيتامين D",
+    "synonyms": [
+      "hypovitaminosis D",
+      "low vitamin D",
+      "rickets (children) / osteomalacia (adults) when severe"
+    ],
+    "abbreviations": [
+      "25(OH)D"
+    ],
+    "icd10": {
+      "code": "E55.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "5B57",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "34713006",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D014808",
+      "basis": "estimate"
+    },
+    "disease_category": "Nutritional / metabolic bone",
+    "organ_system": "Metabolic / musculoskeletal",
+    "specialty": "Family medicine",
+    "emergency_level": "Routine",
+    "severity": "Often mild/asymptomatic; severe deficiency causes osteomalacia (adults) or rickets (children)",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Low vitamin D status, often asymptomatic, that can cause bone pain and muscle weakness and, when severe, osteomalacia in adults or rickets in children.",
+    "detailed_description": "Vitamin D deficiency is common, particularly with limited sun exposure, darker skin, covering clothing, or malabsorption. Most people are asymptomatic and identified on testing. Severe, prolonged deficiency impairs bone mineralisation (osteomalacia/rickets). Management is supplementation and addressing causes; routine screening of the whole population is not recommended - test those at risk or with suggestive features.",
+    "pathophysiology": "Vitamin D (from skin synthesis with sunlight and diet) is hydroxylated to 25(OH)D (the storage/measured form) then to active 1,25(OH)2D, which maintains calcium/phosphate for bone mineralisation. Deficiency causes secondary hyperparathyroidism and defective mineralisation.",
+    "etiology": "Reduced sunlight exposure (latitude, indoor lifestyle, covering clothing, sunscreen), darker skin, obesity (sequestration), malabsorption (coeliac, IBD, bariatric surgery), chronic kidney/liver disease, some drugs (anticonvulsants), and low dietary intake.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Fluctuates seasonally; corrects with supplementation.",
+    "prognosis": "Excellent with treatment; osteomalacia/rickets heal with vitamin D and calcium."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common, especially in winter, in people with darker skin, or with limited sun exposure.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Seasonal; high in at-risk groups.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible directly.",
+      "basis": "estimate"
+    },
+    "age_groups": "All ages; infants, elderly, and housebound at higher risk.",
+    "sex_predominance": "Both; higher where clothing/cultural factors limit sun exposure.",
+    "geographic_distribution": "Worldwide, including sunny regions where skin is covered.",
+    "seasonal_pattern": "Lower levels in winter/spring."
+  },
+  "risk_factors": {
+    "lifestyle": "Limited sun exposure, indoor lifestyle, covering clothing, consistent sunscreen use.",
+    "smoking": "Not a major factor.",
+    "alcohol": "Excess associated with poor intake/liver disease.",
+    "obesity": "Sequestration of vitamin D in adipose tissue lowers levels.",
+    "diabetes": "Weak associations.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Increased need; supplementation advised.",
+    "occupation": "Indoor/night work.",
+    "travel": "Not relevant.",
+    "family_history": "Not typically relevant (rare hereditary rickets).",
+    "genetic_factors": "Rare inherited vitamin D metabolism disorders.",
+    "medications": "Anticonvulsants, glucocorticoids, some antiretrovirals affect vitamin D metabolism.",
+    "previous_diseases": "Malabsorption (coeliac/IBD), bariatric surgery, chronic kidney/liver disease, darker skin phototype."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "None (found on testing)",
+      "frequency": "very common",
+      "importance": "Usually asymptomatic",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Aching bones / muscle weakness or pain",
+      "frequency": "sometimes",
+      "importance": "Suggests significant deficiency/osteomalacia",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Fatigue / low mood",
+      "frequency": "sometimes",
+      "importance": "Nonspecific",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Asymptomatic",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Most cases; diagnosed on testing",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Diffuse bone pain/tenderness",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Suggests osteomalacia in severe deficiency",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Proximal muscle weakness (difficulty rising from a chair/stairs)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Osteomalacic myopathy",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Fatigue, low mood, nonspecific aches",
+      "typical": true,
+      "frequency": "sometimes",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Very nonspecific",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Children: bowed legs, growth delay, skeletal deformity (rickets)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Rickets in severe childhood deficiency",
+      "stage": "Severe (children)",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal 25(OH)D level",
+      "why_important": "Excludes vitamin D deficiency as a cause",
+      "absence_significance": "excludes if absent",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "Normal calcium/phosphate/ALP and no bone pain/weakness",
+      "why_important": "Argues against osteomalacia",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Sun exposure, skin type, clothing coverage, and diet?",
+      "why_ask": "Identifies risk and cause",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Any bone pain or muscle weakness?",
+      "why_ask": "Points to osteomalacia",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Malabsorption symptoms, bariatric surgery, or kidney/liver disease?",
+      "why_ask": "Secondary causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Pregnancy or breastfeeding?",
+      "why_ask": "Supplementation is advised",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Medications (anticonvulsants, steroids)?",
+      "why_ask": "Affect vitamin D metabolism",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Low-moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Musculoskeletal - proximal muscle power, bone tenderness",
+      "expected_finding": "Usually normal; weakness/tenderness in osteomalacia",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Gait (waddling in osteomalacic myopathy)",
+      "expected_finding": "May be abnormal in severe cases",
+      "importance": "Low-moderate"
+    },
+    {
+      "examination": "Children - skeletal deformity assessment",
+      "expected_finding": "Rachitic changes if severe",
+      "importance": "Moderate (children)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Normal",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Higher BMI associated with lower levels"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Serum 25-hydroxyvitamin D [25(OH)D]",
+      "indication": "In symptomatic or high-risk individuals (not population screening)",
+      "expected_result": "Low in deficiency",
+      "normal_range": "Deficiency/insufficiency thresholds vary by guideline (commonly deficiency <25-30 nmol/L)",
+      "diagnostic_value": "Diagnostic of vitamin D status",
+      "rule_in": "Low 25(OH)D",
+      "rule_out": "Normal level",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Calcium, phosphate, ALP, PTH (if osteomalacia/severe deficiency suspected)",
+      "indication": "Assess bone metabolism",
+      "expected_result": "Low/normal calcium, raised ALP/PTH in osteomalacia",
+      "normal_range": "",
+      "diagnostic_value": "Assesses metabolic bone effect",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "X-ray / DXA (selective)",
+      "when_needed": "Suspected osteomalacia (Looser's zones) or bone health assessment",
+      "expected_findings": "Looser's zones/pseudofractures in osteomalacia"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Rarely, bone biopsy for definitive osteomalacia (not routine)",
+    "culture": "Not applicable",
+    "pcr": "Coeliac serology if malabsorption suspected"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Diagnosis by low serum 25(OH)D. Thresholds for deficiency/insufficiency vary between guidelines; interpret with clinical context and bone chemistry. Population-wide screening is not recommended - test at-risk or symptomatic individuals.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": {
+      "value": "Commonly used: deficiency 25(OH)D <25-30 nmol/L, insufficiency ~30-50 nmol/L, sufficiency >=50 nmol/L (thresholds vary; e.g., UK vs US guidance).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Other causes of bone pain/weakness (osteoporosis, osteomalacia from other causes, myopathy)",
+      "why_similar": "Musculoskeletal symptoms",
+      "differences": "Different biochemistry/imaging",
+      "red_flags": "Fracture",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Bone chemistry",
+      "distinguishing_imaging": "DXA/X-ray",
+      "differential_questions": "Is the vitamin D normal with another bone problem?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Hypocalcaemia from other causes (hypoparathyroidism, CKD)",
+      "why_similar": "Low calcium",
+      "differences": "Different PTH/renal profile",
+      "red_flags": "Symptomatic hypocalcaemia",
+      "distinguishing_symptoms": "Tetany/paraesthesia if severe",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "PTH, renal function",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the calcium low from a non-vitamin-D cause?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Nonspecific fatigue/chronic pain (fibromyalgia)",
+      "why_similar": "Aches, fatigue",
+      "differences": "Normal vitamin D and bone chemistry",
+      "red_flags": "",
+      "distinguishing_symptoms": "Widespread pain, normal labs",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are labs normal despite the symptoms?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have limited sun exposure, darker or covered skin, or malabsorption - and any bone pain/weakness?",
+      "target_disease": "Vitamin D deficiency (+/- osteomalacia)",
+      "competing_disease": "Other causes of aches/fatigue",
+      "purpose": "Target testing to those likely to benefit",
+      "interpretation": "High-risk features or bone symptoms -> test 25(OH)D + bone chemistry",
+      "information_gain": "moderate",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "At-risk person or bone symptoms",
+      "question": "Shall we check vitamin D (and calcium/ALP/PTH if bone symptoms) and review the cause?",
+      "expected_answers": "Deficient vs normal",
+      "branching_logic": "Deficient -> supplement and address cause; osteomalacia features -> treat and investigate; normal -> seek other explanation",
+      "information_gain": "moderate"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Serum 25(OH)D",
+      "why": "Confirms status",
+      "expected_outcome": "Low level confirms deficiency"
+    },
+    {
+      "test": "Bone chemistry (Ca/PO4/ALP/PTH)",
+      "why": "If osteomalacia suspected",
+      "expected_outcome": "Detects metabolic bone disease"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Symptomatic hypocalcaemia (tetany, seizures, paraesthesiae)",
+      "immediate_action": "Urgent calcium correction and assessment"
+    },
+    {
+      "finding": "Osteomalacia with fractures or severe weakness",
+      "immediate_action": "Investigate and treat; consider specialist input"
+    },
+    {
+      "finding": "Suspected malabsorption/underlying disease",
+      "immediate_action": "Investigate the cause (e.g., coeliac disease)"
+    },
+    {
+      "finding": "Rickets in a child",
+      "immediate_action": "Paediatric assessment and treatment"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Symptomatic hypocalcaemia; severe osteomalacia with fractures.",
+    "routine_referral": "Refractory deficiency, suspected malabsorption, or complex metabolic bone disease.",
+    "emergency_referral": "Severe symptomatic hypocalcaemia."
+  },
+  "complications": {
+    "early": [
+      "Symptomatic hypocalcaemia (severe deficiency)",
+      "Muscle weakness / falls"
+    ],
+    "late": [
+      "Osteomalacia (adults) / rickets (children)",
+      "Increased fracture risk",
+      "Secondary hyperparathyroidism"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the role of vitamin D; encourage safe sun exposure and dietary sources.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Cholecalciferol/ergocalciferol; Calcium. No autonomous selection or dosing is allowed. Source IDs: NICE_PH56, SACN_VITD.",
+    "lifestyle_advice": "Sensible sun exposure, dietary vitamin D (oily fish, fortified foods), maintenance supplementation in at-risk groups.",
+    "follow_up": "Recheck level after loading if clinically indicated; ongoing maintenance in persistent risk.",
+    "legacy_medications_pre_v13": "Vitamin D supplementation - a loading regimen for symptomatic/severe deficiency followed by maintenance, or maintenance dosing for insufficiency (per local guidance); ensure adequate calcium intake, especially if treating osteomalacia. Investigate and treat any malabsorption."
+  },
+  "patient_education": {
+    "home_advice": "Vitamin D helps keep bones and muscles healthy. Low levels are common, especially with little sunlight or covered skin, and often cause no symptoms. Taking a vitamin D supplement corrects it; some people need a short higher-dose course first. Get a little safe sunlight and include vitamin D foods. See a doctor if you have bone pain, muscle weakness, or (rarely) numbness/tingling and cramps.",
+    "home_advice_ar": "فيتامين D يحافظ على صحة العظام والعضلات. انخفاضه شائع، خاصةً مع قلة الشمس أو تغطية الجلد، وغالباً بلا أعراض. تصحّحه مكمّلات فيتامين D، وبعض الناس يحتاجون جرعة أعلى قصيرة أولاً. تعرّض لقليل من الشمس الآمنة، وتناول أطعمة غنية بالفيتامين. راجع الطبيب عند ألم العظام أو ضعف العضلات، أو (نادراً) تنميل وتشنّجات.",
+    "prevention": "Adequate sun exposure/diet; supplementation in at-risk groups (infants, pregnant/breastfeeding, elderly, darker skin, covered skin).",
+    "warning_signs": "Bone pain, muscle weakness/falls, or numbness/tingling and cramps (low calcium)."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Sensible sun exposure, dietary vitamin D, and supplementation for at-risk groups.",
+    "screening": "No population screening; test at-risk/symptomatic individuals."
+  },
+  "evidence": {
+    "evidence_level": "Moderate-high for treating deficiency/osteomalacia; screening not recommended for the general population.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_PH56, SACN_VITD; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Moderate-strong - NICE, national nutrition guidance.",
+    "verified_source_ids": [
+      "NICE_PH56",
+      "SACN_VITD"
+    ]
+  },
+  "references": {
+    "nice": "Vitamin D: supplement use in specific population groups (PH56) — https://www.nice.org.uk/guidance/ph56/chapter/recommendations",
+    "aafp": "AAFP - Vitamin D deficiency",
+    "bmj_best_practice": "BMJ Best Practice - Vitamin D deficiency",
+    "msd_manual": "MSD Manual - Vitamin D Deficiency",
+    "merck_manual": "Merck Manual - Vitamin D Deficiency and Dependency",
+    "uptodate": "UpToDate - Vitamin D deficiency in adults: definition, clinical manifestations, and treatment",
+    "harrisons": "Harrison's Principles of Internal Medicine - Vitamin D deficiency and metabolic bone disease",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Osteomalacia and vitamin D",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_PH56",
+        "organization": "NICE",
+        "title": "Vitamin D: supplement use in specific population groups (PH56)",
+        "publication_or_update": "2014; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ph56/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Risk-based vitamin D supplementation and testing",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "SACN_VITD",
+        "organization": "UK Scientific Advisory Committee on Nutrition",
+        "title": "Vitamin D and health report",
+        "publication_or_update": "2016; page updated 2023",
+        "url": "https://www.gov.uk/government/publications/sacn-vitamin-d-and-health-report",
+        "accessed": "2026-07-15",
+        "scope": "Vitamin D intake, deficiency threshold context and toxicity prevention",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)",
+      "diagnostic_criteria.cutoff_values (guideline-variable)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "initial_management",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_PH56",
+        "SACN_VITD"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_PH56",
+        "SACN_VITD"
+      ],
+      "red_flags_and_referral": [
+        "NICE_PH56",
+        "SACN_VITD"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_PH56",
+        "organization": "NICE",
+        "title": "Vitamin D: supplement use in specific population groups (PH56)",
+        "publication_or_update": "2014; current page checked 2026",
+        "url": "https://www.nice.org.uk/guidance/ph56/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Risk-based vitamin D supplementation and testing",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "SACN_VITD",
+        "organization": "UK Scientific Advisory Committee on Nutrition",
+        "title": "Vitamin D and health report",
+        "publication_or_update": "2016; page updated 2023",
+        "url": "https://www.gov.uk/government/publications/sacn-vitamin-d-and-health-report",
+        "accessed": "2026-07-15",
+        "scope": "Vitamin D intake, deficiency threshold context and toxicity prevention",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Correct confirmed deficiency safely while preventing hypercalcaemia and addressing the cause.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Cholecalciferol/ergocalciferol; Calcium. No autonomous selection or dosing is allowed. Source IDs: NICE_PH56, SACN_VITD.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "calcium",
+      "renal function/stones",
+      "sarcoidosis/TB",
+      "parathyroid disease",
+      "pregnancy",
+      "digoxin/thiazide"
+    ],
+    "non_drug_measures": [
+      "Safe sunlight/diet advice appropriate to skin type, culture and climate; address malabsorption or medicine causes."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Cholecalciferol/ergocalciferol",
+        "medication_or_class": "Cholecalciferol/ergocalciferol",
+        "option_type": "medication",
+        "role": "vitamin D replacement",
+        "when_to_consider": "Confirmed deficiency or prevention in defined risk groups using local regimen",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "vitamin_d",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "hypercalcaemia or vitamin D toxicity"
+            ],
+            "use_caution_if": [
+              "renal stones, severe CKD, granulomatous disease, hyperparathyroidism, digoxin or thiazide use"
+            ],
+            "history_checks": [
+              "calcium",
+              "renal disease/stones",
+              "sarcoidosis/TB",
+              "parathyroid disease",
+              "medicines"
+            ],
+            "monitoring": [
+              "calcium and 25-hydroxyvitamin D when treating deficiency; renal function in high-risk patients"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_PH56",
+          "SACN_VITD"
+        ]
+      },
+      {
+        "option_name": "Calcium",
+        "medication_or_class": "Calcium",
+        "option_type": "medication",
+        "role": "selected adjunct",
+        "when_to_consider": "Only when dietary intake is inadequate and hypercalcaemia/stone risk is addressed",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "calcium",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "hypercalcaemia or serious product reaction"
+            ],
+            "use_caution_if": [
+              "renal stones, CKD, hyperparathyroidism, cardiovascular risk, constipation, or interactions with levothyroxine/iron/bisphosphonates/selected antibiotics"
+            ],
+            "history_checks": [
+              "calcium level",
+              "renal function/stones",
+              "dietary intake",
+              "hyperparathyroidism",
+              "medicine timing"
+            ],
+            "monitoring": [
+              "calcium and renal/stone risk when indicated; avoid unnecessary high total intake"
+            ]
+          }
+        ],
+        "clinical_note": "Do not automatically combine high-dose calcium with every vitamin D regimen.",
+        "source_ids": [
+          "SACN_VITD"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Specialist review for severe CKD, hypercalcaemia, granulomatous disease, recurrent stones, malabsorption or failure to respond."
+    ],
+    "source_ids": [
+      "NICE_PH56",
+      "SACN_VITD"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

@@ -1,0 +1,753 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-007",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-007",
+    "name": "Acute tonsillitis",
+    "name_ar": "التهاب اللوزتين الحاد",
+    "synonyms": [
+      "tonsillitis",
+      "acute tonsillopharyngitis"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "J03.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA03",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "90176007",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D014069",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute upper respiratory / ENT infection",
+    "organ_system": "ENT (tonsils/pharynx)",
+    "specialty": "Family medicine / ENT",
+    "emergency_level": "Routine - recognise peritonsillar abscess and airway red flags",
+    "severity": "Usually mild and self-limiting; recurrent disease affects quality of life",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute inflammation of the tonsils, usually viral, presenting with sore throat, painful swallowing, fever and tonsillar swelling; overlaps with pharyngitis.",
+    "detailed_description": "Acute tonsillitis and pharyngitis are managed as one clinical problem ('acute sore throat'). Most cases are viral and self-limiting; group A Streptococcus is the main treatable bacterial cause. Scoring (Centor/FeverPAIN) guides antibiotic decisions. Recurrent, frequent, well-documented episodes may warrant ENT referral for tonsillectomy.",
+    "pathophysiology": "Viral or bacterial infection of tonsillar tissue produces inflammation, exudate and reactive lymphadenopathy; marked unilateral swelling suggests peritonsillar abscess.",
+    "etiology": "Mostly respiratory viruses (including EBV); bacterial mainly group A Streptococcus.",
+    "incubation_period": "Viral 1-3 days; streptococcal 2-5 days.",
+    "natural_history": "Most resolve within about a week; some patients have recurrent episodes.",
+    "prognosis": "Excellent; complications (quinsy, rheumatic sequelae) uncommon."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common, especially in children and young adults.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High, peaking in colder months.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Negligible; serious outcomes only via rare airway/deep-space or rheumatic complications.",
+      "basis": "estimate"
+    },
+    "age_groups": "Children and young adults most affected.",
+    "sex_predominance": "None significant.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "Winter/spring predominance."
+  },
+  "risk_factors": {
+    "lifestyle": "Close contact/crowding.",
+    "smoking": "Throat irritation.",
+    "alcohol": "Not relevant.",
+    "obesity": "Not relevant.",
+    "diabetes": "May increase infection risk.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Affects antibiotic choice.",
+    "occupation": "Contact with children.",
+    "travel": "Crowded settings increase exposure.",
+    "family_history": "Household spread common.",
+    "genetic_factors": "Not relevant.",
+    "medications": "Immunosuppression increases risk.",
+    "previous_diseases": "Recurrent tonsillitis; consider tonsillectomy criteria."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Sore throat and painful swallowing",
+      "frequency": "very common",
+      "importance": "Core presentation",
+      "source": "NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Fever and feeling unwell",
+      "frequency": "common",
+      "importance": "Scoring feature",
+      "source": "NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Swollen, tender neck glands",
+      "frequency": "common",
+      "importance": "Scoring feature",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Sore throat / odynophagia",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "strongly reduces",
+      "importance": "Core symptom",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Tonsillar swelling +/- exudate",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Defining tonsillar finding",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fever",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "slightly reduces",
+      "importance": "Scoring feature",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Tender anterior cervical lymphadenopathy",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Scoring feature",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "Centor/McIsaac",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Unilateral severe pain, trismus, muffled voice (quinsy)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - peritonsillar abscess",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Presence of cough/coryza",
+      "why_important": "Favours viral cause and lowers streptococcal probability",
+      "absence_significance": "moderately reduces",
+      "source": "Centor/McIsaac; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No trismus, uvular deviation, drooling, or stridor",
+      "why_important": "Absence argues against quinsy/airway emergency",
+      "absence_significance": "strongly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you have a cough and cold symptoms?",
+      "why_ask": "Viral features lower streptococcal probability",
+      "expected_answer": "Often yes in viral",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "How many documented episodes have you had this year and in prior years?",
+      "why_ask": "Assesses tonsillectomy criteria (e.g., >=7 in 1 year, >=5/year for 2 years, >=3/year for 3 years)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Any one-sided severe pain, trismus, drooling, or breathing difficulty?",
+      "why_ask": "Screens for quinsy/airway emergency (safety)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Young adult with prolonged symptoms and marked fatigue?",
+      "why_ask": "Consider glandular fever (EBV)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "On carbimazole/clozapine or immunosuppressed?",
+      "why_ask": "Consider agranulocytosis if severe sore throat + fever",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "Moderate (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Throat/tonsils",
+      "expected_finding": "Enlarged, erythematous tonsils +/- exudate; check symmetry (quinsy)",
+      "importance": "High"
+    },
+    {
+      "examination": "Cervical lymph nodes",
+      "expected_finding": "Tender/enlarged",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Temperature and general state",
+      "expected_finding": "Normal or raised",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Airway signs (voice, drooling, trismus, stridor)",
+      "expected_finding": "Normal; abnormal = emergency",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Abdomen for splenomegaly if EBV suspected",
+      "expected_finding": "May be enlarged in glandular fever",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal or raised",
+    "heart_rate": "May rise with fever",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal (stridor/distress is an emergency)",
+    "oxygen_saturation": "Normal",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "RADT / throat culture for GAS (selective)",
+      "indication": "Higher-probability cases where testing is used",
+      "expected_result": "Positive in GAS",
+      "normal_range": "Negative",
+      "diagnostic_value": "Confirms streptococcal cause",
+      "rule_in": "Positive supports antibiotics",
+      "rule_out": "Negative lowers probability",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "FBC + EBV serology (selective)",
+      "indication": "Suspected glandular fever",
+      "expected_result": "Atypical lymphocytes; positive EBV serology",
+      "normal_range": "",
+      "diagnostic_value": "Diagnoses EBV",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None routinely",
+      "when_needed": "Suspected deep-space/parapharyngeal infection (CT with contrast)",
+      "expected_findings": "Abscess/collection"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Flexible laryngoscopy by ENT if airway concern",
+    "biopsy": "Only if malignancy suspected (persistent unilateral tonsillar enlargement/ulcer)",
+    "culture": "Throat swab for GAS as above",
+    "pcr": "Not routine"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical diagnosis of acute sore throat/tonsillitis; use Centor/McIsaac or FeverPAIN to estimate streptococcal probability and guide antibiotics.",
+    "diagnostic_scores": {
+      "value": "Centor and FeverPAIN as for pharyngitis; higher scores favour streptococcal cause.",
+      "basis": "sourced"
+    },
+    "cutoff_values": {
+      "value": "Centor >=3 or FeverPAIN >=4 favour antibiotics/testing (NICE NG84). Tonsillectomy (SIGN/ENT-UK): documented sore throats due to tonsillitis with disabling frequency (e.g., >=7 in the preceding year, or >=5/year for 2 years, or >=3/year for 3 years).",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Viral pharyngitis",
+      "why_similar": "Sore throat, fever",
+      "differences": "Cough/coryza, lower score",
+      "red_flags": "None",
+      "distinguishing_symptoms": "Cough, runny nose",
+      "distinguishing_exam": "Less exudate/nodes",
+      "distinguishing_labs": "RADT negative",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have a cough and runny nose?",
+      "likelihood_in_context": "likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Streptococcal (GAS) tonsillitis",
+      "why_similar": "Exudative tonsillitis",
+      "differences": "No cough, higher fever, tender nodes, higher score",
+      "red_flags": "Quinsy",
+      "distinguishing_symptoms": "Sore throat without cough",
+      "distinguishing_exam": "Exudate, tender nodes",
+      "distinguishing_labs": "RADT/culture positive",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do you have a cough? (absence favours strep)",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Infectious mononucleosis (EBV)",
+      "why_similar": "Exudative tonsillitis, nodes",
+      "differences": "Young adult, prolonged, marked fatigue, splenomegaly",
+      "red_flags": "Splenic rupture; airway obstruction; amoxicillin rash",
+      "distinguishing_symptoms": "Weeks of fatigue",
+      "distinguishing_exam": "Splenomegaly, posterior nodes",
+      "distinguishing_labs": "Monospot/EBV serology",
+      "distinguishing_imaging": "",
+      "differential_questions": "Very tired for more than a week with big glands?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Peritonsillar abscess (quinsy)",
+      "why_similar": "Severe tonsillar pain",
+      "differences": "Unilateral, trismus, muffled voice, uvular deviation",
+      "red_flags": "Airway compromise",
+      "distinguishing_symptoms": "Unilateral severe pain, trismus",
+      "distinguishing_exam": "Peritonsillar bulge",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CT if uncertain",
+      "differential_questions": "Is it one-sided with difficulty opening your mouth?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Tonsillar malignancy (persistent unilateral)",
+      "why_similar": "Tonsillar enlargement",
+      "differences": "Persistent unilateral enlargement/ulcer, older/smoker, weight loss",
+      "red_flags": "Persistent unilateral mass",
+      "distinguishing_symptoms": "Chronic, unilateral",
+      "distinguishing_exam": "Unilateral firm mass/ulcer",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "ENT assessment/biopsy",
+      "differential_questions": "Has one tonsil been enlarged/ulcerated for weeks?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have a cough and cold symptoms with the sore throat?",
+      "target_disease": "Viral tonsillitis",
+      "competing_disease": "Streptococcal tonsillitis",
+      "purpose": "Cough presence lowers strep probability",
+      "interpretation": "Cough present -> avoid antibiotics",
+      "information_gain": "high",
+      "source": "Centor/McIsaac; NICE NG84",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the pain one-sided with trismus or a muffled voice?",
+      "target_disease": "Peritonsillar abscess",
+      "competing_disease": "Uncomplicated tonsillitis",
+      "purpose": "Detect quinsy",
+      "interpretation": "Positive -> urgent ENT",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Acute tonsillitis, no airway red flags",
+      "question": "Do you have cough/cold symptoms, and how many episodes have you had this year?",
+      "expected_answers": "Viral features / recurrence pattern",
+      "branching_logic": "Viral features -> avoid antibiotics; high score -> antibiotics/testing; frequent recurrence -> ENT referral for tonsillectomy assessment",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Centor/McIsaac or FeverPAIN scoring",
+      "why": "Guides antibiotic decision",
+      "expected_outcome": "Low vs high strep likelihood"
+    },
+    {
+      "test": "RADT/culture or EBV serology (selective)",
+      "why": "Confirm strep or diagnose glandular fever",
+      "expected_outcome": "Targets management"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Stridor, drooling, or difficulty breathing/swallowing saliva",
+      "immediate_action": "Airway emergency - urgent ENT/anaesthetics; do not examine throat aggressively"
+    },
+    {
+      "finding": "Unilateral severe pain, trismus, muffled voice, uvular deviation",
+      "immediate_action": "Urgent ENT - suspected peritonsillar abscess"
+    },
+    {
+      "finding": "Severe sore throat + fever on carbimazole/clozapine or immunosuppressed",
+      "immediate_action": "Urgent FBC - exclude agranulocytosis"
+    },
+    {
+      "finding": "Persistent unilateral tonsillar enlargement/ulcer",
+      "immediate_action": "Urgent ENT referral to exclude malignancy"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Suspected quinsy/deep-space infection; persistent unilateral tonsillar mass (cancer pathway).",
+    "routine_referral": "Recurrent tonsillitis meeting tonsillectomy criteria (SIGN/ENT-UK).",
+    "emergency_referral": "Airway compromise or neutropenic sepsis."
+  },
+  "complications": {
+    "early": [
+      "Peritonsillar abscess (quinsy)",
+      "Otitis media",
+      "Dehydration"
+    ],
+    "late": [
+      "Recurrent tonsillitis",
+      "Post-streptococcal complications (rare)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Analgesia/antipyretics, fluids, rest; safety-net advice.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Phenoxymethylpenicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG84.",
+    "lifestyle_advice": "Fluids, rest, soothing drinks; stay home while febrile.",
+    "follow_up": "Safety-net for airway/quinsy signs; document episodes for possible tonsillectomy assessment.",
+    "legacy_medications_pre_v13": "Symptomatic relief; antibiotics only for higher-probability streptococcal cases or systemically unwell (phenoxymethylpenicillin first-line; macrolide if penicillin-allergic; AVOID amoxicillin if EBV possible). Consider delayed prescribing."
+  },
+  "patient_education": {
+    "home_advice": "Tonsillitis is usually a viral throat infection that settles within a week. Painkillers and fluids help; antibiotics are only needed for some bacterial cases. Get urgent help if you have trouble breathing or swallowing saliva, drooling, a muffled voice, or one-sided severe pain with difficulty opening your mouth.",
+    "home_advice_ar": "التهاب اللوزتين غالباً عدوى فيروسية تزول خلال أسبوع. تفيد مسكّنات الألم والسوائل، والمضادات الحيوية تلزم فقط في بعض الحالات البكتيرية. اطلب المساعدة العاجلة إذا صعُب التنفّس أو بلع الريق، أو سال اللعاب، أو تغيّر الصوت، أو حدث ألم شديد في جانب واحد مع صعوبة فتح الفم.",
+    "prevention": "Hand hygiene; avoid close contact while infectious.",
+    "warning_signs": "Difficulty breathing/swallowing saliva, drooling, muffled voice, one-sided severe pain with trismus, or a persistently enlarged single tonsil."
+  },
+  "prevention": {
+    "vaccination": "No specific vaccine.",
+    "lifestyle": "Hand/respiratory hygiene.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for scoring-guided antibiotics; tonsillectomy benefit for well-selected recurrent cases.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG84; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG84, SIGN/ENT-UK for tonsillectomy.",
+    "verified_source_ids": [
+      "NICE_NG84"
+    ]
+  },
+  "references": {
+    "nice": "Sore throat (acute): antimicrobial prescribing (NG84) — https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+    "aafp": "AAFP - Tonsillitis / pharyngitis",
+    "bmj_best_practice": "BMJ Best Practice - Tonsillitis",
+    "msd_manual": "MSD Manual - Tonsillar and Pharyngeal Infections",
+    "merck_manual": "Merck Manual - Tonsillitis",
+    "uptodate": "UpToDate - Tonsillopharyngitis; indications for tonsillectomy",
+    "harrisons": "Harrison's Principles of Internal Medicine - Pharyngitis and tonsillitis",
+    "oxford_handbook": "Oxford Handbook of General Practice - Tonsillitis",
+    "who": "",
+    "cdc": "CDC - Sore Throat / Strep Throat",
+    "idsa": "IDSA - Group A Streptococcal Pharyngitis Guideline",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG84",
+        "organization": "NICE",
+        "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute pharyngitis/tonsillitis scoring, self-care and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG84"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG84"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG84"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG84",
+        "organization": "NICE",
+        "title": "Sore throat (acute): antimicrobial prescribing (NG84)",
+        "publication_or_update": "2018; links updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng84/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Acute pharyngitis/tonsillitis scoring, self-care and antibiotic criteria",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Control symptoms, distinguish viral from likely bacterial disease and detect suppurative complications.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Paracetamol; NSAID; Phenoxymethylpenicillin; Macrolide. No autonomous selection or dosing is allowed. Source IDs: NICE_NG84.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "FeverPAIN/Centor",
+      "unilateral swelling/trismus",
+      "EBV features",
+      "hydration"
+    ],
+    "non_drug_measures": [
+      "Fluids and safety-net advice."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "symptom relief",
+        "when_to_consider": "Pain or fever",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "alternative symptom relief",
+        "when_to_consider": "Pain or fever when suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "Phenoxymethylpenicillin",
+        "medication_or_class": "Phenoxymethylpenicillin",
+        "option_type": "medication",
+        "role": "first-choice antibiotic when indicated",
+        "when_to_consider": "High probability or high-risk/systemically unwell presentation",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      },
+      {
+        "option_name": "Macrolide",
+        "medication_or_class": "Macrolide",
+        "option_type": "medication",
+        "role": "allergy alternative",
+        "when_to_consider": "True penicillin allergy",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG84"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Same-day/hospital assessment for quinsy, airway compromise, dehydration, deep-neck spread or sepsis."
+    ],
+    "source_ids": [
+      "NICE_NG84"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

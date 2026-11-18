@@ -1,0 +1,717 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-039",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-039",
+    "name": "Food allergy",
+    "name_ar": "حساسية الطعام",
+    "synonyms": [
+      "IgE-mediated food allergy",
+      "food hypersensitivity"
+    ],
+    "abbreviations": [
+      "IgE"
+    ],
+    "icd10": {
+      "code": "T78.1",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "4A85",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "414285001",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D005512",
+      "basis": "estimate"
+    },
+    "disease_category": "Allergic / immunological",
+    "organ_system": "Immune / multisystem",
+    "specialty": "Family medicine / Allergy",
+    "emergency_level": "Routine for diagnosis - but anaphylaxis is a life-threatening emergency",
+    "severity": "From mild reactions to fatal anaphylaxis",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "An adverse immune (usually IgE-mediated) reaction to a specific food, causing rapid symptoms from urticaria and vomiting to life-threatening anaphylaxis; managed by allergen avoidance and an emergency plan.",
+    "detailed_description": "Food allergy (distinct from food intolerance) is an immune-mediated reaction reproducibly triggered by a specific food. IgE-mediated reactions are rapid (minutes to two hours) and can cause anaphylaxis. Diagnosis is clinical (allergy-focused history) supported by skin-prick/specific-IgE tests (and, when needed, supervised oral food challenge). Management centres on avoidance, education, and - for those at risk of anaphylaxis - adrenaline auto-injectors and an action plan. Common allergens: milk, egg, peanut, tree nuts, fish, shellfish, soy, wheat, sesame.",
+    "pathophysiology": "Sensitisation produces food-specific IgE; on re-exposure, allergen cross-links mast-cell IgE, releasing histamine and other mediators causing urticaria, angioedema, GI and, if severe, airway/cardiovascular compromise (anaphylaxis). Some food allergy is non-IgE-mediated (delayed GI symptoms).",
+    "etiology": "IgE sensitisation to food proteins; genetic/atopic predisposition; environmental and dietary factors influence development.",
+    "incubation_period": "Not applicable (IgE reactions occur within minutes to ~2 hours).",
+    "natural_history": "Some childhood allergies (milk, egg) are often outgrown; peanut, tree nut, fish and shellfish allergies tend to persist.",
+    "prognosis": "Good with avoidance and preparedness; fatal anaphylaxis is rare but possible (higher risk with asthma)."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common, especially in children; a few percent of the population, higher in early childhood.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Rising in many high-income settings.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Fatal anaphylaxis is rare but occurs; poorly-controlled asthma increases risk.",
+      "basis": "estimate"
+    },
+    "age_groups": "Onset often in childhood; can occur at any age.",
+    "sex_predominance": "Both.",
+    "geographic_distribution": "Worldwide; patterns vary by diet.",
+    "seasonal_pattern": "None (pollen-food syndrome relates to pollen seasons)."
+  },
+  "risk_factors": {
+    "lifestyle": "Atopic background; feeding practices (delayed allergen introduction may increase risk).",
+    "smoking": "Not directly relevant.",
+    "alcohol": "Can be a cofactor amplifying reactions.",
+    "obesity": "Not directly relevant.",
+    "diabetes": "Not relevant.",
+    "hypertension": "Not relevant (beta-blockers/ACE inhibitors can worsen anaphylaxis management).",
+    "pregnancy": "Not a specific risk factor.",
+    "occupation": "Occupational food exposure (e.g., bakers - wheat).",
+    "travel": "Different foods/labelling.",
+    "family_history": "Atopy (asthma, eczema, allergies) increases risk.",
+    "genetic_factors": "Atopic predisposition; filaggrin mutations (eczema) associated.",
+    "medications": "Beta-blockers/ACE inhibitors complicate anaphylaxis treatment.",
+    "previous_diseases": "Eczema, asthma, allergic rhinitis; prior reactions (asthma raises anaphylaxis risk)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Rapid reaction after eating a specific food (rash, swelling, vomiting)",
+      "frequency": "very common",
+      "importance": "Core presentation of IgE allergy",
+      "source": "NICE CG116; EAACI",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Lip/face/throat swelling or breathing difficulty",
+      "frequency": "sometimes",
+      "importance": "Anaphylaxis features - emergency",
+      "source": "Resus Council",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Recurrent hives/itch with certain foods",
+      "frequency": "common",
+      "importance": "Suggests IgE food allergy",
+      "source": "EAACI",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Urticaria (hives), itching, flushing",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Common early IgE feature",
+      "stage": "Acute",
+      "early_late": "Early (minutes-2h)",
+      "source": "EAACI",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Angioedema (lip/face/eyelid swelling)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "IgE reaction; throat/tongue involvement is a red flag",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "EAACI",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Vomiting, abdominal pain, diarrhoea",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "GI involvement",
+      "stage": "Acute",
+      "early_late": "Early",
+      "source": "EAACI",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Reproducible reaction to a specific food",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Reproducibility strongly supports true allergy",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CG116",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Throat tightness, stridor, wheeze/breathlessness, dizziness/collapse (ANAPHYLAXIS)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - anaphylaxis (airway/breathing/circulation compromise)",
+      "stage": "Severe",
+      "early_late": "Early",
+      "source": "Resus Council",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Delayed (hours later), purely GI symptoms without skin/airway features; or symptoms unrelated to a specific food",
+      "why_important": "Points away from IgE food allergy (consider intolerance or non-IgE reaction)",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CG116",
+      "basis": "sourced"
+    },
+    {
+      "finding": "Negative allergy tests with a non-suggestive history",
+      "why_important": "Reduces likelihood (tests must be interpreted with history - sensitisation is not allergy)",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CG116",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "What food, how soon after eating, and what symptoms - any breathing/throat/collapse features?",
+      "why_ask": "Allergy-focused history; identifies IgE pattern and severity",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Is the reaction reproducible with that food, and how much triggers it?",
+      "why_ask": "Reproducibility supports true allergy",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any asthma (and is it controlled)?",
+      "why_ask": "Asthma increases anaphylaxis risk/severity",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (risk)"
+    },
+    {
+      "question": "Personal/family history of atopy (eczema, asthma, allergies)?",
+      "why_ask": "Supports allergic mechanism",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Prior severe reactions and current medications (beta-blockers/ACE inhibitors)?",
+      "why_ask": "Risk stratification and treatment considerations",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "During a reaction: airway, breathing, circulation, skin",
+      "expected_finding": "Urticaria/angioedema; stridor/wheeze/hypotension indicate anaphylaxis",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Between reactions: usually normal; assess atopic features",
+      "expected_finding": "Eczema/allergic signs may be present",
+      "importance": "Low-moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "Raised in anaphylaxis",
+    "blood_pressure": "Low in anaphylaxis (shock)",
+    "respiratory_rate": "Raised with airway/breathing involvement",
+    "oxygen_saturation": "May fall in anaphylaxis",
+    "bmi": "Not relevant"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Specific IgE (blood) and/or skin-prick testing to suspected foods",
+      "indication": "Support diagnosis guided by history",
+      "expected_result": "Positive to the culprit food (sensitisation - must match history)",
+      "normal_range": "Negative",
+      "diagnostic_value": "Supports diagnosis",
+      "rule_in": "Positive + suggestive history",
+      "rule_out": "Negative reduces likelihood",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Serum tryptase (during/after a suspected anaphylactic reaction)",
+      "indication": "Confirm mast-cell activation",
+      "expected_result": "Raised acutely then falls",
+      "normal_range": "",
+      "diagnostic_value": "Supports anaphylaxis diagnosis",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "During acute event"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "None",
+      "when_needed": "Not applicable",
+      "expected_findings": "N/A"
+    }
+  ],
+  "ecg": {
+    "when_needed": "In severe anaphylaxis/monitoring",
+    "findings": "Non-specific; tachycardia."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Assess coexisting asthma",
+    "endoscopy": "For eosinophilic oesophagitis / non-IgE GI presentations (specialist)",
+    "biopsy": "As above for eosinophilic disease",
+    "culture": "Not applicable",
+    "pcr": "Not applicable",
+    "oral_food_challenge": "Supervised oral food challenge is the reference standard when diagnosis is uncertain (specialist setting)"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Clinical diagnosis from an allergy-focused history (reproducible reaction to a specific food, typically within minutes to 2 hours for IgE-mediated), supported by skin-prick or specific-IgE testing interpreted in the context of history, and confirmed by supervised oral food challenge when necessary. Sensitisation alone (positive test without clinical reactivity) is NOT allergy.",
+    "diagnostic_scores": "None; component-resolved diagnostics in specialist settings.",
+    "cutoff_values": "N/A (test results interpreted with history)."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Food intolerance (non-immune, e.g., lactose)",
+      "why_similar": "Symptoms after food",
+      "differences": "Dose-related, GI-predominant, no urticaria/airway features, delayed",
+      "red_flags": "",
+      "distinguishing_symptoms": "GI symptoms, no allergic features",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Negative allergy tests",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are the symptoms only gut-related and dose-dependent, without rash/swelling?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Anaphylaxis from another trigger (drug, venom, idiopathic)",
+      "why_similar": "Anaphylaxis",
+      "differences": "Different trigger identified",
+      "red_flags": "Anaphylaxis",
+      "distinguishing_symptoms": "Trigger history",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Tryptase",
+      "distinguishing_imaging": "",
+      "differential_questions": "Was a drug or insect sting involved rather than food?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Pollen-food (oral allergy) syndrome",
+      "why_similar": "Mouth itch with certain raw fruits/vegetables",
+      "differences": "Mild, oral, in pollen-allergic patients, rarely systemic",
+      "red_flags": "",
+      "distinguishing_symptoms": "Oral itch with raw produce",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is it just mouth itch with raw fruits/vegetables?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Chronic urticaria / other causes",
+      "why_similar": "Hives",
+      "differences": "Not food-triggered/reproducible",
+      "red_flags": "",
+      "distinguishing_symptoms": "Ongoing unrelated hives",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do the hives occur without a specific food trigger?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Were there any airway/breathing/circulation features (throat tightness, wheeze, faintness) - i.e., anaphylaxis?",
+      "target_disease": "Anaphylaxis",
+      "competing_disease": "Mild allergic reaction",
+      "purpose": "Identify severity and need for adrenaline/emergency plan",
+      "interpretation": "Positive -> anaphylaxis management + auto-injector + specialist referral",
+      "information_gain": "very high",
+      "source": "Resus Council",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the reaction rapid and reproducible to a specific food?",
+      "target_disease": "IgE food allergy",
+      "competing_disease": "Intolerance/other",
+      "purpose": "Confirm allergic pattern",
+      "interpretation": "Rapid + reproducible -> IgE food allergy; test accordingly",
+      "information_gain": "high",
+      "source": "NICE CG116",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Suspected food allergy",
+      "question": "Any anaphylaxis features and asthma, which food, and is it reproducible?",
+      "expected_answers": "Anaphylaxis risk / culprit food",
+      "branching_logic": "Anaphylaxis/high-risk -> adrenaline auto-injector, action plan, urgent allergy referral; mild -> avoidance + allergy testing guided by history",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Allergy-focused history +/- specific IgE/skin-prick testing",
+      "why": "Diagnose and identify the culprit",
+      "expected_outcome": "Confirms allergy and allergen"
+    },
+    {
+      "test": "Supervised oral food challenge (specialist)",
+      "why": "Reference standard when uncertain",
+      "expected_outcome": "Confirms/refutes clinical allergy"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Anaphylaxis - airway (throat/tongue swelling, stridor), breathing (wheeze/hypoxia), or circulation (hypotension/collapse)",
+      "immediate_action": "Emergency - intramuscular ADRENALINE without delay, call emergency services, ABC support"
+    },
+    {
+      "finding": "Previous severe reaction or food allergy with poorly-controlled asthma",
+      "immediate_action": "High-risk - ensure adrenaline auto-injector, action plan, and specialist referral"
+    },
+    {
+      "finding": "Biphasic reaction risk after anaphylaxis",
+      "immediate_action": "Observe per protocol after treatment"
+    },
+    {
+      "finding": "Widespread reaction / rapidly progressive symptoms",
+      "immediate_action": "Treat as anaphylaxis and seek emergency care"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Anaphylaxis (emergency); diagnostic uncertainty with significant reactions.",
+    "routine_referral": "Confirmed/suspected IgE food allergy for allergy specialist assessment, testing, and management planning; consideration of immunotherapy in specialist centres.",
+    "emergency_referral": "Anaphylaxis."
+  },
+  "complications": {
+    "early": [
+      "Anaphylaxis",
+      "Severe allergic reactions"
+    ],
+    "late": [
+      "Nutritional/social impact of avoidance",
+      "Anxiety",
+      "Accidental exposures"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Clear diagnosis and written management/action plan; education on reading labels and avoiding the allergen; involve dietitian if needed.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Adrenaline auto-injector; Non-sedating antihistamine; Allergen immunotherapy/oral immunotherapy. No autonomous selection or dosing is allowed. Source IDs: NICE_CG116, NICE_NG258_2026.",
+    "lifestyle_advice": "Allergen avoidance, label reading, informing schools/restaurants, carrying auto-injectors, medical-alert identification.",
+    "follow_up": "Specialist review, reassessment of persistence/resolution (some outgrow), auto-injector technique and expiry checks.",
+    "legacy_medications_pre_v13": "Strict allergen avoidance. For those at risk of anaphylaxis: adrenaline auto-injector(s) with training and an emergency action plan; antihistamines for mild reactions. Treat asthma optimally (reduces anaphylaxis risk). Acute anaphylaxis: intramuscular adrenaline is first-line."
+  },
+  "patient_education": {
+    "home_advice": "A food allergy is an immune reaction to a specific food that can happen within minutes - from hives and swelling to a life-threatening reaction (anaphylaxis). Avoid the food completely, learn to read labels, and tell restaurants/schools. If you are at risk of severe reactions, always carry your adrenaline auto-injectors and know how to use them. If a severe reaction happens (throat tightness, difficulty breathing, faintness), use the adrenaline injector straight away and call the emergency services.",
+    "home_advice_ar": "حساسية الطعام تفاعل مناعي تجاه طعام معيّن قد يحدث خلال دقائق - من الشرى والتورّم إلى تفاعل مهدِّد للحياة (التأق). تجنّب الطعام تماماً، وتعلّم قراءة الملصقات، وأخبر المطاعم/المدارس. إن كنت معرّضاً لتفاعلات شديدة فاحمل دائماً حاقن الأدرينالين واعرف كيفية استخدامه. وعند حدوث تفاعل شديد (ضيق الحلق، صعوبة التنفّس، دوار) استخدم حاقن الأدرينالين فوراً واتّصل بالإسعاف.",
+    "prevention": "Allergen avoidance; early introduction of allergenic foods in infancy per current guidance may reduce some allergies.",
+    "warning_signs": "Throat/tongue swelling, difficulty breathing, wheeze, faintness/collapse, or rapidly spreading reaction - use adrenaline and call for help."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Allergen avoidance; guided early introduction of allergenic foods in infancy where appropriate.",
+    "screening": "Not applicable (test based on clinical suspicion, not screening)."
+  },
+  "evidence": {
+    "evidence_level": "High for adrenaline in anaphylaxis and avoidance; growing evidence for early introduction and immunotherapy.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_CG116, NICE_NG258_2026; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CG116, EAACI, Resuscitation Council.",
+    "verified_source_ids": [
+      "NICE_CG116",
+      "NICE_NG258_2026"
+    ]
+  },
+  "references": {
+    "nice": "Food allergy in under 19s: assessment and diagnosis (CG116) — https://www.nice.org.uk/guidance/cg116/chapter/Recommendations | Anaphylaxis: assessment and referral after emergency treatment (NG258) — https://www.nice.org.uk/guidance/ng258",
+    "aafp": "AAFP - Food allergy",
+    "bmj_best_practice": "BMJ Best Practice - Food allergy",
+    "msd_manual": "MSD Manual - Food Allergy",
+    "merck_manual": "Merck Manual - Food Allergy",
+    "uptodate": "UpToDate - Clinical manifestations of food allergy; diagnosis and management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Allergies, Anaphylaxis, and Systemic Mastocytosis",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Anaphylaxis and food allergy",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_CG116",
+        "organization": "NICE",
+        "title": "Food allergy in under 19s: assessment and diagnosis (CG116)",
+        "publication_or_update": "2011; surveillance reviewed",
+        "url": "https://www.nice.org.uk/guidance/cg116/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Allergy-focused history, testing and supervised elimination/reintroduction",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG258_2026",
+        "organization": "NICE",
+        "title": "Anaphylaxis: assessment and referral after emergency treatment (NG258)",
+        "publication_or_update": "2026-05-27",
+        "url": "https://www.nice.org.uk/guidance/ng258",
+        "accessed": "2026-07-15",
+        "scope": "Emergency follow-up, observation, auto-injectors and specialist referral",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_CG116",
+        "NICE_NG258_2026"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_CG116",
+        "NICE_NG258_2026"
+      ],
+      "red_flags_and_referral": [
+        "NICE_CG116",
+        "NICE_NG258_2026"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_CG116",
+        "organization": "NICE",
+        "title": "Food allergy in under 19s: assessment and diagnosis (CG116)",
+        "publication_or_update": "2011; surveillance reviewed",
+        "url": "https://www.nice.org.uk/guidance/cg116/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Allergy-focused history, testing and supervised elimination/reintroduction",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      },
+      {
+        "source_id": "NICE_NG258_2026",
+        "organization": "NICE",
+        "title": "Anaphylaxis: assessment and referral after emergency treatment (NG258)",
+        "publication_or_update": "2026-05-27",
+        "url": "https://www.nice.org.uk/guidance/ng258",
+        "accessed": "2026-07-15",
+        "scope": "Emergency follow-up, observation, auto-injectors and specialist referral",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Confirm the allergen, prevent exposure and ensure an effective anaphylaxis plan.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Adrenaline auto-injector; Non-sedating antihistamine; Allergen immunotherapy/oral immunotherapy. No autonomous selection or dosing is allowed. Source IDs: NICE_CG116, NICE_NG258_2026.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "reaction timing/severity",
+      "asthma control",
+      "beta-blocker/ACE inhibitor",
+      "pregnancy",
+      "ability to carry/use devices",
+      "nutritional risk"
+    ],
+    "non_drug_measures": [
+      "Strict but nutritionally safe avoidance, label education, school/work plan and good asthma control; challenges only under supervision."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Adrenaline auto-injector",
+        "medication_or_class": "Adrenaline auto-injector",
+        "option_type": "medication",
+        "role": "emergency first-line self-treatment for people at risk",
+        "when_to_consider": "After risk assessment with training and action plan",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "adrenaline_autoinjector",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "no absolute contraindication when anaphylaxis is suspected; do not withhold because of cardiac disease or pregnancy"
+            ],
+            "use_caution_if": [
+              "beta-blocker use or significant cardiac disease does not remove the emergency indication but requires specialist planning"
+            ],
+            "history_checks": [
+              "previous reaction severity",
+              "asthma control",
+              "beta-blocker/ACE inhibitor",
+              "ability to use and access two in-date devices"
+            ],
+            "monitoring": [
+              "training, expiry dates, carriage and emergency action-plan understanding"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG258_2026"
+        ]
+      },
+      {
+        "option_name": "Non-sedating antihistamine",
+        "medication_or_class": "Non-sedating antihistamine",
+        "option_type": "medication",
+        "role": "mild isolated symptom relief",
+        "when_to_consider": "Mild reaction without airway/breathing/circulation involvement",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "antihistamine",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "previous serious reaction to the selected antihistamine"
+            ],
+            "use_caution_if": [
+              "renal/hepatic impairment, pregnancy, glaucoma/urinary retention for anticholinergic agents, sedation-sensitive work or driving, or other sedatives"
+            ],
+            "history_checks": [
+              "exact agent",
+              "renal/liver function",
+              "pregnancy",
+              "glaucoma/urinary retention",
+              "driving/work",
+              "sedatives and alcohol"
+            ],
+            "monitoring": [
+              "sedation, anticholinergic effects and symptom response"
+            ]
+          }
+        ],
+        "clinical_note": "Never substitute antihistamine for adrenaline in anaphylaxis.",
+        "source_ids": [
+          "NICE_CG116"
+        ]
+      },
+      {
+        "option_name": "Allergen immunotherapy/oral immunotherapy",
+        "medication_or_class": "Allergen immunotherapy/oral immunotherapy",
+        "option_type": "medication",
+        "role": "specialist selected therapy",
+        "when_to_consider": "Only in an experienced allergy service for eligible allergens/patients",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "allergen_immunotherapy",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "uncontrolled asthma or inability to manage anaphylaxis risk in an appropriate specialist setting"
+            ],
+            "use_caution_if": [
+              "pregnancy initiation, beta-blocker/ACE-inhibitor use, cardiovascular disease, prior systemic reaction, or adherence/access limitations"
+            ],
+            "history_checks": [
+              "confirmed allergen",
+              "asthma control",
+              "pregnancy",
+              "cardiac disease",
+              "beta-blocker/ACE inhibitor",
+              "prior reactions"
+            ],
+            "monitoring": [
+              "specialist-observed reactions, asthma control, adherence and emergency preparedness"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG116"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Immediate emergency treatment for airway, breathing or circulation symptoms; allergy-service referral after anaphylaxis."
+    ],
+    "source_ids": [
+      "NICE_CG116",
+      "NICE_NG258_2026"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

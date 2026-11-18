@@ -1,0 +1,773 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-012",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-012",
+    "name": "Asthma",
+    "name_ar": "الرَّبْو",
+    "synonyms": [
+      "bronchial asthma",
+      "reactive airway disease"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "J45.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "CA23",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "195967001",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": "600807",
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D001249",
+      "basis": "estimate"
+    },
+    "disease_category": "Chronic inflammatory airway disease",
+    "organ_system": "Respiratory",
+    "specialty": "Family medicine / Respiratory",
+    "emergency_level": "Chronic - but acute severe/life-threatening asthma is an emergency",
+    "severity": "Ranges from mild intermittent to severe; acute attacks can be fatal",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "A chronic inflammatory airway disorder with variable, reversible airflow obstruction and bronchial hyper-responsiveness, causing episodic wheeze, cough, chest tightness and breathlessness.",
+    "detailed_description": "Asthma is common and typically atopic, beginning in childhood but presenting at any age. Its hallmark is VARIABLE, often reversible airflow limitation. Diagnosis combines a compatible history with objective tests (spirometry with reversibility, FeNO, peak-flow variability, bronchial challenge). Management is stepwise inhaled therapy (now anchored on inhaled-corticosteroid-containing regimens), self-management with a personalised action plan, and prompt treatment of exacerbations. Recognising and treating acute severe/life-threatening attacks is critical.",
+    "pathophysiology": "Chronic airway inflammation (eosinophilic and/or other) causes bronchial hyper-responsiveness; triggers provoke bronchoconstriction, mucosal oedema and mucus, producing reversible airflow obstruction. Chronic uncontrolled inflammation can lead to airway remodelling.",
+    "etiology": "Multifactorial: atopy/allergen sensitisation, genetic predisposition, respiratory infections, environmental exposures. Common triggers: allergens, viral infections, exercise, cold air, smoke/pollution, NSAIDs/beta-blockers, occupational agents.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Variable; childhood asthma may remit or persist; adult-onset also occurs. Well-controlled patients have normal lives; poor control risks exacerbations and, rarely, death.",
+    "prognosis": "Good with adherence and correct inhaler technique; poor control and under-use of inhaled corticosteroids increase exacerbation and mortality risk."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Affects an estimated ~260 million people worldwide (GINA/WHO); common in children and adults.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "High; onset often in childhood.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "WHO estimates hundreds of thousands of asthma deaths yearly, many preventable.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; frequently childhood onset.",
+    "sex_predominance": "More common in boys in childhood; shifts towards females in adulthood.",
+    "geographic_distribution": "Worldwide; higher prevalence in many high-income and urbanising settings.",
+    "seasonal_pattern": "Exacerbations peak with viral seasons and relevant allergen seasons."
+  },
+  "risk_factors": {
+    "lifestyle": "Allergen and pollutant exposure, physical inactivity/obesity.",
+    "smoking": "Active and passive smoke worsen control and accelerate decline; maternal smoking increases childhood asthma.",
+    "alcohol": "Occasional trigger (sulphites).",
+    "obesity": "Associated with asthma and worse control.",
+    "diabetes": "Not a direct risk factor.",
+    "hypertension": "Not a risk factor (but beta-blockers can worsen asthma).",
+    "pregnancy": "Control can change; maintaining control is important for mother and baby.",
+    "occupation": "Occupational asthma from workplace sensitisers (flour, isocyanates, animals, latex).",
+    "travel": "Different allergen/pollution exposure.",
+    "family_history": "Strong - atopy/asthma runs in families.",
+    "genetic_factors": "Polygenic atopic predisposition.",
+    "medications": "NSAIDs/aspirin and non-selective beta-blockers can trigger bronchospasm in susceptible patients.",
+    "previous_diseases": "Eczema, allergic rhinitis (atopic march); recurrent childhood wheeze."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Episodic wheeze",
+      "frequency": "very common",
+      "importance": "Cardinal feature",
+      "source": "GINA; BTS/NICE/SIGN NG245",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Breathlessness (especially with triggers/exercise)",
+      "frequency": "common",
+      "importance": "Variable airflow limitation",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Cough, often worse at night/early morning",
+      "frequency": "common",
+      "importance": "May be the main symptom (cough-variant asthma)",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Chest tightness",
+      "frequency": "common",
+      "importance": "Common symptom",
+      "source": "GINA",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Wheeze (expiratory, episodic)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Cardinal symptom; variability is key",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Breathlessness (variable, trigger/exercise-related)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Variable airflow limitation",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Cough, worse at night/early morning or with exercise/cold",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "slightly reduces",
+      "importance": "Can be the sole feature",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Chest tightness",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common but nonspecific",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "GINA",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Diurnal variability and symptoms with specific triggers",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "VARIABILITY and trigger-relationship strongly support asthma",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "GINA; BTS/NICE/SIGN NG245",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Silent chest, exhaustion, cyanosis, altered consciousness (severe attack)",
+      "typical": false,
+      "frequency": "rare",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - life-threatening asthma",
+      "stage": "Acute severe",
+      "early_late": "Late",
+      "source": "BTS-SIGN/GINA",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Truly fixed, non-variable symptoms with no reversibility and heavy smoking history",
+      "why_important": "Favours COPD rather than asthma",
+      "absence_significance": "moderately reduces",
+      "source": "GOLD; GINA",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No symptom variability, normal spirometry/PEF variability, and negative FeNO/reversibility",
+      "why_important": "Reduces the likelihood of asthma (though not fully excluded)",
+      "absence_significance": "moderately reduces",
+      "source": "BTS/NICE/SIGN NG245",
+      "basis": "sourced"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Are symptoms episodic and variable, worse at night/early morning, and triggered by allergens/exercise/cold/infection?",
+      "why_ask": "Variability and triggers are central to diagnosing asthma",
+      "expected_answer": "Yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Do symptoms improve with a bronchodilator?",
+      "why_ask": "Reversibility supports asthma",
+      "expected_answer": "Often yes",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Personal/family history of atopy (eczema, hay fever, allergies)?",
+      "why_ask": "Atopic background supports asthma",
+      "expected_answer": "Often positive",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "How often do you use your reliever inhaler and have you had oral steroid courses/attacks/admissions?",
+      "why_ask": "Assesses control and future-risk (over-reliance on reliever is high-risk)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (control/risk)"
+    },
+    {
+      "question": "Do you smoke, and any occupational exposures, NSAID/beta-blocker use?",
+      "why_ask": "Triggers/aggravants and differential (COPD)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Chest auscultation",
+      "expected_finding": "Widespread expiratory wheeze (often normal between episodes)",
+      "importance": "Moderate (may be normal when well)"
+    },
+    {
+      "examination": "Respiratory rate, oxygen saturation, ability to speak (in acute attack)",
+      "expected_finding": "Assess severity of an exacerbation",
+      "importance": "High (safety in exacerbation)"
+    },
+    {
+      "examination": "Peak expiratory flow",
+      "expected_finding": "Reduced/variable; used to grade acute severity",
+      "importance": "High"
+    },
+    {
+      "examination": "Signs of atopy (eczema, allergic rhinitis)",
+      "expected_finding": "Supportive",
+      "importance": "Low-moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal (fever suggests infective trigger)",
+    "heart_rate": "May be raised in an exacerbation; bradycardia is a life-threatening sign",
+    "blood_pressure": "Usually normal",
+    "respiratory_rate": "Raised in exacerbation; a key severity marker",
+    "oxygen_saturation": "Normal when well; <92% indicates severe/life-threatening attack",
+    "bmi": "Obesity worsens control"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "FeNO (fractional exhaled nitric oxide)",
+      "indication": "Support diagnosis (eosinophilic inflammation)",
+      "expected_result": "Raised FeNO supports asthma",
+      "normal_range": "Adults: >=40 ppb supports asthma (NICE)",
+      "diagnostic_value": "Supports diagnosis (not standalone)",
+      "rule_in": "High FeNO + symptoms",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Blood eosinophils / total IgE / allergen testing (selective)",
+      "indication": "Phenotyping / allergic asthma / biologic assessment",
+      "expected_result": "Eosinophilia/atopy in allergic-eosinophilic asthma",
+      "normal_range": "",
+      "diagnostic_value": "Phenotyping",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Chest X-ray",
+      "when_needed": "Diagnostic uncertainty, atypical features, or to exclude complications in a severe exacerbation (e.g., pneumothorax, infection)",
+      "expected_findings": "Often normal; hyperinflation in acute attack"
+    }
+  ],
+  "ecg": {
+    "when_needed": "In severe exacerbation or to assess cardiac differential",
+    "findings": "Sinus tachycardia; helps exclude cardiac cause of breathlessness."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Spirometry with bronchodilator reversibility is central: obstructive pattern (reduced FEV1/FVC) with significant reversibility supports asthma.",
+    "endoscopy": "Not applicable (bronchoscopy only for specific indications)",
+    "biopsy": "Not applicable routinely",
+    "culture": "Sputum only if infective exacerbation",
+    "pcr": "Not routine",
+    "peak_flow": "Serial peak-flow monitoring showing diurnal variability supports asthma; bronchial challenge testing in uncertain cases."
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Compatible symptoms (episodic, variable wheeze/breathlessness/cough/chest tightness) PLUS objective evidence of variable airflow limitation: bronchodilator reversibility on spirometry (e.g., improvement in FEV1), raised FeNO, peak-flow variability, or a positive bronchial challenge. No single test is definitive; guidelines (GINA; BTS/NICE/SIGN NG245) advise a structured objective work-up.",
+    "diagnostic_scores": "Control assessed with tools such as the Asthma Control Test/RCP 3 questions; not diagnostic.",
+    "cutoff_values": {
+      "value": "NICE: FeNO >=40 ppb (adults) supportive; obstructive spirometry FEV1/FVC <0.7 with reversibility (e.g., FEV1 improvement >=12% and 200 mL) supportive; PEF variability >20%.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "COPD",
+      "why_similar": "Wheeze, breathlessness, cough",
+      "differences": "Older, smoker, persistent (less variable) airflow limitation, minimal reversibility",
+      "red_flags": "Severe exacerbation",
+      "distinguishing_symptoms": "Progressive fixed breathlessness",
+      "distinguishing_exam": "Hyperinflation",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Are symptoms variable/reversible or steadily progressive with a smoking history?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Heart failure (cardiac 'wheeze')",
+      "why_similar": "Breathlessness, nocturnal symptoms",
+      "differences": "Orthopnoea, oedema, cardiac history, basal crackles",
+      "red_flags": "Acute pulmonary oedema",
+      "distinguishing_symptoms": "Orthopnoea, ankle swelling",
+      "distinguishing_exam": "Crackles, raised JVP, oedema",
+      "distinguishing_labs": "BNP, echo",
+      "distinguishing_imaging": "CXR (congestion)",
+      "differential_questions": "Do you get breathless lying flat with ankle swelling?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Vocal cord dysfunction / inducible laryngeal obstruction",
+      "why_similar": "Wheeze/stridor, breathlessness",
+      "differences": "Inspiratory noise, throat tightness, poor response to bronchodilator",
+      "red_flags": "",
+      "distinguishing_symptoms": "Throat-level tightness",
+      "distinguishing_exam": "Inspiratory stridor",
+      "distinguishing_labs": "Laryngoscopy",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the tightness in your throat with noisy breathing in?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Bronchiectasis / chronic infection",
+      "why_similar": "Cough, breathlessness",
+      "differences": "Chronic productive cough, recurrent infections",
+      "red_flags": "Haemoptysis",
+      "distinguishing_symptoms": "Daily sputum",
+      "distinguishing_exam": "Coarse crackles",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "HRCT chest",
+      "differential_questions": "Do you cough up sputum most days with repeated chest infections?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Anaphylaxis (acute wheeze)",
+      "why_similar": "Acute wheeze/breathlessness",
+      "differences": "Rapid, allergen exposure, urticaria/angioedema/hypotension",
+      "red_flags": "Airway/circulatory compromise",
+      "distinguishing_symptoms": "Rapid onset with rash/swelling",
+      "distinguishing_exam": "Urticaria, angioedema, hypotension",
+      "distinguishing_labs": "Tryptase",
+      "distinguishing_imaging": "",
+      "differential_questions": "Did it start suddenly after an exposure, with rash or swelling?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are your symptoms variable - worse at night/early morning and with specific triggers - and do they improve with a reliever inhaler?",
+      "target_disease": "Asthma",
+      "competing_disease": "COPD / other",
+      "purpose": "Variability + reversibility is the core discriminator",
+      "interpretation": "Variable, trigger-related, reversible -> asthma",
+      "information_gain": "very high",
+      "source": "GINA; BTS/NICE/SIGN NG245",
+      "basis": "sourced"
+    },
+    {
+      "question": "In an acute attack: can you complete sentences, what is your oxygen level and peak flow?",
+      "target_disease": "Acute severe/life-threatening asthma",
+      "competing_disease": "Mild exacerbation",
+      "purpose": "Grade severity",
+      "interpretation": "Inability to speak, SpO2 <92%, low PEF, silent chest -> life-threatening",
+      "information_gain": "very high",
+      "source": "BTS-SIGN",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Suspected asthma, stable",
+      "question": "Are your symptoms variable and trigger-related, and how often do you use your reliever?",
+      "expected_answers": "Typical variable pattern / control level",
+      "branching_logic": "Typical pattern -> objective testing (spirometry+reversibility, FeNO, PEF) and start ICS-based treatment; frequent reliever use -> escalate and review technique/adherence",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Spirometry with bronchodilator reversibility (+ FeNO / peak-flow diary)",
+      "why": "Objective evidence of variable airflow limitation",
+      "expected_outcome": "Confirms asthma and phenotype"
+    },
+    {
+      "test": "Peak flow and SpO2 (in exacerbation)",
+      "why": "Grade acute severity",
+      "expected_outcome": "Guides emergency treatment"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Silent chest, cyanosis, exhaustion, poor respiratory effort, altered consciousness, bradycardia, or SpO2 <92%",
+      "immediate_action": "Life-threatening asthma - emergency: high-flow oxygen, nebulised salbutamol/ipratropium, systemic steroids, urgent senior/critical-care help"
+    },
+    {
+      "finding": "Cannot complete sentences, RR >=25, HR >=110, PEF 33-50% predicted",
+      "immediate_action": "Acute severe asthma - urgent treatment and assessment"
+    },
+    {
+      "finding": "Poor response to initial treatment or rising CO2",
+      "immediate_action": "Emergency - escalate; consider ventilatory support"
+    },
+    {
+      "finding": "Frequent reliever use, prior near-fatal attack, or multiple recent courses of oral steroids",
+      "immediate_action": "High-risk - urgent review and treatment escalation"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Acute severe/life-threatening exacerbation (emergency); diagnostic uncertainty needing specialist testing.",
+    "routine_referral": "Poor control despite optimised treatment and good adherence/technique; suspected occupational asthma; consideration of biologics/severe-asthma assessment.",
+    "emergency_referral": "Life-threatening asthma or failure to respond to acute treatment."
+  },
+  "complications": {
+    "early": [
+      "Acute severe/life-threatening exacerbation",
+      "Respiratory failure",
+      "Pneumothorax (rare)"
+    ],
+    "late": [
+      "Airway remodelling / fixed obstruction",
+      "Reduced quality of life",
+      "Steroid-related effects with frequent oral courses"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Confirm diagnosis objectively; personalised asthma action plan; inhaler technique and adherence checks; trigger avoidance; smoking cessation; annual review.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): ICS-containing inhaler regimen; Bronchodilator reliever; Short systemic corticosteroid course; Add-on LAMA/LTRA/biologic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG245.",
+    "lifestyle_advice": "Stop smoking, avoid triggers, maintain healthy weight and activity, ensure vaccinations (influenza), correct inhaler technique.",
+    "follow_up": "Review after exacerbations and at least annually; assess control (symptoms, reliever use, exacerbations, lung function) and step treatment up/down.",
+    "legacy_medications_pre_v13": "Anchor treatment on inhaled corticosteroid (ICS)-containing therapy - modern guidance (GINA) does NOT recommend short-acting beta-agonist (SABA)-only treatment. Use ICS-formoterol as reliever (+/- maintenance) or regular ICS with a reliever, stepping up to ICS/LABA and add-ons (LAMA, LTRA) as needed; biologics for severe eosinophilic/allergic asthma. Acute exacerbation: oxygen to target saturations, inhaled/nebulised bronchodilators, systemic corticosteroids, +/- ipratropium/magnesium per severity."
+  },
+  "patient_education": {
+    "home_advice": "Asthma is a long-term condition where the airways are sensitive and can tighten. The key is using your preventer (steroid) inhaler every day as prescribed - not just relying on your blue reliever. Learn your inhaler technique, follow your written action plan, and know the danger signs. Get emergency help if your reliever isn't working, you're too breathless to speak, or your lips look blue.",
+    "home_advice_ar": "الربو حالة مزمنة تكون فيها المجاري الهوائية حسّاسة وقد تضيق. الأساس هو استخدام بخاخ الوقاية (الستيرويد) يومياً كما وُصف - لا الاعتماد على البخاخ الموسّع الأزرق فقط. أتقن طريقة استخدام البخاخ، والتزم بخطة العمل المكتوبة، واعرف علامات الخطر. اطلب المساعدة الطارئة إذا لم يعُد البخاخ الموسّع يُجدي، أو عجزت عن الكلام من ضيق النفس، أو ازرقّت شفتاك.",
+    "prevention": "Trigger avoidance, smoking cessation, good adherence to preventer therapy, influenza vaccination.",
+    "warning_signs": "Reliever not lasting/working, too breathless to speak or eat, blue lips, exhaustion, or peak flow falling sharply - seek emergency care."
+  },
+  "prevention": {
+    "vaccination": "Annual influenza vaccination (and pneumococcal per local guidance).",
+    "lifestyle": "Avoid tobacco smoke and known triggers; healthy weight and activity.",
+    "screening": "Not applicable (case-finding in symptomatic patients)."
+  },
+  "evidence": {
+    "evidence_level": "High - large trials/guidelines support ICS-based therapy and against SABA-only treatment.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG245; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - GINA, BTS/NICE/SIGN NG245, BTS/SIGN.",
+    "verified_source_ids": [
+      "NICE_NG245"
+    ]
+  },
+  "references": {
+    "nice": "Asthma: diagnosis, monitoring and chronic asthma management (NG245) — https://www.nice.org.uk/guidance/ng245/chapter/recommendations",
+    "aafp": "AAFP - Asthma diagnosis and management",
+    "bmj_best_practice": "BMJ Best Practice - Asthma in adults",
+    "msd_manual": "MSD Manual - Asthma",
+    "merck_manual": "Merck Manual - Asthma",
+    "uptodate": "UpToDate - Asthma in adolescents and adults: diagnosis and management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Asthma",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Asthma",
+    "who": "WHO - Asthma fact sheet",
+    "cdc": "CDC - Asthma",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "GINA - Global Strategy for Asthma Management and Prevention (current report)",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG245",
+        "organization": "BTS/NICE/SIGN",
+        "title": "Asthma: diagnosis, monitoring and chronic asthma management (NG245)",
+        "publication_or_update": "2024; updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng245/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Asthma objective diagnosis and age-specific pharmacological management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "metadata.omim",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria.cutoff_values",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG245"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG245"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG245"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG245",
+        "organization": "BTS/NICE/SIGN",
+        "title": "Asthma: diagnosis, monitoring and chronic asthma management (NG245)",
+        "publication_or_update": "2024; updated 2025",
+        "url": "https://www.nice.org.uk/guidance/ng245/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Asthma objective diagnosis and age-specific pharmacological management",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Achieve control and prevent severe attacks using an inhaled-corticosteroid-containing strategy.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): ICS-containing inhaler regimen; Bronchodilator reliever; Short systemic corticosteroid course; Add-on LAMA/LTRA/biologic. No autonomous selection or dosing is allowed. Source IDs: NICE_NG245.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "objective confirmation",
+      "current inhalers/adherence",
+      "attack history",
+      "NSAID reaction",
+      "beta-blocker use",
+      "pregnancy",
+      "smoking"
+    ],
+    "non_drug_measures": [
+      "Written action plan, trigger/smoking control, vaccination, adherence and inhaler-technique review."
+    ],
+    "medication_options": [
+      {
+        "option_name": "ICS-containing inhaler regimen",
+        "medication_or_class": "ICS-containing inhaler regimen",
+        "option_type": "medication",
+        "role": "foundation controller/reliever strategy",
+        "when_to_consider": "All confirmed asthma; exact age-specific regimen follows current guideline",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ics_airway",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "recurrent oral candidiasis, dysphonia, high cumulative steroid exposure, or poor inhaler technique"
+            ],
+            "history_checks": [
+              "current inhalers",
+              "exacerbations",
+              "adherence",
+              "technique",
+              "smoking",
+              "oral thrush"
+            ],
+            "monitoring": [
+              "symptom control, exacerbations, inhaler technique, oral effects and growth in children"
+            ]
+          }
+        ],
+        "clinical_note": "Do not use SABA-only treatment as the long-term strategy.",
+        "source_ids": [
+          "NICE_NG245"
+        ]
+      },
+      {
+        "option_name": "Bronchodilator reliever",
+        "medication_or_class": "Bronchodilator reliever",
+        "option_type": "medication",
+        "role": "symptom relief within an ICS-containing plan",
+        "when_to_consider": "As specified by age and treatment track",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "bronchodilator",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "tachyarrhythmia, ischaemic heart disease, hypokalaemia, urinary retention or narrow-angle glaucoma depending on class"
+            ],
+            "history_checks": [
+              "arrhythmia",
+              "heart disease",
+              "potassium",
+              "glaucoma",
+              "urinary retention"
+            ],
+            "monitoring": [
+              "heart rate, tremor, potassium when high-dose, symptoms and inhaler technique"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG245"
+        ]
+      },
+      {
+        "option_name": "Short systemic corticosteroid course",
+        "medication_or_class": "Short systemic corticosteroid course",
+        "option_type": "medication",
+        "role": "acute exacerbation treatment",
+        "when_to_consider": "Moderate/severe attack after clinical assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "systemic_steroid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "untreated serious systemic infection unless specialist-directed"
+            ],
+            "use_caution_if": [
+              "diabetes, severe hypertension, peptic ulcer, osteoporosis, glaucoma, psychiatric history, or recurrent courses"
+            ],
+            "history_checks": [
+              "infection",
+              "diabetes",
+              "blood pressure",
+              "bone/eye/psychiatric history"
+            ],
+            "monitoring": [
+              "glucose, blood pressure, mood, infection and cumulative exposure"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG245"
+        ]
+      },
+      {
+        "option_name": "Add-on LAMA/LTRA/biologic",
+        "medication_or_class": "Add-on LAMA/LTRA/biologic",
+        "option_type": "medication",
+        "role": "specialist or stepped add-on",
+        "when_to_consider": "Persistent poor control after confirming diagnosis, adherence and technique",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "bronchodilator",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "tachyarrhythmia, ischaemic heart disease, hypokalaemia, urinary retention or narrow-angle glaucoma depending on class"
+            ],
+            "history_checks": [
+              "arrhythmia",
+              "heart disease",
+              "potassium",
+              "glaucoma",
+              "urinary retention"
+            ],
+            "monitoring": [
+              "heart rate, tremor, potassium when high-dose, symptoms and inhaler technique"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG245"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Emergency treatment for inability to speak, exhaustion, cyanosis, silent chest, low oxygen or poor response to reliever."
+    ],
+    "source_ids": [
+      "NICE_NG245"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

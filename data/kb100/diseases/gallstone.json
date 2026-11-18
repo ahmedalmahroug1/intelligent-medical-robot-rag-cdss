@@ -1,0 +1,749 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-037",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-037",
+    "name": "Gallstones (cholelithiasis) and biliary colic",
+    "name_ar": "حصوات المرارة (والمغص الصفراوي)",
+    "synonyms": [
+      "cholelithiasis",
+      "gallstones",
+      "biliary colic"
+    ],
+    "abbreviations": [
+      "LFTs",
+      "MRCP",
+      "ERCP"
+    ],
+    "icd10": {
+      "code": "K80.20",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DC11",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "266474003",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D042882",
+      "basis": "estimate"
+    },
+    "disease_category": "Hepatobiliary",
+    "organ_system": "Gastrointestinal (biliary tract)",
+    "specialty": "Family medicine / General surgery",
+    "emergency_level": "Biliary colic routine; acute cholecystitis, cholangitis and gallstone pancreatitis are emergencies",
+    "severity": "Often asymptomatic; complications can be serious",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Stones in the gallbladder, often asymptomatic, but able to cause biliary colic (episodic RUQ pain after fatty meals) and complications such as cholecystitis, obstructive jaundice, cholangitis and pancreatitis.",
+    "detailed_description": "Gallstones are very common and frequently asymptomatic (found incidentally). Symptomatic disease ranges from biliary colic to acute complications. Diagnosis is by ultrasound; management of symptomatic stones is usually cholecystectomy. The key tasks are distinguishing uncomplicated biliary colic from complications (fever, jaundice, persistent pain) and recognising emergencies (cholangitis, pancreatitis).",
+    "pathophysiology": "Supersaturation of bile with cholesterol (or pigment) forms stones; a stone transiently obstructing the cystic duct causes biliary colic, sustained obstruction/inflammation causes cholecystitis, and stones passing into the common bile duct cause obstructive jaundice, cholangitis or gallstone pancreatitis.",
+    "etiology": "Cholesterol stones (most) - risk with the 'five Fs' (female, forty, fertile, fat, family history); pigment stones with haemolysis. Rapid weight loss, pregnancy and certain drugs contribute.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Most asymptomatic stones remain silent; once symptomatic, recurrence and complications are more likely.",
+    "prognosis": "Excellent for uncomplicated disease treated with cholecystectomy; complications increase risk."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; a significant minority of adults have gallstones, many asymptomatic.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increases with age, female sex, obesity.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low uncomplicated; significant with cholangitis/severe pancreatitis.",
+      "basis": "estimate"
+    },
+    "age_groups": "Increases with age.",
+    "sex_predominance": "More common in women.",
+    "geographic_distribution": "Worldwide; varies by diet/genetics.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "High-fat/low-fibre diet, rapid weight loss, sedentary.",
+    "smoking": "Weak association.",
+    "alcohol": "Not a strong risk for stones.",
+    "obesity": "Strong risk factor.",
+    "diabetes": "Associated.",
+    "hypertension": "Not directly relevant.",
+    "pregnancy": "Increases risk (hormonal).",
+    "occupation": "Not directly relevant.",
+    "travel": "Not relevant.",
+    "family_history": "Positive family history increases risk.",
+    "genetic_factors": "Genetic predisposition; haemolytic disorders (pigment stones).",
+    "medications": "Oestrogens, some others; rapid weight loss (including after bariatric surgery).",
+    "previous_diseases": "Haemolytic anaemia, Crohn's/ileal disease, cirrhosis."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Episodic right-upper-quadrant/epigastric pain after fatty meals",
+      "frequency": "very common",
+      "importance": "Classic biliary colic",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Pain radiating to the back/right shoulder tip",
+      "frequency": "common",
+      "importance": "Typical radiation",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "None (asymptomatic, found incidentally)",
+      "frequency": "common",
+      "importance": "Most stones are silent",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "RUQ/epigastric pain, colicky, lasting up to a few hours (biliary colic)",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Classic symptom; often postprandial (fatty food)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Radiation to back or right shoulder",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Supports biliary origin",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Nausea/vomiting with the pain",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Fever with persistent RUQ pain and tenderness (cholecystitis)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - acute cholecystitis",
+      "stage": "Complicated",
+      "early_late": "Any",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Jaundice, dark urine, pale stools (+/- fever/rigors = cholangitis)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - obstruction / cholangitis (emergency)",
+      "stage": "Complicated",
+      "early_late": "Any",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Pain settles within hours, afebrile, no jaundice, normal LFTs",
+      "why_important": "Supports uncomplicated biliary colic rather than a complication",
+      "absence_significance": "moderately reduces",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No epigastric pain radiating to back with very high lipase",
+      "why_important": "Argues against gallstone pancreatitis",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Is the pain in the right upper abdomen, after fatty meals, and does it settle within a few hours?",
+      "why_ask": "Characterises biliary colic",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any fever, or persistent pain (not settling)?",
+      "why_ask": "Screens for cholecystitis (safety)",
+      "expected_answer": "No in simple colic",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any jaundice, dark urine, pale stools, or rigors?",
+      "why_ask": "Screens for duct obstruction/cholangitis (emergency)",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Severe epigastric pain radiating to the back (pancreatitis)?",
+      "why_ask": "Screens for gallstone pancreatitis",
+      "expected_answer": "No",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Risk factors (female, weight, family history, pregnancy)?",
+      "why_ask": "Pre-test probability",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Abdominal examination (RUQ)",
+      "expected_finding": "RUQ tenderness; Murphy's sign positive in cholecystitis",
+      "importance": "High"
+    },
+    {
+      "examination": "Temperature and assessment for jaundice",
+      "expected_finding": "Fever/jaundice indicate complications",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "General/haemodynamic assessment (sepsis in cholangitis)",
+      "expected_finding": "Assess for sepsis",
+      "importance": "High (safety)"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal in colic; raised in cholecystitis/cholangitis",
+    "heart_rate": "Raised with complications/sepsis",
+    "blood_pressure": "Low in septic/severe disease",
+    "respiratory_rate": "Raised if severe",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Often raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "LFTs (bilirubin, ALT/AST, ALP/GGT)",
+      "indication": "Assess for duct obstruction/inflammation",
+      "expected_result": "Normal in simple colic; obstructive pattern (raised bilirubin/ALP) with CBD stones",
+      "normal_range": "",
+      "diagnostic_value": "Detects obstruction/complication",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine (urgent if unwell)"
+    },
+    {
+      "test_name": "FBC/CRP",
+      "indication": "Assess for inflammation/infection (cholecystitis/cholangitis)",
+      "expected_result": "Raised inflammatory markers with complications",
+      "normal_range": "",
+      "diagnostic_value": "Severity",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent if unwell"
+    },
+    {
+      "test_name": "Amylase/lipase",
+      "indication": "Suspected gallstone pancreatitis",
+      "expected_result": "Markedly raised in pancreatitis",
+      "normal_range": "",
+      "diagnostic_value": "Diagnoses pancreatitis",
+      "rule_in": "Lipase >3x ULN",
+      "rule_out": "",
+      "urgency": "Urgent"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Abdominal ultrasound (first-line)",
+      "when_needed": "Suspected gallstone disease",
+      "expected_findings": "Gallstones; wall thickening/pericholecystic fluid (cholecystitis); dilated ducts"
+    },
+    {
+      "imaging_type": "MRCP / endoscopic ultrasound; ERCP (therapeutic)",
+      "when_needed": "Suspected common bile duct stones",
+      "expected_findings": "Ductal stones; ERCP for stone removal"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If epigastric pain could be cardiac",
+    "findings": "Used to help exclude cardiac cause."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "ERCP for common bile duct stones (therapeutic)",
+    "biopsy": "Not applicable",
+    "culture": "Blood cultures if cholangitis/sepsis",
+    "pcr": "Not applicable"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Gallstones on ultrasound with compatible symptoms (biliary colic). Complications defined clinically/biochemically/radiologically: acute cholecystitis (RUQ pain >6h, fever, Murphy's sign, imaging changes); choledocholithiasis (obstructive LFTs, dilated CBD); cholangitis (Charcot's triad: RUQ pain, fever/rigors, jaundice); gallstone pancreatitis (raised lipase).",
+    "diagnostic_scores": "Tokyo Guidelines for cholecystitis/cholangitis severity.",
+    "cutoff_values": "N/A"
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Peptic ulcer / gastritis / GERD",
+      "why_similar": "Epigastric pain",
+      "differences": "Relation to acid/meals, burning",
+      "red_flags": "Bleeding",
+      "distinguishing_symptoms": "Heartburn/rhythmic pain",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "H. pylori",
+      "distinguishing_imaging": "Endoscopy",
+      "differential_questions": "Is it burning epigastric pain related to acid rather than fatty-meal RUQ pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Acute cholecystitis",
+      "why_similar": "RUQ pain",
+      "differences": "Persistent pain, fever, positive Murphy's sign",
+      "red_flags": "Sepsis, gangrene",
+      "distinguishing_symptoms": "Pain not settling + fever",
+      "distinguishing_exam": "Murphy's sign",
+      "distinguishing_labs": "Raised WCC/CRP",
+      "distinguishing_imaging": "US changes",
+      "differential_questions": "Is the pain persistent with fever?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Cholangitis / CBD obstruction",
+      "why_similar": "Biliary pain",
+      "differences": "Jaundice, fever/rigors, obstructive LFTs",
+      "red_flags": "Sepsis (emergency)",
+      "distinguishing_symptoms": "Jaundice + fever",
+      "distinguishing_exam": "Jaundice, unwell",
+      "distinguishing_labs": "Obstructive LFTs, raised markers",
+      "distinguishing_imaging": "Dilated ducts/CBD stone",
+      "differential_questions": "Any yellowing, dark urine, and fever/rigors?",
+      "likelihood_in_context": "less likely",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Acute pancreatitis / cardiac / renal colic",
+      "why_similar": "Upper abdominal pain",
+      "differences": "Back radiation (pancreatitis); exertional (cardiac); loin-to-groin (renal)",
+      "red_flags": "Severe pancreatitis; ACS",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Lipase/troponin/urine",
+      "distinguishing_imaging": "CT/US",
+      "differential_questions": "Does it radiate to the back, come with exertion, or go to the groin?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Any jaundice, dark urine, pale stools, fever/rigors, or pain that will not settle?",
+      "target_disease": "Gallstone complication (cholecystitis/cholangitis/obstruction)",
+      "competing_disease": "Uncomplicated biliary colic",
+      "purpose": "Detect complications/emergencies",
+      "interpretation": "Positive -> urgent/emergency assessment",
+      "information_gain": "very high",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is the pain in the right upper abdomen after fatty meals and settling within hours?",
+      "target_disease": "Biliary colic",
+      "competing_disease": "Other upper GI pain",
+      "purpose": "Characterise biliary pain",
+      "interpretation": "Typical -> arrange ultrasound and consider cholecystectomy",
+      "information_gain": "high",
+      "source": "NICE CG188",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "RUQ pain suspecting gallstones",
+      "question": "Any complication features (fever/jaundice/persistent pain/back radiation), and has an ultrasound been done?",
+      "expected_answers": "Uncomplicated colic vs complication",
+      "branching_logic": "Uncomplicated -> ultrasound + elective cholecystectomy referral + analgesia/advice; complications -> urgent/emergency admission (cholecystitis/cholangitis/pancreatitis)",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Abdominal ultrasound + LFTs",
+      "why": "Confirm stones and detect obstruction",
+      "expected_outcome": "Diagnosis and complication screen"
+    },
+    {
+      "test": "Lipase / MRCP (as indicated)",
+      "why": "Exclude pancreatitis / CBD stones",
+      "expected_outcome": "Identifies complications"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Charcot's triad (RUQ pain, fever/rigors, jaundice) - cholangitis",
+      "immediate_action": "Emergency - admit; IV antibiotics, resuscitation, urgent biliary drainage (ERCP)"
+    },
+    {
+      "finding": "Persistent RUQ pain with fever/positive Murphy's sign (cholecystitis)",
+      "immediate_action": "Urgent surgical assessment/admission"
+    },
+    {
+      "finding": "Severe epigastric pain radiating to back with raised lipase (gallstone pancreatitis)",
+      "immediate_action": "Emergency admission"
+    },
+    {
+      "finding": "Jaundice with dark urine/pale stools",
+      "immediate_action": "Urgent assessment for biliary obstruction"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Acute cholecystitis, cholangitis, obstructive jaundice, gallstone pancreatitis (emergency).",
+    "routine_referral": "Symptomatic gallstones for elective cholecystectomy; incidental stones only if symptomatic/high-risk.",
+    "emergency_referral": "Cholangitis/severe pancreatitis/sepsis."
+  },
+  "complications": {
+    "early": [
+      "Acute cholecystitis",
+      "Cholangitis",
+      "Gallstone pancreatitis",
+      "Obstructive jaundice"
+    ],
+    "late": [
+      "Recurrent biliary colic",
+      "Gallbladder empyema/gangrene/perforation",
+      "Gallstone ileus",
+      "Small increased gallbladder cancer risk (chronic)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Analgesia for colic; explain the diagnosis and plan; dietary advice while awaiting surgery.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Paracetamol; Antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_CG188.",
+    "lifestyle_advice": "Reduce fatty-food triggers while awaiting surgery; weight management.",
+    "follow_up": "Refer symptomatic stones for cholecystectomy; safety-net for complication features.",
+    "legacy_medications_pre_v13": "Analgesia (NSAID or opioid) for biliary colic; antiemetics as needed. Definitive treatment for symptomatic stones is laparoscopic cholecystectomy. Complications need admission: IV fluids/antibiotics for cholecystitis/cholangitis, ERCP for ductal stones, and management of pancreatitis."
+  },
+  "patient_education": {
+    "home_advice": "Gallstones are common and often cause no problems. When they do, they typically cause bouts of pain in the upper-right tummy, often after fatty meals, that settle within a few hours. The usual treatment for troublesome stones is keyhole surgery to remove the gallbladder. Seek urgent help if the pain does not settle, you develop a fever, or you notice yellow eyes/skin, dark urine or pale stools - these can mean a blockage or infection.",
+    "home_advice_ar": "حصوات المرارة شائعة وكثيراً ما لا تسبّب مشاكل. وعندما تسبّبها، تكون نوبات ألم في أعلى يمين البطن، غالباً بعد الوجبات الدسمة، تهدأ خلال ساعات. والعلاج المعتاد للحصوات المُزعجة هو جراحة بالمنظار لاستئصال المرارة. اطلب المساعدة العاجلة إذا لم يهدأ الألم، أو ظهرت حرارة، أو لاحظت اصفرار العين/الجلد أو بولاً غامقاً أو برازاً فاتحاً - فقد تعني انسداداً أو عدوى.",
+    "prevention": "Healthy weight, balanced diet, avoid very rapid weight loss.",
+    "warning_signs": "Persistent pain, fever, jaundice (yellow eyes/skin), dark urine, pale stools, or severe pain radiating to the back."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Healthy weight and diet; avoid crash diets.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for cholecystectomy in symptomatic disease; established emergency pathways for complications.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_CG188; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE CG188, Tokyo Guidelines.",
+    "verified_source_ids": [
+      "NICE_CG188"
+    ]
+  },
+  "references": {
+    "nice": "Gallstone disease: diagnosis and management (CG188) — https://www.nice.org.uk/guidance/cg188/chapter/Recommendations",
+    "aafp": "AAFP - Gallstones / biliary colic",
+    "bmj_best_practice": "BMJ Best Practice - Cholelithiasis",
+    "msd_manual": "MSD Manual - Cholelithiasis",
+    "merck_manual": "Merck Manual - Gallstones",
+    "uptodate": "UpToDate - Approach to the patient with suspected gallstone disease",
+    "harrisons": "Harrison's Principles of Internal Medicine - Diseases of the Gallbladder and Bile Ducts",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Gallstones",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_CG188",
+        "organization": "NICE",
+        "title": "Gallstone disease: diagnosis and management (CG188)",
+        "publication_or_update": "2014",
+        "url": "https://www.nice.org.uk/guidance/cg188/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Imaging, cholecystectomy and duct-stone pathways",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_CG188"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_CG188"
+      ],
+      "red_flags_and_referral": [
+        "NICE_CG188"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_CG188",
+        "organization": "NICE",
+        "title": "Gallstone disease: diagnosis and management (CG188)",
+        "publication_or_update": "2014",
+        "url": "https://www.nice.org.uk/guidance/cg188/chapter/Recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Imaging, cholecystectomy and duct-stone pathways",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Control biliary pain and provide definitive surgical/endoscopic care for symptomatic or complicated stones.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): NSAID; Paracetamol; Antibiotic. No autonomous selection or dosing is allowed. Source IDs: NICE_CG188.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "pregnancy",
+      "renal/GI/bleeding history",
+      "anticoagulation",
+      "jaundice/LFTs",
+      "pancreatitis",
+      "surgical fitness"
+    ],
+    "non_drug_measures": [
+      "No treatment is required for many incidentally found asymptomatic stones; avoid extreme rapid weight loss."
+    ],
+    "medication_options": [
+      {
+        "option_name": "NSAID",
+        "medication_or_class": "NSAID",
+        "option_type": "medication",
+        "role": "biliary-colic analgesia",
+        "when_to_consider": "When suitable after renal/GI/CV/pregnancy review",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG188"
+        ]
+      },
+      {
+        "option_name": "Paracetamol",
+        "medication_or_class": "Paracetamol",
+        "option_type": "medication",
+        "role": "analgesic alternative/adjunct",
+        "when_to_consider": "When suitable",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG188"
+        ]
+      },
+      {
+        "option_name": "Antibiotic",
+        "medication_or_class": "Antibiotic",
+        "option_type": "medication",
+        "role": "complication treatment",
+        "when_to_consider": "Acute cholecystitis/cholangitis or sepsis under hospital/local protocol",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_CG188"
+        ]
+      },
+      {
+        "option_name": "Cholecystectomy/ERCP",
+        "medication_or_class": "Cholecystectomy/ERCP",
+        "option_type": "specialist_procedure",
+        "role": "definitive procedural therapy",
+        "when_to_consider": "Symptomatic stones, cholecystitis or duct stones according to pathway",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Requires imaging, anticoagulation, anaesthetic/surgical fitness and procedure-specific complication assessment.",
+        "source_ids": [
+          "NICE_CG188"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Emergency care for fever with RUQ pain, jaundice, hypotension/confusion, pancreatitis or peritonism."
+    ],
+    "source_ids": [
+      "NICE_CG188"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

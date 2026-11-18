@@ -1,0 +1,772 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-041",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-041",
+    "name": "Acute appendicitis",
+    "name_ar": "التهاب الزائدة الدودية الحاد",
+    "synonyms": [
+      "appendicitis"
+    ],
+    "abbreviations": [],
+    "icd10": {
+      "code": "K35.80",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "DB10",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "85189001",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D001064",
+      "basis": "estimate"
+    },
+    "disease_category": "Acute surgical abdomen",
+    "organ_system": "Gastrointestinal (appendix)",
+    "specialty": "Family medicine / General surgery",
+    "emergency_level": "EMERGENCY - a common surgical abdomen; perforation causes peritonitis/sepsis",
+    "severity": "Serious - requires urgent surgical assessment; perforation increases morbidity",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Acute inflammation of the appendix, the commonest surgical emergency, classically with peri-umbilical pain migrating to the right iliac fossa, requiring urgent assessment and usually appendicectomy.",
+    "detailed_description": "Appendicitis is a leading cause of the acute abdomen. Presentation can be atypical (children, elderly, pregnancy). The primary-care role is early recognition and prompt referral for surgical assessment - NOT to exclude it in the community. Diagnosis is clinical, supported by inflammatory markers and imaging (ultrasound/CT). Delay risks perforation, peritonitis and sepsis.",
+    "pathophysiology": "Luminal obstruction (faecolith, lymphoid hyperplasia) causes distension, bacterial overgrowth, mucosal ischaemia and inflammation; progression leads to necrosis and perforation with localised abscess or generalised peritonitis. Visceral pain (peri-umbilical) becomes somatic/localised (right iliac fossa) as the parietal peritoneum is involved.",
+    "etiology": "Appendiceal luminal obstruction and infection; sometimes no clear cause.",
+    "incubation_period": "Not applicable (acute over ~24-72 hours).",
+    "natural_history": "Progresses over hours-days from inflammation to perforation if untreated; some mild cases may resolve/recur.",
+    "prognosis": "Excellent with timely surgery; worse with perforation/delay, especially at extremes of age."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Very common; lifetime risk of appendicitis is significant (a few percent).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Peaks in the second-third decades; occurs at any age.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low with prompt treatment; higher with perforation/sepsis or delayed presentation.",
+      "basis": "estimate"
+    },
+    "age_groups": "Most common in children/young adults; atypical and higher-risk in the very young and elderly.",
+    "sex_predominance": "Slightly more common in males.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "Slight variation reported."
+  },
+  "risk_factors": {
+    "lifestyle": "No strong modifiable risk factors.",
+    "smoking": "Not a major factor.",
+    "alcohol": "Not relevant.",
+    "obesity": "May complicate assessment/surgery.",
+    "diabetes": "Can mask/complicate.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Appendicitis in pregnancy has atypical location and higher risk - low threshold for assessment.",
+    "occupation": "Not relevant.",
+    "travel": "Consider other causes if travel-related (mimics).",
+    "family_history": "Some familial tendency.",
+    "genetic_factors": "Not primary.",
+    "medications": "None causal.",
+    "previous_diseases": "None specific (prior appendicectomy excludes it)."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Abdominal pain moving to the right lower abdomen",
+      "frequency": "very common",
+      "importance": "Classic migrating pain",
+      "source": "clinical/surgical texts",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Anorexia, nausea, vomiting",
+      "frequency": "common",
+      "importance": "Common associated features",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "complaint": "Fever and worsening localised pain",
+      "frequency": "common",
+      "importance": "Progression/inflammation",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Peri-umbilical pain migrating to the right iliac fossa",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Classic pattern (not always present)",
+      "stage": "Early-mid",
+      "early_late": "Early",
+      "source": "clinical/surgical texts",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Anorexia",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "slightly reduces",
+      "importance": "Very common - its absence makes appendicitis a little less likely",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Nausea/vomiting (usually AFTER pain onset)",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Vomiting before pain suggests another cause",
+      "stage": "Early",
+      "early_late": "Early",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Right iliac fossa tenderness/guarding (McBurney's point), rebound",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "moderately reduces",
+      "importance": "Key examination sign of localised peritonism",
+      "stage": "Mid",
+      "early_late": "Mid",
+      "source": "clinical/surgical texts",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Low-grade fever",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "High fever suggests perforation/other cause",
+      "stage": "Mid",
+      "early_late": "Mid",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Generalised abdominal pain/rigidity, high fever, unwell (perforation/peritonitis)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - perforation/peritonitis/sepsis",
+      "stage": "Complicated",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "No RIF tenderness, pain-free, eating normally, normal inflammatory markers",
+      "why_important": "Makes appendicitis less likely (but does not fully exclude - reassess if progressing)",
+      "absence_significance": "moderately reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "finding": "Prior appendicectomy",
+      "why_important": "Excludes appendicitis (appendix already removed)",
+      "absence_significance": "excludes if absent",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Where did the pain start and where is it now?",
+      "why_ask": "Migrating central-to-RIF pain is characteristic",
+      "expected_answer": "Central then RIF",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any loss of appetite, nausea/vomiting, and did vomiting come before or after the pain?",
+      "why_ask": "Anorexia is common; vomiting-before-pain suggests another cause",
+      "expected_answer": "Anorexia; vomiting after pain",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "For women: last menstrual period, pregnancy possibility, and gynaecological symptoms?",
+      "why_ask": "Exclude ectopic pregnancy/ovarian pathology/PID (key mimics)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Any urinary symptoms or diarrhoea?",
+      "why_ask": "Consider UTI/gastroenteritis mimics",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "How severe/progressive is it, and any high fever or feeling very unwell?",
+      "why_ask": "Assess for perforation/peritonitis/sepsis",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Abdominal examination (RIF tenderness, guarding, rebound, Rovsing's sign)",
+      "expected_finding": "Localised RIF peritonism; generalised peritonitis if perforated",
+      "importance": "High"
+    },
+    {
+      "examination": "Temperature, pulse, and signs of sepsis",
+      "expected_finding": "Low-grade fever; sepsis features indicate perforation",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Consider pelvic/urinary assessment for mimics",
+      "expected_finding": "Helps exclude gynaecological/urological causes",
+      "importance": "Moderate-high"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Low-grade fever (high suggests perforation)",
+    "heart_rate": "Raised with pain/inflammation/sepsis",
+    "blood_pressure": "Low with sepsis/perforation",
+    "respiratory_rate": "Raised if peritonitis/sepsis",
+    "oxygen_saturation": "Usually normal",
+    "bmi": "Not central"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "FBC + CRP",
+      "indication": "Support diagnosis and assess severity",
+      "expected_result": "Raised white cell count and CRP (normal markers reduce but do not exclude)",
+      "normal_range": "",
+      "diagnostic_value": "Supportive",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    },
+    {
+      "test_name": "Urinalysis and pregnancy test (women)",
+      "indication": "Exclude UTI and ectopic pregnancy",
+      "expected_result": "Helps identify mimics",
+      "normal_range": "",
+      "diagnostic_value": "Excludes key mimics",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    },
+    {
+      "test_name": "U&E/lactate (if unwell)",
+      "indication": "Assess severity/sepsis",
+      "expected_result": "Deranged if severe",
+      "normal_range": "",
+      "diagnostic_value": "Severity",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Urgent"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Ultrasound (first-line in children/pregnancy/young women) or CT abdomen",
+      "when_needed": "To confirm the diagnosis and assess complications when uncertain",
+      "expected_findings": "Enlarged non-compressible appendix, wall thickening, fat stranding, abscess/perforation"
+    }
+  ],
+  "ecg": {
+    "when_needed": "Not applicable",
+    "findings": "Not applicable"
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Not applicable",
+    "biopsy": "Histology of the removed appendix confirms the diagnosis",
+    "culture": "Blood cultures if septic",
+    "pcr": "Not applicable",
+    "scoring": "Clinical scores (e.g., Alvarado) support decision-making but do not replace assessment"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Primarily clinical: characteristic history (migrating RIF pain, anorexia, nausea) with RIF tenderness/peritonism, supported by raised inflammatory markers and imaging (ultrasound/CT) where used. Scores (e.g., Alvarado) aid risk stratification. Definitive diagnosis is often at surgery/histology.",
+    "diagnostic_scores": {
+      "value": "Alvarado score and paediatric appendicitis scores stratify likelihood.",
+      "basis": "sourced"
+    },
+    "cutoff_values": "N/A (clinical decision)."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Gynaecological (ectopic pregnancy, ovarian torsion/cyst, PID)",
+      "why_similar": "Lower abdominal/pelvic pain in women",
+      "differences": "Menstrual/pregnancy history, adnexal signs",
+      "red_flags": "Ectopic pregnancy (emergency)",
+      "distinguishing_symptoms": "Amenorrhoea/vaginal bleeding",
+      "distinguishing_exam": "Adnexal tenderness/mass",
+      "distinguishing_labs": "Pregnancy test",
+      "distinguishing_imaging": "Pelvic ultrasound",
+      "differential_questions": "When was your last period and could you be pregnant?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Mesenteric adenitis / gastroenteritis (children)",
+      "why_similar": "Abdominal pain",
+      "differences": "Preceding URTI, diffuse, self-limiting",
+      "red_flags": "",
+      "distinguishing_symptoms": "Diarrhoea/URTI",
+      "distinguishing_exam": "Less localised",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any diarrhoea or recent cold, with more diffuse pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Urinary tract infection / renal colic",
+      "why_similar": "Abdominal/flank pain",
+      "differences": "Urinary symptoms; loin-to-groin colic",
+      "red_flags": "Obstructed infected kidney",
+      "distinguishing_symptoms": "Dysuria/loin pain",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Urinalysis",
+      "distinguishing_imaging": "CT KUB",
+      "differential_questions": "Any burning on urination or loin-to-groin pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Other surgical causes (Meckel's, Crohn's, perforated ulcer, diverticulitis)",
+      "why_similar": "Acute abdomen",
+      "differences": "Cause-specific features",
+      "red_flags": "Peritonitis",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "CT",
+      "differential_questions": "Any features pointing to another surgical cause?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "For women of reproductive age: could you be pregnant (ectopic)?",
+      "target_disease": "Ectopic pregnancy",
+      "competing_disease": "Appendicitis",
+      "purpose": "Do not miss ectopic pregnancy",
+      "interpretation": "Positive pregnancy test with pain -> emergency gynaecology assessment",
+      "information_gain": "very high",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "question": "Did the pain start centrally and move to the right lower abdomen, with loss of appetite?",
+      "target_disease": "Appendicitis",
+      "competing_disease": "Other abdominal pain",
+      "purpose": "Elicit the classic pattern",
+      "interpretation": "Migrating RIF pain + RIF tenderness -> urgent surgical referral",
+      "information_gain": "high",
+      "source": "clinical/surgical texts",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Acute abdominal pain suggesting appendicitis",
+      "question": "Is there RIF tenderness/peritonism, could she be pregnant, and are there signs of sepsis/perforation?",
+      "expected_answers": "Localised appendicitis vs mimic vs perforation",
+      "branching_logic": "Suspected appendicitis -> urgent same-day surgical referral (do not exclude in the community); pregnancy possible -> exclude ectopic; sepsis/peritonitis -> emergency admission",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Urgent surgical assessment",
+      "why": "Appendicitis is a surgical emergency - refer, do not attempt to exclude in primary care",
+      "expected_outcome": "Timely diagnosis and treatment"
+    },
+    {
+      "test": "Bloods (FBC/CRP), pregnancy test, urinalysis +/- imaging (US/CT)",
+      "why": "Support diagnosis and exclude mimics",
+      "expected_outcome": "Confirms/refutes and detects complications"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Generalised abdominal rigidity/peritonitis, high fever, tachycardia, hypotension (perforation/sepsis)",
+      "immediate_action": "Emergency - resuscitate and urgent surgical admission"
+    },
+    {
+      "finding": "Positive pregnancy test with abdominal pain",
+      "immediate_action": "Emergency - exclude ectopic pregnancy"
+    },
+    {
+      "finding": "Rapidly worsening or severe localised pain with peritonism",
+      "immediate_action": "Urgent same-day surgical assessment"
+    },
+    {
+      "finding": "Very young child or elderly/immunocompromised with abdominal pain",
+      "immediate_action": "Low threshold for urgent assessment (atypical/high-risk presentations)"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Any suspected appendicitis - urgent same-day surgical assessment.",
+    "routine_referral": "Not applicable (this is an acute condition).",
+    "emergency_referral": "Peritonitis/sepsis, suspected perforation, or ectopic pregnancy."
+  },
+  "complications": {
+    "early": [
+      "Perforation",
+      "Peritonitis / intra-abdominal abscess",
+      "Sepsis"
+    ],
+    "late": [
+      "Appendix mass/abscess",
+      "Adhesional bowel obstruction (post-surgery)",
+      "Wound infection"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "In primary care: recognise and REFER urgently; keep nil by mouth; analgesia and safety-net while arranging transfer; do not give antibiotics that mask signs without surgical input.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Analgesia and IV fluids; Peri-operative/pathway antibiotic; Non-operative antibiotic strategy. No autonomous selection or dosing is allowed. Source IDs: WSES_APPENDICITIS_2025.",
+    "lifestyle_advice": "Not applicable acutely; post-operative recovery advice.",
+    "follow_up": "Surgical follow-up; histology review (occasionally reveals other pathology).",
+    "legacy_medications_pre_v13": "Hospital management: IV fluids, analgesia, and antibiotics; APPENDICECTOMY (laparoscopic) is the standard treatment; selected uncomplicated cases may be managed with antibiotics under specialist care. Abscess may need drainage."
+  },
+  "patient_education": {
+    "home_advice": "Appendicitis is a surgical emergency. The pain often starts around the belly button and moves to the lower-right tummy, with loss of appetite and feeling sick. It needs urgent hospital assessment - usually an operation to remove the appendix - because a burst appendix is dangerous. If you or your child has worsening tummy pain that settles in the lower-right side, especially with fever or vomiting, get medical help urgently. Do not just take painkillers and wait.",
+    "home_advice_ar": "التهاب الزائدة حالة طارئة جراحية. يبدأ الألم غالباً حول السرّة ثم ينتقل إلى أسفل يمين البطن، مع فقدان الشهية والغثيان. يحتاج تقييماً عاجلاً في المستشفى - عادةً عملية لاستئصال الزائدة - لأن انفجارها خطير. إذا أصابك أو أصاب طفلك ألم بطن متزايد يستقرّ في أسفل اليمين، خاصةً مع حرارة أو قيء، فاطلب المساعدة الطبية عاجلاً. لا تكتفِ بالمسكّنات والانتظار.",
+    "prevention": "No known prevention.",
+    "warning_signs": "Worsening/persistent right-lower abdominal pain, fever, vomiting, a rigid painful tummy, or feeling very unwell - seek emergency care."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "No established prevention.",
+    "screening": "Not applicable."
+  },
+  "evidence": {
+    "evidence_level": "High for surgical management; growing evidence for antibiotics-first in selected uncomplicated cases.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by WSES_APPENDICITIS_2025; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - surgical association guidance (e.g., WSES), NICE.",
+    "verified_source_ids": [
+      "WSES_APPENDICITIS_2025"
+    ]
+  },
+  "references": {
+    "nice": "NICE guidance on suspected appendicitis / acute abdomen pathways",
+    "aafp": "AAFP - Evaluation of acute abdominal pain / appendicitis",
+    "bmj_best_practice": "BMJ Best Practice - Appendicitis",
+    "msd_manual": "MSD Manual - Appendicitis",
+    "merck_manual": "Merck Manual - Appendicitis",
+    "uptodate": "UpToDate - Acute appendicitis in adults: clinical manifestations and differential diagnosis; management",
+    "harrisons": "Harrison's Principles of Internal Medicine - Acute Appendicitis and Peritonitis",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine / Surgery - Appendicitis",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "WSES_APPENDICITIS_2025",
+        "organization": "World Society of Emergency Surgery",
+        "title": "Jerusalem Guidelines for Acute Appendicitis, 2025 edition",
+        "publication_or_update": "2025/2026 publication",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41604201/",
+        "accessed": "2026-07-15",
+        "scope": "Risk scoring, imaging, surgery and selected non-operative treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "WSES_APPENDICITIS_2025"
+      ],
+      "treatment_and_monitoring": [
+        "WSES_APPENDICITIS_2025"
+      ],
+      "red_flags_and_referral": [
+        "WSES_APPENDICITIS_2025"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "WSES_APPENDICITIS_2025",
+        "organization": "World Society of Emergency Surgery",
+        "title": "Jerusalem Guidelines for Acute Appendicitis, 2025 edition",
+        "publication_or_update": "2025/2026 publication",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41604201/",
+        "accessed": "2026-07-15",
+        "scope": "Risk scoring, imaging, surgery and selected non-operative treatment",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Recognise a surgical emergency, provide analgesia/resuscitation and select surgery versus non-operative care in hospital.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Analgesia and IV fluids; Peri-operative/pathway antibiotic; Non-operative antibiotic strategy. No autonomous selection or dosing is allowed. Source IDs: WSES_APPENDICITIS_2025.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "pregnancy",
+      "age/frailty",
+      "immunocompromise",
+      "anticoagulation",
+      "renal function",
+      "imaging/appendicolith",
+      "peritonitis/sepsis"
+    ],
+    "non_drug_measures": [
+      "Nil-by-mouth and resuscitation decisions belong to the acute surgical team."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Analgesia and IV fluids",
+        "medication_or_class": "Analgesia and IV fluids",
+        "option_type": "medication",
+        "role": "supportive emergency care",
+        "when_to_consider": "After urgent assessment; analgesia should not be withheld solely to preserve signs",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "paracetamol",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe active liver disease or prior serious reaction"
+            ],
+            "use_caution_if": [
+              "heavy alcohol use, malnutrition, low body weight, or concomitant paracetamol-containing products"
+            ],
+            "history_checks": [
+              "liver disease",
+              "alcohol intake",
+              "all current OTC products"
+            ],
+            "monitoring": [
+              "total daily exposure and clinical response"
+            ]
+          },
+          {
+            "rule_id": "nsaid",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active gastrointestinal bleeding/ulcer, serious NSAID allergy, or NSAID-triggered asthma"
+            ],
+            "use_caution_if": [
+              "chronic kidney disease, heart failure, hypertension, anticoagulation/antiplatelet therapy, older age, pregnancy, or dehydration"
+            ],
+            "history_checks": [
+              "ulcer/bleeding history",
+              "renal disease",
+              "heart failure",
+              "asthma reaction",
+              "pregnancy",
+              "anticoagulants"
+            ],
+            "monitoring": [
+              "renal function, blood pressure, oedema and gastrointestinal bleeding symptoms when clinically indicated"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "WSES_APPENDICITIS_2025"
+        ]
+      },
+      {
+        "option_name": "Peri-operative/pathway antibiotic",
+        "medication_or_class": "Peri-operative/pathway antibiotic",
+        "option_type": "medication",
+        "role": "infection treatment/prophylaxis",
+        "when_to_consider": "Hospital-selected according to uncomplicated/complicated disease and local resistance",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          },
+          {
+            "rule_id": "macrolide",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "prior serious macrolide allergy or clinically important QT prolongation with interacting drugs"
+            ],
+            "use_caution_if": [
+              "liver disease, bradycardia, hypokalaemia, myasthenia gravis, pregnancy, or QT-prolonging medicines"
+            ],
+            "history_checks": [
+              "ECG/QT history",
+              "liver disease",
+              "pregnancy",
+              "interacting medicines"
+            ],
+            "monitoring": [
+              "clinical response; ECG/electrolytes when risk is material"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "WSES_APPENDICITIS_2025"
+        ]
+      },
+      {
+        "option_name": "Laparoscopic appendicectomy",
+        "medication_or_class": "Laparoscopic appendicectomy",
+        "option_type": "specialist_procedure",
+        "role": "standard definitive treatment",
+        "when_to_consider": "Most operative candidates, especially complicated disease",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Requires urgent surgical and anaesthetic assessment; this KB never recommends outpatient delay.",
+        "source_ids": [
+          "WSES_APPENDICITIS_2025"
+        ]
+      },
+      {
+        "option_name": "Non-operative antibiotic strategy",
+        "medication_or_class": "Non-operative antibiotic strategy",
+        "option_type": "medication",
+        "role": "selected alternative",
+        "when_to_consider": "Carefully selected uncomplicated cases after imaging and shared specialist decision",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "penicillin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "documented immediate or severe delayed penicillin allergy"
+            ],
+            "use_caution_if": [
+              "renal impairment, prior C. difficile, or recent antibiotic exposure"
+            ],
+            "history_checks": [
+              "exact allergy reaction",
+              "renal function",
+              "recent antibiotics",
+              "local resistance"
+            ],
+            "monitoring": [
+              "clinical response, allergy and antibiotic-associated diarrhoea"
+            ]
+          }
+        ],
+        "clinical_note": "Requires discussion of failure/recurrence and is not an autonomous outpatient recommendation.",
+        "source_ids": [
+          "WSES_APPENDICITIS_2025"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Immediate emergency/surgical assessment for suspected appendicitis, peritonitis, sepsis, pregnancy, older/immunocompromised patient or diagnostic uncertainty."
+    ],
+    "source_ids": [
+      "WSES_APPENDICITIS_2025"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

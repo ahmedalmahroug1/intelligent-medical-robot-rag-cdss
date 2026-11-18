@@ -1,0 +1,772 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-028",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-028",
+    "name": "Atrial fibrillation",
+    "name_ar": "الرجفان الأذيني",
+    "synonyms": [
+      "AF",
+      "atrial fibrillation",
+      "irregular heart rhythm"
+    ],
+    "abbreviations": [
+      "AF",
+      "AFib"
+    ],
+    "icd10": {
+      "code": "I48.9",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "BC81.3",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "49436004",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D001281",
+      "basis": "estimate"
+    },
+    "disease_category": "Cardiac arrhythmia",
+    "organ_system": "Cardiovascular",
+    "specialty": "Family medicine / Cardiology",
+    "emergency_level": "Usually routine - but AF with haemodynamic instability or acute stroke is an emergency",
+    "severity": "Ranges from asymptomatic to disabling; main harm is stroke risk",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "The commonest sustained cardiac arrhythmia, an irregularly irregular atrial rhythm causing palpitations, breathlessness and fatigue, whose greatest danger is a markedly increased risk of stroke.",
+    "detailed_description": "Atrial fibrillation is common and increases with age. It may be paroxysmal, persistent or permanent, and is often found incidentally (including asymptomatic). Diagnosis requires an ECG (or ambulatory monitoring). Management has three strands: STROKE PREVENTION with anticoagulation guided by risk score (the priority), RATE or RHYTHM control for symptoms, and treatment of underlying causes/precipitants.",
+    "pathophysiology": "Disorganised atrial electrical activity replaces coordinated contraction, causing an irregular ventricular response; loss of atrial 'kick' and stasis (especially the left atrial appendage) promotes thrombus formation and embolic stroke.",
+    "etiology": "Hypertension, ischaemic/valvular/structural heart disease, heart failure, hyperthyroidism, alcohol, sepsis/infection, pulmonary disease/PE, obesity and sleep apnoea; often multifactorial or 'lone' AF.",
+    "incubation_period": "Not applicable.",
+    "natural_history": "Often progresses from paroxysmal to persistent/permanent; embolic and heart-failure risk if untreated.",
+    "prognosis": "Good with appropriate anticoagulation and rate/rhythm control; untreated AF carries substantial stroke and heart-failure risk."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "The most common sustained arrhythmia; prevalence rises steeply with age (several percent of older adults).",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increases with age and cardiovascular disease.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Increased mortality mainly via stroke and heart failure.",
+      "basis": "estimate"
+    },
+    "age_groups": "Predominantly older adults.",
+    "sex_predominance": "Slightly more common in men; strokes from AF often more severe in women.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "None strong."
+  },
+  "risk_factors": {
+    "lifestyle": "Excess alcohol ('holiday heart'), obesity, physical inactivity; also endurance athletes.",
+    "smoking": "Cardiovascular risk factor.",
+    "alcohol": "Acute and chronic excess precipitate AF.",
+    "obesity": "Strong risk factor (and via sleep apnoea).",
+    "diabetes": "Associated risk factor.",
+    "hypertension": "Major, common risk factor.",
+    "pregnancy": "Uncommon; consider structural/thyroid causes.",
+    "occupation": "Not directly relevant.",
+    "travel": "Not directly relevant.",
+    "family_history": "Familial predisposition in some.",
+    "genetic_factors": "Some genetic susceptibility.",
+    "medications": "Sympathomimetics, thyroxine excess.",
+    "previous_diseases": "Hypertension, heart failure, coronary/valvular disease, hyperthyroidism, obstructive sleep apnoea, chronic lung disease."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Palpitations (irregular)",
+      "frequency": "very common",
+      "importance": "Common symptom",
+      "source": "NICE NG196; ESC",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Breathlessness and fatigue",
+      "frequency": "common",
+      "importance": "Reduced cardiac efficiency",
+      "source": "ESC",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "None (incidental / asymptomatic)",
+      "frequency": "common",
+      "importance": "Often found on examination/opportunistic pulse check",
+      "source": "NICE NG196",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Irregularly irregular pulse",
+      "typical": true,
+      "frequency": "very common",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "strongly reduces",
+      "importance": "Hallmark clinical sign (confirm with ECG)",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "NICE NG196",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Palpitations",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "compatible",
+      "absence_significance": "no significant change",
+      "importance": "Common but AF can be asymptomatic",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "ESC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Breathlessness / reduced exercise tolerance",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "ESC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Fatigue / dizziness / lightheadedness",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Nonspecific",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "ESC",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Chest pain, syncope, or acute severe breathlessness (with fast AF)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - haemodynamic compromise / precipitated ischaemia/heart failure",
+      "stage": "Acute",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Acute focal neurological deficit (embolic stroke/TIA)",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "strongly suggestive",
+      "absence_significance": "no significant change",
+      "importance": "RED FLAG - AF-related thromboembolism",
+      "stage": "Complication",
+      "early_late": "Any",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Regular pulse and normal ECG at the time",
+      "why_important": "AF unlikely at that moment (but paroxysmal AF needs ambulatory monitoring to capture)",
+      "absence_significance": "moderately reduces",
+      "source": "NICE NG196",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No structural heart disease, normal thyroid, no precipitant",
+      "why_important": "Suggests 'lone'/idiopathic AF; still assess stroke risk",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Do you feel an irregular fast heartbeat, and is it constant or does it come and go?",
+      "why_ask": "Distinguishes paroxysmal from persistent; guides monitoring",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any chest pain, blackouts, or severe breathlessness with episodes?",
+      "why_ask": "Screens for haemodynamic compromise (emergency)",
+      "expected_answer": "Usually no",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Stroke risk factors (age, hypertension, diabetes, prior stroke/TIA, heart failure, vascular disease)?",
+      "why_ask": "CHA2DS2-VASc for anticoagulation decision",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Bleeding risk factors and current medications (including alcohol)?",
+      "why_ask": "Anticoagulation safety (bleeding-risk assessment)",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High"
+    },
+    {
+      "question": "Any thyroid symptoms, alcohol excess, or recent infection?",
+      "why_ask": "Identifies precipitants/causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Pulse (rate and rhythm)",
+      "expected_finding": "Irregularly irregular; assess rate",
+      "importance": "High"
+    },
+    {
+      "examination": "Blood pressure and signs of haemodynamic compromise",
+      "expected_finding": "Assess stability",
+      "importance": "High (safety)"
+    },
+    {
+      "examination": "Cardiac and respiratory exam (heart failure, valve disease)",
+      "expected_finding": "May reveal cause/complication",
+      "importance": "Moderate-high"
+    },
+    {
+      "examination": "Thyroid and general exam (precipitants)",
+      "expected_finding": "Signs of hyperthyroidism/infection",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal (fever suggests infective precipitant)",
+    "heart_rate": "Often raised and irregular; may be very fast",
+    "blood_pressure": "Variable; low BP with fast AF suggests compromise",
+    "respiratory_rate": "Normal or raised",
+    "oxygen_saturation": "Usually normal (low if heart failure/PE)",
+    "bmi": "Often raised"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "Thyroid function tests, U&E, FBC, glucose",
+      "indication": "Identify precipitants and baseline for treatment",
+      "expected_result": "May reveal hyperthyroidism, electrolyte issues",
+      "normal_range": "",
+      "diagnostic_value": "Aetiology/safety",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Renal/liver function and FBC (for anticoagulant choice/dosing)",
+      "indication": "Anticoagulation safety",
+      "expected_result": "Guides drug/dose",
+      "normal_range": "",
+      "diagnostic_value": "Safety",
+      "rule_in": "",
+      "rule_out": "",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "Echocardiography",
+      "when_needed": "Assess structural/valvular disease, LV function, and to guide rhythm-control/anticoagulation decisions",
+      "expected_findings": "Valve disease, LV dysfunction, atrial enlargement"
+    }
+  ],
+  "ecg": {
+    "when_needed": "REQUIRED to diagnose - 12-lead ECG (and ambulatory/patch monitoring for paroxysmal AF)",
+    "findings": "Irregularly irregular rhythm with ABSENT P waves and a fibrillatory baseline; variable ventricular rate."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "If coexisting lung disease",
+    "endoscopy": "Not applicable",
+    "biopsy": "Not applicable",
+    "culture": "If infective precipitant suspected",
+    "pcr": "Not applicable",
+    "ambulatory_monitoring": "Holter/patch/implantable monitors to capture paroxysmal AF"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "ECG demonstration of atrial fibrillation: irregularly irregular ventricular rhythm with absent distinct P waves (fibrillatory waves), lasting at least 30 seconds on a rhythm strip/single-lead. Classify as paroxysmal, persistent, long-standing persistent, or permanent. Then assess STROKE RISK (CHA2DS2-VASc) and bleeding risk (e.g., ORBIT/HAS-BLED to identify modifiable factors).",
+    "diagnostic_scores": {
+      "value": "CHA2DS2-VASc for stroke risk; bleeding-risk tools (e.g., ORBIT/HAS-BLED) to address modifiable bleeding factors (not to withhold anticoagulation).",
+      "basis": "sourced"
+    },
+    "cutoff_values": {
+      "value": "Offer anticoagulation based on CHA2DS2-VASc (e.g., consider at score >=1 in men / >=2 in women; offer at >=2). Do not use bleeding risk alone to withhold anticoagulation.",
+      "basis": "sourced"
+    }
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Atrial flutter",
+      "why_similar": "Fast, sometimes irregular tachyarrhythmia",
+      "differences": "Sawtooth flutter waves, often regular (e.g., 2:1)",
+      "red_flags": "Fast ventricular rate",
+      "distinguishing_symptoms": "Similar palpitations",
+      "distinguishing_exam": "May be regular",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the rhythm regular with sawtooth waves on ECG?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Other supraventricular tachycardias / multiple ectopics",
+      "why_similar": "Palpitations",
+      "differences": "ECG pattern differs (regular SVT; discrete ectopics)",
+      "red_flags": "",
+      "distinguishing_symptoms": "Sudden on/off (SVT)",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Do episodes start and stop suddenly and look regular on ECG?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Sinus tachycardia (e.g., from sepsis, anaemia, PE, thyrotoxicosis)",
+      "why_similar": "Fast heart rate/palpitations",
+      "differences": "Regular with normal P waves; underlying cause",
+      "red_flags": "Underlying serious cause (PE, sepsis)",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Cause-specific",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is the rhythm regular with a clear precipitant?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "AF causing/with acute complications (stroke, heart failure, ischaemia)",
+      "why_similar": "AF present",
+      "differences": "Complication features dominate",
+      "red_flags": "Focal neurology, pulmonary oedema, chest pain",
+      "distinguishing_symptoms": "Complication-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any stroke symptoms, severe breathlessness, or chest pain?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Are you haemodynamically compromised now (chest pain, severe breathlessness, syncope, low BP)?",
+      "target_disease": "Unstable AF (emergency)",
+      "competing_disease": "Stable AF",
+      "purpose": "Detect instability needing emergency care",
+      "interpretation": "Positive -> emergency (may need cardioversion)",
+      "information_gain": "very high",
+      "source": "ESC; NICE NG196",
+      "basis": "sourced"
+    },
+    {
+      "question": "What is the CHA2DS2-VASc score (stroke risk factors)?",
+      "target_disease": "AF stroke risk",
+      "competing_disease": "N/A",
+      "purpose": "Guide anticoagulation (the priority)",
+      "interpretation": "Higher score -> offer anticoagulation",
+      "information_gain": "very high",
+      "source": "NICE NG196; ESC",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Confirmed AF on ECG",
+      "question": "Are you stable, what is your stroke risk (CHA2DS2-VASc) and bleeding risk, and are you very symptomatic?",
+      "expected_answers": "Stable/unstable; stroke risk; symptom burden",
+      "branching_logic": "Unstable -> emergency; stable -> anticoagulate per stroke risk + rate control (or rhythm control if symptomatic/appropriate) + treat cause",
+      "information_gain": "very high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "12-lead ECG (+ ambulatory monitoring if paroxysmal)",
+      "why": "Confirms AF",
+      "expected_outcome": "Diagnostic rhythm"
+    },
+    {
+      "test": "Bloods (TFTs, U&E, FBC) + echocardiography",
+      "why": "Find cause and guide anticoagulation/rhythm decisions",
+      "expected_outcome": "Aetiology and structural assessment"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "AF with haemodynamic instability (hypotension, severe breathlessness/pulmonary oedema, chest pain, syncope)",
+      "immediate_action": "Emergency - urgent assessment; consider emergency electrical cardioversion"
+    },
+    {
+      "finding": "Acute focal neurological deficit (stroke/TIA)",
+      "immediate_action": "Emergency stroke pathway"
+    },
+    {
+      "finding": "Very fast ventricular rate with ischaemia or heart failure",
+      "immediate_action": "Urgent rate/rhythm control and treatment"
+    },
+    {
+      "finding": "New AF - assess stroke risk urgently",
+      "immediate_action": "Do not overlook anticoagulation (the main preventable harm)"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Unstable AF (emergency); AF with stroke/TIA (emergency); AF causing heart failure/ischaemia.",
+    "routine_referral": "Rhythm-control consideration (young/symptomatic/refractory), consideration of cardioversion/ablation, or diagnostic uncertainty.",
+    "emergency_referral": "Haemodynamic instability or acute stroke."
+  },
+  "complications": {
+    "early": [
+      "Rapid ventricular response with heart failure/ischaemia",
+      "Haemodynamic instability"
+    ],
+    "late": [
+      "Ischaemic (embolic) stroke - the major harm",
+      "Heart failure (tachycardia-induced or via lost atrial contraction)",
+      "Reduced quality of life"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Confirm on ECG; assess stability; identify and treat precipitants/causes (thyroid, alcohol, infection, sleep apnoea); educate about stroke prevention.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Direct-acting oral anticoagulant; Vitamin K antagonist; Beta-blocker; Diltiazem/verapamil. No autonomous selection or dosing is allowed. Source IDs: NICE_NG196.",
+    "lifestyle_advice": "Reduce alcohol, weight loss, treat sleep apnoea and hypertension, physical activity.",
+    "follow_up": "Review symptoms, rate/rhythm control, anticoagulation adherence and bleeding, and renal function; reassess stroke risk over time.",
+    "legacy_medications_pre_v13": "STROKE PREVENTION is the priority: offer anticoagulation (a direct oral anticoagulant first-line, or warfarin) based on CHA2DS2-VASc; do not use aspirin for stroke prevention in AF; address modifiable bleeding factors rather than withholding anticoagulation. RATE control first-line for most: beta-blocker or rate-limiting calcium-channel blocker (digoxin as an option, e.g., sedentary/heart failure). RHYTHM control (cardioversion, antiarrhythmics, ablation) for those symptomatic despite rate control, newer/reversible AF, or heart failure. Emergency cardioversion if haemodynamically unstable."
+  },
+  "patient_education": {
+    "home_advice": "Atrial fibrillation is an irregular heartbeat. It can cause palpitations, breathlessness and tiredness, but its most important risk is stroke - which is why blood-thinning (anticoagulant) medication is usually the key treatment; take it exactly as prescribed and report any unusual bleeding. Other medicines control your heart rate. Reducing alcohol, losing weight and treating sleep apnoea help. Get emergency help for stroke symptoms (face drooping, arm weakness, speech difficulty), severe breathlessness, chest pain, or blackouts.",
+    "home_advice_ar": "الرجفان الأذيني نظم قلب غير منتظم. قد يسبّب خفقاناً وضيق نفس وتعباً، لكن أخطر ما فيه هو خطر الجلطة الدماغية - ولذلك يكون دواء تمييع الدم (المضاد للتخثّر) هو العلاج الأهم عادةً؛ تناوله تماماً كما وُصف وأبلغ عن أي نزيف غير معتاد. وأدوية أخرى تضبط سرعة القلب. يفيد تقليل الكحول وإنقاص الوزن وعلاج انقطاع النفس النومي. اطلب المساعدة الطارئة عند أعراض الجلطة (تدلّي الوجه، ضعف الذراع، صعوبة الكلام)، أو ضيق نفس شديد، أو ألم صدر، أو إغماء.",
+    "prevention": "Manage hypertension, weight, alcohol and sleep apnoea; anticoagulation prevents strokes in those at risk.",
+    "warning_signs": "Stroke symptoms (FAST), severe breathlessness, chest pain, blackout, or unusual bleeding on anticoagulants."
+  },
+  "prevention": {
+    "vaccination": "Not specific.",
+    "lifestyle": "Weight loss, alcohol reduction, treating hypertension and sleep apnoea reduce AF burden.",
+    "screening": "Opportunistic pulse checks/ECG in older adults to detect AF (case-finding)."
+  },
+  "evidence": {
+    "evidence_level": "High - strong evidence that anticoagulation prevents AF-related stroke; established rate/rhythm strategies.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG196; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - NICE NG196, ESC atrial fibrillation guidelines.",
+    "verified_source_ids": [
+      "NICE_NG196"
+    ]
+  },
+  "references": {
+    "nice": "Atrial fibrillation: diagnosis and management (NG196) — https://www.nice.org.uk/guidance/ng196/chapter/recommendations",
+    "aafp": "AAFP - Atrial fibrillation management",
+    "bmj_best_practice": "BMJ Best Practice - Atrial fibrillation",
+    "msd_manual": "MSD Manual - Atrial Fibrillation",
+    "merck_manual": "Merck Manual - Atrial Fibrillation",
+    "uptodate": "UpToDate - Atrial fibrillation: overview and management; anticoagulation",
+    "harrisons": "Harrison's Principles of Internal Medicine - The Tachyarrhythmias (Atrial Fibrillation)",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - Atrial fibrillation",
+    "who": "",
+    "cdc": "CDC - Atrial Fibrillation",
+    "idsa": "",
+    "esc": "ESC Guidelines for the diagnosis and management of atrial fibrillation",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG196",
+        "organization": "NICE",
+        "title": "Atrial fibrillation: diagnosis and management (NG196)",
+        "publication_or_update": "2021",
+        "url": "https://www.nice.org.uk/guidance/ng196/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Stroke prevention, anticoagulation and rate/rhythm control",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "diagnostic_criteria",
+      "initial_management",
+      "red_flags",
+      "referral_criteria"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG196"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG196"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG196"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG196",
+        "organization": "NICE",
+        "title": "Atrial fibrillation: diagnosis and management (NG196)",
+        "publication_or_update": "2021",
+        "url": "https://www.nice.org.uk/guidance/ng196/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Stroke prevention, anticoagulation and rate/rhythm control",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Prevent stroke and control symptoms while balancing bleeding and ventricular-function risk.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Direct-acting oral anticoagulant; Vitamin K antagonist; Beta-blocker; Diltiazem/verapamil. No autonomous selection or dosing is allowed. Source IDs: NICE_NG196.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "AF duration",
+      "valve disease",
+      "CHA2DS2-VASc and bleeding risks",
+      "renal/liver function",
+      "heart-failure phenotype",
+      "pregnancy",
+      "interactions/adherence"
+    ],
+    "non_drug_measures": [
+      "Treat triggers/comorbidities, reduce alcohol where relevant and support adherence."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Direct-acting oral anticoagulant",
+        "medication_or_class": "Direct-acting oral anticoagulant",
+        "option_type": "medication",
+        "role": "stroke prevention",
+        "when_to_consider": "Eligible AF after CHA2DS2-VASc and bleeding-risk assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "doac",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active major bleeding, mechanical heart valve, or anticoagulant-specific contraindication"
+            ],
+            "use_caution_if": [
+              "renal/liver impairment, prior GI/intracranial bleed, frailty/falls, interacting medicines, pregnancy, or adherence concern"
+            ],
+            "history_checks": [
+              "valve disease",
+              "renal/liver function",
+              "bleeding history",
+              "pregnancy",
+              "interactions",
+              "adherence"
+            ],
+            "monitoring": [
+              "renal/liver function at guideline intervals, haemoglobin, bleeding and adherence; use licensed dose criteria"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG196"
+        ]
+      },
+      {
+        "option_name": "Vitamin K antagonist",
+        "medication_or_class": "Vitamin K antagonist",
+        "option_type": "medication",
+        "role": "stroke prevention alternative",
+        "when_to_consider": "When DOAC is unsuitable or valve-specific indication requires it",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "warfarin",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "active major bleeding, pregnancy except specialist-defined indications, or inability to provide safe INR monitoring"
+            ],
+            "use_caution_if": [
+              "high bleeding risk, liver disease, poor adherence, unstable diet/alcohol intake, falls, or interacting medicines/antibiotics"
+            ],
+            "history_checks": [
+              "bleeding history",
+              "pregnancy",
+              "liver function",
+              "adherence",
+              "diet/alcohol",
+              "complete interaction list"
+            ],
+            "monitoring": [
+              "INR at protocol-defined intervals, bleeding, interactions and time in therapeutic range"
+            ]
+          }
+        ],
+        "clinical_note": "Requires INR monitoring, interaction and diet/adherence management.",
+        "source_ids": [
+          "NICE_NG196"
+        ]
+      },
+      {
+        "option_name": "Beta-blocker",
+        "medication_or_class": "Beta-blocker",
+        "option_type": "medication",
+        "role": "rate control",
+        "when_to_consider": "Selected patients without contraindication",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "beta_blocker",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "severe bradycardia, high-grade heart block without pacing, or cardiogenic shock"
+            ],
+            "use_caution_if": [
+              "asthma/COPD, peripheral vascular disease, diabetes with hypoglycaemia, or acute decompensated heart failure"
+            ],
+            "history_checks": [
+              "heart rate/ECG",
+              "airways disease",
+              "heart failure",
+              "diabetes"
+            ],
+            "monitoring": [
+              "heart rate, blood pressure, bronchospasm and heart-failure symptoms"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG196"
+        ]
+      },
+      {
+        "option_name": "Diltiazem/verapamil",
+        "medication_or_class": "Diltiazem/verapamil",
+        "option_type": "medication",
+        "role": "rate-control alternative",
+        "when_to_consider": "Only when ventricular function and conduction permit",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "ccb",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "class-specific contraindication such as severe hypotension; avoid verapamil/diltiazem in HFrEF"
+            ],
+            "use_caution_if": [
+              "heart failure, bradycardia/heart block, constipation, oedema, or interacting medicines"
+            ],
+            "history_checks": [
+              "heart-failure phenotype",
+              "heart rate/ECG",
+              "bowel symptoms",
+              "medicines"
+            ],
+            "monitoring": [
+              "blood pressure, heart rate, oedema and constipation"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG196"
+        ]
+      },
+      {
+        "option_name": "Rhythm control/cardioversion",
+        "medication_or_class": "Rhythm control/cardioversion",
+        "option_type": "specialist_strategy_or_procedure",
+        "role": "selected symptom/strategy treatment",
+        "when_to_consider": "Specialist/acute pathway with anticoagulation timing and structural-heart assessment",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [],
+        "clinical_note": "Includes procedure- and antiarrhythmic-specific safety assessment.",
+        "source_ids": [
+          "NICE_NG196"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Emergency cardioversion pathway for life-threatening haemodynamic instability; urgent stroke assessment for focal neurological symptoms."
+    ],
+    "source_ids": [
+      "NICE_NG196"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}

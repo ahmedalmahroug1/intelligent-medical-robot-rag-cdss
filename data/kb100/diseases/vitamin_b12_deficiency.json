@@ -1,0 +1,658 @@
+{
+  "_meta": {
+    "schema_version": "1.3",
+    "disease_id": "FM-025",
+    "data_status": "source_checked_needs_clinician_review",
+    "last_updated": "2026-07-15",
+    "honesty_note": "Scheme v1.2: symptoms graded on 3 sourced ordinal axes (frequency, diagnostic_value, absence_significance); questions carry information_gain (static prior). Ordinal tiers -> internal ranking integers at engine time only, NOT clinical probabilities/LRs. Remaining numerics not from a citable source are {value, basis:'estimate'}; icd10 sourced; icd11/snomed/mesh estimates.",
+    "verification_note": "Official-source links and structured medication-safety checks were audited on 2026-07-15. This is a non-clinician evidence audit, not clinical approval."
+  },
+  "metadata": {
+    "disease_id": "FM-025",
+    "name": "Vitamin B12 deficiency",
+    "name_ar": "عوز فيتامين B12",
+    "synonyms": [
+      "cobalamin deficiency",
+      "pernicious anaemia (autoimmune cause)",
+      "B12 deficiency anaemia"
+    ],
+    "abbreviations": [
+      "B12",
+      "IF"
+    ],
+    "icd10": {
+      "code": "E53.8",
+      "basis": "sourced"
+    },
+    "icd11": {
+      "code": "5B5K",
+      "basis": "estimate"
+    },
+    "snomed_ct": {
+      "code": "190634004",
+      "basis": "estimate"
+    },
+    "omim": {
+      "code": null,
+      "basis": "estimate"
+    },
+    "mesh": {
+      "code": "D014806",
+      "basis": "estimate"
+    },
+    "disease_category": "Nutritional / haematological / neurological",
+    "organ_system": "Haematological / neurological",
+    "specialty": "Family medicine / Haematology",
+    "emergency_level": "Routine - but neurological involvement needs prompt treatment to avoid permanent damage",
+    "severity": "From mild/asymptomatic to macrocytic anaemia and serious neurological disease",
+    "last_updated": "2026-07-15"
+  },
+  "overview": {
+    "short_description": "Deficiency of vitamin B12 (cobalamin) causing macrocytic anaemia and, importantly, neurological problems (neuropathy, cognitive change, subacute combined degeneration) that can become permanent if untreated.",
+    "detailed_description": "B12 deficiency is common, especially in older adults, vegans, and with malabsorption. The key clinical points are that neurological damage can occur (and may precede or occur without anaemia) and can be irreversible if treatment is delayed, and that pernicious anaemia (autoimmune loss of intrinsic factor) is a common cause. Treatment is B12 replacement, usually intramuscular, especially with neurological features.",
+    "pathophysiology": "B12 is a cofactor for DNA synthesis (hence megaloblastic anaemia) and myelin metabolism (hence neuropathy/subacute combined degeneration of the cord). Absorption requires intrinsic factor (from gastric parietal cells) and an intact terminal ileum.",
+    "etiology": "Malabsorption - pernicious anaemia (autoimmune), gastric/ileal surgery, coeliac/Crohn's, metformin/PPIs (reduced absorption); low intake (strict vegan diet); rarely, competition (bacterial overgrowth, fish tapeworm).",
+    "incubation_period": "Not applicable (large hepatic stores mean deficiency develops over years).",
+    "natural_history": "Develops gradually; haematological changes reverse with treatment, but neurological damage may be permanent if long-standing.",
+    "prognosis": "Excellent for anaemia; neurological recovery depends on early treatment."
+  },
+  "epidemiology": {
+    "prevalence": {
+      "value": "Common, rising with age; higher in vegans and those with malabsorption.",
+      "basis": "estimate"
+    },
+    "incidence": {
+      "value": "Increases with age; pernicious anaemia more common in older adults with autoimmune background.",
+      "basis": "estimate"
+    },
+    "mortality": {
+      "value": "Low with treatment; morbidity from untreated neurological disease.",
+      "basis": "estimate"
+    },
+    "age_groups": "Any age; especially older adults.",
+    "sex_predominance": "Pernicious anaemia slightly more common in women.",
+    "geographic_distribution": "Worldwide.",
+    "seasonal_pattern": "None."
+  },
+  "risk_factors": {
+    "lifestyle": "Strict vegan/vegetarian diet without supplementation.",
+    "smoking": "Not directly relevant.",
+    "alcohol": "Excess associated with poor intake.",
+    "obesity": "Not directly relevant.",
+    "diabetes": "Metformin reduces B12 absorption.",
+    "hypertension": "Not relevant.",
+    "pregnancy": "Increased demand; deficiency affects the infant.",
+    "occupation": "Not relevant.",
+    "travel": "Fish tapeworm in endemic areas (rare).",
+    "family_history": "Autoimmune disease / pernicious anaemia.",
+    "genetic_factors": "Autoimmune predisposition; rare inherited transport defects.",
+    "medications": "Metformin, proton-pump inhibitors/H2 blockers (long-term).",
+    "previous_diseases": "Autoimmune conditions, gastric/ileal surgery, coeliac/Crohn's disease."
+  },
+  "chief_complaints": [
+    {
+      "complaint": "Tiredness / symptoms of anaemia",
+      "frequency": "common",
+      "importance": "Common but nonspecific",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Numbness/tingling in hands and feet",
+      "frequency": "common",
+      "importance": "Neurological - important to catch early",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "complaint": "Memory/cognitive change, unsteadiness",
+      "frequency": "sometimes",
+      "importance": "Neurological involvement",
+      "source": "BSH",
+      "basis": "sourced"
+    }
+  ],
+  "symptoms": [
+    {
+      "symptom": "Fatigue / symptoms of anaemia",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "nonspecific",
+      "absence_significance": "no significant change",
+      "importance": "Common but nonspecific",
+      "stage": "Any",
+      "early_late": "Mid",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Peripheral paraesthesiae (numbness/tingling), often symmetrical",
+      "typical": true,
+      "frequency": "common",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Key neurological feature - treat promptly",
+      "stage": "Any",
+      "early_late": "Any",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Glossitis (sore, smooth tongue), mouth ulcers",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Supportive",
+      "stage": "Any",
+      "early_late": "Mid",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    },
+    {
+      "symptom": "Unsteadiness/ataxia, weakness, cognitive/mood change",
+      "typical": false,
+      "frequency": "sometimes",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Subacute combined degeneration / neuropsychiatric involvement",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "symptom": "Mild jaundice / lemon-yellow pallor (megaloblastic haemolysis)",
+      "typical": false,
+      "frequency": "uncommon",
+      "diagnostic_value": "suggestive",
+      "absence_significance": "no significant change",
+      "importance": "Feature of severe megaloblastic anaemia",
+      "stage": "Severe",
+      "early_late": "Late",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "negative_findings": [
+    {
+      "finding": "Normal serum B12 (with normal indices)",
+      "why_important": "Reduces likelihood of deficiency (borderline levels may need active-B12/MMA if symptoms persist)",
+      "absence_significance": "moderately reduces",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "finding": "No neurological symptoms/signs",
+      "why_important": "Less concern for irreversible neurological damage (but anaemia still needs treatment)",
+      "absence_significance": "slightly reduces",
+      "source": "clinical reasoning",
+      "basis": "estimate"
+    }
+  ],
+  "history_questions": [
+    {
+      "question": "Any numbness/tingling, unsteadiness, or memory changes?",
+      "why_ask": "Neurological involvement needs prompt IM treatment",
+      "expected_answer": "Variable",
+      "diagnostic_value": "High (safety)"
+    },
+    {
+      "question": "Diet (vegan/vegetarian) and any gastric/bowel surgery or coeliac/Crohn's?",
+      "why_ask": "Intake/malabsorption causes",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate-high"
+    },
+    {
+      "question": "Metformin or long-term acid suppressants (PPI)?",
+      "why_ask": "Drug-related reduced absorption",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Personal/family history of autoimmune disease?",
+      "why_ask": "Pernicious anaemia is autoimmune",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    },
+    {
+      "question": "Symptoms of anaemia (fatigue, breathlessness)?",
+      "why_ask": "Assess severity",
+      "expected_answer": "Variable",
+      "diagnostic_value": "Moderate"
+    }
+  ],
+  "physical_examination": [
+    {
+      "examination": "Neurological exam (peripheral sensation, proprioception, gait, reflexes, cognition)",
+      "expected_finding": "Sensory neuropathy, impaired proprioception/vibration, ataxia in SCDC",
+      "importance": "High"
+    },
+    {
+      "examination": "Mouth/tongue",
+      "expected_finding": "Glossitis",
+      "importance": "Moderate"
+    },
+    {
+      "examination": "Pallor / mild jaundice",
+      "expected_finding": "In megaloblastic anaemia",
+      "importance": "Moderate"
+    }
+  ],
+  "vital_signs": {
+    "temperature": "Normal",
+    "heart_rate": "May be raised if significant anaemia",
+    "blood_pressure": "Normal",
+    "respiratory_rate": "Normal",
+    "oxygen_saturation": "Normal",
+    "bmi": "Variable"
+  },
+  "laboratory_tests": [
+    {
+      "test_name": "FBC + blood film",
+      "indication": "Detect macrocytic anaemia",
+      "expected_result": "Macrocytosis (raised MCV), anaemia; hypersegmented neutrophils on film",
+      "normal_range": "",
+      "diagnostic_value": "Suggests megaloblastic anaemia",
+      "rule_in": "",
+      "rule_out": "Normal indices do not exclude neurological B12 deficiency",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Serum B12 (+/- active B12/holotranscobalamin, methylmalonic acid, folate)",
+      "indication": "Confirm deficiency",
+      "expected_result": "Low B12; raised MMA/homocysteine support tissue deficiency",
+      "normal_range": "Lab-specific",
+      "diagnostic_value": "Confirms deficiency",
+      "rule_in": "Low B12 (or borderline with raised MMA)",
+      "rule_out": "",
+      "urgency": "Routine"
+    },
+    {
+      "test_name": "Intrinsic factor antibodies (+/- gastric parietal cell antibodies)",
+      "indication": "Diagnose pernicious anaemia",
+      "expected_result": "Positive IF antibodies (specific) in pernicious anaemia",
+      "normal_range": "Negative",
+      "diagnostic_value": "Confirms pernicious anaemia",
+      "rule_in": "Positive IF antibodies",
+      "rule_out": "Negative does not exclude (low sensitivity)",
+      "urgency": "Routine"
+    }
+  ],
+  "imaging": [
+    {
+      "imaging_type": "MRI spine (selective)",
+      "when_needed": "Suspected subacute combined degeneration",
+      "expected_findings": "Dorsal column signal change"
+    }
+  ],
+  "ecg": {
+    "when_needed": "If severe anaemia with cardiac symptoms",
+    "findings": "May show tachycardia/ischaemia."
+  },
+  "other_diagnostic_tests": {
+    "spirometry": "Not applicable",
+    "endoscopy": "Gastroscopy if gastric pathology suspected (pernicious anaemia associates with gastric atrophy/cancer risk)",
+    "biopsy": "Not routine",
+    "culture": "Not applicable",
+    "pcr": "Coeliac serology if malabsorption suspected"
+  },
+  "diagnostic_criteria": {
+    "formal_criteria": "Low serum B12 (or borderline B12 with clinical features and raised methylmalonic acid/homocysteine). Establish the cause; test for intrinsic factor antibodies to diagnose pernicious anaemia. Treat neurological presentations promptly even before all results return.",
+    "diagnostic_scores": "None.",
+    "cutoff_values": "Thresholds are laboratory-specific; borderline results are interpreted with active-B12/MMA and clinical context (BSH)."
+  },
+  "differential_diagnosis": [
+    {
+      "disease": "Folate deficiency",
+      "why_similar": "Macrocytic (megaloblastic) anaemia",
+      "differences": "Low folate; no neurological features from folate deficiency itself (and giving folate alone in B12 deficiency can worsen neurology)",
+      "red_flags": "Do not treat with folate alone if B12 low",
+      "distinguishing_symptoms": "No neuropathy from folate deficiency",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Low folate, normal B12",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is folate low with normal B12?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": true
+    },
+    {
+      "disease": "Other macrocytosis (alcohol, hypothyroidism, liver disease, myelodysplasia, drugs)",
+      "why_similar": "Raised MCV",
+      "differences": "Non-megaloblastic; other findings",
+      "red_flags": "Cytopenias (MDS)",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal B12/folate; TFTs/LFTs; marrow if needed",
+      "distinguishing_imaging": "",
+      "differential_questions": "Any alcohol, thyroid or liver disease?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    },
+    {
+      "disease": "Other peripheral neuropathy (diabetes, etc.)",
+      "why_similar": "Paraesthesiae",
+      "differences": "Different cause; normal B12",
+      "red_flags": "",
+      "distinguishing_symptoms": "Cause-specific",
+      "distinguishing_exam": "",
+      "distinguishing_labs": "Normal B12",
+      "distinguishing_imaging": "",
+      "differential_questions": "Is there diabetes or another neuropathy cause with normal B12?",
+      "likelihood_in_context": "possible",
+      "must_not_miss": false
+    }
+  ],
+  "diagnostic_questions": [
+    {
+      "question": "Do you have numbness/tingling, unsteadiness, or memory change (neurological features)?",
+      "target_disease": "B12 deficiency with neurological involvement",
+      "competing_disease": "Uncomplicated deficiency",
+      "purpose": "Neurological features mandate prompt IM treatment to prevent permanent damage",
+      "interpretation": "Neurological features -> treat promptly (IM), do not delay",
+      "information_gain": "very high",
+      "source": "BSH",
+      "basis": "sourced"
+    },
+    {
+      "question": "Is folate also low? (Important - do not treat with folate alone if B12 is low.)",
+      "target_disease": "Combined B12/folate deficiency",
+      "competing_disease": "Isolated folate deficiency",
+      "purpose": "Avoid precipitating/worsening neurology",
+      "interpretation": "If both low, replace B12 first/alongside folate",
+      "information_gain": "high",
+      "source": "BSH",
+      "basis": "sourced"
+    }
+  ],
+  "next_best_question": [
+    {
+      "current_situation": "Low B12 (+/- macrocytic anaemia)",
+      "question": "Are there neurological features, what is the cause (diet/malabsorption/drugs), and is folate low?",
+      "expected_answers": "Neuro vs not; cause; folate status",
+      "branching_logic": "Neurological or pernicious anaemia -> IM B12; dietary -> oral/IM as appropriate; replace B12 before/with folate if both low; investigate cause",
+      "information_gain": "high"
+    }
+  ],
+  "next_best_test": [
+    {
+      "test": "Serum B12 (+ MMA/active B12 if borderline) and folate",
+      "why": "Confirms deficiency and avoids folate-alone error",
+      "expected_outcome": "Confirms B12 deficiency"
+    },
+    {
+      "test": "Intrinsic factor antibodies",
+      "why": "Diagnose pernicious anaemia (needs lifelong treatment)",
+      "expected_outcome": "Identifies autoimmune cause"
+    }
+  ],
+  "red_flags": [
+    {
+      "finding": "Neurological features (neuropathy, ataxia, cognitive change) with low B12",
+      "immediate_action": "Treat promptly with intramuscular B12 to prevent irreversible damage"
+    },
+    {
+      "finding": "Low B12 with low folate",
+      "immediate_action": "Replace B12 first/together - do NOT give folate alone (can worsen neurology)"
+    },
+    {
+      "finding": "Severe symptomatic anaemia",
+      "immediate_action": "Urgent assessment; specialist input"
+    },
+    {
+      "finding": "Pernicious anaemia (gastric atrophy - increased gastric cancer risk)",
+      "immediate_action": "Lifelong treatment and awareness of GI symptoms"
+    }
+  ],
+  "referral_criteria": {
+    "urgent_referral": "Significant neurological involvement; severe anaemia; diagnostic uncertainty.",
+    "routine_referral": "Refractory/unclear cause; suspected malabsorption; haematology input.",
+    "emergency_referral": "Rarely (severe anaemia/cardiac compromise)."
+  },
+  "complications": {
+    "early": [
+      "Symptomatic anaemia",
+      "Peripheral neuropathy"
+    ],
+    "late": [
+      "Subacute combined degeneration of the cord (may be permanent)",
+      "Cognitive impairment",
+      "Increased gastric cancer risk (pernicious anaemia)"
+    ]
+  },
+  "initial_management": {
+    "supportive_care": "Explain the cause and treatment; note lifelong treatment for pernicious anaemia/irreversible malabsorption.",
+    "medications": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral vitamin B12; Intramuscular vitamin B12. No autonomous selection or dosing is allowed. Source IDs: NICE_NG239.",
+    "lifestyle_advice": "Dietary B12 (animal products; fortified foods/supplements for vegans); review causative drugs.",
+    "follow_up": "Monitor haematological response; ongoing replacement per cause; monitor neurological recovery.",
+    "legacy_medications_pre_v13": "Intramuscular hydroxocobalamin (loading then maintenance) - especially with neurological features or pernicious anaemia; oral B12 (higher dose) may suffice for dietary deficiency or maintenance in some. If both B12 and folate are low, treat B12 first/together, then folate. Address the underlying cause."
+  },
+  "patient_education": {
+    "home_advice": "Vitamin B12 is needed for blood and nerves. Low levels cause tiredness and, importantly, nerve symptoms like numbness, pins-and-needles or unsteadiness that must be treated promptly to avoid lasting damage. Treatment is usually B12 injections (sometimes tablets). If the cause is your body not absorbing B12 (pernicious anaemia or after surgery), treatment is lifelong. Vegans should take a B12 supplement.",
+    "home_advice_ar": "فيتامين B12 ضروري للدم والأعصاب. نقصه يسبّب التعب، والأهم أعراضاً عصبية كالتنميل والوخز وعدم الاتزان يجب علاجها بسرعة لتجنّب ضرر دائم. العلاج غالباً حقن B12 (وأحياناً أقراص). إن كان السبب عدم امتصاص الجسم للفيتامين (فقر الدم الوبيل أو بعد جراحة) فالعلاج مدى الحياة. على النباتيين الصرفين تناول مكمّل B12.",
+    "prevention": "B12 supplementation for vegans and at-risk groups; monitor with long-term metformin/PPI use.",
+    "warning_signs": "New numbness/tingling, unsteadiness, weakness, or memory/mood change - seek prompt review."
+  },
+  "prevention": {
+    "vaccination": "Not applicable.",
+    "lifestyle": "Adequate dietary B12; supplementation for vegans/at-risk.",
+    "screening": "Consider testing in at-risk groups (vegans, malabsorption, long-term metformin/PPI, older adults with suggestive symptoms)."
+  },
+  "evidence": {
+    "evidence_level": "High for B12 replacement; strong emphasis on prompt treatment of neurological deficiency.",
+    "guideline_strength": "The main diagnosis/test and treatment direction was checked against the current guidance identified by NICE_NG239; see evidence_review for scope and limitations. This does not verify every legacy narrative sentence.",
+    "legacy_guideline_strength_pre_v13": "Strong - BSH (British Society for Haematology), NICE CKS.",
+    "verified_source_ids": [
+      "NICE_NG239"
+    ]
+  },
+  "references": {
+    "nice": "Vitamin B12 deficiency in over 16s (NG239) — https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+    "aafp": "AAFP - Vitamin B12 deficiency",
+    "bmj_best_practice": "BMJ Best Practice - Vitamin B12 deficiency",
+    "msd_manual": "MSD Manual - Vitamin B12 Deficiency",
+    "merck_manual": "Merck Manual - Vitamin B12 Deficiency",
+    "uptodate": "UpToDate - Clinical manifestations and diagnosis of vitamin B12 and folate deficiency",
+    "harrisons": "Harrison's Principles of Internal Medicine - Megaloblastic Anemias",
+    "oxford_handbook": "Oxford Handbook of Clinical Medicine - B12 deficiency and pernicious anaemia",
+    "who": "",
+    "cdc": "",
+    "idsa": "",
+    "esc": "",
+    "ada": "",
+    "gina": "",
+    "gold": "",
+    "acp": "",
+    "pubmed_references": [],
+    "verification_status": "canonical_sources_checked_legacy_bibliography_not_sentence_verified",
+    "verified_official_sources": [
+      {
+        "source_id": "NICE_NG239",
+        "organization": "NICE",
+        "title": "Vitamin B12 deficiency in over 16s (NG239)",
+        "publication_or_update": "2024",
+        "url": "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Diagnosis by cause, oral/intramuscular replacement and follow-up",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "reference_precedence": "Use verified_official_sources and evidence_review for schema 1.3 decisions. Older named bibliography fields are retained as background only and may be superseded."
+  },
+  "confidence_and_source_tracking": {
+    "source_for_each_field": "See evidence_review.field_source_map and per-item/per-treatment source_ids. Existing narrative fields still require clinician sentence-level review.",
+    "estimated_sections": [
+      "metadata.icd11",
+      "metadata.snomed_ct",
+      "metadata.mesh",
+      "epidemiology (numeric ranges)"
+    ],
+    "sourced_sections": [
+      "metadata.icd10",
+      "symptoms (ordinal grading)",
+      "chief_complaints",
+      "negative_findings",
+      "laboratory_tests",
+      "initial_management",
+      "red_flags"
+    ],
+    "last_verified": "2026-07-15",
+    "reviewer": {
+      "name": null,
+      "role": "licensed clinician",
+      "status": "pending",
+      "reviewed_on": null
+    },
+    "record_confidence": "moderate",
+    "verification_status": "source_checked_needs_clinician_review"
+  },
+  "evidence_review": {
+    "verification_status": "source_checked_needs_clinician_review",
+    "checked_on": "2026-07-15",
+    "review_scope": [
+      "current official guidance link",
+      "diagnosis/test context",
+      "treatment direction",
+      "history-based medication safety"
+    ],
+    "field_source_map": {
+      "diagnosis_and_tests": [
+        "NICE_NG239"
+      ],
+      "treatment_and_monitoring": [
+        "NICE_NG239"
+      ],
+      "red_flags_and_referral": [
+        "NICE_NG239"
+      ]
+    },
+    "sources": [
+      {
+        "source_id": "NICE_NG239",
+        "organization": "NICE",
+        "title": "Vitamin B12 deficiency in over 16s (NG239)",
+        "publication_or_update": "2024",
+        "url": "https://www.nice.org.uk/guidance/ng239/chapter/recommendations",
+        "accessed": "2026-07-15",
+        "scope": "Diagnosis by cause, oral/intramuscular replacement and follow-up",
+        "source_type": "official_guideline_or_professional_society_guideline"
+      }
+    ],
+    "clinician_review": {
+      "status": "pending",
+      "reviewer_name": null,
+      "reviewer_role": "licensed clinician",
+      "reviewed_on": null
+    },
+    "limitations": [
+      "Guidelines require individual clinical judgement and may differ by country, formulary and antimicrobial resistance.",
+      "The evidence audit verifies traceability and major safety structure; it does not certify every narrative sentence.",
+      "No medication should be selected or dosed without patient-specific contraindication and interaction checking."
+    ]
+  },
+  "treatment_guidance": {
+    "status": "decision_support_only_pending_clinician_review",
+    "treatment_goal": "Replace vitamin B12 according to cause and prevent irreversible neurological harm.",
+    "legacy_narrative_summary": "Canonical schema 1.3 guidance: use treatment_guidance.medication_options and its history-based safety checks. Candidate classes/options (not a prescription): Oral vitamin B12; Intramuscular vitamin B12. No autonomous selection or dosing is allowed. Source IDs: NICE_NG239.",
+    "required_history_before_any_medication": [
+      "age and weight where dosing is weight- or age-dependent",
+      "pregnancy or breastfeeding status when relevant",
+      "documented drug allergies and the exact reaction",
+      "all prescribed, OTC, herbal and recreational substances",
+      "renal and hepatic disease",
+      "major cardiovascular, respiratory, gastrointestinal and bleeding history",
+      "neurological signs",
+      "pregnancy",
+      "diet",
+      "GI surgery/malabsorption",
+      "metformin/PPI",
+      "nitrous oxide",
+      "folate/iron status"
+    ],
+    "non_drug_measures": [
+      "Correct dietary cause and identify autoimmune gastritis, surgery, malabsorption, metformin/PPI use or nitrous oxide exposure."
+    ],
+    "medication_options": [
+      {
+        "option_name": "Oral vitamin B12",
+        "medication_or_class": "Oral vitamin B12",
+        "option_type": "medication",
+        "role": "replacement",
+        "when_to_consider": "Diet-related or selected non-severe deficiency when absorption/adherence are adequate",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "vitamin_b12",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "severe hypokalaemia risk during brisk haematologic response, uncertain diagnosis, or folate deficiency"
+            ],
+            "history_checks": [
+              "cause of deficiency",
+              "neurological signs",
+              "diet",
+              "malabsorption/surgery",
+              "metformin/PPI/nitrous oxide"
+            ],
+            "monitoring": [
+              "clinical and haematologic response; investigate cause; do not delay treatment for neurological compromise"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG239"
+        ]
+      },
+      {
+        "option_name": "Intramuscular vitamin B12",
+        "medication_or_class": "Intramuscular vitamin B12",
+        "option_type": "medication",
+        "role": "replacement",
+        "when_to_consider": "Autoimmune gastritis, total gastrectomy/terminal ileal resection, selected malabsorption, severe neurological/haematological presentation or adherence concern",
+        "do_not_autoprescribe": true,
+        "dose_policy": "Dose is not inferred from this KB; use age, weight, renal/hepatic function, pregnancy status and the current local formulary/medicine label.",
+        "safety_checks": [
+          {
+            "rule_id": "vitamin_b12",
+            "rule_status": "screening_rule_requires_exact_product_label_verification",
+            "product_label_verification_required": true,
+            "avoid_if": [
+              "serious product allergy"
+            ],
+            "use_caution_if": [
+              "severe hypokalaemia risk during brisk haematologic response, uncertain diagnosis, or folate deficiency"
+            ],
+            "history_checks": [
+              "cause of deficiency",
+              "neurological signs",
+              "diet",
+              "malabsorption/surgery",
+              "metformin/PPI/nitrous oxide"
+            ],
+            "monitoring": [
+              "clinical and haematologic response; investigate cause; do not delay treatment for neurological compromise"
+            ]
+          }
+        ],
+        "clinical_note": "",
+        "source_ids": [
+          "NICE_NG239"
+        ]
+      }
+    ],
+    "procedures_referral_and_escalation": [
+      "Do not delay replacement when neurological compromise is suspected; specialist investigation for unclear cause or persistent symptoms."
+    ],
+    "source_ids": [
+      "NICE_NG239"
+    ],
+    "localization_note": "Before use in Libya, align choices with the Libyan formulary, local availability, antimicrobial resistance, referral pathways and prescribing law.",
+    "autonomous_prescribing_allowed": false
+  }
+}
